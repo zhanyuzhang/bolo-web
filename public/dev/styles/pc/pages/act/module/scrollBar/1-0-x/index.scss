@@ -1,0 +1,30 @@
+.scroll-bar-section{
+  overflow:hidden;
+  position: relative;
+}
+.scroll-bar-article{
+  position: absolute;
+  top:0;
+  left:0;
+}
+.scroll-bar-scrollBar{
+  position: absolute;
+  top:0;
+  right:0;
+  width: 13px;
+  height:100%;
+  background-color: #9c9c9c;
+  border-radius: 6.5px;
+
+}
+.scroll-bar-tip{
+  position: absolute;
+  top:0px;
+  right:0px;
+  width: 11px;
+  height:10px;
+
+  border-radius: 6.5px;
+  background-color: white;
+  border:1px solid #9c9c9c;
+}

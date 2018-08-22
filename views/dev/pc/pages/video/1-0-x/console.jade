@@ -1,0 +1,75 @@
+// Created by Dillance on 16/5/25.
+extends ./../../../../layout
+block head
+    meta(http-equiv='Content-Type',content='text/html;charset=utf-8')
+    meta(name='description', content='网易菠萝，精品无广告原创视频内容，好玩吐槽神奇社区，只做年轻人最爱的（超趣味）2.5次元内容。')
+    meta(name='keywords', content='网易菠萝, 网易, 菠萝, 无广告, 萌贱污, 原创视频, 视频, 吐槽, 社区, 神奇, bolo, boluo, 视频社区, 内涵段子, 大力金刚,直播,小视频,网红,快看,暴走漫画,同道大叔,烧脑,花熊,漫画岛,bilibili,腾讯, 土豆,小咖秀,快手,有妖气,内涵,二次元,acfun')
+    title 网易菠萝 - UP主视频管理平台
+    include ../../../_include/base-dependencies
+    link(rel='stylesheet', href='/dev/styles/pc/pages/video/1-0-x/index.css')
+    if(editorInfo)
+        script.
+            var EDITOR_INFO = !{editorInfo};
+    if(histroyTags)
+        script.
+            var HISTORY_TAGS = !{histroyTags};
+block content
+    .wrapper
+        .side-panel-container
+            include partial/left-panel
+        .main-container
+            .page-container.video-console.show
+                .header-bar
+                    .search-box.pull-right
+                        input(type='text',name='search',placeholder='视频名称')
+                        .search-btn
+                    .title 视频编辑
+                    .filter-options
+                        label
+                            input(type='radio',name='filter',checked='checked',value='')
+                            span.text 全部
+                        label
+                            input(type='radio',name='filter',value='0')
+                            span.text 已上架
+                        label
+                            input(type='radio',name='filter',value='1')
+                            span.text 待审核
+                        label
+                            input(type='radio',name='filter',value='2')
+                            span.text 已下架
+                .list-container
+                    include tmpl/video-list
+                    ul.video-list
+            .page-container.video-info
+                .content
+                    .upload-info
+                        .cover-edit-btn
+                            img
+                            span 编辑封面
+                        .title 已上传：
+                        .cover-tip 更换视频封面请点击左侧编辑封面
+                    .fill-tip 请确认以下视频信息：
+                    .form-container
+                    include ../1-1-x/tmpl/info-editor
+            include partial/cover-editor
+        .count-tip
+            | 全部共有
+            i.total 0
+            | 个视频，已上架
+            i.up-total 0
+            | 个
+        .add-set-dialog
+            .container
+                .title 新建选集
+                .content
+                    input(type='text',placeholder='请输入选集名')
+                .confirm-btn 确定
+                .remove-btn
+        .tip-dialog
+            .container
+                .content
+                .confirm-btn 确定
+                .remove-btn
+        include partial/user-editor
+    script.
+        require('/pages/pc/video/1-0-x/console');

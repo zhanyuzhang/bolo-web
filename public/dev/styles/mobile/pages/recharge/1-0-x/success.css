@@ -1,0 +1,40 @@
+body {
+  color: #2e2e2e;
+  font-size: .3rem; }
+
+.pay_suc {
+  width: 100%;
+  clear: both;
+  position: fixed;
+  left: 0;
+  top: 50%;
+  margin-top: -1.73rem; }
+
+.pay_suc .suc_photo {
+  margin: 0 auto;
+  width: 2.54rem;
+  height: 2.43rem;
+  background: url(//img4.cache.netease.com/bobo/bolo/img2016/pay0803/ard_sus.png) no-repeat center top;
+  background-size: 2.54rem 2.43rem; }
+
+.pay_suc .suc_tips {
+  width: 100%;
+  font-size: 0.24rem;
+  color: #2e2e2e;
+  text-align: center;
+  line-height: 0.64rem; }
+
+.pay_suc .suc_btn {
+  width: 1.34rem;
+  height: 0.48rem;
+  background: #ffaf1a;
+  color: #fff;
+  font-size: 0.24rem;
+  line-height: 0.48rem;
+  text-align: center;
+  margin: 0 auto;
+  -moz-border-radius: 0.06rem;
+  -webkit-border-radius: 0.06rem;
+  border-radius: 0.06rem; }
+
+/*# sourceMappingURL=success.css.map */

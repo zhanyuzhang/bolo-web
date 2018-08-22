@@ -1,0 +1,19 @@
+script(type='text/template', id='comment-list-tpl')
+  <% for(var index in this){ %> 
+  div.comment_list_item
+   div.comment_list_item_left
+    img.face(src!="<% this[index]['avatar'] %>")
+   div.comment_list_item_right
+    h1.nick <% this[index]['nick'] %>
+    p.info <% this[index]['content'] %>
+    span.time <% this[index]['dateStr'] %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来自
+    <% if(this[index]['commentFrom']==0){ %>
+    div.cfrom.cfrom-b
+    <% } %>
+    <% if(this[index]['commentFrom']==1){ %>
+    div.cfrom.cfrom-l
+    <% } %>
+    <% if(this[index]['commentFrom']==2){ %>
+    div.cfrom.cfrom-g
+    <% } %>
+  <% } %>

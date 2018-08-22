@@ -1,0 +1,101 @@
+//
+   Created by gztimboy on 2016/8/23 0023.
+
+extends ./../../../../layout
+block head
+    meta(name='description', content='网易菠萝，精品无广告原创视频内容，好玩吐槽神奇社区，只做年轻人最爱的（超趣味）2.5次元内容。')
+    meta(name='keywords', content='网易菠萝, 网易, 菠萝, 无广告, 萌贱污, 原创视频, 视频, 吐槽, 社区, 神奇, bolo, boluo, 视频社区, 内涵段子, 大力金刚,直播,小视频,网红,快看,暴走漫画,同道大叔,烧脑,花熊,漫画岛,bilibili,腾讯, 土豆,小咖秀,快手,有妖气,内涵,二次元,acfun')
+    title 网易菠萝 - 有内涵无广告萌贱污原创视频神器
+    include ../../../_include/base-dependencies
+    link(rel='stylesheet', href='/dev/styles/pc/pages/download/1-1-x/index.css')
+    if(bdList)
+        script.
+            var bdList = !{JSON.stringify(bdList)};
+    if(videoList)
+        script.
+            var videoList = !{JSON.stringify(videoList)};
+            videoList[0].stat = 'autoCover';
+            videoList[1].stat = 'daliCover';
+            videoList[2].stat = 'chenxiangCover';
+            videoList[3].stat = 'baozouCover';
+block content
+    include ../../../_include/header
+    .dl-area-bg
+        .dl-area-cnt
+            .video
+                #focusVideo
+                    //<object width="522" height="305" id="flash_784803062" type="application/x-shockwave-flash" data="http://v.163.com/swf/video/NetEaseFlvPlayerV3.swf"><param value="true" name="allowFullScreen"><param value="always" name="allowscriptaccess"><param value="opaque" name="wmode"><param value="000000" name="bgcolor"><param value="pltype=7&amp;topicid=0035&amp;sid=VACTAH9N7&amp;vid=VAD5HPTDJ&amp;autoplay=true&amp;openSub=false&amp;iplimit=0" name="flashvars"><param value="http://v.163.com/swf/video/NetEaseFlvPlayerV3.swf" name="movie"></object>
+                h2 看下一个
+                .cover
+            .dl-dm-bg
+                .dl-dm
+    .dl-area2-bg
+    .dl-area3-bg
+        .dl-area3
+            .dl-area3-cnt
+                .intro#videoIntro
+                    //.intro-l
+                        h2
+                            a(href="#") 不知道是什么视频的标题
+                        h3 评论（251）
+                    //.intro-r
+                        a(href="#")
+                            img(src="/dev/images/pages/pc/download/1-1-x/xzbg41.png" width="148" height="100")
+                .comment
+                    ul#videoComment
+                        //li
+                            .text.clearfix
+                                .text-l
+                                    img(src="/dev/images/pages/pc/download/1-1-x/100100.gif" width="64" height="64")
+                                .text-r
+                                    h2 用户昵称哈哈哈哈
+                                    h3 评论内容哈哈哈哈哈哈哈哈哈哈
+                                    h4
+                                        span.icon
+                                        span.num 123456
+
+                .icon2
+    .dl-area4-bg
+    .dl-area5-bg
+        .dl-area5#marquee1
+            .dl-area5-cnt
+                ul#marquee1_1
+                    //li
+                        .pic
+                            a(href="#")
+                                img(src="/dev/images/pages/pc/download/1-1-x/100100.gif" width="180" height="230")
+                                h3.title 1IP名称哈哈哈哈
+                ul#marquee1_2
+    .dl-area6-bg
+        .dl-area6.clearfix
+            ul.text
+                li.on
+                    h2 网易:你们老说我是黄易，我就黄给你们看!(≧▽≦)/ 乐视:嘿嘿嘿。。。(づ￣3￣)づ╭❤～ 乐事:我不想背锅！| ￣Å￣|o 快播:WTF? 广电:你们这群年轻人，navie.
+                    h3 来自菠萝饭：CSK
+                li
+                    h2 网易涉及的面真是越来越广了呢，竟然开始做小视频社区了哈。不过这款APP为啥要叫网易菠萝咧？是要体现它黄得有深度，污得辣眼睛么？至少在这里面真的有看到很多污得理直气壮的视频作品。
+                    h3 来自菠萝饭：隔壁家的凌落
+                li
+                    h2 不愧是大公司的产品，无论是操作的流畅度，还是给用户的体验度都很完美。与网易菠萝合作的原创视频团队也是数不胜数，因此，每天总有各种各样的视频上线。如果我喜欢看短视频的话，只能说一句洒家这辈子值了。
+                    h3 来自菠萝饭：南京吴彦祖
+                li
+                    h2 首先，作为网易菠萝的忠实用户看他从一开始慢慢进化到现在，还是满欣慰的。呆在种子用户群的我，一提出什么想法和意见，都会得到反馈。最后也可以在产品的更新上看到产品团队的用心。
+                    h3 来自菠萝饭：大康
+            .pot
+                span.on
+                span
+                span
+                span
+    .dl-area7-bg
+        .dl-area7
+            .icon
+    .dl-float
+        .pic
+        h2 骚一骚
+    include ../../../_include/dialog/1-0-x/tip
+    include ../../../_include/dialog/1-0-x/join-bolo
+    include ../../../_include/footer
+    script.
+        require('/pages/pc/download@1-1-x');
+
+    include ../../../_include/cnzz-stat

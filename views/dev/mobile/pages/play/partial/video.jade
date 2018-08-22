@@ -1,0 +1,16 @@
+.video-box(data-duration='#{videoInfo.duration}')
+    video(poster='#{videoInfo.cover.trim()}',preload='auto',webkit-playsinline)
+        source(src='#{videoInfo.linkMp4}',type='video/mp4')
+    ul.danmaku-wrap
+    .first-play-btn
+    .controller
+        .play-btn
+        - var minute = Math.floor(videoInfo.duration / 60);
+        - var second = videoInfo.duration % 60;
+        .time #{minute > 9 ? minute : '0' + minute}:#{second > 9 ? second : '0' + second}
+        .progress-bar
+            .dynamic-bar
+                .control-btn
+        .full-screen-btn
+        .danmaku-switch
+          

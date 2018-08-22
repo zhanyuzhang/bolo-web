@@ -1,0 +1,84 @@
+// Created by Dillance on 16/5/25.
+
+extends ./../../../../layout
+block head
+    meta(name='description', content='网易菠萝，精品无广告原创视频内容，好玩吐槽神奇社区，只做年轻人最爱的（超趣味）2.5次元内容。')
+    meta(name='keywords', content='网易菠萝, 网易, 菠萝, 无广告, 萌贱污, 原创视频, 视频, 吐槽, 社区, 神奇, bolo, boluo, 视频社区, 内涵段子, 大力金刚,直播,小视频,网红,快看,暴走漫画,同道大叔,烧脑,花熊,漫画岛,bilibili,腾讯, 土豆,小咖秀,快手,有妖气,内涵,二次元,acfun')
+    title 网易菠萝 - UP主视频管理平台
+    include ../../../_include/base-dependencies
+    link(rel='stylesheet', href='/dev/styles/pc/pages/video/1-0-x/index.css')
+    if(editorInfo)
+        script.
+            var EDITOR_INFO = !{editorInfo};
+    script.
+        var agree = '!{hasAgreed}';
+block content
+    .wrapper
+        .side-panel-container
+            - var page = 'index';
+            include partial/left-panel
+        .main-container
+            .page-container.start.show
+                ul.step-bar
+                    li.item.first 选择文件
+                    li.item.second 上传&编辑
+                    li.item.third 提交成功
+                .upload-btn 点击上传
+                    input(type='file')
+                ul.upload-tips
+                    li.item 视频大小：大小不超过1G
+                    li.item 视频格式：支持主流 flv 及 MP4 格式
+                    li.item 视频长度：视频时长介于 1秒 至 40分钟 之间
+                .warm-tip
+                    | 温馨提示：
+                    br
+                    | 1、请勿上传色情或违法反动视频。&emsp;&emsp;2、使用网易菠萝上传视频，表示您默认同意我们的内容协议。
+            .page-container.upload
+                .step-bar
+                .content
+                    .upload-info
+                        .cover-edit-btn
+                            span 视频上传并提交后可编辑封面
+                        .title 正在上传：王尼玛.avi
+                        .progress-wrap
+                            .progress-bar
+                                .body 0%
+                            a.cancel-btn 取消上传
+                        .upload-data
+                            .left-time.pull-left 剩余时间：
+                                i 00:00
+                            .speed.pull-left 上传速度：
+                                i 2.33M/S
+                            .uploaded.pull-left 已上传：
+                                i 2.43M/120M
+                    .fill-tip 只差一点了，请在下方补充视频信息：
+                    .form-container
+                    include ../1-1-x/tmpl/info-editor
+        if(userInfo.userId && !hasAgreed)
+            include partial/agreement
+
+        .add-set-dialog
+            .container
+                .title 新建选集
+                .content
+                    input(type='text',placeholder='请输入选集名')
+                .confirm-btn 确定
+                .remove-btn
+        .tip-dialog
+            .container
+                .content
+                .confirm-btn 确定
+                .remove-btn
+        .submit-success-dialog
+            .container
+                .success-icon
+                .remove-btn
+                .operation
+                    a.continue-btn(href='/video/upload') 继续上传
+                    | &emsp;
+                    | &emsp;
+                    a.manage-btn(href='/video/console') 视频管理
+
+        include partial/user-editor
+    script.
+        require('/pages/pc/video/1-0-x/upload');

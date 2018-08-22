@@ -1,0 +1,60 @@
+//
+   Created by Dillance on 17/1/12.
+
+.play-comment-box
+    .title
+        i.comment-total-num #{videoInfo.commentCount}
+        | 条评论
+    .say-box
+        .avatar
+            if userInfo.userId
+                img(src='#{userInfo.avatar}')
+            else
+                img(src='http://img2.cache.netease.com/bobo/image/avatar150.png')
+        .input-wrap
+            if userInfo.userId
+                input(type='text',placeholder='发表评论')
+            else
+                input(type='text',placeholder='先登录，才能发评论哦')
+        .send-btn 发&emsp;表
+    .comment-list
+    .switch
+
+
+script(type='text/template', data-key='comment-item')
+    <% data.forEach(function(d){ %>
+    .comment-item
+        .comment-body(data-id!='<%-d.id%>',data-cid!='<%-d.id%>',data-user-id!='<%-d.userIdStr%>',data-nick!='<%-d.nick%>')
+            a.avatar(href!='/new/person?id=<%-d.userIdStr%>',target='_blank')
+                img(src!='<%-(d.avatar || "http://img2.cache.netease.com/bobo/image/avatar150.png")%>')
+            .info
+                .name
+                    a(href!='/new/person?id=<%-d.userIdStr%>',target='_blank') <%-d.nick%>
+                    i.time <%-(dateParser(d.createTime))%>
+                .words <%-d.content%>
+            .operation
+                <% if(d.userIdStr != !{userInfo.userIdStr || '""'}){ %>
+                .report-btn(data-cid!='<%-d.id%>')
+                <% } %>
+                .reply-btn
+                .like-btn(class!='<% if(d.hasSupport){ %>ed<% } %>',data-cid!='<%-d.id%>') <%-d.supportCount%>
+        .reply-box(id!='<%-d.id%>')
+    <% }); %>
+script(type='text/template', data-key='reply')
+    <% data.forEach(function(d){ %>
+    .comment-body(data-id!='<%-d.id%>',data-cid!='<%-d.cid%>',data-user-id!='<%-d.userIdStr%>',data-nick!='<%-d.nick%>')
+        a.avatar(href!='/new/person?id=<%-d.userIdStr%>',target='_blank')
+            img(src!='<%-d.avatar%>')
+        .info
+            .name
+                a(href!='/new/person?id=<%-d.userIdStr%>',target='_blank') <%-d.nick%>
+                i.weeker 回复
+                a(href!='/new/person?id=<%-d.replyUserIdStr%>',target='_blank') <%-d.replyNick%>
+                i.time <%-(dateParser(d.createTime))%>
+            .words <%-d.content%>
+        .operation
+            <% if(d.userIdStr != !{userInfo.userIdStr || '""'}){ %>
+            .report-btn(data-cid!='<%-d.id%>')
+            <% } %>
+            .reply-btn
+    <% }); %>

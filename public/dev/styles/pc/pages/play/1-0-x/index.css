@@ -1,0 +1,476 @@
+.wrapper {
+  color: #2e2e2e;
+  padding-bottom: 170px; }
+  .wrapper .header {
+    height: 60px;
+    background: #ffaf1a; }
+    .wrapper .header .container {
+      width: 1000px;
+      overflow: hidden;
+      margin: 0 auto; }
+    .wrapper .header .logo {
+      width: 150px;
+      height: 60px;
+      background: url("/dev/images/pages/pc/play/1-0-x/logo.png") no-repeat center;
+      background-color: transparent; }
+    .wrapper .header .action {
+      width: auto;
+      height: 60px;
+      background: url("/dev/images/pages/pc/play/1-0-x/icon01.png") no-repeat left center;
+      background-color: transparent;
+      padding-left: 50px;
+      overflow: hidden; }
+      .wrapper .header .action .download-btn {
+        width: 120px;
+        height: 60px;
+        background: url("/dev/images/pages/pc/play/1-0-x/download-btn.gif") no-repeat center;
+        background-color: transparent; }
+      .wrapper .header .action .join-btn {
+        width: 120px;
+        height: 60px;
+        background: url("/dev/images/pages/pc/play/1-0-x/join-btn.gif") no-repeat center;
+        background-color: transparent; }
+  .wrapper .play-container {
+    width: 1000px;
+    margin: 45px auto 0; }
+    .wrapper .play-container:after {
+      content: '';
+      clear: both;
+      display: block; }
+    .wrapper .play-container .main-wrap {
+      width: 720px; }
+      .wrapper .play-container .main-wrap .video-box {
+        height: 405px;
+        position: relative;
+        overflow: hidden; }
+        .wrapper .play-container .main-wrap .video-box video {
+          width: 100%;
+          height: 100%;
+          background: #000; }
+        .wrapper .play-container .main-wrap .video-box .danmaku-wrap {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: .76rem;
+          width: 100%;
+          overflow: hidden;
+          pointer-events: none; }
+          .wrapper .play-container .main-wrap .video-box .danmaku-wrap .track {
+            font-size: 20px;
+            color: #fff;
+            text-shadow: 1px 1px 2px #000;
+            position: relative; }
+          .wrapper .play-container .main-wrap .video-box .danmaku-wrap .bullet {
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            display: block;
+            opacity: .95;
+            white-space: nowrap;
+            font-weight: bold;
+            -webkit-transition: -webkit-transform 4s linear;
+            -moz-transition: -moz-transform 4s linear;
+            -ms-transition: -ms-transform 4s linear;
+            -o-transition: -o-transform 4s linear;
+            transition: transform 4s linear; }
+            .wrapper .play-container .main-wrap .video-box .danmaku-wrap .bullet.trigger {
+              -webkit-transform: translate(-100%, 0);
+              -moz-transform: translate(-100%, 0);
+              -ms-transform: translate(-100%, 0);
+              -o-transform: translate(-100%, 0);
+              transform: translate(-100%, 0); }
+      .wrapper .play-container .main-wrap .video-info {
+        margin-top: 24px;
+        padding-bottom: 56px;
+        position: relative; }
+        .wrapper .play-container .main-wrap .video-info .primary-info {
+          padding-left: 112px;
+          position: relative;
+          min-height: 90px; }
+          .wrapper .play-container .main-wrap .video-info .primary-info .avatar {
+            width: 86px;
+            height: 86px;
+            border: 2px solid #e5e9eb;
+            border-radius: 100%;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            top: 0; }
+            .wrapper .play-container .main-wrap .video-info .primary-info .avatar img {
+              width: 100%;
+              height: 100%;
+              display: block; }
+          .wrapper .play-container .main-wrap .video-info .primary-info .title {
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 38px;
+            padding: 5px 0; }
+          .wrapper .play-container .main-wrap .video-info .primary-info .stuff {
+            height: 28px;
+            line-height: 28px;
+            font-size: 20px;
+            margin-top: 5px; }
+            .wrapper .play-container .main-wrap .video-info .primary-info .stuff .follow-btn {
+              width: 80px;
+              color: #fff;
+              text-align: center;
+              background: #ffaf1a;
+              border-radius: 3px;
+              font-size: 16px;
+              margin-left: 12px; }
+            .wrapper .play-container .main-wrap .video-info .primary-info .stuff .up-time {
+              font-size: 12px;
+              color: #999;
+              margin-left: 20px; }
+        .wrapper .play-container .main-wrap .video-info .desc {
+          line-height: 28px;
+          font-size: 16px;
+          margin-top: 16px; }
+        .wrapper .play-container .main-wrap .video-info .tags-box {
+          line-height: 24px;
+          font-size: 14px;
+          color: #999;
+          overflow: hidden;
+          margin-top: 22px; }
+          .wrapper .play-container .main-wrap .video-info .tags-box .item {
+            margin-right: 10px; }
+        .wrapper .play-container .main-wrap .video-info .hits {
+          width: auto;
+          height: 24px;
+          background: url("/dev/images/pages/pc/play/1-0-x/icon04.png") no-repeat left center;
+          background-color: transparent;
+          line-height: 24px;
+          padding-left: 35px;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          font-size: 14px; }
+        .wrapper .play-container .main-wrap .video-info .action {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          font-size: 14px;
+          overflow: hidden;
+          line-height: 40px; }
+          .wrapper .play-container .main-wrap .video-info .action .collect-btn {
+            width: auto;
+            height: 30px;
+            background: url("/dev/images/pages/pc/play/1-0-x/icon02.png") no-repeat left center;
+            background-color: transparent;
+            overflow: hidden;
+            padding-left: 46px;
+            margin-right: 66px; }
+          .wrapper .play-container .main-wrap .video-info .action .share-btn {
+            width: auto;
+            height: 30px;
+            background: url("/dev/images/pages/pc/play/1-0-x/icon03.png") no-repeat left center;
+            background-color: transparent;
+            overflow: hidden;
+            padding-left: 46px; }
+      .wrapper .play-container .main-wrap .comment-box {
+        margin-top: 76px; }
+        .wrapper .play-container .main-wrap .comment-box .title {
+          font-size: 30px;
+          line-height: 40px;
+          font-weight: bold; }
+          .wrapper .play-container .main-wrap .comment-box .title i {
+            font-size: 18px;
+            font-weight: 100;
+            color: #ffaf1a;
+            margin-left: 10px; }
+        .wrapper .play-container .main-wrap .comment-box .send-comment-btn {
+          border: 1px solid #d2d2d2;
+          background: #f7f7f7;
+          color: #999;
+          line-height: 48px;
+          margin-top: 35px;
+          border-radius: 3px;
+          text-align: center;
+          font-size: 20px;
+          display: block; }
+          .wrapper .play-container .main-wrap .comment-box .send-comment-btn:active {
+            color: #eee; }
+        .wrapper .play-container .main-wrap .comment-box .comment-list {
+          margin-top: 18px; }
+          .wrapper .play-container .main-wrap .comment-box .comment-list .item {
+            padding-left: 76px;
+            position: relative;
+            min-height: 50px;
+            margin-top: 30px; }
+            .wrapper .play-container .main-wrap .comment-box .comment-list .item .avatar {
+              width: 46px;
+              height: 46px;
+              overflow: hidden;
+              border: 2px solid #e3e7ea;
+              border-radius: 100%;
+              position: absolute;
+              top: 0;
+              left: 0; }
+              .wrapper .play-container .main-wrap .comment-box .comment-list .item .avatar img {
+                width: 100%;
+                height: 100%;
+                display: block; }
+            .wrapper .play-container .main-wrap .comment-box .comment-list .item .content {
+              position: relative;
+              padding-bottom: 15px;
+              border-bottom: 1px dashed #cfcfcf; }
+              .wrapper .play-container .main-wrap .comment-box .comment-list .item .content .name {
+                color: #999;
+                line-height: 32px;
+                font-size: 16px; }
+              .wrapper .play-container .main-wrap .comment-box .comment-list .item .content p {
+                font-size: 18px;
+                line-height: 24px;
+                padding: 10px 0; }
+              .wrapper .play-container .main-wrap .comment-box .comment-list .item .content .action {
+                position: absolute;
+                top: 0;
+                right: 0; }
+                .wrapper .play-container .main-wrap .comment-box .comment-list .item .content .action .like-btn,
+                .wrapper .play-container .main-wrap .comment-box .comment-list .item .content .action .comment-btn,
+                .wrapper .play-container .main-wrap .comment-box .comment-list .item .content .action .more-btn {
+                  padding-left: 30px;
+                  margin-left: 34px;
+                  color: #999;
+                  overflow: hidden;
+                  line-height: 34px; }
+                .wrapper .play-container .main-wrap .comment-box .comment-list .item .content .action .like-btn {
+                  width: auto;
+                  height: 24px;
+                  background: url("/dev/images/pages/pc/play/1-0-x/icon05.png") no-repeat left center;
+                  background-color: transparent; }
+                .wrapper .play-container .main-wrap .comment-box .comment-list .item .content .action .comment-btn {
+                  width: auto;
+                  height: 24px;
+                  background: url("/dev/images/pages/pc/play/1-0-x/icon06.png") no-repeat left center;
+                  background-color: transparent; }
+                .wrapper .play-container .main-wrap .comment-box .comment-list .item .content .action .more-btn {
+                  width: auto;
+                  height: 24px;
+                  background: url("/dev/images/pages/pc/play/1-0-x/icon07.png") no-repeat left center;
+                  background-color: transparent; }
+              .wrapper .play-container .main-wrap .comment-box .comment-list .item .content .reply-box .reply-item {
+                padding: 10px 0; }
+                .wrapper .play-container .main-wrap .comment-box .comment-list .item .content .reply-box .reply-item .user-info {
+                  overflow: hidden; }
+                  .wrapper .play-container .main-wrap .comment-box .comment-list .item .content .reply-box .reply-item .user-info .avatar {
+                    width: 32px;
+                    height: 32px;
+                    position: relative; }
+                  .wrapper .play-container .main-wrap .comment-box .comment-list .item .content .reply-box .reply-item .user-info .name {
+                    line-height: 34px;
+                    margin-left: 10px; }
+            .wrapper .play-container .main-wrap .comment-box .comment-list .item:last-child .content {
+              border-bottom: 0; }
+    .wrapper .play-container .sub-wrap {
+      width: 245px; }
+      .wrapper .play-container .sub-wrap .title {
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 34px; }
+        .wrapper .play-container .sub-wrap .title i {
+          font-size: 18px;
+          font-weight: 100;
+          color: #ffaf1a; }
+      .wrapper .play-container .sub-wrap .episodes-list {
+        margin-top: 30px;
+        height: 510px;
+        overflow: auto; }
+        .wrapper .play-container .sub-wrap .episodes-list .item {
+          height: 106px;
+          border: 2px solid #f1f1f1;
+          background: #f1f1f1;
+          line-height: 106px;
+          text-align: center;
+          border-radius: 5px;
+          margin-bottom: 26px; }
+          .wrapper .play-container .sub-wrap .episodes-list .item:last-child {
+            margin: 0; }
+          .wrapper .play-container .sub-wrap .episodes-list .item.current {
+            background: #fff;
+            border-color: #ffaf1a;
+            color: #ffaf1a; }
+          .wrapper .play-container .sub-wrap .episodes-list .item .video-title {
+            font-size: 18px;
+            width: 165px;
+            max-height: 56px;
+            line-height: 28px;
+            overflow: hidden;
+            text-align: left;
+            display: inline-block;
+            vertical-align: middle; }
+
+.download-bar {
+  height: 170px;
+  background: #ffaf1a;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%; }
+  .download-bar .container {
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden; }
+    .download-bar .container .slogan {
+      width: auto;
+      height: 69px;
+      background: url("/dev/images/pages/pc/play/1-0-x/logo-big.png") no-repeat left center;
+      background-color: transparent;
+      padding-top: 20px;
+      padding-left: 86px;
+      margin-top: 36px;
+      font-size: 24px;
+      line-height: 34px; }
+      .download-bar .container .slogan b {
+        font-size: 30px; }
+    .download-bar .container .download-btn {
+      width: 319px;
+      height: 140px;
+      background: url("/dev/images/pages/pc/play/1-0-x/download-btn02.gif") no-repeat center;
+      background-color: transparent;
+      margin-top: 15px; }
+
+.play-tip-dialog {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none; }
+  .play-tip-dialog .container {
+    width: 610px;
+    height: 340px;
+    background: #333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -305px;
+    margin-top: -170px;
+    overflow: hidden;
+    border-radius: 10px; }
+    .play-tip-dialog .container .con {
+      margin: 85px auto 62px;
+      width: 336px;
+      height: 56px;
+      background: url("/dev/images/pages/pc/play/1-0-x/logo-cry.png") no-repeat left center;
+      background-color: transparent;
+      padding-top: 24px;
+      color: #999;
+      font-size: 22px;
+      padding-left: 72px;
+      line-height: 28px; }
+  .play-tip-dialog .action {
+    width: 444px;
+    height: 46px;
+    margin: 0 auto; }
+    .play-tip-dialog .action .cancel-btn {
+      width: 192px;
+      height: 44px;
+      line-height: 44px;
+      border: 1px solid #ffaf1a;
+      color: #ffaf1a; }
+    .play-tip-dialog .action .confirm-btn {
+      width: 194px;
+      height: 46px;
+      line-height: 46px;
+      background: #ffaf1a;
+      color: #333; }
+    .play-tip-dialog .action .cancel-btn,
+    .play-tip-dialog .action .confirm-btn {
+      border-radius: 4px;
+      text-align: center;
+      font-size: 22px; }
+  .play-tip-dialog .remove-btn {
+    width: 25px;
+    height: 25px;
+    background: url("/dev/images/pages/pc/play/1-0-x/remove-btn.png") no-repeat center;
+    background-color: transparent;
+    position: absolute;
+    top: 20px;
+    right: 20px; }
+
+.share-dialog {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none; }
+  .share-dialog .container {
+    width: 610px;
+    height: 340px;
+    background: #333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -305px;
+    margin-top: -170px;
+    overflow: hidden;
+    border-radius: 10px; }
+    .share-dialog .container .con {
+      margin-left: 60px;
+      line-height: 80px;
+      color: #999;
+      font-size: 22px; }
+    .share-dialog .container .platform-list {
+      width: 490px;
+      margin: 50px auto 0;
+      text-align: justify; }
+      .share-dialog .container .platform-list:after {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        content: '';
+        display: inline-block; }
+      .share-dialog .container .platform-list .item {
+        line-height: 46px;
+        padding-top: 80px;
+        display: inline-block;
+        color: #999;
+        cursor: pointer;
+        text-align: center;
+        font-size: 14px; }
+        .share-dialog .container .platform-list .item.wechat {
+          width: 81px;
+          height: auto;
+          background: url("/dev/images/pages/pc/play/1-0-x/icon-wechat.png") no-repeat center top;
+          background-color: transparent; }
+        .share-dialog .container .platform-list .item.moment {
+          width: 81px;
+          height: auto;
+          background: url("/dev/images/pages/pc/play/1-0-x/icon-moment.png") no-repeat center top;
+          background-color: transparent; }
+        .share-dialog .container .platform-list .item.weibo {
+          width: 81px;
+          height: auto;
+          background: url("/dev/images/pages/pc/play/1-0-x/icon-weibo.png") no-repeat center top;
+          background-color: transparent; }
+        .share-dialog .container .platform-list .item.qzone {
+          width: 81px;
+          height: auto;
+          background: url("/dev/images/pages/pc/play/1-0-x/icon-qzone.png") no-repeat center top;
+          background-color: transparent; }
+    .share-dialog .container .qrcode {
+      width: 160px;
+      height: 160px;
+      position: absolute;
+      top: 1px;
+      left: 90px;
+      background: #fff;
+      overflow: hidden;
+      display: none; }
+      .share-dialog .container .qrcode .body {
+        width: 150px;
+        margin: 5px auto 0;
+        height: 150px; }
+    .share-dialog .container .remove-btn {
+      width: 25px;
+      height: 25px;
+      background: url("/dev/images/pages/pc/play/1-0-x/remove-btn.png") no-repeat center;
+      background-color: transparent;
+      position: absolute;
+      top: 20px;
+      right: 20px; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,86 @@
+//
+   Created by Dillance on 17/1/14.
+
+extends ./../../layout/1-0-x/index
+block head
+    meta(name='description', content='网易菠萝_泛游戏视频社区，网易菠萝原班团队倾力打造的泛游戏视频社区，立足网易游戏、暴雪资源优势，聚合知名游戏、搞笑、动画类PGC，提供内容丰富的泛游戏视频。')
+    meta(name='keywords', content='网易菠萝, 网易, 菠萝, 无广告, 游戏, 原创视频, 视频, 守望先锋, 英雄联盟, LOL, OW, 守望屁股, 视频社区, 炉石传说, 大力金刚,直播,小视频,网红,斗鱼, 虎牙, 熊猫, 战旗, bilibili, 腾讯, 土豆,网易游戏,二次元, 游戏杂谈, 游戏解说, 大神解说, 游戏集锦, 泛娱乐, 搞笑')
+    title #{targetUserInfo.nick}-网易菠萝-泛游戏视频社区
+    include ../../_include/base-dependencies
+    link(rel='stylesheet', href='/dev/styles/pc/pages/newbolo/person/1-0-x/index.css')
+    script.
+        var TARGET_USER_INFO = !{JSON.stringify(targetUserInfo)};
+block content
+    include ../../components/side-bar/1-0-x/index
+    include ../../components/header/1-0-x/index
+    - var pageType = (query.id && (query.id != userInfo.userIdStr)) || (!query.id && !userInfo.userIdStr) ? 'else' : 'self';
+    .wrapper
+        .person-info
+            .avatar
+                img(src='#{targetUserInfo.avatar || "http://img2.cache.netease.com/bobo/image/avatar150.png"}')
+                if (userInfo.userIdStr && !query.id) || (userInfo.userIdStr == query.id)
+                    .input-wrap
+                        input(type='file')
+            .main-info
+                .name #{targetUserInfo.nick}
+                .intro #{targetUserInfo.intro}
+                .data
+                    span.item.follow #{targetUserInfo.followCount || 0}
+                        i.unit 关注
+                    span.item.fans #{targetUserInfo.followedCount || 0}
+                        i.unit 粉丝
+                    span.item.publish #{targetUserInfo.onlineVideoCount || 0}
+                        i.unit 发布
+            if query.id != userInfo.userIdStr
+                .follow-btn(class='#{targetUserInfo.followed && "ed"}',data-id='#{query.id}')
+            else
+                .edit-btn
+        .module-title.my-concern #{pageType == 'else' ? 'TA' : '我'}的关注
+            i.count 0
+        .concern-list-wrap
+            .concern-list(class='#{pageType}')
+                script(type='text/template', data-key='concern-list')
+                    <% data.forEach(function(d){ %>
+                    .item
+                        .uploader-info
+                            a.avatar(href!='/new/person?id=<%-d.userIdStr%>',target='_blank')
+                                img(src!='<%-(getImage(d.avatar,[60,60]))%>')
+                            .stuff
+                                a.name(href!='/new/person?id=<%-d.userIdStr%>',target='_blank') <%-d.nick%>
+                                .intro <%-d.intro%>
+                        .video-box
+                            <% d.videoList.forEach(function(v,i){ %>
+                            a.video-item(href!='/new/play?videoId=<%-v.videoId%>',target='_blank')
+                                .poster
+                                    img(src!='<%-(getImage(v.cover,[160,90]))%>')
+                                .title <%-v.title%>
+                            <% if(i == 0){ %>
+                            | <%-('&nbsp;')%>
+                            <% } %>
+                            <% }); %>
+                            <% if(!d.videoList.length){ %>
+                            .video-item
+                                .poster
+                                .title.gray 该用户还未发表视频
+                            <% } %>
+                    <% }); %>
+        .module-title.my-publish #{pageType == 'else' ? 'TA' : '我'}的发布
+            i.count #{targetUserInfo.onlineVideoCount}
+        .publish-video-list.video-card-list-wrap(class='#{pageType}',data-interface='/bolo/api/channel/videoList.htm',data-length='infinite',data-page-size='9',data-page-num='1',data-user-id='#{query.id || userInfo.userIdStr}')
+            include ../../components/video-card-list/1-0-x/index.jade
+        include ../../components/footer/1-0-x/index
+    include ../../components/footer/1-0-x/bobo
+    .user-info-editor
+        .container
+            .title 编辑资料
+            .input-wrap
+                input(type='text',placeholder='昵称',value='#{targetUserInfo.nick}',data-default-val='#{targetUserInfo.nick}',maxlength='10')
+            .input-wrap(style='margin-top:10px;')
+                textarea(rows='3',placeholder='简介',data-default-val='#{targetUserInfo.intro}',maxlength='20') #{targetUserInfo.intro}
+            .operation
+                .cancel-btn 取&nbsp;消
+                .confirm-btn 保&nbsp;存
+            .remove-btn
+    script.
+        require('/pages/pc/newbolo/person@1-0-x');
+

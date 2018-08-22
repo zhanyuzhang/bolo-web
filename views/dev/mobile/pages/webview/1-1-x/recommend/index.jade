@@ -1,0 +1,46 @@
+//
+   Created by Dillance on 16/4/27.
+
+extends ./../../../../../layout
+block head
+    meta(name='keywords', content='网易Bobo 美女主播 视频聊天 美女视频 视频直播 美女秀场 视频聊天室 在线K歌 视频交友')
+    meta(name='description', content='BoBo是网易旗下大型在线娱乐社区 互联网明星直播平台 在线视频聊天 在线K歌跳舞 视频交友 赶快加入')
+    title 菠萝菌的力荐清单
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/webview/1-1-x/recommend/index.css')
+    - var originWidth = 1080
+    include ../../../../_include/rem-helper
+block content
+    .wrapper
+        .nav-bar
+            .list-wrap
+                include tmpl/category-list
+                ul.list-container
+            .open-btn
+
+        .main-container.swiper-container
+            .content.swiper-wrapper
+                .list-wrap.swiper-slide(data-cid='#{query.zid}')
+                    .scroll-wrap
+                        .hot-area
+                            .title
+                                .text-block 本区热门
+                            ul.hot-video-list
+                        .all-area
+                            .title
+                                .text-block 每日新视频
+                            ul.all-video-list
+                    .fly-to-top
+            include tmpl/video-wrap
+            include tmpl/video-list
+
+    .nav-list-all
+        ul.list-wrap
+        .close-btn
+    .tip-dialog
+
+    script.
+        require('/pages/mobile/webview/recommend/1-1-x/recommend');
+
+    include ../../../../_include/cnzz-stat

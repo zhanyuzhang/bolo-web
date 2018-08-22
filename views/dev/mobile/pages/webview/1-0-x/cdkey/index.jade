@@ -1,0 +1,57 @@
+// Created by Dillance on 16/9/29.
+
+extends ./../../../../../layout
+block head
+    meta(name="keywords" content="网易菠萝 短视频 二次元 网络剧 真人短剧 在线直播 萌动漫 污视频 贱直播")
+    meta(name="description" content="菠萝是网易旗下海量短视频平台 年轻人娱乐社区 热门IP短剧想看就看 更有著名IP创作团队与你即时直播互动 就差爱吐槽的你 赶快加入")
+    title 兑换码
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/webview/1-0-x/cdkey/index.css')
+    - var originWidth = 1080
+    include ../../../../_include/rem-helper
+block content
+    .wrapper
+        .form-box
+            .input-wrap
+                input(type='text',placeholder='输入兑换码',value='#{query.code || ""}')
+            .confirm-btn 确定
+        .ticket-box(id="invite-box")
+            script(type='text/template', data-key='invitation')
+                <% data.forEach(function(d){ %>
+                .coupon(class!='<% if(d.status == 1 || d.status == 2 || d.blanceNum == 0){ %>dead<% } %>')
+                    .info
+                        .content
+                            .description 邀请好友看
+                            .title 《<%-d.userName%>》<%-d.setName%>
+                    .status
+                        <% if(d.status == 0){ %>
+                        .content
+                            .share-btn(data-setId!='<%-d.setId%>',data-code!='<%-d.code%>' data-setName!='<%-d.setName%>' data-userName!='<%-d.userName%>') 免费邀请
+                        <% }else{ %>
+                        .content 已失效
+                        <% } %>
+                <% }); %>
+
+        .ticket-box(id="ticket-box")
+            script(type='text/template', data-key='coupon')
+                <% data.forEach(function(d){ %>
+                .coupon(class!='<% if(d.status == 1 || d.status == 2){ %>dead<% } %>')
+                    .info
+                        .content
+                            .title <%-d.name%>&emsp;
+                                .valid-date 有效期至<%-dateParser(d.pastDue)%>
+                            .tip <%-d.intro%>
+                    .status
+                        <% if(d.status == 0){ %>
+                        .content
+                            .play-btn(data-vids!='<%-d.vids%>',data-name!='<%-d.name%>')
+                            .text 马上去看
+                        <% }else{ %>
+                        | 已失效
+                        <% } %>
+                <% }); %>
+    .tip-dialog
+    script.
+        require('/pages/mobile/webview/cdkey@1-0-x');
+    include ../../../../_include/cnzz-stat

@@ -1,0 +1,13 @@
+node_modules
+npm-debug.log
+public/release
+views/release
+.idea
+public/dev/scripts/test/**/*.js
+public/dev/scripts/app/**/*.js
+!public/dev/scripts/app/**/*-debug.js
+public/dev/views/**/*.html
+public/dev/styles/**/*.map
+public/dev/styles/**/*.scssc
+logs
+cachedFileList.txt

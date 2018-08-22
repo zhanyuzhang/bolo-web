@@ -1,0 +1,35 @@
+.page-container.cover-editor
+    .content
+        .title 封面设置
+        .main-body
+            .mode-one.pull-left
+                label.methods
+                    input(type='radio',name='img-editor-mode',checked='checked')
+                    i &nbsp;方式一
+                    i.tip &emsp;自选封面
+                .img-selector
+                    img
+                    input(type='file')
+                    .cover 编辑封面
+                ul.tips-box
+                    li.item 封面图分辨率为16:9
+                    li.item 大小不超过3M
+                    li.item 支持jpg、gif、png格式
+                    li.item 点击封面上传图片
+            .mode-two.pull-left
+                label.methods
+                    input(type='radio',name='img-editor-mode')
+                    i &nbsp;方式二
+                    i.tip &emsp;从以下视频截图中选取封面
+                ul.img-list
+                    script(type='text/template', data-key='screenshot-item')
+                        <% data.forEach(function(d){ %>
+                        li.item
+                            label
+                                input(type='radio',name='img-item')
+                                img(src!='<%=d%>')
+                        <% }); %>
+                .change-btn 换一批
+        .options
+            .cancel-btn 取消
+            .confirm-btn 确认

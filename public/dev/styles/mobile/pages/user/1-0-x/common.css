@@ -1,0 +1,48 @@
+html{   -webkit-box-orient: vertical; -webkit-box-align: center; -webkit-tap-highlight-color:rgba(255,0,0,0); height: 100%;}
+body { margin:0; font-family: "Microsoft YaHei", "微软雅黑", Arial,sans-serif; font-size:22px; position:relative; background:#fafafa; height:100%;}
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, blockquote, p { padding:0; margin:0;background:url(//img2.cache.netease.com/bobo/img15/appyrj1503/blank.gif) no-repeat 0 0; font-size:22px;}
+table, td, tr, th { font-size:0.12rem;}
+li { list-style-type:none; }
+img { vertical-align:top; border:0;}
+ol, ul { list-style:none; }
+h1, h2, h3, h4, h5, h6 { font-size:0.12rem; font-weight:normal;}
+.fB { font-weight:bold;}
+.clearfix { *zoom:1;}
+.clearfix:after, .area:after { display:block; overflow:hidden; clear:both; height:0; visibility:hidden; content:"."; }
+.blank1 { clear:both; height:0.01rem; overflow:hidden; display:block; }
+.blank5 { clear:both; height:0.05rem; overflow:hidden; display:block; }
+.blank6{ clear:both; height:0.06rem; overflow:hidden; display:block; }
+.blank10 { clear:both; height:0.10rem; overflow:hidden; display:block; }
+.blank24{ clear:both; height:0.24rem; overflow:hidden; display:block; }
+.normal{display: none;}
+.normal.on{display: block;}
+
+.bnav { position: fixed; bottom: 0; z-index: 2; background: #f4f4f4; width:100%; clear: both ; margin: 0 auto; height: 0.92rem; border-top:1px solid #e8e8e8;}
+.bnav ul { clear: both; float:left; width:100%;}
+.bnav li { width:50%; float:left; text-align: center;}
+.bnav li h2 {font-size: 0.20rem; color:#6f6f6f; padding-top:0.05rem;}
+.bnav-home { width:0.70rem; height: 0.92rem; clear: both; margin: 0 auto;}
+.bnav-home-ic {width:0.49rem; height: 0.47rem; clear: both; margin:0.10rem auto 0; background: url("/dev/images/index/1-0-x/mhbg01a.png") no-repeat; background-size: 100% 100%; display: block;}
+.bnav-rank { width:0.70rem; height: 0.92rem; clear: both; margin: 0 auto;}
+.bnav-rank-ic {width:0.47rem; height: 0.47rem; clear: both; margin:0.10rem auto 0; background: url("/dev/images/index/1-0-x/mhbg02a.png") no-repeat; background-size: 100% 100%; display: block;}
+.bnav-me { width:0.70rem; height: 0.92rem; clear: both; margin: 0 auto;}
+.bnav-me-ic {width:0.49rem; height: 0.47rem; clear: both; margin:0.10rem auto 0; background: url("/dev/images/index/1-0-x/mhbg04a.png") no-repeat; background-size: 100% 100%; display: block;}
+.bnav .on .bnav-home-ic { background: url("/dev/images/index/1-0-x/mhbg01b.png") no-repeat; background-size: 100% 100%;}
+.bnav .on .bnav-rank-ic { background: url("/dev/images/index/1-0-x/mhbg02b.png") no-repeat; background-size: 100% 100%;}
+.bnav .on .bnav-me-ic { background: url("/dev/images/index/1-0-x/mhbg04b.png") no-repeat; background-size: 100% 100%;}
+.bnav .on h2{ color:#f12c95;}
+.bnav li a {width:0.70rem; height:0.92rem; display: block ;}
+.bnav li a:active .bnav-home-ic { background: url("/dev/images/index/1-0-x/mhbg01b.png") no-repeat; background-size: 100% 100%;}
+.bnav li a:active .bnav-rank-ic { background: url("/dev/images/index/1-0-x/mhbg02b.png") no-repeat; background-size: 100% 100%;}
+.bnav li a:active .bnav-me-ic { background: url("/dev/images/index/1-0-x/mhbg04b.png") no-repeat; background-size: 100% 100%;}
+.bnav li a:active h2 { color:#f02c95;}
+
+.header{ width: 100%; clear:both; background: #f02d95; height:0.96rem; position: relative;}
+.header-icon{ position: absolute; left:0;top:0; width:0.96rem; height:0.96rem; background: url(/dev/images/pages/mobile/user/1-0-x/fl_icon.png) no-repeat 0.25rem 0.35rem; background-size:0.20rem 0.34rem; z-index: 10; }
+.header-title{ position:absolute; left:0; top:0;text-align: center; width: 100%; font-size: 0.36rem; color:#fafffd; line-height: 0.96rem; z-index: 9;}
+
+.user-medal{display:inline-block;vertical-align: bottom;width:0.48rem;height:0.40rem;background-size:0.48rem 0.40rem;}
+
+.follows-tips { position: fixed; z-index: 1000;width:100%; clear:both; margin:0 auto; display:none; bottom:5%; text-align:center;margin-top:-10px;}
+.follows-tips-text { background:url("/dev/images/user/1-0-x/follows_tipsbg.png"); border-radius:4px;padding:0.08rem 0.30rem 0.10rem; font-size: 0.24rem; color:#fff; line-height:160%; display:inline-block;box-shadow: 0 0 5px #232323;}
+

@@ -1,0 +1,35 @@
+extends ./../../../../../layout
+block head
+    meta(name='keywords', content='网易菠萝 萌贱污 无广告 视频')
+    meta(name='description', content='网易菠萝-有内涵无广告萌贱原创视频神器')
+    title 菠萝菌的力荐清单
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/webview/1-0-4/sysinfo/index.css')
+    - var originWidth = 1080
+    include ../../../../_include/rem-helper
+block content
+    .sysInfoList.sysNList
+    script(id="tpl",type="text/template")
+        <% for(var index in this){ %>
+        .item(data-type!="<% this[index]['linkType'] %>",data-value!="<% this[index]['link'] %>")
+            h1 <% this[index]['title'] %>
+            p <% this[index]['content'] %>
+                <% if(this[index]['linkType']==1) {%>
+                a 戳我看《<% this[index]['videoTitle'] %>》
+                <% } %>
+                <% if(this[index]['linkType']==2){ %>
+                a 点这里去看看 @<% this[index]['channelName'] %> 的精彩视频
+                <% } %>
+                <% if(this[index]['linkType']==4){ %>
+                <% if(this[index]['anchorName']!=null){ %>
+                a 火速点开 @<% this[index]['anchorName'] %> 的围观直播现场
+                <% } %>
+                <% } %>
+                <% if(this[index]['linkType']==0){ %>
+                a <% this[index]['link'] %>
+                <% } %>
+            span.time  <% this[index]['dateStr'] %>
+        <% } %>
+    script.
+        require('/pages/mobile/webview/sysinfo@1-0-x')

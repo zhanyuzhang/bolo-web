@@ -1,0 +1,45 @@
+.video-box(data-duration='#{videoInfo.isLock > 0 ? videoInfo.previewDuration : videoInfo.duration}' data-islock = videoInfo.isLock)
+    if videoInfo.isLock > 0
+        .locked-video
+            .content
+                .text 嘤嘤嘤，这个视频仅支持在APP观看。
+                .download-btn 下载菠萝观看
+    else
+        video(poster='#{videoInfo.cover.trim()}',preload='auto',webkit-playsinline)
+            source(src='#{videoInfo.linkMp4}',type='video/mp4')
+        img(class="replace-img hidden" src='#{videoInfo.cover.trim()}' )
+        .locked-video-playing-tips(class="hidden")
+            .wording(class="bottom") 免费预览，
+                span(class="buy-btn" data-stat="play_pay_float") 立即购买
+                span 查看全集
+        .locked-video-end-tips(class="hidden")
+            .content
+                h2 更多精彩，购买即可观看~
+                .buy-btn(data-stat="play_pay_ending") 立即购买
+            //.replay-btn 重新播放
+        ul.danmaku-wrap
+        .first-play-btn
+        .controller
+            .play-btn
+            - var minute = Math.floor(videoInfo.duration / 60);
+            - var second = videoInfo.duration % 60;
+            .time #{minute > 9 ? minute : '0' + minute}:#{second > 9 ? second : '0' + second}
+            .progress-bar
+                .dynamic-bar
+                    .control-btn
+            .full-screen-btn
+            .danmaku-switch
+    include ./author-info
+    .video-box-end(class="hidden")
+        .video-lists
+            .item
+                img
+                .bottom
+                    p
+            .item
+                img
+                .bottom
+                    p
+        .video-box-end-tips  更多污视频，立即下载爱啪啪~
+        a.video-box-end-btn  立即下载
+        a.video-box-end-reset 重新播放

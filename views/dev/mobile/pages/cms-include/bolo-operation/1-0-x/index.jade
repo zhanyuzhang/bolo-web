@@ -1,0 +1,15 @@
+link(rel='stylesheet', href='/dev/styles/mobile/common/base/1-0-x/base.css')
+- var originWidth = 1080
+include ../../../../_include/rem-helper
+include ../../../../_include/comment
+script.
+    var head = document.head || document.getElementsByTagName("head")[0] || document.documentElement,
+        bowlScript = document.createElement("script");
+
+    bowlScript.onload = function(){
+        require('/pages/mobile/cms-include/bolo-operation@1-0-x');
+    }
+
+    bowlScript.async = true;
+    bowlScript.src = '/dev/scripts/bowl.js';
+    head.appendChild(bowlScript);

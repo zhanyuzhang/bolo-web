@@ -1,0 +1,183 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+.hidden {
+  display: none; }
+
+body {
+  background-color: #fff;
+  background-image: url("/dev/images/pages/mobile/act/seckill/1-0-x/bg.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-repeat: repeat-y; }
+  body .wrapper {
+    position: relative;
+    padding: .1rem .2rem; }
+    body .wrapper .header {
+      height: 3.4rem;
+      background-image: url("/dev/images/pages/mobile/act/seckill/1-0-x/header.png");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      position: relative; }
+      body .wrapper .header .remained-count {
+        font-size: .30rem;
+        position: absolute;
+        font-weight: bold; }
+        body .wrapper .header .remained-count .count {
+          color: red; }
+      body .wrapper .header .wording {
+        font-size: .2rem;
+        width: 3.7rem;
+        text-align: center;
+        left: 1.4rem;
+        position: absolute;
+        top: 2.5rem;
+        color: #fff; }
+      body .wrapper .header .timmer {
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+        -webkit-justify-content: center;
+        align-items: center;
+        -webkit-align-items: center;
+        width: 3.7rem;
+        height: .55rem;
+        position: absolute;
+        left: 1.4rem;
+        top: 1.9rem;
+        font-size: .25rem;
+        color: red;
+        padding-left: .05rem; }
+        body .wrapper .header .timmer .part .high-bit, body .wrapper .header .timmer .part .low-bit {
+          display: inline-block;
+          background: #fff;
+          border-radius: .05rem;
+          padding: .025rem;
+          margin-left: .05rem; }
+        body .wrapper .header .timmer .part .unit {
+          display: inline-block;
+          color: #fff;
+          margin-left: .05rem;
+          font-size: .2rem; }
+    body .wrapper .ticket-before-click {
+      height: 3.68rem;
+      background-image: url("/dev/images/pages/mobile/act/seckill/1-0-x/ticket1.png");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      position: relative; }
+      body .wrapper .ticket-before-click .get-btn {
+        width: 3.2rem;
+        height: .9rem;
+        position: absolute;
+        top: 2.3rem;
+        left: 3.3rem;
+        border-radius: .1rem;
+        background-image: url("/dev/images/pages/mobile/act/seckill/1-0-x/btn-valid.png");
+        background-size: 100%;
+        background-repeat: no-repeat; }
+        body .wrapper .ticket-before-click .get-btn.disabled {
+          background-image: url("/dev/images/pages/mobile/act/seckill/1-0-x/btn-invalid.png");
+          background-size: 100%;
+          background-repeat: no-repeat; }
+    body .wrapper .ticket-after-click {
+      height: 3.68rem;
+      background-image: url("/dev/images/pages/mobile/act/seckill/1-0-x/ticket2.png");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      position: relative; }
+      body .wrapper .ticket-after-click .code {
+        position: absolute;
+        width: 5rem;
+        left: 1.5rem;
+        top: .8rem;
+        font-size: .8rem;
+        text-align: center;
+        font-weight: bold; }
+      body .wrapper .ticket-after-click .get-btn {
+        width: 3.2rem;
+        height: .9rem;
+        position: absolute;
+        top: 2.3rem;
+        left: 2.2rem;
+        border-radius: .1rem;
+        background-image: url("/dev/images/pages/mobile/act/seckill/1-0-x/exchange-btn.png");
+        background-size: 100%;
+        background-repeat: no-repeat; }
+    body .wrapper .recommend {
+      height: 2.83rem;
+      background-image: url("/dev/images/pages/mobile/act/seckill/1-0-x/recommend.png");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      position: relative;
+      margin: .2rem 0; }
+      body .wrapper .recommend .read-more {
+        width: 2rem;
+        height: .5rem;
+        float: right; }
+      body .wrapper .recommend .recommend-video {
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        top: 1.1rem; }
+        body .wrapper .recommend .recommend-video#recommend-video1 {
+          left: 1.2rem; }
+        body .wrapper .recommend .recommend-video#recommend-video2 {
+          left: 4.9rem; }
+    body .wrapper .rule {
+      height: 2.5rem;
+      position: relative; }
+      body .wrapper .rule .title {
+        font-size: .32rem;
+        margin: .2rem 0;
+        font-weight: bold; }
+      body .wrapper .rule .content {
+        font-size: .24rem; }
+        body .wrapper .rule .content li {
+          margin: .1rem 0; }
+  body .modal-window {
+    position: absolute;
+    top: 0;
+    width: 7.5rem;
+    height: 14rem;
+    background: rgba(0, 0, 0, 0.7); }
+  body .warn-window {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 6rem;
+    height: 3.5rem;
+    top: 4rem; }
+    body .warn-window .close-btn {
+      position: absolute;
+      width: .5rem;
+      height: .5rem;
+      left: 5.5rem; }
+    body .warn-window .stay-btn {
+      position: absolute;
+      width: 2.2rem;
+      height: 1rem;
+      left: .5rem;
+      top: 2.05rem; }
+    body .warn-window .leave-btn {
+      position: absolute;
+      width: 2.2rem;
+      height: 1rem;
+      left: 3.2rem;
+      top: 2.05rem; }
+    body .warn-window#not-start {
+      background-image: url("/dev/images/pages/mobile/act/seckill/1-0-x/is-not-start.png");
+      background-size: 100%;
+      background-repeat: no-repeat; }
+    body .warn-window#is-ended {
+      background-image: url("/dev/images/pages/mobile/act/seckill/1-0-x/is-end.png");
+      background-size: 100%;
+      background-repeat: no-repeat; }
+
+/*# sourceMappingURL=index.css.map */

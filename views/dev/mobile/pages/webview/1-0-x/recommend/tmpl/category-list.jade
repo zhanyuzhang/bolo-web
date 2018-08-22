@@ -1,0 +1,4 @@
+script(type='text/template', data-key='category-list')
+    <% data.forEach(function(d,i){ %>
+    li.item(class!='<% if(i == 0){ %>current<% } %>',data-cid!='<%=d.id%>') <%=d.name%>
+    <% }); %>

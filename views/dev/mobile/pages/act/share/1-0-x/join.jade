@@ -1,0 +1,63 @@
+//
+   Created by Dillance on 16/8/30.
+
+extends ./../../../../../layout
+block head
+    include ../../../../_include/seo
+    title 分享计划申请
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/act/share/1-0-x/join.css')
+    - var originWidth = 1080
+    include ../../../../_include/rem-helper
+block content
+    .wechat-share(style='display:none')
+        img(src='/dev/images/pages/mobile/act/share/1-0-x/wechat-share.png')
+    .wrapper
+        .main-container
+            form#join-form
+                .account 申请加入的账号：#{userInfo.nickName}
+                .form-item
+                    .title 真实姓名：
+                    .input-wrap
+                        input(type='text',name='name')
+                .form-item
+                    .title 支付宝账号：
+                    .input-wrap
+                        input(type='text',name='alipayAccount')
+                .form-item
+                    .title 手机号码：
+                    .input-wrap
+                        input(type='text',name='phone')
+                .form-item
+                    .title QQ/微信：
+                    .input-wrap
+                        input(type='text',name='wechatAccount')
+                .form-item
+                    .title 身份证号码：
+                    .input-wrap
+                        input(type='text',name='IDNumber')
+                .id-tip 身份证验证：请上传身份证正反面截图，支持jpg、gif、png格式，单张照片在10k内
+                .id-box
+                    .front-face
+                        .tip 身份证正面
+                        .img-box
+                            img
+                            input(type='file',name='IDImageFront')
+                    | &nbsp;
+                    .back-face
+                        .tip 身份证反面
+                        .img-box
+                            img
+                            input(type='file',name='IDImageBack')
+                .agreement-box
+                    input(type='checkbox',name='agree')
+                    | &nbsp;
+                    .text
+                        | 同意
+                        a(href='/m/act/share/rules') 网易菠萝分享计划协议
+            .contect-tip 分享计划负责人联系方式：gzxuxiaochun#corp.netease.com（#换成@）
+        .submit-btn 提交
+    .tip-dialog
+    script.
+        require('/pages/mobile/act/share/1-0-x/join');

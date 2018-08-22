@@ -1,0 +1,69 @@
+//
+   Created by Dillance on 16/11/16.
+
+extends ./../../../../layout
+block head
+    if query.aid == '14800587113001'
+        meta(name='keywords',content='阿拉蕾,崔雅涵,阿拉蕾是谁的女儿,阿拉蕾崔雅涵父母,董力,视频,图片,合集,身份,微博,爸爸去哪儿第四季,萝莉')
+        meta(name='description',content='萝莉阿拉蕾崔雅涵，各种董力抱阿拉蕾，阿拉蕾父母亮相视频图片合集一网打尽。')
+        title 萌娃阿拉蕾和董力可以组CP的理由
+    else if query.aid == '14800587113301'
+        meta(name='keywords',content='法医秦明，百度云，法医秦明，电视剧，法医秦明，下载，法医秦明幸存者，在线看，百度，bilibili，系列，幸存')
+        meta(name='description',content='法医秦明百度云，法医秦明电视剧，法医秦明下载，法医秦明幸存者在线看')
+        title 《法医秦明》，吃不下饭也要作死追的剧
+    else if query.aid == '14800587105971'
+        meta(name='keywords',content='神奇动物在哪里，预告，豆瓣，什么时候，上映，pdf，下载，书，博士，神奇的魁地奇球')
+        meta(name='description',content='神奇动物在哪里，神奇动物在哪里预告，神奇动物在哪里，豆瓣，神奇动物在哪里什么时候上映')
+        title 天啊！我捕捉到了神奇动物在哪里！
+    else
+        meta(name='keywords',content='网易菠萝 短视频 二次元 网络剧 真人短剧 在线直播 萌动漫 污视频 贱直播')
+        meta(name='description',content='#{collectionInfo.intro}')
+        title #{collectionInfo.name}
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/collection/1-0-x/details.css')
+    - var originWidth = 1080
+    include ../../../_include/rem-helper
+    script.
+        var COLLECTION_INFO = !{JSON.stringify(collectionInfo)};
+block content
+    .wrapper
+        .banner
+            img(src='#{collectionInfo.cover}')
+            .cover
+            .container
+                .content
+                    .title #{collectionInfo.name}
+                    .cutting-line
+                    .intro #{collectionInfo.intro}
+                    .like-btn(data-count='#{collectionInfo.supportCount}') #{collectionInfo.supportCount}次
+        ul.video-list
+            script(type='text/template', data-key='video-item')
+                <% data.forEach(function(d){ %>
+                li.video-item(id!='video-<%-d.videoId%>')
+                    .play-box
+                        .video-box
+                        .cover(data-url!='<%-d.linkMp4%>')
+                            img(src!='<%-d.cover%>')
+                        .danmaku-wrap
+                    .info-box
+                        .title <%-d.title%>
+                        .intro <%-d.intro%>
+                        .upload-master
+                            .avatar
+                                img(src!='<%-(getImage(d.avatar,[80,80]))%>')
+                            .name <%-d.channelName%>
+                <% }); %>
+            script(type='text/template', data-key='video')
+                video(src!='<%-url%>',preload='none',controls='controls',autoplay,webkit-playsinline,playsinline)
+        .more-btn 点击加载更多...
+        include ../../../_include/comment
+    .to-comment-btn.show 评论
+    .video-dialog
+        video(webkit-playsinline)
+    .full-cover
+
+    .tip-dialog
+    script.
+        require('/pages/mobile/collection/1-0-x/details');
+    include ../../../_include/cnzz-stat

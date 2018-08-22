@@ -1,0 +1,9 @@
+script(type='text/template', data-key='comment-reply-list')
+    <% data.forEach(function(d){ %>
+    .reply-item
+        .user-info
+            .avatar.pull-left
+                img(src!='<%=d.avatar%>')
+            .name.pull-left <%-d.nick%>：
+        p <%-d.content%>
+    <% }); %>

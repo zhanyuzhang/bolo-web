@@ -1,0 +1,24 @@
+.bolo-footer{
+  height:268px;background:#393939;
+  .container{
+    width:1000px;margin:0 auto;color:#fff;overflow: hidden;position:relative;
+    h4{font-size:20px;margin-top:42px;}
+    p{line-height:26px;margin-top:22px;font-size:14px;}
+    a{color:#fff;}
+
+    .qr-codes{
+      position:absolute;top:78px;right:0;
+      .download-page,
+      .bolo-wechat-account{
+        width:118px;display: inline-block;vertical-align: top;*display:inline;margin-left:20px;
+        .qr-wrap{
+          height:110px;background:#fff;border-radius:3px;position:relative;
+          .body{@include center-absolute-box(106px,97px);}
+        }
+        .text{margin-top:14px;color:#fff;text-align:center;}
+      }
+      .download-page .body{background:url(/dev/images/common/qr-download-page.png) no-repeat;}
+      .bolo-wechat-account .body{background:url(/dev/images/common/qr-bolo.png) no-repeat;}
+    }
+  }
+}

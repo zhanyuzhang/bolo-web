@@ -1,0 +1,25 @@
+//
+   Created by Dillance on 16/5/23.
+
+extends ./../../../../../layout
+block head
+    meta(name='keywords', content='网易菠萝 萌贱污 无广告 视频')
+    meta(name='description', content='网易菠萝-有内涵无广告萌贱原创视频神器')
+    title 菠萝菌的力荐清单
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/webview/1-0-x/access/index.css')
+    - var originWidth = 1080
+    include ../../../../_include/rem-helper
+block content
+    .wrapper
+        .title 开启菠萝消息推送权限方法
+        br
+        p 手机授权菠萝获得消息推送权限后，菠萝菌才能给大大们推送菠萝,请前往手机【设置】中开启权限
+        br
+        br
+        p 操作步骤：
+        p 请开启手机中的【设置】-【应用】-找到【网易菠萝】并进入-【消息推送】点允许即可。
+        br
+        p.tip 注：由于各手机系统差异，请根据手机实际路径操作。
+        a.set-btn(href='javascript:html5Util.startApplicationDetails();') 马上去设置

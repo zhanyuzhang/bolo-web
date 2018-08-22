@@ -1,0 +1,47 @@
+//
+   Created by gztimboy on 2016/8/29 0029.
+
+extends ./../../../../layout
+block head
+    include ../../../_include/seo
+    title 网易菠萝-有内涵无广告萌贱原创视频神器
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no")
+    meta(name="format-detection" content="address=no,email=no,telephone=no")
+    include ../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/download/1-1-x/index.css')
+    - var originWidth = 720
+    include ../../../_include/rem-helper
+block content
+    div(style='width:0;height:0;overflow:hidden;line-height:0;font-size:0;')
+        img(src='/dev/images/common/bolo-logo.png',width='400')
+    .download-cnt-1
+        .download-cnt-text
+            a.btn2(href='javascript:;',data-href='/m/hybrid/join') 我要入驻
+            a.btn(href='javascript:;',data-href='http://a.app.qq.com/o/simple.jsp?pkgname=com.netease.bolo.android') 下载
+    //.download-cnt-2
+    //.download-cnt-3
+    //    .bolo-icon
+    //    .bolo-icon-arrow
+    .download-bar
+        .logo
+        .ip-name
+            | 网易
+            br
+            | 菠萝
+        .content
+            | 双手下载
+            br
+            | 以示清白
+        a.btn(href='javascript:;',data-href='http://a.app.qq.com/o/simple.jsp?pkgname=com.netease.bolo.android')
+    .download-guide
+        .container
+            .content 请点击这里使用浏览器打开
+            .triangle
+            .icon
+
+    script.
+        var BACKGROUND_INFO = !{JSON.stringify(backgroundInfo)};
+    script(language="JavaScript" src="//img2.cache.netease.com/bobo/img16/appfans1603/swiper.min.js")
+    script.
+        require('/pages/mobile/download@1-1-x');
+    include ../../../_include/cnzz-stat

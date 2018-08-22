@@ -1,0 +1,7 @@
+script(type='text/template', data-key='video-wrap')
+    <% data.forEach(function(d,i){ %>
+    .list-wrap(data-cid!='<%=d.id%>',data-name!='<%=d.name%>')
+        .scroll-wrap
+            ul.video-list
+        .fly-to-top
+    <% }); %>

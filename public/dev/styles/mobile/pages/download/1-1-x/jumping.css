@@ -1,0 +1,24 @@
+@charset "UTF-8";
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+html .wrapper, body .wrapper {
+  position: relative;
+  width: 3.5rem;
+  text-align: center;
+  color: #666666;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%); }
+html .wrapper .wording, body .wrapper .wording {
+  margin-top: .5rem;
+  font-family: '微软雅黑';
+  font-size: .3rem; }
+html .wrapper .hidden, body .wrapper .hidden {
+  display: none; }
+html .wrapper img, body .wrapper img {
+  width: 2.0rem; }
+
+/*# sourceMappingURL=jumping.css.map */

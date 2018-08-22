@@ -1,0 +1,18 @@
+{
+  "app_path": "./app/",
+  "lib_path": "./lib/",
+  "list": [
+    {
+      "target": "/pages/home/1-0-x/(home(.js)?)?$",
+      "excepts": ["^(?!/)"]
+    },
+    {
+      "target": "/common/Header/1-0-x/(Header(.js)?)?$",
+      "excepts": ["^(?!/)"]
+    }
+  ],
+  "ignored_paths": ["bowl","lib"],
+  "uglify_options": {
+    "ascii_only": true
+  }
+}

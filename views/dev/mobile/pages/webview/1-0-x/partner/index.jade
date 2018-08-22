@@ -1,0 +1,78 @@
+//
+   Created by Dillance on 16/6/23.
+
+extends ./../../../../../layout
+block head
+    meta(name="keywords" content="网易菠萝 短视频 二次元 网络剧 真人短剧 在线直播 萌动漫 污视频 贱直播")
+    meta(name="description" content="菠萝是网易旗下海量短视频平台 年轻人娱乐社区 热门IP短剧想看就看 更有著名IP创作团队与你即时直播互动 就差爱吐槽的你 赶快加入")
+    title UP主集结地
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/webview/1-0-x/partner/index.css')
+    - var originWidth = 1080
+    include ../../../../_include/rem-helper
+block content
+    .wrapper
+        .new-partner
+            .title 新UP主
+            ul.partner-list
+                script(type='text/template', data-key='new-partner-list')
+                    <% data.forEach(function(d,i){ %>
+                    li.item(data-id!='<%=d.userIdStr%>')
+                        .avatar
+                            img(src!='<%=(getImage(d.avatar,[200,200]))%>')
+                        .name <%-d.name%>
+                        .intro <%-(d.editorDesc || d.intro)%>
+                        <% if(d.isNew){ %>
+                        .new-icon new
+                        <% } %>
+                    <% }); %>
+        .all-partner
+            .title 全部UP主
+            .category-list-placeholder
+                ul.category-list
+                    script(type='text/template', data-key='category-list')
+                        <% data.forEach(function(d,i){ %>
+                        li.item(data-id!='<%=d.id%>')
+                            .text-inline-block <%-d.tag%>
+                        <% }); %>
+            .partner-box
+                script(type='text/template', data-key='all-partner-list')
+                    <% data.forEach(function(d,i){ %>
+                    .partner-wrap
+                        .header(data-tag!='<%=d.tag%>')
+                            .content
+                                .icon(style!='background:url(<%=d.icon%>) transparent no-repeat center; background-size: 100%')
+                                .text <%-d.tag%>
+                        ul.partner-list
+                            <% d.channels.forEach(function(c,i){ %>
+                            <% if(c.videos && c.videos.length){ %>
+                            li.partner-card(data-id!='<%=c.userIdStr%>')
+                                .partner-info
+                                    .avatar
+                                        img(src!='<%=(getImage(c.avatar,[112,112]))%>')
+                                    .stuff
+                                        .name <%-c.name%>
+                                        .intro <%-c.intro%>
+                                    .follow-btn(class!='<% if(c.isFollowed){ %>followed<% } %>',data-id!='<%=c.userIdStr%>')
+                                        .icon
+                                        .text <% if(c.isFollowed){ %>已关注<% }else{ %>关注<% } %>
+                                .video-box
+                                    <% c.videos.forEach(function(v,i){ %>
+                                    .video-item(data-id!='<%=v.videoId%>')
+                                        .cover
+                                            img.video-img(src='',data-origin!='<%=(getImage(v.cover,[460,260]))%>')
+                                            <% if(v.isLock){ %>
+                                            .icon(class!='<% if(v.isLock == 1){ %>seed<% }else{ %>coin<% } %>')
+                                            <% } %>
+                                        .name <%-v.title%>
+                                    <% }); %>
+                            <% } %>
+                            <% }); %>
+                    <% }); %>
+    .fly-to-top
+    .tip-dialog
+    script.
+        require('/pages/mobile/webview/partner/1-0-x/partner');
+
+    include ../../../../_include/cnzz-stat

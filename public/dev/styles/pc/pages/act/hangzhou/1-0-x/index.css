@@ -1,0 +1,321 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background: #fed384;
+  font-family: Arial, "微软雅黑", “sans-serif”, "宋体"; }
+  body .wrapper {
+    color: #69552f; }
+    body .wrapper .header {
+      position: relative;
+      height: 60px;
+      background: #ffaf1a; }
+      body .wrapper .header .container {
+        width: 1050px;
+        height: 100%;
+        position: relative;
+        margin: 0 auto; }
+        body .wrapper .header .container .logo {
+          width: 150px;
+          height: 100%;
+          background: url("/dev/images/pages/pc/act/hangzhou/1-0-x/logo.jpg") center no-repeat;
+          float: left; }
+        body .wrapper .header .container .menu {
+          width: 280px;
+          height: 100%;
+          float: right;
+          padding-left: 50px;
+          padding-top: 10px;
+          background: url("/dev/images/pages/pc/act/hangzhou/1-0-x/menu-icon.jpg") left no-repeat; }
+          body .wrapper .header .container .menu a {
+            width: 110px;
+            color: #2d2d2d;
+            line-height: 36px;
+            border: 1px solid #2e2e2e;
+            border-radius: 2px;
+            margin-left: 10px;
+            text-align: center;
+            font-size: 18px;
+            margin-top: 10px;
+            opacity: .6;
+            padding: 5px 10px;
+            text-decoration: none; }
+          body .wrapper .header .container .menu .download {
+            color: #000;
+            border: 1px solid #000; }
+    body .wrapper .main {
+      max-width: 1516px;
+      min-width: 1050px;
+      height: 2974px;
+      margin: 0 auto;
+      margin-top: -10px;
+      background: url("/dev/images/pages/pc/act/hangzhou/1-0-x/bg.png") center no-repeat;
+      background-size: cover;
+      border: 1px solid transparent; }
+      body .wrapper .main .player-area {
+        width: 1000px;
+        height: 800px;
+        position: relative;
+        margin: 0 auto;
+        padding-top: 300px; }
+        body .wrapper .main .player-area video {
+          width: 750px;
+          height: 400px;
+          margin: 10px 0 0 140px; }
+        body .wrapper .main .player-area .float-tips {
+          position: absolute;
+          bottom: 20px;
+          right: 0;
+          width: 160px;
+          height: 100px;
+          background: url("/dev/images/pages/pc/act/hangzhou/1-0-x/float-tips.png") center no-repeat;
+          background-size: cover; }
+        body .wrapper .main .player-area .next-btn {
+          position: absolute;
+          right: 10px;
+          top: 480px;
+          width: 73px;
+          height: 96px;
+          background: url("/dev/images/pages/pc/act/hangzhou/1-0-x/replay-btn.png") center no-repeat;
+          background-size: cover;
+          cursor: pointer; }
+        body .wrapper .main .player-area .video-name {
+          position: absolute;
+          bottom: 20px;
+          left: 140px;
+          font-size: 28px; }
+      body .wrapper .main .comment-area {
+        margin: 0 auto;
+        width: 1000px;
+        height: 720px;
+        padding-top: 220px; }
+        body .wrapper .main .comment-area .info {
+          width: 580px;
+          height: 120px;
+          margin-left: 130px; }
+          body .wrapper .main .comment-area .info .wording {
+            width: 65%;
+            height: 100px;
+            float: left;
+            margin-top: 20px;
+            color: #69552f; }
+            body .wrapper .main .comment-area .info .wording .video-name {
+              height: 60px;
+              width: 100%;
+              overflow: hidden;
+              font-size: 24px; }
+            body .wrapper .main .comment-area .info .wording .count {
+              font-size: 24px;
+              margin-top: 10px;
+              font-weight: bold; }
+          body .wrapper .main .comment-area .info .post-img {
+            cursor: pointer;
+            width: 200px;
+            height: 100px;
+            font-size: 30px;
+            float: left;
+            margin-top: 10px;
+            background: url(//img2.cache.netease.com/bobo/2016/8/26/20160826143010a6e51.png) center no-repeat;
+            background-size: cover; }
+            body .wrapper .main .comment-area .info .post-img .play-btn {
+              display: block;
+              width: 48px;
+              height: 48px;
+              background: url("/dev/images/pages/pc/act/hangzhou/1-0-x/play-btn.png") no-repeat;
+              top: 25px;
+              margin: 0 auto;
+              position: relative; }
+        body .wrapper .main .comment-area .comment-list {
+          width: 580px;
+          margin-left: 130px;
+          margin-top: 20px;
+          list-style: none; }
+          body .wrapper .main .comment-area .comment-list li {
+            height: 110px;
+            border-bottom: 1px solid #ccc; }
+            body .wrapper .main .comment-area .comment-list li .user-img {
+              float: left;
+              width: 100px;
+              height: 100px;
+              margin-right: 10px;
+              text-align: center;
+              vertical-align: center; }
+              body .wrapper .main .comment-area .comment-list li .user-img img {
+                margin-top: 25px;
+                width: 50px;
+                height: 50px;
+                border-radius: 25px;
+                overflow: hidden; }
+            body .wrapper .main .comment-area .comment-list li .content {
+              float: left;
+              width: 320px;
+              height: 100px;
+              padding: 20px 0; }
+              body .wrapper .main .comment-area .comment-list li .content .user-name {
+                font-size: 18px; }
+              body .wrapper .main .comment-area .comment-list li .content .comment-content {
+                margin-top: 10px;
+                font-size: 20px;
+                font-weight: bold;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical; }
+            body .wrapper .main .comment-area .comment-list li .like {
+              width: 130px;
+              height: 100px;
+              float: right;
+              position: relative; }
+              body .wrapper .main .comment-area .comment-list li .like .count {
+                color: #aaa;
+                bottom: 0;
+                position: absolute;
+                padding-left: 30px;
+                line-height: 30px;
+                font-size: 20px;
+                width: 130px;
+                height: 29px;
+                background: url("/dev/images/pages/pc/act/hangzhou/1-0-x/like-btn.png") left no-repeat; }
+      body .wrapper .main .gallery-area {
+        width: 1050px;
+        height: 700px;
+        margin: 0 auto;
+        padding: 410px 0 10px 0; }
+        body .wrapper .main .gallery-area .wrap {
+          overflow: hidden;
+          width: 100%;
+          height: 280px; }
+        body .wrapper .main .gallery-area .channel-container {
+          width: 4000px;
+          height: 280px; }
+          body .wrapper .main .gallery-area .channel-container .channel {
+            position: relative;
+            height: 300px;
+            float: left; }
+            body .wrapper .main .gallery-area .channel-container .channel .img-container {
+              width: 200px;
+              height: 284px;
+              padding: 0 10px;
+              display: inline-block;
+              position: relative;
+              left: 0;
+              cursor: pointer; }
+              body .wrapper .main .gallery-area .channel-container .channel .img-container a {
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+                vertical-align: baseline;
+                text-decoration: none;
+                background: transparent;
+                color: #2d2d2d; }
+                body .wrapper .main .gallery-area .channel-container .channel .img-container a img {
+                  vertical-align: top;
+                  width: 180px;
+                  height: 230px; }
+                body .wrapper .main .gallery-area .channel-container .channel .img-container a h3.title {
+                  padding: 0 5px;
+                  text-align: center;
+                  clear: both;
+                  margin: 0 auto;
+                  font-size: 20px;
+                  color: #fff;
+                  font-weight: 100;
+                  background: #2e2e2e;
+                  line-height: 54px;
+                  height: 54px;
+                  overflow: hidden;
+                  word-break: break-all;
+                  border-radius: 0 0 6px 6px; }
+      body .wrapper .main .praise-area {
+        width: 1050px;
+        height: 350px;
+        margin: 0 auto;
+        padding-top: 100px; }
+        body .wrapper .main .praise-area .content {
+          width: 600px;
+          height: 240px;
+          margin: 0 auto;
+          position: relative;
+          padding: 80px 0 0 30px; }
+          body .wrapper .main .praise-area .content .wording {
+            font-size: 30px; }
+      body .wrapper .main .pot {
+        padding-top: 180px;
+        height: 210px; }
+        body .wrapper .main .pot .toolbar {
+          position: relative;
+          margin: 0 auto;
+          width: 200px;
+          height: 100%;
+          text-align: center; }
+          body .wrapper .main .pot .toolbar .btn {
+            margin: 10px;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            background: #434343;
+            border-radius: 10px;
+            opacity: .7;
+            cursor: pointer; }
+            body .wrapper .main .pot .toolbar .btn.active {
+              background: #f39700; }
+    body .wrapper .footer {
+      background: #393939;
+      height: 266px; }
+      body .wrapper .footer .container {
+        width: 1050px;
+        height: 100%;
+        margin: 0 auto;
+        background: url("/dev/images/pages/pc/act/hangzhou/1-0-x/footer-bg.png") center no-repeat;
+        background-size: cover; }
+        body .wrapper .footer .container ul.link-list {
+          display: inline-block;
+          width: 582px;
+          height: 260px;
+          padding: 80px 10px 0 10px; }
+          body .wrapper .footer .container ul.link-list li {
+            display: inline-block; }
+            body .wrapper .footer .container ul.link-list li a {
+              display: inline-block;
+              width: 180px;
+              height: 60px;
+              cursor: pointer; }
+        body .wrapper .footer .container .link-yinyangshi {
+          display: inline-block;
+          margin-left: 10px;
+          padding-top: 50px;
+          width: 50px;
+          height: 200px; }
+          body .wrapper .footer .container .link-yinyangshi a {
+            display: inline-block;
+            height: 150px;
+            width: 50px; }
+
+.official-qrcode {
+  position: fixed;
+  width: 216px;
+  height: 198px;
+  z-index: 999;
+  top: 100px;
+  right: 50px;
+  background: url("/dev/images/pages/pc/act/hangzhou/1-0-x/official-qrcode.png") left no-repeat;
+  background-size: contain; }
+  .official-qrcode .close-btn {
+    width: 30px;
+    height: 30px;
+    right: 25px;
+    top: 0;
+    position: absolute;
+    cursor: pointer; }
+
+ul {
+  list-style: none; }
+
+.hidden {
+  display: none; }
+
+/*# sourceMappingURL=index.css.map */

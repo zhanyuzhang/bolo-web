@@ -1,0 +1,63 @@
+//
+   Created by Dillance on 16/12/2.
+
+extends ./../../../../../layout
+block head
+    meta(name="keywords" content="网易菠萝 短视频 二次元 网络剧 真人短剧 在线直播 萌动漫 污视频 贱直播")
+    meta(name="description" content="菠萝是网易旗下海量短视频平台 年轻人娱乐社区 热门IP短剧想看就看 更有著名IP创作团队与你即时直播互动 就差爱吐槽的你 赶快加入")
+    title 大热IP独家首发|网易菠萝
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/webview/1-0-x/initial/index.css')
+    - var originWidth = 1080
+    include ../../../../_include/rem-helper
+block content
+    .wrapper
+        .swiper-container
+            .swiper-wrapper
+                script(type='text/template', data-key='series-list')
+                    <% data.forEach(function(d,i){ %>
+                    .item.swiper-slide(data-shareinfo!='<% if(i == 0){ %>《梅嘲讽-啪啪寻爱夜》12月8日于网易菠萝APP强势登场！<% }else{ %>《大力金刚-第二季》10月12日于网易菠萝APP强势登场！<% } %>')
+                        .banner
+                            <% if(i == 0){ %>
+                            img(src='/dev/images/pages/mobile/webview/1-0-x/initial/chaofeng.png')
+                            <% }else if(i == 1){ %>
+                            img(src='/dev/images/pages/mobile/webview/1-0-x/initial/dali.png')
+                            <% } %>
+                        .series-box
+                            .video-box
+                                video(src!='<%-d.videoList[0].link%>',poster!='<%-d.videoList[0].cover%>',controls='controls')
+                                .poster
+                                    img(src!='<%-d.videoList[0].cover%>')
+                            .intro
+                                .text-wrap <%-d.intro%>
+                            <% if(i == 0){ %>
+                            .release-time 12月8日强势登场
+                            <% }else if(i == 1){ %>
+                            .release-time 10月12日登陆网易菠萝
+                            <% } %>
+                            .operation
+                                <% if(i == 0){ %>
+                                .exchange-btn(data-sid!='<%-d.sid%>') 疯抢兑换码
+                                | &emsp;
+                                .book-btn(data-vid!='<%-d.videoList[0].videoId%>') 戳我观看
+                                <% }else if(i == 1){ %>
+                                .book-btn(data-vid!='<%-d.videoList[0].videoId%>') 戳我观看
+                                <% } %>
+                    <% }); %>
+    .download-bar--black(style='display:none')
+        .logo
+        .ip-name
+            | 网易
+            br
+            | 菠萝
+        .content
+            | 双手下载
+            br
+            | 以示清白
+        a.btn(href='javascript:;',data-href='http://a.app.qq.com/o/simple.jsp?pkgname=com.netease.bolo.android')
+
+    .tip-dialog
+    script.
+        require('/pages/mobile/webview/initial@1-0-x');
+    include ../../../../_include/cnzz-stat

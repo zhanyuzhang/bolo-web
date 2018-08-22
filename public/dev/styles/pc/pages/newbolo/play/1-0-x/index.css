@@ -1,0 +1,539 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0; }
+
+.header {
+  height: 510px;
+  background: #0f0f0f;
+  position: absolute;
+  border: none; }
+
+.wrapper .main {
+  position: relative;
+  z-index: 2;
+  width: 1020px;
+  padding-top: 60px;
+  margin: 0 auto; }
+  .wrapper .main .player {
+    height: 650px;
+    background: #0f0f0f;
+    position: relative;
+    unselectable: none;
+    -moz-user-select: none;
+    onselectstart: none;
+    -webkit-user-select: none; }
+    .wrapper .main .player video {
+      width: 100%;
+      height: 570px; }
+    .wrapper .main .player img.snow-screen {
+      width: 100%;
+      height: 570px; }
+    .wrapper .main .player .danmaku {
+      padding-top: 10px;
+      width: 1020px;
+      position: absolute;
+      top: 0;
+      overflow: hidden; }
+      .wrapper .main .player .danmaku div[class*=channel] {
+        height: 30px;
+        line-height: 30px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        overflow: hidden; }
+      .wrapper .main .player .danmaku .marquee {
+        height: 30px;
+        overflow: hidden;
+        position: absolute;
+        left: 1020px;
+        text-shadow: 2px 2px 2px rgba(15, 15, 15, 0.8); }
+    .wrapper .main .player .control-bar {
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      height: 80px;
+      bottom: 80px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent); }
+      .wrapper .main .player .control-bar input[type=checkbox] {
+        display: none; }
+      .wrapper .main .player .control-bar .progress-area {
+        width: 700px;
+        height: 20px;
+        left: -73px;
+        right: 0;
+        margin: 0 auto;
+        position: absolute;
+        cursor: pointer;
+        padding-top: 10px; }
+        .wrapper .main .player .control-bar .progress-area .progress {
+          background: rgba(255, 255, 255, 0.5);
+          height: 4px; }
+          .wrapper .main .player .control-bar .progress-area .progress .current {
+            height: 100%;
+            background: #ffaf19; }
+        .wrapper .main .player .control-bar .progress-area .slide-bar {
+          position: absolute;
+          height: 20px;
+          top: 0;
+          width: 4px;
+          background: #fff; }
+      .wrapper .main .player .control-bar .time {
+        position: absolute;
+        color: #fff;
+        left: 120px;
+        top: 24px;
+        font-size: 14px; }
+        .wrapper .main .player .control-bar .time .current {
+          color: #ffaf1a; }
+      .wrapper .main .player .control-bar .play-btn, .wrapper .main .player .control-bar .muted-btn, .wrapper .main .player .control-bar .danmaku-btn {
+        cursor: pointer;
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        background-size: cover; }
+      .wrapper .main .player .control-bar .play-btn {
+        left: 40px;
+        background: url("/dev/images/pages/pc/newbolo/play/1-0-x/pause-btn.png") no-repeat center; }
+      .wrapper .main .player .control-bar #play-checkbox:checked ~ label.play-btn {
+        background: url("/dev/images/pages/pc/newbolo/play/1-0-x/play-btn.png") no-repeat center; }
+      .wrapper .main .player .control-bar .danmaku-btn {
+        right: 100px;
+        background: url("/dev/images/pages/pc/newbolo/play/1-0-x/close-danmaku-btn.png") no-repeat center; }
+      .wrapper .main .player .control-bar #danmaku-checkbox:checked ~ label.danmaku-btn {
+        background: url("/dev/images/pages/pc/newbolo/play/1-0-x/open-danmaku-btn.png") no-repeat center; }
+      .wrapper .main .player .control-bar .volume-controller {
+        width: 48px;
+        height: 120px;
+        position: absolute;
+        right: 40px;
+        bottom: 32px; }
+        .wrapper .main .player .control-bar .volume-controller .muted-btn {
+          bottom: 0;
+          background: url("/dev/images/pages/pc/newbolo/play/1-0-x/not-muted-btn.png") no-repeat center; }
+        .wrapper .main .player .control-bar .volume-controller #muted-checkbox:checked ~ label.muted-btn {
+          background: url("/dev/images/pages/pc/newbolo/play/1-0-x/muted-btn.png") no-repeat center; }
+        .wrapper .main .player .control-bar .volume-controller:hover .volume-box {
+          border-radius: 2px;
+          padding-top: 5px;
+          width: 40px;
+          height: 70px;
+          background: rgba(15, 15, 15, 0.8);
+          position: absolute;
+          bottom: 50px;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          cursor: pointer; }
+          .wrapper .main .player .control-bar .volume-controller:hover .volume-box .total-volume, .wrapper .main .player .control-bar .volume-controller:hover .volume-box .current-volume {
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 4px;
+            height: 60px;
+            bottom: 5px;
+            margin: 0 auto;
+            background: #999; }
+          .wrapper .main .player .control-bar .volume-controller:hover .volume-box .current-volume {
+            background: #ffaf19; }
+          .wrapper .main .player .control-bar .volume-controller:hover .volume-box .slide-bar {
+            position: absolute;
+            width: 20px;
+            height: 3px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            background: #fff;
+            bottom: 65px; }
+      .wrapper .main .player .control-bar.show {
+        opacity: 1; }
+    .wrapper .main .player .danmaku-bar {
+      font-size: 14px;
+      width: 940px;
+      height: 80px;
+      line-height: 80px;
+      margin: 0 auto;
+      padding: 0 10px; }
+      .wrapper .main .player .danmaku-bar .danmaku-input {
+        box-sizing: border-box;
+        padding: 0 10px;
+        width: 830px;
+        height: 50px;
+        vertical-align: middle;
+        border-radius: 3px; }
+      .wrapper .main .player .danmaku-bar .submit-btn {
+        margin-left: 20px;
+        vertical-align: middle;
+        display: inline-block;
+        width: 80px;
+        height: 50px;
+        line-height: 50px;
+        color: #fff;
+        text-align: center;
+        background: #ffaf1a;
+        border-radius: 2px;
+        cursor: pointer; }
+        .wrapper .main .player .danmaku-bar .submit-btn:active {
+          background: #ffd17b; }
+    .wrapper .main .player:hover .control-bar {
+      opacity: 1; }
+  .wrapper .main .info {
+    height: 220px;
+    position: relative;
+    font-size: 14px;
+    box-shadow: 0 0 5px 0 rgba(15, 15, 15, 0.1);
+    background: #fff; }
+    .wrapper .main .info .panel {
+      float: left;
+      width: 750px;
+      height: 100%;
+      color: #999;
+      padding-left: 30px; }
+      .wrapper .main .info .panel .title {
+        color: #333;
+        padding: 20px 0 5px 0;
+        font-size: 32px; }
+      .wrapper .main .info .panel .row1 .tag-list {
+        display: inline-block; }
+        .wrapper .main .info .panel .row1 .tag-list .tag {
+          background: #f5f5f5;
+          display: inline-block;
+          padding: 2px 5px;
+          margin: 5px; }
+      .wrapper .main .info .panel .row1 .view-count {
+        display: inline-block;
+        padding-left: 20px; }
+      .wrapper .main .info .panel .row2 {
+        padding-top: 20px; }
+        .wrapper .main .info .panel .row2 .icon {
+          float: left;
+          width: 60px;
+          height: 60px; }
+          .wrapper .main .info .panel .row2 .icon img {
+            width: 60px;
+            height: 60px;
+            background: #aaa;
+            border-radius: 30px; }
+        .wrapper .main .info .panel .row2 .details {
+          width: 650px;
+          float: left;
+          padding: 0 10px 0 20px; }
+          .wrapper .main .info .panel .row2 .details .nick {
+            font-weight: bold;
+            color: #333; }
+          .wrapper .main .info .panel .row2 .details .upload-time {
+            padding-left: 20px; }
+    .wrapper .main .info .button-bar {
+      box-sizing: border-box;
+      position: relative;
+      font-size: 14px;
+      float: right;
+      width: 230px;
+      height: 100%;
+      padding-top: 30px;
+      text-align: center; }
+      .wrapper .main .info .button-bar .comment-btn, .wrapper .main .info .button-bar .like-btn {
+        cursor: pointer;
+        padding: 0 10px 0 40px;
+        display: inline-block;
+        height: 40px;
+        line-height: 40px;
+        margin: 0px 10px;
+        background: #f5f5f5 url("/dev/images/pages/pc/newbolo/play/1-0-x/comment-btn.png") no-repeat 10px center;
+        border-radius: 2px;
+        vertical-align: middle;
+        font-weight: bold; }
+      .wrapper .main .info .button-bar .like-btn {
+        background: #f5f5f5 url("/dev/images/pages/pc/newbolo/play/1-0-x/like-btn.png") no-repeat 10px center; }
+        .wrapper .main .info .button-bar .like-btn.active {
+          background: #f5f5f5 url("/dev/images/pages/pc/newbolo/play/1-0-x/like-btn-active.png") no-repeat 10px center;
+          color: #ffaf19; }
+      .wrapper .main .info .button-bar .follow-btn {
+        cursor: pointer;
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 80px;
+        height: 48px;
+        background: url("/dev/images/pages/pc/newbolo/play/1-0-x/follow-btn.png") no-repeat; }
+        .wrapper .main .info .button-bar .follow-btn.followed {
+          background-position: -95px -5px; }
+          .wrapper .main .info .button-bar .follow-btn.followed:hover {
+            background-position: -95px -63px; }
+        .wrapper .main .info .button-bar .follow-btn.to-follow {
+          background-position: -5px -5px; }
+          .wrapper .main .info .button-bar .follow-btn.to-follow:hover {
+            background-position: -5px -63px; }
+
+.play-comment-box {
+  width: 1020px;
+  padding: 10px 30px;
+  box-shadow: 0 0 5px 0 rgba(15, 15, 15, 0.1);
+  margin: 20px auto 0;
+  box-sizing: border-box;
+  background: #fff; }
+  .play-comment-box .title {
+    font-size: 24px;
+    height: 48px;
+    line-height: 48px;
+    border-bottom: 1px solid #f5f5f5;
+    width: 940px;
+    margin: 0 auto; }
+  .play-comment-box .say-box {
+    margin: 20px auto 0;
+    width: 940px; }
+    .play-comment-box .say-box .avatar,
+    .play-comment-box .say-box .input-wrap,
+    .play-comment-box .say-box .send-btn {
+      display: inline-block;
+      vertical-align: middle; }
+    .play-comment-box .say-box .avatar {
+      width: 60px;
+      height: 60px;
+      overflow: hidden;
+      border-radius: 100%;
+      background: #dbdbdb; }
+      .play-comment-box .say-box .avatar img {
+        width: 100%;
+        height: 100%;
+        display: block; }
+    .play-comment-box .say-box .input-wrap {
+      width: 718px;
+      padding: 10px 20px;
+      height: 26px;
+      background: #f5f5f5;
+      border: 1px solid #f5f5f5;
+      border-radius: 2px;
+      position: relative;
+      margin-left: 20px; }
+      .play-comment-box .say-box .input-wrap input {
+        width: 718px;
+        height: 26px;
+        line-height: 26px;
+        display: block;
+        border: 0;
+        background: none;
+        padding: 0; }
+      .play-comment-box .say-box .input-wrap:before {
+        width: 0;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+        overflow: hidden;
+        display: block;
+        border-style: dashed;
+        border-color: transparent;
+        border-width: 11px 11px 0 0;
+        border-right-style: solid;
+        border-right-color: #f5f5f5;
+        position: absolute;
+        left: -11px;
+        bottom: -1px;
+        content: ''; }
+      .play-comment-box .say-box .input-wrap:after {
+        width: 0;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+        overflow: hidden;
+        display: block;
+        border-style: dashed;
+        border-color: transparent;
+        border-width: 9px 9px 0 0;
+        border-right-style: solid;
+        border-right-color: #f5f5f5;
+        position: absolute;
+        left: -9px;
+        bottom: 0;
+        content: ''; }
+      .play-comment-box .say-box .input-wrap.activated {
+        border-color: #ffaf19;
+        background: #fff; }
+        .play-comment-box .say-box .input-wrap.activated:before {
+          border-right-color: #ffaf19; }
+        .play-comment-box .say-box .input-wrap.activated:after {
+          border-right-color: #fff; }
+    .play-comment-box .say-box .send-btn {
+      width: 80px;
+      height: 48px;
+      line-height: 48px;
+      color: #fff;
+      text-align: center;
+      background: #ffaf19;
+      border-radius: 2px;
+      cursor: pointer;
+      margin-left: 20px;
+      font-size: 14px; }
+      .play-comment-box .say-box .send-btn:active {
+        background: #ffd17b; }
+      .play-comment-box .say-box .send-btn:hover {
+        background: #ffb833; }
+      .play-comment-box .say-box .send-btn:active {
+        background: #f2a719; }
+  .play-comment-box .comment-list {
+    margin-top: 30px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    max-height: 256px; }
+    .play-comment-box .comment-list.opened {
+      max-height: none; }
+    .play-comment-box .comment-list .comment-item {
+      font-size: 14px; }
+      .play-comment-box .comment-list .comment-item .comment-body {
+        padding: 0 10px 8px 82px;
+        position: relative;
+        margin-bottom: 10px; }
+        .play-comment-box .comment-list .comment-item .comment-body .avatar {
+          width: 60px;
+          height: 60px;
+          border-radius: 100%;
+          overflow: hidden;
+          position: absolute;
+          left: 10px;
+          top: 10px;
+          background: #dbdbdb; }
+          .play-comment-box .comment-list .comment-item .comment-body .avatar img {
+            width: 100%;
+            height: 100%;
+            display: block; }
+        .play-comment-box .comment-list .comment-item .comment-body .info {
+          position: relative;
+          padding-right: 165px; }
+          .play-comment-box .comment-list .comment-item .comment-body .info .name {
+            font-weight: bold;
+            line-height: 50px; }
+            .play-comment-box .comment-list .comment-item .comment-body .info .name .weeker {
+              font-weight: 100;
+              margin: 0 8px; }
+            .play-comment-box .comment-list .comment-item .comment-body .info .name .time {
+              font-weight: 100;
+              color: #999;
+              margin-left: 20px; }
+          .play-comment-box .comment-list .comment-item .comment-body .info:after {
+            width: 100%;
+            height: 1px;
+            font-size: 0;
+            overflow: hidden;
+            background: #fafafa;
+            position: absolute;
+            bottom: -17px;
+            left: 0;
+            content: ''; }
+        .play-comment-box .comment-list .comment-item .comment-body .operation {
+          text-align: right;
+          position: absolute;
+          top: 20px;
+          right: 0;
+          padding-right: 20px; }
+          .play-comment-box .comment-list .comment-item .comment-body .operation .reply-btn,
+          .play-comment-box .comment-list .comment-item .comment-body .operation .report-btn,
+          .play-comment-box .comment-list .comment-item .comment-body .operation .remove-btn,
+          .play-comment-box .comment-list .comment-item .comment-body .operation .like-btn {
+            display: inline-block;
+            vertical-align: middle; }
+          .play-comment-box .comment-list .comment-item .comment-body .operation .remove-btn {
+            width: 16px;
+            height: 16px;
+            background: url("/dev/images/pages/pc/newbolo/play/1-0-x/play-comment-icons.png") no-repeat -79px -52px;
+            background-color: transparent;
+            display: none;
+            cursor: pointer;
+            margin-right: 20px; }
+            .play-comment-box .comment-list .comment-item .comment-body .operation .remove-btn:hover {
+              background-position: -31px -5px; }
+          .play-comment-box .comment-list .comment-item .comment-body .operation .report-btn {
+            width: 16px;
+            height: 16px;
+            background: url("/dev/images/pages/pc/newbolo/play/1-0-x/play-comment-icons.png") no-repeat -5px -52px;
+            background-color: transparent;
+            display: none;
+            cursor: pointer;
+            margin-right: 20px; }
+            .play-comment-box .comment-list .comment-item .comment-body .operation .report-btn:hover {
+              background-position: -31px -52px; }
+          .play-comment-box .comment-list .comment-item .comment-body .operation .reply-btn {
+            width: 16px;
+            height: 13px;
+            background: url("/dev/images/pages/pc/newbolo/play/1-0-x/play-comment-icons.png") no-repeat -5px -5px;
+            background-color: transparent;
+            display: none;
+            cursor: pointer;
+            margin-right: 20px; }
+            .play-comment-box .comment-list .comment-item .comment-body .operation .reply-btn:hover {
+              background-position: -57px -5px; }
+          .play-comment-box .comment-list .comment-item .comment-body .operation .like-btn {
+            width: 20px;
+            height: 15px;
+            line-height: 16px;
+            padding-left: 20px;
+            font-size: 12px;
+            color: #999;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+            text-align: left; }
+            .play-comment-box .comment-list .comment-item .comment-body .operation .like-btn:after {
+              width: 16px;
+              height: 15px;
+              background: url("/dev/images/pages/pc/newbolo/play/1-0-x/play-comment-icons.png") no-repeat -5px -28px;
+              background-color: transparent;
+              content: '';
+              position: absolute;
+              left: 0;
+              top: 0; }
+            .play-comment-box .comment-list .comment-item .comment-body .operation .like-btn.ed {
+              color: #ffaf19; }
+              .play-comment-box .comment-list .comment-item .comment-body .operation .like-btn.ed:after {
+                background-position: -57px -28px; }
+        .play-comment-box .comment-list .comment-item .comment-body:hover {
+          background: #fafafa; }
+          .play-comment-box .comment-list .comment-item .comment-body:hover .operation .reply-btn,
+          .play-comment-box .comment-list .comment-item .comment-body:hover .operation .report-btn,
+          .play-comment-box .comment-list .comment-item .comment-body:hover .operation .remove-btn {
+            display: inline-block; }
+      .play-comment-box .comment-list .comment-item .reply-box {
+        margin-left: 80px; }
+  .play-comment-box .switch {
+    width: 75px;
+    text-align: center;
+    padding-right: 12px;
+    position: relative;
+    margin: 20px auto 10px;
+    font-size: 14px;
+    cursor: pointer;
+    display: none; }
+    .play-comment-box .switch:before {
+      content: '展开更多'; }
+    .play-comment-box .switch:after {
+      width: 12px;
+      height: 9px;
+      background: url("/dev/images/pages/pc/newbolo/play/1-0-x/play-comment-icons.png") no-repeat -57px -52px;
+      background-color: transparent;
+      position: absolute;
+      content: '';
+      right: 0;
+      top: 10px;
+      margin-top: -5px; }
+    .play-comment-box .switch.opened {
+      width: 140px; }
+      .play-comment-box .switch.opened:before {
+        content: '太可怕了，赶紧收起'; }
+      .play-comment-box .switch.opened:after {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg); }
+
+.clear {
+  clear: both; }
+
+.hidden {
+  display: none; }
+
+/*# sourceMappingURL=index.css.map */

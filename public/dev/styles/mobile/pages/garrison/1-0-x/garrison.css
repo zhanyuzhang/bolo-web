@@ -1,0 +1,62 @@
+html{   -webkit-box-orient: vertical; -webkit-box-align: center; -webkit-tap-highlight-color:rgba(255,0,0,0);}
+body { margin:0; font-family: "Microsoft YaHei", "微软雅黑", Arial,sans-serif; font-size:0.12rem; position:relative; background: #e3e8e9; }
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, blockquote, p {padding: 0;margin: 0;background: url(//img2.cache.netease.com/bobo/img16/apptest/h5/mobile1603/blank.gif) no-repeat 0 0;}
+table, td, tr, th { font-size:0.12rem;}
+li { list-style-type:none; }
+img { vertical-align:top; border:0;}
+ol, ul { list-style:none; }
+h1, h2, h3, h4, h5, h6 { font-size:0.12rem; font-weight:normal;}
+.fB { font-weight:bold;}
+.clearfix { *zoom:1;}
+.clearfix:after, .area:after { display:block; overflow:hidden; clear:both; height:0; visibility:hidden; content:"."; }
+a , a:hover ,a:visited {text-decoration:none;}
+.cDRed,.cDRed:visited,.cDRed a{color:#f63838; text-decoration:none;}
+.cDRed a:hover,a.cDRed:hover{color:#f63838; text-decoration:none;}
+.cRed,.cRed:visited,.cRed a{color:#ff6d54; text-decoration:none;}
+.cRed a:hover,a.cRed:hover{color:#ff6d54; text-decoration:none;}
+.blank3 { clear:both; height:0.03rem; overflow:hidden; display:block; }
+.blank5 { clear:both; height:0.05rem; overflow:hidden; display:block; }
+.blank6 { clear:both; height:0.06rem; overflow:hidden; display:block; }
+.blank9 { clear:both; height:0.09rem; overflow:hidden; display:block; }
+.blank6w { background:#fff; clear:both; height:0.06rem; overflow:hidden; display:block; }
+.blank10 { clear:both; height:0.10rem; overflow:hidden; display:block; }
+.blank12 { clear:both; height:0.12rem; overflow:hidden; display:block; }
+.blank15 { clear:both; height:0.15rem; overflow:hidden; display:block; }
+.blank20 { clear:both; height:0.20rem; overflow:hidden; display:block; }
+.blank30 { clear:both; height:0.30rem; overflow:hidden; display:block; }
+.display-none { display: none;}
+
+body {}
+
+.gar-area {color:#2e2e2e; width:100%; height: 100%;}
+.gar-title { font-size: 0.46rem; line-height: 110%; padding: 0.35rem 0; text-align: center; }
+.gar-des { font-size: 0.24rem; line-height: 150%; padding:0  0.2rem; text-align: left;}
+.gar-input { clear: both; margin:0 auto; padding: 0.34rem 0.2rem 0;}
+.gar-input-title { font-size: 0.26rem; text-align: left; width:1.5rem; float:left; line-height: 0.7rem;}
+.gar-input-content {width:5.6rem; float:left; position: relative;}
+.gar-input-content-input01 { width:85%; clear: both; margin:0 auto; line-height: 0.7rem; height: 0.7rem; border-radius: 4px; border:0px; background: #fff; padding:0 12% 0 3%; font-size: 0.26rem; color:#2e2e2e;}
+.gar-input-content-input01-tips { color: #c54141;}
+.gar-input-content-clear { background:url("/dev/images/pages/mobile/garrison/1-0-x/gar_ic_clear.png") no-repeat center; background-size: 0.33rem 0.33rem; width:0.7rem; height:0.7rem; position: absolute; right: 0; top: 0;}
+.gar-input2 { clear: both; margin:0 auto; padding: 0.34rem 0.2rem 0;}
+.gar-input2-title { font-size: 0.26rem; text-align: left; width:1.5rem; float:left; line-height: 0.4rem;}
+.gar-input2-des { font-size: 0.22rem; text-align: left; width:5.6rem; float: left;line-height: 0.4rem; color: #535353;}
+
+.gar-input3 { clear: both; margin:0 auto; padding: 0.15rem 0.2rem 0;}
+.gar-input3-area {width:3.40rem; border:2px solid #ccc; height:2rem; position: relative; overflow: hidden;}
+.gar-input3-area img {width:3.4rem; height:2rem; overflow: hidden;}
+.gar-input3-area-l { float: left;}
+.gar-input3-area-r { float: right;}
+.gar-input3-area-title { position:absolute; z-index: 2; width:100%; font-size: 0.24rem; color:#9c9c9c; text-align:center; padding: 0.2rem 0;}
+.gar-input3-area-ic { position: absolute; z-index: 3; width:3.4rem; height:2rem; background:url("/dev/images/pages/mobile/garrison/1-0-x/gar_ic_add.png") no-repeat center; background-size: 0.4rem 0.4rem;}
+.gar-input4 { clear: both; margin:0 auto; padding: 0.28rem 0.2rem 0;}
+.gar-input4 h3 { font-size: 0.26rem; text-align: left; line-height: 160%; padding-bottom: 0.15rem;}
+.gar-input4-title { font-size: 0.26rem; text-align: left; width:1.5rem; float:left; line-height: 0.44rem;}
+.gar-input4-content {width:5.6rem; float:left; position: relative;}
+.gar-input-content-input02 { width:94%; padding:0 3%; clear: both; margin:0 auto; line-height: 0.44rem; height: 0.44rem; border-radius: 4px; border:0px; background: #fff; font-size: 0.26rem; color:#2e2e2e;}
+.gar-input-content-input02-tips { color: #c54141;}
+.gar-but {width:100%;margin:2rem auto 0; background: #feb01a; line-height: 0.98rem; height:0.98rem; text-align: center; font-size: 0.38rem; color: #fff;}
+.gar-but:active { background: #ffd17a;}
+.gar-but-no {background: #ffd17a;}
+.gar-tips { width:100%; clear: both; margin:0 auto; color: #2e2e2e;  display: none; padding-top:0.4rem;}
+.gar-tips-ic { background:url("/dev/images/pages/mobile/garrison/1-0-x/gar_ic_bolo.png") no-repeat center; background-size: 1.92rem 2.04rem; width:1.92rem; height:2.04rem; clear: both; margin:0 auto; display: block;}
+.gar-tips-text {font-size: 0.32rem; text-align: center; padding: 0.3rem 0.6rem 0.3rem; }

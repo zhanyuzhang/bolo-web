@@ -1,0 +1,14 @@
+script(type='text/template', data-key='list')
+    <% data.forEach(function(d){ %>
+    li.item(data-id!='<%=d.id%>')
+        a(href!='<%=d.bannerLink%>')
+            img(src!='<%=d.bannerPic%>')
+            .name
+                //b [技能get]
+                | <%=d.bannerName%>
+            <% if(d.bannerTag){ %>
+            .tip
+                .content <%=d.bannerTag%>
+                .icon
+            <% } %>
+    <% }); %>

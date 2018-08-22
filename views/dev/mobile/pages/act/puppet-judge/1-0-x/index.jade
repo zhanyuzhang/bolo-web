@@ -1,0 +1,120 @@
+extends ./../../../../../layout
+block head
+    include ../../../../_include/seo
+    title 你有一宗未解的校园连环杀人案
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no")
+    meta(name="format-detection" content="address=no,email=no,telephone=no")
+    include ../../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/act/puppet-judge/1-0-x/index.css')
+    - var originWidth = 720
+    include ../../../../_include/rem-helper
+block content
+    .wrapper
+        div(class="page home-page")
+            .bottom-fixed-toolbar
+                .next-btn
+        div(class="page playback-page hidden")
+            .bottom-fixed-toolbar
+                .next-btn
+        div(class="page puzzle-page hidden")
+            .img-container
+                .img-wrapper
+                    img(data-src="/dev/images/pages/mobile/act/puppet-judge/1-0-x/game-5.gif" class="draggable left-img wrong-img" data-order=2)
+                    .number 1
+                .img-wrapper
+                    img(data-src="/dev/images/pages/mobile/act/puppet-judge/1-0-x/game-2.png")
+                    .number 2
+                .img-wrapper
+                    img(data-src="/dev/images/pages/mobile/act/puppet-judge/1-0-x/game-1.gif" class="draggable left-img wrong-img" data-order=0)
+                    .number 3
+                .img-wrapper
+                    img(data-src="/dev/images/pages/mobile/act/puppet-judge/1-0-x/game-4.png")
+                    .number 4
+                .img-wrapper
+                    img(data-src="/dev/images/pages/mobile/act/puppet-judge/1-0-x/game-3.gif" class="draggable left-img wrong-img" data-order=1)
+                    .number 5
+                .img-wrapper
+                    img(data-src="/dev/images/pages/mobile/act/puppet-judge/1-0-x/game-6.png")
+                    .number 6
+            .bottom-fixed-toolbar
+                .replay-btn
+                .next-btn
+        div(class="page congratulate-page hidden")
+            .bottom-fixed-toolbar
+                .next-btn 【挑战最终关】
+                .share-area
+                    div(class="word") 就此止步，秀一秀成就
+                    div(class="share-btn")
+        div(class="page murder-page hidden")
+            .murder-container
+                .murder(data-name="shenfan")
+                .murder(data-name="banzhuren")
+                .murder(data-name="haha")
+                .murder(data-name="fanquan")
+            .bottom-fixed-toolbar
+                .pre-btn
+
+        div(class="page figure-page hidden")
+            .figure(data-name="shenfan" class="hidden")
+                .evidence
+                    img(data-src="/dev/images/pages/mobile/act/puppet-judge/1-0-x/evidence-shenfan.png")
+            .figure(data-name="banzhuren" class="hidden")
+                .evidence
+                    img(data-src="/dev/images/pages/mobile/act/puppet-judge/1-0-x/evidence-banzhuren.png")
+            .figure(data-name="haha" class="hidden")
+                .evidence
+                    img(data-src="/dev/images/pages/mobile/act/puppet-judge/1-0-x/evidence-haha.png")
+            .figure(data-name="fanquan" class="hidden")
+                .evidence
+                    img(data-src="/dev/images/pages/mobile/act/puppet-judge/1-0-x/evidence-fanquan.png")
+            .bottom-fixed-toolbar
+
+                .input-btn 我要写证词！
+                .nav
+                    .pre-btn
+                    .next-btn 就是TA!
+
+        div(class="page share-page hidden")
+            img(class="share-img hidden" data-src="/dev/images/pages/mobile/act/puppet-judge/1-0-x/share-shenfan.png")
+            img(class="share-img hidden" data-src="/dev/images/pages/mobile/act/puppet-judge/1-0-x/share-banzhuren.png")
+            img(class="share-img hidden" data-src="/dev/images/pages/mobile/act/puppet-judge/1-0-x/share-haha.png")
+            img(class="share-img hidden" data-src="/dev/images/pages/mobile/act/puppet-judge/1-0-x/share-fanquan.png")
+            .bottom-fixed-toolbar
+                .share-area
+                    div(class="word") 【邀请朋友们一起破案】
+                    div(class="share-btn")
+            .download-btn
+                .download-bar
+                        .logo
+                        .ip-name
+                            | 网易
+                            br
+                            | 菠萝
+                        .content
+                            | 双手下载
+                            br
+                            | 以示清白
+                        .btn(data-href='http://a.app.qq.com/o/simple.jsp?pkgname=com.netease.bolo.android')
+
+        div(class="player hidden")
+            video(width="100%" poster="http://bobo-public.nosdn.127.net/bobo_1478588614757_92657419.png"  controls="true")
+                source(src="http://bobolive.nosdn.127.net/aac_bobo_1478587338009_67943422.mp4" type="video/mp4")
+            div(class="close-player transparent") 关闭视频
+        div(class="music-player hidden")
+            audio(src="http://file.ws.126.net/liveshow/bobo/bg_music01_f5bc863071.mp3" autoplay="true")
+        div(class="music-player-switch music-player-switch-on")
+        div(class="input-window hidden")
+            .send-box
+                textarea(rows=4 class="input-field" placeholder="点这里输入证词 (・ω・)")
+                .submit-btn 提交
+                .cancel-btn 取消
+        div(class="modal-window hidden")
+        div(class="gesture-window hidden")
+            .wording 温馨提示：上下拖动红框图片，排出事件发生的先后顺序
+        div(class="tips hidden")
+            span(class='content')
+            span(class="tips-angle")
+
+    script.
+        require('/pages/mobile/act/puppet-judge@1-0-x');
+    include ../../../../_include/cnzz-stat

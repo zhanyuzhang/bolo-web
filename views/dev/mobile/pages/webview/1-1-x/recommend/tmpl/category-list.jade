@@ -1,0 +1,5 @@
+script(type='text/template', data-key='category-list')
+    li.item.current(data-cid='#{query.cid}') 推荐
+    <% data.forEach(function(d,i){ %>
+    li.item(data-cid!='<%=d.id%>') <%=d.name%>
+    <% }); %>

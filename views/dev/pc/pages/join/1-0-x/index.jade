@@ -1,0 +1,92 @@
+//
+   Created by gztimboy on 2016/8/23 0023.
+
+extends ./../../../../layout
+block head
+    meta(name='description', content='网易菠萝，精品无广告原创视频内容，好玩吐槽神奇社区，只做年轻人最爱的（超趣味）2.5次元内容。')
+    meta(name='keywords', content='网易菠萝, 网易, 菠萝, 无广告, 萌贱污, 原创视频, 视频, 吐槽, 社区, 神奇, bolo, boluo, 视频社区, 内涵段子, 大力金刚,直播,小视频,网红,快看,暴走漫画,同道大叔,烧脑,花熊,漫画岛,bilibili,腾讯, 土豆,小咖秀,快手,有妖气,内涵,二次元,acfun')
+    title 网易菠萝 - 有内涵无广告萌贱污原创视频神器
+    include ../../../_include/base-dependencies
+    link(rel='stylesheet', href='/dev/styles/pc/pages/join/1-0-x/index.css')
+    if(gfbdHotList)
+        script.
+            var gfbdHotList = !{JSON.stringify(gfbdHotList)};
+            gfbdHotList[0].stat = 'enter_post1';
+    if(gfbdList)
+        script.
+            var gfbdList = !{JSON.stringify(gfbdList)};
+            gfbdList[0].stat = 'enter_post2';
+            gfbdList[1].stat = 'enter_post3';
+            gfbdList[2].stat = 'enter_post4';
+    if(evaluateList)
+        script.
+            var evaluateList = !{JSON.stringify(evaluateList)};
+block content
+    include ../../../_include/header
+    .jo-area
+        .jo-area-cnt
+            h2.joinNow(data-index='1') 马上入驻
+    .jo-intro.clearfix
+        ul
+            li
+                h2
+                    span.num 1
+                    span.title 海量网易资源
+                h3 背靠网易大山，享众多网易推广资源，菠萝菌带你一起飞！
+            li
+                h2
+                    span.num 2
+                    span.title 全方位粉丝互动
+                h3 异步视频+直播互动+官方活动，全方位触达用户聚粉。
+            li
+                h2
+                    span.num 3
+                    span.title 诱人分享计划
+                    span.title2
+                        a(href="http://bolo.bobo.com/act/share" target="_bank") 了解详情&gt;
+                h3 菠萝菌将提供给您具有竞争力的分成体系，质量越佳，收入越丰厚，更有每周额外转化率奖励！
+    .jo-evaluate-bg
+        .jo-evaluate
+            ul
+                li
+                    //.evaluate.clearfix
+                        .evaluate-l
+                            h3 视频炒鸡污...没广告！产品细节也做得好，短视频就在这上面看啦~ 网易菠萝，二次元我的爱，支持！
+                        .evaluate-r
+                            .avatar
+                                img(src="/dev/images/pages/pc/join/1-0-x/100100.gif" width="108" height="108")
+                            .nick 大力金刚
+    .jo-report-bg
+        .jo-report
+            .jo-report-l
+                //.pic
+                    a(href="#")
+                        img(src="/dev/images/pages/pc/join/1-0-x/100100.gif" width="495" height="300")
+                //h2
+                    a(href="#") 在ChinaJoy上，来看看这些被网红、VR包围的二次元公司们
+            .jo-report-r
+                dl
+                    //dt
+                        a(href="#")
+                            .pic
+                                img(src="/dev/images/pages/pc/join/1-0-x/100100.gif" width="145" height="90")
+                            .title 网易想做一个移动端的B站+美拍于是有了“网易菠萝”
+                    //dt
+                        a(href="#")
+                            .pic
+                                img(src="/dev/images/pages/pc/join/1-0-x/100100.gif" width="145" height="90")
+                            .title 网易想做一个移动端的B站+美拍于是有了“网易菠萝”
+                    //dt
+                        a(href="#")
+                            .pic
+                                img(src="/dev/images/pages/pc/join/1-0-x/100100.gif" width="145" height="90")
+                            .title 网易想做一个移动端的B站+美拍于是有了“网易菠萝”
+    .jo-but-bg
+        h2.joinNow(data-index='2') 马上入驻勾搭
+    include ../../../_include/dialog/1-0-x/tip
+    include ../../../_include/dialog/1-0-x/join-bolo
+    include ../../../_include/footer
+    script.
+        require('/pages/pc/join@1-0-x');
+
+    include ../../../_include/cnzz-stat

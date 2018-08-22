@@ -1,0 +1,27 @@
+script(type='text/template', data-key='episodes')
+    .title
+        | 分集
+        //i (<%=total%>)
+    ul.episodes-list
+        <% data.forEach(function(d){ %>
+
+        <% if(d.videoId == VIDEO_INFO.id){ %>
+        li.item(class!='current')
+            .video-title <%=d.title%>
+        <% }else{ %>
+        li.item
+            a(href!='/play?videoId=<%=d.videoId%>')
+                .video-title <%=d.title%>
+        <% } %>
+
+        <% }); %>
+        li.item
+            a(href!='/download')
+                .video-title(style='text-align:left')
+                    | 快下载
+                    b 网易菠萝
+                    | ，下集更精彩。科科！
+                    //br
+                    //| 上
+                    //b 网易菠萝
+                    //| ！

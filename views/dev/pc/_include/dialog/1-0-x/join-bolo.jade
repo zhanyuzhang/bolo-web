@@ -1,0 +1,33 @@
+.join-bolo-dialog(style='display:none;')
+    .container
+        .content
+            .join-bolo-please 申请入驻
+            .body
+                .tip 请根据以下提示填写资料，我们将有专人与您联系
+                .form-container
+                    .form-item
+                        span 团队名称：
+                        .input-wrap
+                            input(type='text',name='name',placeholder='请填写团队名称')
+                    .form-item
+                        span 微博账号：
+                        .input-wrap
+                            input(type='text',name='weibo',placeholder='请填写微博账号')
+                    .form-item
+                        span QQ或微信：
+                        .input-wrap
+                            input(type='text',name='wechatAccount',placeholder='请填写QQ或微信账号')
+                    .form-item
+                        span 联系方式：
+                        .input-wrap
+                            input(type='text',name='phone',placeholder='请填写联系方式')
+                .tip 请在下方粘贴您在其他视频平台的系列视频名
+                .form-container
+                    .form-item
+                        span 视频平台：
+                        .input-wrap
+                            input(type='text',name='video',placeholder='例如：B站+口水三国')
+                .confirm-box
+                    .submit-btn 提交
+                    br
+        .remove-btn

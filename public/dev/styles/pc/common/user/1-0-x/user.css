@@ -1,0 +1,2385 @@
+.png24 {
+    display: inline-block
+}
+
+.cGray,.cGray:visited,.cGray a,.cGray a:visited {
+    color: #999
+}
+
+.cDGray,.cDGray:visited,.cDGray a,.cDGray a:visited {
+    color: #5a5a5a
+}
+
+.cBlue,.cBlue:visited,.cBlue:hover,.cBlue a,.cBlue a:visited,.cBlue a:hover {
+    color: #1E50A2
+}
+
+.cDBlue,.cDBlue:visited,.cDBlue:hover,.cDBlue a,.cDBlue a:visited,.cDBlue a:hover {
+    color: #8BA4CD
+}
+
+.cDRed,.cDRed:visited,.cDRed:hover,.cDRed a,.cDRed a:visited,.cDRed a:hover {
+    color: #ba2636
+}
+
+.cGreen,.cGreen:visited,.cGreen a,.cGreen a:visited {
+    color: #467902
+}
+
+.cOrange,.cOrange:visited,.cOrange a,.cOrange a:visited {
+    color: #f44103
+}
+
+.fB {
+    font-weight: 700 !important
+}
+
+.fI {
+    font-style: italic
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.fS12 {
+    font-size: 12px !important
+}
+
+.fS14 {
+    font-size: 14px !important
+}
+
+.fFS {
+    font-family: \5b8b\4f53
+}
+
+.tAr {
+    text-align: right
+}
+
+.hidden {
+    display: none !important
+}
+
+.clearfix {
+    overflow: hidden;
+    *zoom:1}
+
+caption,th,.tAl {
+    text-align: left
+}
+
+.underline,.underline:visited,.underline a,.underline a:visited {
+    text-decoration: underline !important
+}
+
+.ununderline,.ununderline:visited,.ununderline a,.ununderline a:visited {
+    text-decoration: none !important
+}
+
+.pos-rel {
+    position: relative
+}
+
+.pos-abs {
+    position: absolute
+}
+
+.va-m {
+    vertical-align: middle
+}
+
+.mt10 {
+    margin-top: 10px
+}
+
+.blank10 {
+    clear: both;
+    display: block;
+    height: 10px !important;
+    overflow: hidden
+}
+
+.fW {
+    font-weight: normal !important
+}
+
+.noBg {
+    background-image: none !important
+}
+
+.noBorder {
+    border: 0px !important
+}
+
+.logo-home {
+    width: 115px;
+    height: 55px
+}
+
+.logo-home a {
+    display: block;
+    width: 115px;
+    height: 55px;
+    text-indent: -9999em;
+    overflow: hidden;
+    background: transparent url("//img1.cache.netease.com/bobo/image/logo/logo-home-2015.png") no-repeat left top;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//img1.cache.netease.com/bobo/image/logo/logo-home-2015.png',sizingMethod='scale')
+}
+
+.logo64 {
+    width: 180px;
+    height: 64px
+}
+
+.logo64 a {
+    display: block;
+    width: 180px;
+    height: 64px;
+    text-indent: -9999em;
+    overflow: hidden;
+    background: transparent url("//img1.cache.netease.com/bobo/image/logo/logo64.png") no-repeat left top;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//img1.cache.netease.com/bobo/image/logo/logo64.png',sizingMethod='scale')
+}
+
+.logo36 {
+    width: 105px;
+    height: 36px
+}
+
+.logo36 a {
+    display: block;
+    width: 105px;
+    height: 36px;
+    text-indent: -9999em;
+    overflow: hidden;
+    background: transparent url("//img1.cache.netease.com/bobo/image/logo/logo36.png") no-repeat left top;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//img1.cache.netease.com/bobo/image/logo/logo36.png',sizingMethod='scale')
+}
+
+.login-info {
+    float: right;
+    position: relative;
+    height: 52px;
+    margin-left: 15px;
+    font-family: Microsoft YaHei;
+    z-index: 101
+}
+
+.login-info .login-info-inner2 {
+    padding: 16px 20px 0
+}
+
+.login-info .login-info-inner2 a,.login-info .login-info-inner2 i {
+    color: #666;
+    font-size: 14px
+}
+
+.login-info .login-info-inner2 i {
+    margin: 0 10px
+}
+
+.login-info .login-info-inner2 a:hover,.login-info .login-info-inner2 a:active {
+    color: #ff4e00;
+    text-decoration: none
+}
+
+.login-info .login-info-inner {
+    position: relative;
+    *width: 125px
+}
+
+.login-info .login-info-show {
+    float: right;
+    display: block;
+    padding: 9px 15px 0;
+    height: 42px;
+    outline: none
+}
+
+.login-info .login-user-center {
+    display: none;
+    position: absolute;
+    top: 52px;
+    right: 0;
+    width: 210px;
+    background: #fff;
+    border: 1px solid #e1e1e1
+}
+
+.login-info .login-user-center div {
+    position: relative;
+    padding: 18px 0 0 13px
+}
+
+.login-info .login-user-center div .login-user-wealth {
+    position: absolute;
+    top: 8px;
+    right: 8px
+}
+
+.login-info .login-user-center div h5 {
+    margin-left: 60px;
+    padding: 2px 0 4px
+}
+
+.login-info .login-user-center div p {
+    clear: both;
+    padding: 10px;
+    color: #666
+}
+
+.login-info .login-user-center div p .icon-bobi {
+    margin-bottom: -4px;
+    margin-right: 5px
+}
+
+.login-info .login-user-center div p .icon-bojuan {
+    margin-bottom: -3px;
+    margin-right: 5px;
+    margin-left: 12px
+}
+
+.login-info .login-user-center ul a {
+    display: block;
+    height: 33px;
+    line-height: 33px;
+    padding-left: 27px;
+    color: #666;
+    background: #fff;
+    border-top: 1px solid #e6e6e6
+}
+
+.login-info .login-user-center ul a:hover,.login-info .login-user-center ul a:active,.login-info .login-user-center ul .cur {
+    text-decoration: none;
+    background: #f7f7f7
+}
+
+.login-info .login-news {
+    float: right;
+    position: relative;
+    display: block;
+    width: 53px;
+    height: 52px;
+    outline: none;
+    cursor: pointer;
+    text-align: center
+}
+
+.login-info .icon-mail,.login-info .icon-mail2 {
+    position: absolute;
+    top: 18px;
+    left: 14px
+}
+
+.login-info .icon-mail2 {
+    display: none
+}
+
+.login-info .login-news-active .icon-mail,.login-info .login-news:hover .icon-mail,.login-info .login-news:active .icon-mail {
+    display: none
+}
+
+.login-info .login-news-active .icon-mail2,.login-info .login-news:hover .icon-mail2,.login-info .login-news:active .icon-mail2 {
+    display: inline-block
+}
+
+.login-info .icon-msg {
+    display: none;
+    position: absolute;
+    top: 14px;
+    right: 10px
+}
+
+.login-edit {
+    display: none;
+    position: absolute;
+    top: 52px;
+    right: 0;
+    width: 170px;
+    padding: 5px 20px;
+    text-align: left;
+    background: #fff;
+    border: 1px solid #e1e1e1
+}
+
+.login-edit p {
+    margin: 5px 0 8px
+}
+
+.login-edit a {
+    color: #fff;
+    width: 64px;
+    height: 25px;
+    line-height: 25px;
+    margin-right: 10px
+}
+
+.login-edit .login-edit-tip {
+    display: none;
+    color: #F44103;
+    font-family: Arial
+}
+
+.login-edit .login-edit-tip .icon-error {
+    margin-bottom: -2px;
+    margin-right: 3px;
+    margin-left: -3px
+}
+
+.login-edit .orange-btn {
+    background: #f44103
+}
+
+.login-edit .orange-btn:hover,.login-edit .orange-btn:active {
+    background: #e70000
+}
+
+.login-edit .gray-btn {
+    background: #969696
+}
+
+.login-edit .gray-btn:hover,.login-edit .gray-btn:active {
+    background: #686868
+}
+
+.login-edit .nick-edit {
+    color: #9e9e9e;
+    height: 18px;
+    line-height: 18px;
+    padding: 5px 3px 5px 12px;
+    border: 1px solid #e5e5e5
+}
+
+.message-pop-view {
+    display: none;
+    position: absolute;
+    top: 52px;
+    right: 70px;
+    width: 170px;
+    text-align: left;
+    background: #fff;
+    border: 1px solid #e1e1e1
+}
+
+.message-pop-view a {
+    display: block;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 17px;
+    color: #666;
+    background: #fff;
+    border-bottom: 1px solid #e6e6e6
+}
+
+.message-pop-view a:hover,.message-pop-view a:active,.message-pop-view .cur {
+    text-decoration: none;
+    background: #f7f7f7
+}
+
+.message-pop {
+    display: none;
+    position: absolute;
+    top: 52px;
+    right: 70px;
+    width: 325px;
+    text-align: left;
+    background: #fff;
+    border: 1px solid #e1e1e1
+}
+
+.message-pop .message-pop-wrapper .message-pop-btn {
+    display: block;
+    height: 43px;
+    line-height: 43px;
+    padding-left: 17px;
+    color: #666;
+    background: #fff
+}
+
+.message-pop .message-pop-wrapper .message-pop-btn:hover,.message-pop .message-pop-wrapper .message-pop-btn:active {
+    text-decoration: none;
+    background: #f7f7f7
+}
+
+.message-pop .message-pop-list {
+    background: #fff
+}
+
+.message-pop .message-pop-list h4 {
+    color: #666;
+    padding: 15px 13px 8px
+}
+
+.message-pop .message-pop-list li {
+    position: relative;
+    color: #999;
+    word-wrap: break-word;
+    word-break: break-all;
+    text-align: justify;
+    min-height: 50px;
+    padding: 0 13px 13px;
+    _width: 299px
+}
+
+.message-pop .message-pop-list h5 {
+    position: relative;
+    top: -3px;
+    height: 25px;
+    line-height: 25px;
+    margin-left: 63px;
+    color: #333;
+    font-family: Microsoft YaHei
+}
+
+.message-pop .message-pop-list h5 span,.message-pop .message-pop-list h5 em {
+    float: left;
+    margin-right: 5px
+}
+
+.message-pop .message-pop-list h5 .msg-pop-anchor {
+    margin-top: 3px
+}
+
+.message-pop .message-pop-list h5 .msg-pop-wealth {
+    margin-top: -14px
+}
+
+.message-pop .message-pop-list p {
+    margin-left: 63px
+}
+
+.message-pop .message-pop-list .msg-reply {
+    display: none;
+    position: absolute;
+    top: -3px;
+    right: 13px;
+    background: #fff
+}
+
+.message-pop .message-pop-list .msg-reply a {
+    display: inline-block;
+    margin-left: 8px
+}
+
+.message-pop .message-pop-list .message-pop-time {
+    position: absolute;
+    top: -3px;
+    right: 13px;
+    color: #ccc
+}
+
+.message-pop .message-pop-list .msg-pop-control {
+    padding: 18px 0 5px;
+    text-align: right
+}
+
+.message-pop .message-pop-list .msg-pop-control a {
+    margin-left: 10px
+}
+
+.message-pop .message-pop-list .hover .msg-reply {
+    display: block
+}
+
+.message-pop .team-pop-list li {
+    height: 30px;
+    line-height: 30px;
+    padding: 0;
+    margin: 0
+}
+
+.message-pop .team-pop-list p {
+    padding: 0 13px
+}
+
+.login-info-active .login-edit {
+    display: block
+}
+
+.warpper,.container,.content,.footer {
+    clear: both
+}
+
+.container {
+    width: 1000px;
+    /*min-height: 700px;*/
+    margin: 50px auto 0
+}
+
+.header {
+    *z-index: 99
+}
+
+.conL {
+    float: left
+}
+
+.conR {
+    float: right
+}
+
+.tips {
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    left: 50%;
+    width: 450px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    margin-left: -225px;
+    background: #ffe3b8;
+    z-index: 999;
+    display: none
+}
+
+.tips .correct {
+    color: #666
+}
+
+.tips .error {
+    color: #f44103
+}
+
+.upload-form {
+    position: absolute;
+    z-index: 10001;
+    display: block;
+    top: 0;
+    right: 0;
+    height: 20px;
+    width: 48px;
+    overflow: hidden
+}
+
+.upload-form .file-input {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 680px
+}
+
+.icon-add,.icon-app,.icon-app_hover,.icon-award,.icon-bbk,.icon-bigNameMusic1,.icon-bigNameMusic2,.icon-bigNameMusic3,.icon-bigNamePKItem1,.icon-bigNamePKItem2,.icon-bigNameTit,.icon-bobi,.icon-bodou,.icon-bojuan,.icon-card-bottom,.icon-card-left,.icon-card-right,.icon-card-top,.icon-close-b,.icon-download-top,.icon-dujia,.icon-error,.icon-facebook-login,.icon-fans,.icon-form-correct,.icon-form-error,.icon-form-waring,.icon-friend,.icon-friendlove,.icon-giant,.icon-like,.icon-liked,.icon-live,.icon-liveG,.icon-love,.icon-mailB,.icon-member,.icon-member2,.icon-msg,.icon-mv-delete,.icon-mv-deleteH,.icon-mv-sina,.icon-mv-sinaH,.icon-mv-watch,.icon-nav-choice,.icon-nav-choice_hover,.icon-nav-classify,.icon-nav-classify_hover,.icon-nav-follow,.icon-nav-follow_hover,.icon-nav-fu,.icon-nav-hall,.icon-nav-hall_hover,.icon-nav-more,.icon-nav-more_hover,.icon-nav-record,.icon-nav-record_hover,.icon-next-down,.icon-next-down_hover,.icon-next-right,.icon-next-right_hover,.icon-ntes,.icon-personal,.icon-play,.icon-playNum,.icon-prev-left,.icon-prev-left_hover,.icon-prev-up,.icon-prev-up_hover,.icon-puke,.icon-qq-login,.icon-qq,.icon-radio,.icon-rightG,.icon-ring,.icon-scan,.icon-search-live,.icon-search,.icon-sina,.icon-speaker,.icon-star,.icon-user,.icon-warning,.icon-weibo-login,.icon-wx-green,.icon-wx,.icon-zan {
+    background-image: url("//img2.cache.netease.com/liveshow/static0806/image/sprites/icon.b241f93a.png");
+    display: inline-block;
+}
+
+.icon-add {
+    background-position: 0 0;
+    height: 16px;
+    width: 14px
+}
+
+.icon-addB {
+    background-position: 0 -22px;
+    height: 17px;
+    width: 17px
+}
+
+.icon-admin {
+    background-position: 0 -45px;
+    height: 16px;
+    width: 16px
+}
+
+.icon-anchor {
+    background-position: 0 -67px;
+    height: 16px;
+    width: 16px
+}
+
+.icon-applyarrow {
+    background-position: 0 -89px;
+    height: 13px;
+    width: 20px
+}
+
+.icon-arrow {
+    background-position: 0 -108px;
+    height: 8px;
+    width: 11px
+}
+
+.icon-audience {
+    background-position: 0 -122px;
+    height: 16px;
+    width: 14px
+}
+
+.icon-back {
+    background-position: 0 -144px;
+    height: 29px;
+    width: 29px
+}
+
+.icon-bbk {
+    background-position: 0 -179px;
+    height: 17px;
+    width: 14px
+}
+
+.icon-bobi {
+    background-position: 0 -202px;
+    height: 19px;
+    width: 19px
+}
+
+.icon-bodou {
+    background-position: 0 -227px;
+    height: 18px;
+    width: 18px
+}
+
+.icon-bojuan {
+    background-position: 0 -251px;
+    height: 16px;
+    width: 15px
+}
+
+.icon-card-bottom {
+    background-position: 0 -273px;
+    height: 14px;
+    width: 16px
+}
+
+.icon-card-left {
+    background-position: 0 -293px;
+    height: 22px;
+    width: 12px
+}
+
+.icon-card-right {
+    background-position: 0 -321px;
+    height: 22px;
+    width: 12px
+}
+
+.icon-card-top {
+    background-position: 0 -349px;
+    height: 11px;
+    width: 20px
+}
+
+.icon-clock {
+    background-position: 0 -366px;
+    height: 12px;
+    width: 12px
+}
+
+.icon-clockS {
+    background-position: 0 -384px;
+    height: 14px;
+    width: 15px
+}
+
+.icon-close {
+    background-position: 0 -404px;
+    height: 9px;
+    width: 9px
+}
+
+.icon-confirm {
+    background-position: 0 -419px;
+    height: 19px;
+    width: 19px
+}
+
+.icon-corner {
+    background-position: 0 -444px;
+    height: 25px;
+    width: 14px
+}
+
+.icon-correct {
+    background-position: 0 -475px;
+    height: 14px;
+    width: 13px
+}
+
+.icon-cover {
+    background-position: 0 -495px;
+    height: 15px;
+    width: 16px
+}
+
+.icon-cover2 {
+    background-position: 0 -516px;
+    height: 17px;
+    width: 19px
+}
+
+.icon-del {
+    background-position: 0 -539px;
+    height: 14px;
+    width: 11px
+}
+
+.icon-dollar {
+    background-position: 0 -559px;
+    height: 16px;
+    width: 16px
+}
+
+.icon-down {
+    background-position: 0 -581px;
+    height: 12px;
+    width: 10px
+}
+
+.icon-down2 {
+    background-position: 0 -599px;
+    height: 12px;
+    width: 10px
+}
+
+.icon-dujia {
+    background-position: 0 -617px;
+    height: 18px;
+    width: 17px
+}
+
+.icon-error {
+    background-position: 0 -641px;
+    height: 13px;
+    width: 13px
+}
+
+.icon-errorB {
+    background-position: 0 -660px;
+    height: 23px;
+    width: 23px
+}
+
+.icon-errorRed {
+    background-position: 0 -689px;
+    height: 12px;
+    width: 12px
+}
+
+.icon-exchange {
+    background-position: 0 -707px;
+    height: 14px;
+    width: 40px
+}
+
+.icon-fail {
+    background-position: 0 -727px;
+    height: 13px;
+    width: 16px
+}
+
+.icon-fansB {
+    background-position: 0 -746px;
+    height: 35px;
+    width: 29px
+}
+
+.icon-fansF {
+    background-position: 0 -787px;
+    height: 12px;
+    width: 11px
+}
+
+.icon-fansFH {
+    background-position: 0 -805px;
+    height: 13px;
+    width: 11px
+}
+
+.icon-fansGB {
+    background-position: 0 -824px;
+    height: 27px;
+    width: 22px
+}
+
+.icon-fansS {
+    background-position: 0 -857px;
+    height: 14px;
+    width: 14px
+}
+
+.icon-gift {
+    background-position: 0 -877px;
+    height: 15px;
+    width: 18px
+}
+
+.icon-gongxian {
+    background-position: 0 -898px;
+    height: 19px;
+    width: 19px
+}
+
+.icon-help {
+    background-position: 0 -923px;
+    height: 28px;
+    width: 28px
+}
+
+.icon-help2 {
+    background-position: 0 -957px;
+    height: 16px;
+    width: 17px
+}
+
+.icon-list4 {
+    background-position: 0 -979px;
+    height: 12px;
+    width: 11px
+}
+
+.icon-liveG {
+    background-position: 0 -997px;
+    height: 13px;
+    width: 12px
+}
+
+.icon-liveGB {
+    background-position: 0 -1016px;
+    height: 27px;
+    width: 19px
+}
+
+.icon-liveW {
+    background-position: 0 -1049px;
+    height: 14px;
+    width: 12px
+}
+
+.icon-liveWB {
+    background-position: 0 -1069px;
+    height: 32px;
+    width: 22px
+}
+
+.icon-mail {
+    background-position: 0 -1107px;
+    height: 18px;
+    width: 25px
+}
+
+.icon-mail2 {
+    background-position: 0 -1131px;
+    height: 18px;
+    width: 25px
+}
+
+.icon-mailB {
+    background-position: 0 -1155px;
+    height: 17px;
+    width: 21px
+}
+
+.icon-member {
+    background-position: 0 -1178px;
+    height: 18px;
+    width: 18px
+}
+
+.icon-memberG {
+    background-position: 0 -1202px;
+    height: 14px;
+    width: 14px
+}
+
+.icon-memberW {
+    background-position: 0 -1222px;
+    height: 14px;
+    width: 14px
+}
+
+.icon-msg {
+    background-position: 0 -1242px;
+    height: 10px;
+    width: 10px
+}
+
+.icon-none {
+    background-position: 0 -1258px;
+    height: 24px;
+    width: 24px
+}
+
+.icon-ntes {
+    background-position: 0 -1288px;
+    height: 17px;
+    width: 35px
+}
+
+.icon-num {
+    background-position: 0 -1311px;
+    height: 10px;
+    width: 16px
+}
+
+.icon-personal {
+    background-position: 0 -1327px;
+    height: 11px;
+    width: 11px
+}
+
+.icon-photodel {
+    background-position: 0 -1344px;
+    height: 11px;
+    width: 11px
+}
+
+.icon-play {
+    background-position: 0 -1361px;
+    height: 32px;
+    width: 32px
+}
+
+.icon-qq {
+    background-position: 0 -1399px;
+    height: 23px;
+    width: 20px
+}
+
+.icon-radio {
+    background-position: 0 -1428px;
+    height: 22px;
+    width: 20px
+}
+
+.icon-rank1 {
+    background-position: 0 -1456px;
+    height: 26px;
+    width: 26px
+}
+
+.icon-rank2 {
+    background-position: 0 -1488px;
+    height: 26px;
+    width: 26px
+}
+
+.icon-rank3 {
+    background-position: 0 -1520px;
+    height: 16px;
+    width: 16px
+}
+
+.icon-rankcorner {
+    background-position: 0 -1542px;
+    height: 6px;
+    width: 15px
+}
+
+.icon-rankcorner2 {
+    background-position: 0 -1554px;
+    height: 6px;
+    width: 16px
+}
+
+.icon-reply {
+    background-position: 0 -1566px;
+    height: 14px;
+    width: 11px
+}
+
+.icon-right {
+    background-position: 0 -1586px;
+    height: 16px;
+    width: 20px
+}
+
+.icon-rightDeltoid {
+    background-position: 0 -1608px;
+    height: 10px;
+    width: 8px
+}
+
+.icon-rightG {
+    background-position: 0 -1624px;
+    height: 16px;
+    width: 16px
+}
+
+.icon-rightS {
+    background-position: 0 -1646px;
+    height: 12px;
+    width: 15px
+}
+
+.icon-room-alert {
+    background-position: 0 -1664px;
+    height: 14px;
+    width: 14px
+}
+
+.icon-room-delete {
+    background-position: 0 -1684px;
+    height: 7px;
+    width: 7px
+}
+
+.icon-room {
+    background-position: 0 -1697px;
+    height: 23px;
+    width: 26px
+}
+
+.icon-search {
+    background-position: 0 -1726px;
+    height: 18px;
+    width: 18px
+}
+
+.icon-search2 {
+    background-position: 0 -1750px;
+    height: 15px;
+    width: 20px
+}
+
+.icon-searchB {
+    background-position: 0 -1771px;
+    height: 22px;
+    width: 21px
+}
+
+.icon-sina {
+    background-position: 0 -1799px;
+    height: 21px;
+    width: 27px
+}
+
+.icon-tiny {
+    background-position: 0 -1826px;
+    height: 10px;
+    width: 10px
+}
+
+.icon-tinygray {
+    background-position: 0 -1842px;
+    height: 10px;
+    width: 10px
+}
+
+.icon-top {
+    background-position: 0 -1858px;
+    height: 24px;
+    width: 24px
+}
+
+.icon-usercorner {
+    background-position: 0 -1888px;
+    height: 14px;
+    width: 8px
+}
+
+.icon-warning {
+    background-position: 0 -1908px;
+    height: 14px;
+    width: 16px
+}
+
+.icon-week {
+    background-position: 0 -1928px;
+    height: 18px;
+    width: 18px
+}
+
+.icon-weekgx {
+    background-position: 0 -1952px;
+    height: 18px;
+    width: 41px
+}
+
+.icon-wenhao {
+    background-position: 0 -1976px;
+    height: 16px;
+    width: 16px
+}
+
+.icon-zhibo {
+    background-position: 0 -1998px;
+    height: 18px;
+    width: 17px
+}
+
+.icon-qq-login {
+    background-position: 0px -2431px;
+    width: 64px;
+    height: 64px;
+}
+
+.icon-weibo-login {
+    background-position: 0px -2505px;
+    width: 64px;
+    height: 64px;
+}
+
+.btn-sprite,.btn-anchor-left,.btn-anchor-right,.btn-apply,.btn-blue,.btn-bobi,.btn-card-close,.btn-close,.btn-download-live,.btn-enter,.btn-ewmclose,.btn-ewmtab,.btn-ewmtab2,.btn-family-left,.btn-family-right,.btn-freshclose,.btn-haoli,.btn-hometab,.btn-huigu,.btn-jzz-search,.btn-jzz-tab,.btn-login-close,.btn-msg-del,.btn-msg-pop,.btn-msg-reply,.btn-pClose,.btn-personal-close,.btn-play,.btn-prestep,.btn-receive,.btn-register,.btn-reminder,.btn-search,.btn-search2,.btn-shop-buy,.btn-showewm,.btn-submit,.btn-team-left,.btn-team-right,.btn-upload,.btn-uploadvideo,.btn-video,.btn-videoClose,.btn-videopop,.btn-vipclose,.btn-viptip_close {
+    background-image: url('//img1.cache.netease.com/bobo/image/btn-s0b6b66d575.png');
+    background-repeat: no-repeat
+}
+
+.btn-anchor-left {
+    background-position: 0 0;
+    height: 26px;
+    width: 26px
+}
+
+.btn-anchor-left:hover,.btn-anchor-left.anchor-left-hover {
+    background-position: 0 -34px
+}
+
+.btn-anchor-right {
+    background-position: 0 -68px;
+    height: 26px;
+    width: 26px
+}
+
+.btn-anchor-right:hover,.btn-anchor-right.anchor-right-hover {
+    background-position: 0 -102px
+}
+
+.btn-apply {
+    background-position: 0 -136px;
+    height: 26px;
+    width: 78px
+}
+
+.btn-apply:hover,.btn-apply.apply-hover {
+    background-position: 0 -170px
+}
+
+.btn-blue {
+    background-position: 0 -204px;
+    height: 27px;
+    width: 120px
+}
+
+.btn-blue:hover,.btn-blue.blue-hover {
+    background-position: 0 -239px
+}
+
+.btn-bobi {
+    background-position: 0 -274px;
+    height: 44px;
+    width: 128px
+}
+
+.btn-bobi:hover,.btn-bobi.bobi-hover {
+    background-position: 0 -326px
+}
+
+.btn-card-close {
+    background-position: 0 -378px;
+    height: 40px;
+    width: 40px
+}
+
+.btn-card-close:hover,.btn-card-close.card-close-hover {
+    background-position: 0 -426px
+}
+
+.btn-close {
+    background-position: 0 -474px;
+    height: 10px;
+    width: 10px
+}
+
+.btn-close:hover,.btn-close.close-hover {
+    background-position: 0 -492px
+}
+
+.btn-download-live {
+    background-position: 0 -510px;
+    height: 34px;
+    width: 109px
+}
+
+.btn-enter {
+    background-position: 0 -552px;
+    height: 36px;
+    width: 108px
+}
+
+.btn-enter:hover,.btn-enter.enter-hover {
+    background-position: 0 -596px
+}
+
+.btn-ewmclose {
+    background-position: 0 -640px;
+    height: 18px;
+    width: 18px
+}
+
+.btn-ewmclose:hover,.btn-ewmclose.ewmclose-hover {
+    background-position: 0 -666px
+}
+
+.btn-ewmtab {
+    background-position: 0 -692px;
+    height: 14px;
+    width: 14px
+}
+
+.btn-ewmtab2 {
+    background-position: 0 -714px;
+    height: 14px;
+    width: 14px
+}
+
+.btn-family-left {
+    background-position: 0 -736px;
+    height: 50px;
+    width: 50px
+}
+
+.btn-family-left:hover,.btn-family-left.family-left-hover {
+    background-position: 0 -794px
+}
+
+.btn-family-right {
+    background-position: 0 -852px;
+    height: 50px;
+    width: 50px
+}
+
+.btn-family-right:hover,.btn-family-right.family-right-hover {
+    background-position: 0 -910px
+}
+
+.btn-freshclose {
+    background-position: 0 -968px;
+    height: 21px;
+    width: 21px
+}
+
+.btn-freshclose:hover,.btn-freshclose.freshclose-hover {
+    background-position: 0 -997px
+}
+
+.btn-haoli {
+    background-position: 0 -1026px;
+    height: 44px;
+    width: 128px
+}
+
+.btn-haoli:hover,.btn-haoli.haoli-hover {
+    background-position: 0 -1078px
+}
+
+.btn-hometab {
+    background-position: 0 -1130px;
+    height: 30px;
+    width: 30px
+}
+
+.btn-hometab:hover,.btn-hometab.hometab-hover {
+    background-position: 0 -1168px
+}
+
+.btn-huigu {
+    background-position: 0 -1206px;
+    height: 44px;
+    width: 240px
+}
+
+.btn-huigu:hover,.btn-huigu.huigu-hover {
+    background-position: 0 -1258px
+}
+
+.btn-jzz-search {
+    background-position: 0 -1310px;
+    height: 25px;
+    width: 76px
+}
+
+.btn-jzz-search:hover,.btn-jzz-search.jzz-search-hover {
+    background-position: 0 -1343px
+}
+
+.btn-jzz-tab {
+    background-position: 0 -1376px;
+    height: 27px;
+    width: 62px
+}
+
+.btn-jzz-tab:hover,.btn-jzz-tab.jzz-tab-hover {
+    background-position: 0 -1411px
+}
+
+.btn-login-close {
+    background-position: 0 -1446px;
+    height: 40px;
+    width: 46px
+}
+
+.btn-login-close:hover,.btn-login-close.login-close-hover {
+    background-position: 0 -1494px
+}
+
+.btn-msg-del {
+    background-position: 0 -1542px;
+    height: 22px;
+    width: 22px
+}
+
+.btn-msg-del:hover,.btn-msg-del.msg-del-hover {
+    background-position: 0 -1572px
+}
+
+.btn-msg-pop {
+    background-position: 0 -1602px;
+    height: 20px;
+    width: 21px
+}
+
+.btn-msg-pop:hover,.btn-msg-pop.msg-pop-hover {
+    background-position: 0 -1630px
+}
+
+.btn-msg-reply {
+    background-position: 0 -1658px;
+    height: 22px;
+    width: 22px
+}
+
+.btn-msg-reply:hover,.btn-msg-reply.msg-reply-hover {
+    background-position: 0 -1688px
+}
+
+.btn-pClose {
+    background-position: 0 -1718px;
+    height: 24px;
+    width: 24px
+}
+
+.btn-personal-close {
+    background-position: 0 -1750px;
+    height: 34px;
+    width: 34px
+}
+
+.btn-personal-close:hover,.btn-personal-close.personal-close-hover {
+    background-position: 0 -1792px
+}
+
+.btn-play {
+    background-position: 0 -1834px;
+    height: 36px;
+    width: 52px
+}
+
+.btn-play:hover,.btn-play.play-hover {
+    background-position: 0 -1878px
+}
+
+.btn-prestep {
+    background-position: 0 -1922px;
+    height: 28px;
+    width: 67px
+}
+
+.btn-receive {
+    background-position: 0 -1958px;
+    height: 26px;
+    width: 78px
+}
+
+.btn-receive:hover,.btn-receive.receive-hover {
+    background-position: 0 -1992px
+}
+
+.btn-register {
+    background-position: 0 -2026px;
+    height: 26px;
+    width: 78px
+}
+
+.btn-register:hover,.btn-register.register-hover {
+    background-position: 0 -2060px
+}
+
+.btn-reminder {
+    background-position: 0 -2094px;
+    height: 36px;
+    width: 108px
+}
+
+.btn-search {
+    background-position: 0 -2138px;
+    height: 20px;
+    width: 20px
+}
+
+.btn-search2 {
+    background-position: 0 -2166px;
+    height: 18px;
+    width: 18px
+}
+
+.btn-shop-buy {
+    background-position: 0 -2192px;
+    height: 23px;
+    width: 58px
+}
+
+.btn-shop-buy:hover,.btn-shop-buy.shop-buy-hover {
+    background-position: 0 -2223px
+}
+
+.btn-showewm {
+    background-position: 0 -2254px;
+    height: 30px;
+    width: 48px
+}
+
+.btn-showewm:hover,.btn-showewm.showewm-hover {
+    background-position: 0 -2292px
+}
+
+.btn-submit {
+    background-position: 0 -2330px;
+    height: 30px;
+    width: 142px
+}
+
+.btn-submit:hover,.btn-submit.submit-hover {
+    background-position: 0 -2368px
+}
+
+.btn-team-left {
+    background-position: 0 -2406px;
+    height: 25px;
+    width: 25px
+}
+
+.btn-team-left:hover,.btn-team-left.team-left-hover {
+    background-position: 0 -2439px
+}
+
+.btn-team-right {
+    background-position: 0 -2472px;
+    height: 25px;
+    width: 25px
+}
+
+.btn-team-right:hover,.btn-team-right.team-right-hover {
+    background-position: 0 -2505px
+}
+
+.btn-upload {
+    background-position: 0 -2538px;
+    height: 35px;
+    width: 107px
+}
+
+.btn-upload:hover,.btn-upload.upload-hover {
+    background-position: 0 -2581px
+}
+
+.btn-uploadvideo {
+    background-position: 0 -2624px;
+    height: 35px;
+    width: 107px
+}
+
+.btn-uploadvideo:hover,.btn-uploadvideo.uploadvideo-hover {
+    background-position: 0 -2667px
+}
+
+.btn-video {
+    background-position: 0 -2710px;
+    height: 52px;
+    width: 52px
+}
+
+.btn-videoClose {
+    background-position: 0 -2770px;
+    height: 18px;
+    width: 18px
+}
+
+.btn-videoClose:hover,.btn-videoClose.videoClose-hover {
+    background-position: 0 -2796px
+}
+
+.btn-videopop {
+    background-position: 0 -2822px;
+    height: 37px;
+    width: 107px
+}
+
+.btn-vipclose {
+    background-position: 0 -2867px;
+    height: 26px;
+    width: 26px
+}
+
+.btn-vipclose:hover,.btn-vipclose.vipclose-hover {
+    background-position: 0 -2901px
+}
+
+.btn-viptip_close {
+    background-position: 0 -2935px;
+    height: 17px;
+    width: 17px
+}
+
+.btn-viptip_close:hover,.btn-viptip_close.viptip_close-hover {
+    background-position: 0 -2960px
+}
+
+
+
+.avatar,.avatar-m,.avatar-s,.avatar-r1,.avatar-r2,.avatar-week1,.avatar-week2,.avatar-no1,.avatar-b,.avatar-login,.avatar-login1,.avatar-m-w {
+    position: relative;
+    display: block
+}
+
+.avatar em,.avatar-m em,.avatar-s em,.avatar-r1 em,.avatar-r2 em,.avatar-week1 em,.avatar-week2 em,.avatar-no1 em,.avatar-b em,.avatar-login em,.avatar-login1 em,.avatar-m-w em {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    background-image: url(//img1.cache.netease.com/bobo/image/avatar_v140915.png)
+}
+
+.avatar,.avatar img,.avatar em {
+    height: 80px;
+    width: 80px
+}
+
+.avatar-m,.avatar-m img,.avatar-m em {
+    height: 50px;
+    width: 50px
+}
+
+.avatar-s,.avatar-s img,.avatar-s em {
+    height: 40px;
+    width: 40px
+}
+
+.avatar-r1,.avatar-r1 img,.avatar-r1 em {
+    height: 58px;
+    width: 58px
+}
+
+.avatar-r2,.avatar-r2 img,.avatar-r2 em {
+    height: 50px;
+    width: 50px
+}
+
+.avatar-week1,.avatar-week1 em,.avatar-week2,.avatar-week2 em {
+    width: 57px;
+    height: 57px
+}
+
+.avatar-login,.avatar-login em,.avatar-login img {
+    width: 120px;
+    height: 120px
+}
+
+.avatar-week1 img,.avatar-week2 img {
+    _position: absolute;
+    _top: 3px;
+    _left: 3px;
+    width: 52px;
+    height: 52px;
+    margin-top: 2px;
+    margin-left: 2px
+}
+
+.avatar-b,.avatar-b img,.avatar-b em {
+    width: 32px;
+    height: 32px
+}
+
+.avatar-m-w,.avatar-m-w img,.avatar-m-w em {
+    width: 68px;
+    height: 68px
+}
+
+.avatar-no1 {
+    width: 92px;
+    height: 92px
+}
+
+.avatar-no1 img {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 68px;
+    height: 68px
+}
+
+.avatar-no1 em {
+    top: 0;
+    left: 0;
+    width: 92px;
+    height: 92px
+}
+
+.avatar-login1,.avatar-login1 em,.avatar-login1 img {
+    width: 36px;
+    height: 36px
+}
+
+.avatar em {
+    background-position: 0 0;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//img1.cache.netease.com/bobo/image/avatar/avatar.png',sizingMethod='scale')
+}
+
+.avatar .avatar-g {
+    background-position: 0 -80px;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//img1.cache.netease.com/bobo/image/avatar/avatar-g.png',sizingMethod='scale')
+}
+
+.avatar .avatar-y {
+    background-position: 0 -460px;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//img1.cache.netease.com/bobo/image/avatar/avatar-y.png',sizingMethod='scale')
+}
+
+.avatar-m em {
+    background-position: 0 -160px;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//img1.cache.netease.com/bobo/image/avatar/avatar-m.png',sizingMethod='scale')
+}
+
+.avatar-m .avatar-m-g {
+    background-position: 0 -210px;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//img1.cache.netease.com/bobo/image/avatar/avatar-m-g.png',sizingMethod='scale')
+}
+
+.avatar-m .avatar-m-b {
+    background-position: 0 -410px;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//img1.cache.netease.com/bobo/image/avatar/avatar-m-b.png',sizingMethod='scale')
+}
+
+.avatar-m .avatar-m-o {
+    background-position: 0 -540px;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//img1.cache.netease.com/bobo/image/avatar/avatar-m-o.png',sizingMethod='scale')
+}
+
+.avatar-s em {
+    background-position: 0 -370px;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//img1.cache.netease.com/bobo/image/avatar/avatar-s.png',sizingMethod='scale')
+}
+
+.avatar-r1 em {
+    background-position: 0 -310px;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//img1.cache.netease.com/bobo/image/avatar/avatar-r1.png',sizingMethod='scale')
+}
+
+.avatar-r2 em {
+    background-position: 0 -210px;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//img1.cache.netease.com/bobo/image/avatar/avatar-r2.png',sizingMethod='scale')
+}
+
+.avatar-week1 em {
+    background-position: 0 -590px;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//img1.cache.netease.com/bobo/image/avatar/avatar-week1.png',sizingMethod='scale')
+}
+
+.avatar-week2 em {
+    background-position: 0 -647px;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//img1.cache.netease.com/bobo/image/avatar/avatar-week2.png',sizingMethod='scale')
+}
+
+.avatar-b em {
+    background-position: 0 -800px;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//img1.cache.netease.com/bobo/image/avatar/avatar-b.png',sizingMethod='scale')
+}
+
+.avatar-no1 em {
+    background-position: 0 -705px;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//img1.cache.netease.com/bobo/image/avatar/avatar-no1.png',sizingMethod='scale')
+}
+
+.avatar-login em {
+    background-position: 0 -900px;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//img1.cache.netease.com/bobo/image/avatar/avatar-login.png',sizingMethod='scale')
+}
+
+.avatar-login1 em {
+    background-position: 0 -1020px;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//img1.cache.netease.com/bobo/image/avatar/avatar-login1.png',sizingMethod='scale')
+}
+
+.avatar-login1:hover em,.avatar-login1:active em {
+    background-position: -40px -1020px;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//img1.cache.netease.com/bobo/image/avatar/avatar-login1-hover.png',sizingMethod='scale')
+}
+
+.avatar-m-w em {
+    background-position: 0 -832px;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//img1.cache.netease.com/bobo/image/avatar/avatar-m-w.png',sizingMethod='scale')
+}
+
+#shade {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: fixed;
+    _position: absolute;
+    z-index: 1150;
+    background: #000;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    left: 0;
+    top: 0;
+    display: none
+}
+
+.dialogLayer {
+    position: fixed;
+    _position: absolute;
+    z-index: 1300;
+    border-right: 1px solid #8a8a8a;
+    border-bottom: 1px solid #767676;
+    background: #fff;
+    display: none
+}
+
+.dialogLayer-hd {
+    height: 10px;
+    line-height: 10px;
+    padding: 12px 15px;
+    text-align: right
+}
+
+.dialogLayer-hd .btn-close {
+    _font-size: 0;
+    cursor: pointer
+}
+
+.popWidth {
+    width: 400px
+}
+
+.popWidth .dialogLayer-bd {
+    padding: 20px 20px 30px;
+    text-align: center
+}
+
+.popWidth .dialogLayer-bd h3 {
+    color: #666;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px
+}
+
+.popWidth .dialogLayer-bd p {
+    margin-bottom: 20px
+}
+
+.popWidth .dialogLayer-bd .orange-btnS,.popWidth .dialogLayer-bd .gray-btnS {
+    margin: 0 5px
+}
+
+.msgdialogLayer {
+    width: 506px;
+    background: #f6f6f6
+}
+
+.msgdialogLayer .dialogLayer-bd {
+    width: 422px;
+    padding: 5px 42px 48px
+}
+
+.msgdialogLayer h3 {
+    font-size: 14px
+}
+
+.msgdialogLayer textarea {
+    width: 400px;
+    height: 120px;
+    line-height: 20px;
+    padding: 8px 11px;
+    margin: 5px 0 8px;
+    color: #5b5b5b;
+    resize: none;
+    border: 0 none;
+    overflow: hidden;
+    border-top: 1px solid #d9d9d9;
+    background: #fff
+}
+
+.msgdialogLayer .msg-send-info {
+    height: 23px;
+    line-height: 23px;
+    padding-left: 5px;
+    text-align: right
+}
+
+.msgdialogLayer .msg-send-info em {
+    position: relative;
+    bottom: -5px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Georgia;
+    margin: 0 15px
+}
+
+.feedbackdialogLayer {
+    width: 506px;
+    background: #f6f6f6
+}
+
+.feedbackdialogLayer .dialogLayer-bd {
+    width: 402px;
+    padding: 5px 52px 45px
+}
+
+.feedbackdialogLayer h3 {
+    height: 25px;
+    line-height: 25px;
+    text-align: right
+}
+
+.feedbackdialogLayer h3 strong {
+    float: left;
+    font-size: 14px
+}
+
+.feedbackdialogLayer h3 span {
+    position: relative;
+    top: -3px
+}
+
+.feedbackdialogLayer h3 em {
+    position: relative;
+    bottom: -4px;
+    font-size: 24px;
+    font-family: Georgia;
+    margin: 0 15px
+}
+
+.feedbackdialogLayer textarea {
+    width: 380px;
+    height: 80px;
+    line-height: 20px;
+    padding: 8px 11px;
+    margin: 12px 0 28px;
+    color: #5b5b5b;
+    resize: none;
+    border: 0 none;
+    overflow: hidden;
+    border-top: 1px solid #d9d9d9;
+    background: #fff
+}
+
+.repdialogLayer {
+    *width: 402px
+}
+
+.repdialogLayer .dialogLayer-bd {
+    width: 338px;
+    padding: 5px 32px 35px
+}
+
+.repdialogLayer .dialogLayer-bd h3 {
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 20px
+}
+
+.repdialogLayer .dialogLayer-bd .report-msg-info {
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e8e8e8
+}
+
+.repdialogLayer .dialogLayer-bd .report-msg-info .avatar-m {
+    margin-right: 40px
+}
+
+.repdialogLayer .dialogLayer-bd .report-msg-info .report-wealth {
+    position: absolute;
+    left: 60px;
+    top: 0
+}
+
+.repdialogLayer .dialogLayer-bd .report-msg-info .report-anchor {
+    margin-bottom: -4px;
+    margin-left: 5px
+}
+
+.repdialogLayer .dialogLayer-bd .report-msg-info p {
+    _margin-top: 10px
+}
+
+.repdialogLayer .dialogLayer-bd .report-msg-reason {
+    padding: 18px 0 5px
+}
+
+.repdialogLayer .dialogLayer-bd .report-msg-reason label {
+    float: left;
+    width: 169px;
+    _width: 165px;
+    margin-bottom: 12px
+}
+
+.repdialogLayer .dialogLayer-bd .report-check {
+    position: relative;
+    bottom: -2px;
+    margin-right: 10px
+}
+
+.repdialogLayer .dialogLayer-bd textarea {
+    width: 326px;
+    height: 40px;
+    padding: 5px 6px;
+    margin-bottom: 15px;
+    _margin-top: 10px;
+    border-top: 1px solid #c3c3c3;
+    border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    border-bottom: 0 none;
+    background: #f6f6f6;
+    resize: none
+}
+
+.repdialogLayer .dialogLayer-bd .orange-btnS {
+    margin-right: 10px
+}
+
+.header {
+    *position: relative;
+    width: 100%;
+    height: 52px;
+    background: #fff;
+    box-shadow: 0 2px 2px #ddd
+}
+
+.header .header-inner {
+    position: relative;
+    width: 1130px;
+    height: 52px;
+    margin: 0 auto
+}
+
+.header .logo36 {
+    float: left;
+    margin-top: 7px;
+    margin-right: 32px
+}
+
+.navi {
+    float: left;
+    position: relative;
+    top: -3px;
+    border-top: 3px solid #fe32b8;
+    height: 48px
+}
+
+.navi span {
+    position: absolute;
+    top: -4px;
+    left: 210px;
+    display: block;
+    width: 200px;
+    height: 4px;
+    font-size: 0;
+    line-height: 0;
+    background: #ae21ff
+}
+
+.navi a {
+    float: left;
+    display: block;
+    height: 52px;
+    color: #222;
+    padding: 0 12px;
+    text-align: center;
+    font: 18px/52px Microsoft YaHei
+}
+
+.navi a:hover,.navi a:active,.navi .cur {
+    color: #fe32b8;
+    text-decoration: none
+}
+
+.navi .nav-tab:hover,.navi .nav-tab:active,.navi .nav-tab.cur {
+    color: #ae21ff
+}
+
+.navi i {
+    position: relative;
+    top: 18px;
+    *top: 15px;
+    float: left;
+    display: block;
+    width: 1px;
+    height: 18px;
+    margin: 0 12px;
+    border-right: 1px solid #dcdcdc
+}
+
+.search {
+    float: right;
+    position: relative;
+    height: 28px;
+    padding-right: 3px;
+    margin-top: 14px;
+    z-index: 100
+}
+
+.search .search-input {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    font-family: Microsoft YaHei;
+    padding: 4px 0 4px 12px;
+    color: #999;
+    cursor: text;
+    outline: none;
+    border: 0 none;
+    background: none
+}
+
+.search .btn-search {
+    position: absolute;
+    top: 4px;
+    right: 9px;
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+    -moz-transition: -moz-transform 0.4s ease-out;
+    transition: transform 0.4s ease-out
+}
+
+.search-hover {
+    border: 1px solid #acacac;
+    border-radius: 14px
+}
+
+.search-hover .btn-search {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg)
+}
+
+.search-active {
+    border-color: #ffb8a0
+}
+
+.header-apply-btn {
+    float: right;
+    margin-top: 18px;
+    _margin-top: 20px;
+    margin-left: 10px;
+    color: #666;
+    font: 14px Microsoft YaHei
+}
+
+.header-apply-btn:hover,.header-apply-btn:active {
+    color: #ff4e00;
+    text-decoration: none
+}
+
+/*.footer{padding:15px 0;margin-top:100px;background:#353535;height:20px;line-height:20px;font:12px/1.75 Arial,sans-serif,\5b8b\4f53;text-align:center}.footer .foot{color:#ccc;width:1000px;text-align:right;margin:0 auto}.footer a{color:#ccc;margin-right:35px}.footer i{color:#6e6e6e;font-size:14px;margin-right:35px}.footer .copyright{position:relative;top:1px;font-size:14px;margin:0 5px}*/
+.loginLayer {
+    width:414px;
+    /*width: 775px;*/
+    border: 0 none
+}
+
+.loginLayer .dialogLayer-hd {
+    position: relative;
+    padding: 0;
+    height: 135px;
+    /*background: url("/dev/images/common/bolo-login-bg.jpg") #ffaf1c center no-repeat;*/
+    background: url("/dev/images/common/bolo-login-bg2.jpg") #ffaf1c center no-repeat;
+}
+.loginLayer .dialogLayer-hd .receive-now {
+    position: absolute;
+    top: 78px;
+    right: 20px;
+    display: block;
+    width: 145px;
+    height: 39px;
+    text-align: center;
+    color: #ff005e;
+    font: 20px/38px Microsoft YaHei;
+    background: #fff600;
+    border-radius: 10px;
+    display:none !important;
+
+}
+
+.loginLayer .dialogLayer-hd .receive-now:hover {
+    text-decoration: none;
+    background: #fff961
+}
+
+.loginLayer .dialogLayer-hd .receive-now:active {
+    text-decoration: none;
+    background: #ffde00
+}
+
+.loginLayer .dialogLayer-bd {
+    *height: 220px;
+    padding: 25px 52px;
+}
+
+.loginLayer h2 {
+    height: 20px;
+    line-height: 20px;
+    font-size: 20px;
+    font-family: Microsoft YaHei
+}
+
+.login-area {
+    float: left;
+    position: relative;
+    width: 308px;
+    padding-right: 55px;
+    border-right: 1px solid #e3e3e3
+}
+
+.login-area #login-URS-iframe{
+    min-height:309px;
+}
+
+.login-area #login-URS-iframe iframe{
+    min-height:309px;
+}
+
+.login-area .login-mail,.login-area .login-pwd {
+    width: 288px;
+    height: 20px;
+    line-height: 20px;
+    padding: 7px 10px 9px;
+    margin-top: 18px;
+    border: 0 none;
+    color: #7c7c7c;
+    border-top: 1px solid #d5d5d5;
+    background: #f6f6f6;
+    font-size: 14px
+}
+
+.login-area .login-item {
+    position: relative
+}
+
+.login-area .login-default-text {
+    position: absolute;
+    top: 25px;
+    left: 11px;
+    color: #BBB;
+    font-size: 14px;
+    cursor: text
+}
+
+.login-area .login-check {
+    margin-top: 5px;
+    text-align: right
+}
+
+.login-area .login-check input {
+    position: relative;
+    top: 3px;
+    margin-right: 5px
+}
+
+.login-area .login-btn {
+    outline: none;
+    cursor: pointer;
+    display: block;
+    width: 308px;
+    height: 38px;
+    margin-top: 25px;
+    color: #fff;
+    font: 18px/38px Microsoft YaHei;
+    text-align: center;
+    text-decoration: none !important;
+    background: url(//img1.cache.netease.com/bobo/image/rep.png) 0 -80px repeat-x;
+    border: none
+}
+
+.login-area .login-btn:hover,.login-area .login-btn:active {
+    background-position: 0 -40px
+}
+
+.login-area .login-error-tip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 308px;
+    height: 25px;
+    line-height: 25px;
+    color: #ef6433;
+    background: #fff
+}
+
+.login-area .login-error-tip .icon-error {
+    margin-bottom: -2px;
+    margin-right: 6px
+}
+
+.no-account {
+    float: right;
+    width: 250px;
+    padding-left: 52px;
+    display:none;
+}
+
+.no-account p {
+    margin: -5px 0 12px;
+    *margin: -2px 0 8px;
+}
+
+.no-account .no-account-login {
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    float: left;
+    width: 114px;
+    padding: 10px 0;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.no-account .no-account-login:hover {
+    -moz-box-shadow: 0 3px 12px rgba(0,0,0,0.16);
+    -o-box-shadow: 0 3px 12px rgba(0,0,0,0.16);
+    -webkit-box-shadow: 0 3px 12px rgba(0,0,0,0.16);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.16);
+}
+
+.no-account .no-account-login:active {
+    -moz-box-shadow: 0 3px 7px rgba(0,0,0,0.2);
+    -o-box-shadow: 0 3px 7px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 3px 7px rgba(0,0,0,0.2);
+    box-shadow: 0 3px 7px rgba(0,0,0,0.2);
+}
+
+.no-account .sina-login {
+    margin-left: 20px;
+}
+
+
+.loginLayer-info h2 {
+    margin-bottom: 40px
+}
+
+.loginLayer-info p {
+    margin-bottom: 15px
+}
+
+.loginLayer-info label {
+    float: left;
+    position: relative;
+    width: 53px;
+    padding-left: 16px
+}
+
+.loginLayer-info label em {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    font-size: 0;
+    line-height: 0;
+    background: #333
+}
+
+.loginLayer-info .login-nickname,.loginLayer-info select {
+    height: 22px;
+    line-height: 22px;
+    padding-left: 8px;
+    border: 0 none;
+    color: #7c7c7c;
+    border-top: 1px solid #d5d5d5;
+    background: #f6f6f6
+}
+
+.loginLayer-info select {
+    margin-right: 8px
+}
+
+.loginLayer-info .login-select-year {
+    width: 80px
+}
+
+.loginLayer-info .login-select-date {
+    width: 50px
+}
+
+.loginLayer-info .login-select-place {
+    width: 115px
+}
+
+.loginLayer-info .login-select-city {
+    width: 80px
+}
+
+.loginLayer-info .loginLayer-info-confirm {
+    margin-top: 20px;
+    margin-left: 70px
+}
+
+.loginLayer-info .nickname-error-tip {
+    color: #ef6433;
+    margin-left: 8px
+}
+
+.loginLayer-info .nickname-error-tip .icon-error {
+    margin-bottom: -2px;
+    margin-right: 5px
+}
+
+.ntes-regist {
+    display: block;
+    width: 302px;
+    height: 84px;
+    color: #fff;
+    font: bold 16px/84px Microsoft YaHei;
+    text-align: center;
+    margin: 16px 0 8px;
+    text-decoration: none !important;
+    background: url(//img1.cache.netease.com/bobo/image/rep.png) 0 -280px repeat-x
+}
+
+.ntes-regist:hover,.ntes-regist:active {
+    background-position: 0 -365px
+}
+
+.domainSelector {
+    width: 306px;
+    border: 1px solid #e4e4e4
+}
+
+.domainSelector .title {
+    background: none repeat scroll 0 0 #F6F6F6;
+    padding: 3px 0 3px 2px;
+    text-align: left
+}

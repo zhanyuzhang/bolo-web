@@ -1,0 +1,132 @@
+@charset "UTF-8";
+html,
+body {
+  height: 100%; }
+
+body {
+  overflow: auto; }
+
+.wrapper {
+  min-height: 100%;
+  background: #ffaf1a;
+  font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  position: relative; }
+
+.content {
+  padding-bottom: 50px;
+  position: relative;
+  overflow: hidden; }
+
+.content object {
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  z-index: 2; }
+
+.qrcode {
+  width: 249px;
+  height: 390px;
+  position: absolute;
+  top: 457px;
+  left: 50%;
+  margin-left: 250px;
+  background: url(/dev/images/pages/pc/download/1-0-x/qrcode.png) no-repeat;
+  z-index: 5; }
+  .qrcode .android-btn {
+    width: 136px;
+    height: 40px;
+    position: absolute;
+    top: 300px;
+    left: 20px;
+    display: block; }
+  .qrcode .ios-btn {
+    width: 136px;
+    height: 40px;
+    position: absolute;
+    top: 253px;
+    left: 20px;
+    display: block; }
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 5; }
+
+.danmaku-wrap {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden; }
+  .danmaku-wrap .item-track {
+    color: #fff;
+    font-size: 18px;
+    position: relative; }
+    .danmaku-wrap .item-track .bullet {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      display: block;
+      white-space: nowrap;
+      font-weight: bold;
+      -webkit-transform: translate3d(0, 0, 0); }
+
+.bolo-footer {
+  height: 268px;
+  background: #393939; }
+  .bolo-footer .container {
+    width: 1000px;
+    margin: 0 auto;
+    color: #fff;
+    overflow: hidden;
+    position: relative; }
+    .bolo-footer .container h4 {
+      font-size: 20px;
+      margin-top: 42px; }
+    .bolo-footer .container p {
+      line-height: 26px;
+      margin-top: 22px;
+      font-size: 14px; }
+    .bolo-footer .container a {
+      color: #fff; }
+    .bolo-footer .container .qr-codes {
+      position: absolute;
+      top: 78px;
+      right: 0; }
+      .bolo-footer .container .qr-codes .download-page,
+      .bolo-footer .container .qr-codes .bolo-wechat-account {
+        width: 118px;
+        display: inline-block;
+        vertical-align: top;
+        *display: inline;
+        margin-left: 20px; }
+        .bolo-footer .container .qr-codes .download-page .qr-wrap,
+        .bolo-footer .container .qr-codes .bolo-wechat-account .qr-wrap {
+          height: 110px;
+          background: #fff;
+          border-radius: 3px;
+          position: relative; }
+          .bolo-footer .container .qr-codes .download-page .qr-wrap .body,
+          .bolo-footer .container .qr-codes .bolo-wechat-account .qr-wrap .body {
+            width: 106px;
+            height: 97px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -53px;
+            margin-top: -48.5px; }
+        .bolo-footer .container .qr-codes .download-page .text,
+        .bolo-footer .container .qr-codes .bolo-wechat-account .text {
+          margin-top: 14px;
+          color: #fff;
+          text-align: center; }
+      .bolo-footer .container .qr-codes .download-page .body {
+        background: url(/dev/images/common/qr-download-page.png) no-repeat; }
+      .bolo-footer .container .qr-codes .bolo-wechat-account .body {
+        background: url(/dev/images/common/qr-bolo.png) no-repeat; }
+
+/*# sourceMappingURL=index.css.map */

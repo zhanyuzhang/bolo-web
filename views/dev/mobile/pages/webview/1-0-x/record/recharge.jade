@@ -1,0 +1,31 @@
+//
+   Created by Dillance on 16/9/20.
+
+extends ./../../../../../layout
+block head
+    meta(name="keywords" content="网易菠萝 短视频 二次元 网络剧 真人短剧 在线直播 萌动漫 污视频 贱直播")
+    meta(name="description" content="菠萝是网易旗下海量短视频平台 年轻人娱乐社区 热门IP短剧想看就看 更有著名IP创作团队与你即时直播互动 就差爱吐槽的你 赶快加入")
+    title 消费记录
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/webview/1-0-x/record/consume.css')
+    - var originWidth = 1080
+    include ../../../../_include/rem-helper
+block content
+    .wrapper
+        script(type='text/template', data-key='consume-list')
+            <% data.forEach(function(d){ %>
+            .date-title <%-(d.month_date1.replace('-','年') + '月')%>
+            ul.list-box
+                <% d.list.forEach(function(l){ %>
+                li.item
+                    .main-part
+                        .description <%-l.description%>
+                        .date <%-dateParser(l.created_time)%>
+                    .coin-num <%-l.cCurrency%>
+                <% }); %>
+            <% }); %>
+    script.
+        require('/pages/mobile/webview/record/1-0-x/recharge');
+    include ../../../../_include/cnzz-stat
+

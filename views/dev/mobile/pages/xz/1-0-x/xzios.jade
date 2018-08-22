@@ -1,0 +1,36 @@
+//
+   Created by gztimboy on 2016/4/12 0012.
+
+doctype html
+html
+    head
+        title 网易菠萝
+        meta(http-equiv="Content-Type",content="text/html; charset=utf-8")
+        meta(name="keywords" content="网易菠萝 短视频 二次元 网络剧 真人短剧 在线直播 萌动漫 污视频 贱直播")
+        meta(name="description" content="菠萝是网易旗下海量短视频平台 年轻人娱乐社区 热门IP短剧想看就看 更有著名IP创作团队与你即时直播互动 就差爱吐槽的你 赶快加入")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no")
+        meta(name="format-detection" content="address=no,email=no,telephone=no")
+        meta(name="apple-mobile-web-app-capable" content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+        - var originWidth = 750
+        include ../../../_include/rem-helper
+        script(src='/dev/scripts/bowl.js')
+        link(rel="stylesheet" href="/dev/styles/mobile/pages/xz/1-0-x/xz.css")
+    body
+        .xz-area
+            .xz-dm
+            .xz-cover
+        .xz-dl
+            .xz-dl-logo
+            .xz-dl-title 网易<br>菠萝
+            .xz-dl-des 双手下载<br>以示清白
+            .xz-dl-but
+        #popmask.popmask
+            #xz-tips.xz-tips
+                .xz-tips-top
+                    .xz-tips-arrows
+                    .xz-tips-ic
+                .xz-tips-text 点击这里去浏览器下载吧
+        script.
+            require('/pages/mobile/xz/1-0-x/xzios');
+

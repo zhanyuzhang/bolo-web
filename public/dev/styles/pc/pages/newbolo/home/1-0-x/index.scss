@@ -1,0 +1,224 @@
+@import "../../../../common/base/1-0-x/base-var";
+$imagePath: '/dev/images/pages/pc/newbolo/home/1-0-x/';
+* {
+    padding: 0;
+    margin: 0;
+    //box-sizing: border-box;
+    //font-family: '微软雅黑';
+}
+.header {
+    border: none;
+    position: absolute;
+    height: 510px;
+    background: #0f0f0f;
+}
+
+.wrapper {
+    .banner {
+        position: relative;
+        width: 1180px;
+        margin: 0 auto;
+        color: #fff;
+        padding-top: 60px;
+
+        .video-info {
+            box-sizing: border-box;
+            float: left;
+            height: 460px;
+            width: 400px;
+            font-size: 14px;
+
+            .title {
+                font-size: 48px;
+                color: #ffaf19;
+                padding: 50px 0;
+            }
+
+            .name {
+                font-size: 24px;
+            }
+
+            .tag-list {
+                font-size: 12px;
+
+                .tag {
+                    background: #2c2c2c;
+                    display: inline-block;
+                    padding: 2px 5px;
+                    margin: 5px;
+                }
+            }
+
+            .source {
+                height: 24px;
+                padding: 20px 0 10px 0;
+
+                .icon {
+                    width: 24px;
+                    height: 24px;
+                    background: #aaa;
+                    border-radius: 24px;
+                    vertical-align: middle;
+                }
+
+                .nick {
+                    display: inline-block;
+                    margin: 0 10px;
+                    color: #fff;
+                }
+
+                .time {
+                    display: inline-block;
+                }
+            }
+            .brief {
+                height: 84px;
+                display:-webkit-box;
+                -webkit-line-clamp:4;
+                -webkit-box-orient:vertical;
+                word-break: break-all;
+                overflow:hidden;
+                text-overflow:ellipsis;
+            }
+        }
+
+        .player {
+            position: relative;
+            float: right;
+            height: 460px;
+            width: 780px;
+
+            input[type=checkbox] {
+                display: none;
+            }
+
+            video {
+                height: 450px;
+                width: 780px;
+            }
+            .modal {
+                cursor: pointer;
+                position: absolute;
+                height: 450px;
+                width: 780px;
+                top: 0;
+
+                .left-gradient, .right-gradient {
+                    width: 160px;
+                    height: 100%;
+                    float: left;
+                    background: linear-gradient(to right, rgba(15, 15, 15, 1), rgba(15, 15, 15, 0));
+                }
+                .right-gradient {
+                    float: right;
+                    background: linear-gradient(to left, rgba(15, 15, 15, 1), rgba(15, 15, 15, 0));
+                }
+                .shade {
+                    position: absolute;
+                    background: #0f0f0f;
+                    opacity: 0;
+                    top: 0;
+                    bottom: 0;
+                    width: 100%;
+                }
+            }
+
+            .danmaku {
+                padding-top: 10px;
+                width: 780px;
+                height: 450px;
+                position: absolute;
+                top: 0;
+                overflow: hidden;
+
+                div[class*=channel] {
+                    height: 30px;
+                    line-height: 30px;
+                    color: #fff;
+                    font-size: 18px;
+                    font-weight: bold;
+                    overflow: hidden;
+                }
+
+                .marquee {
+                    height: 30px;
+                    overflow: hidden;
+                    position: absolute;
+                    left: 780px;
+                    text-shadow: 2px 2px 2px rgba(15, 15, 15, .8);
+                }
+            }
+
+            .control {
+                position: absolute;
+                width: 780px;
+                height: 80px;
+                bottom: 10px;
+                opacity: 0;
+                background: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, 0));
+
+                .progress {
+                    position: absolute;
+                    background: rgba(255, 255, 255, .5);
+                    height: 2px;
+                    width: 700px;
+                    bottom: 15px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+
+                    .pass {
+                        height: 100%;
+                        background: #ffaf19
+                    }
+                }
+
+                .play-btn {
+                    cursor: pointer;
+                    left: 40px;
+                    width: 48px;
+                    height: 48px;
+                    background: url($imagePath + 'pause-btn.png') no-repeat center;
+                    background-size: cover;
+                    position: absolute;
+                }
+                #play-checkbox:checked ~ label.play-btn {
+                    background: url($imagePath + 'play-btn.png') no-repeat center;
+                }
+                .muted-btn {
+                    cursor: pointer;
+                    right: 40px;
+                    width: 48px;
+                    height: 48px;
+                    background: url($imagePath + 'not-muted-btn.png') no-repeat center;
+                    background-size: cover;
+                    position: absolute;
+                }
+                #muted-checkbox:checked ~ label.muted-btn {
+                    background: url($imagePath + 'muted-btn.png') no-repeat center;
+                }
+
+                .danmaku-btn {
+                    cursor: pointer;
+                    right: 100px;
+                    width: 80px;
+                    height: 48px;
+                    background: url($imagePath + 'enter-btn.png') no-repeat center;
+                    background-size: cover;
+                    position: absolute;
+                }
+
+                &.show {
+                    opacity: 1;
+                }
+            }
+
+            &:hover {
+                .control {
+                    opacity: 1;
+                }
+            }
+
+        }
+    }
+}

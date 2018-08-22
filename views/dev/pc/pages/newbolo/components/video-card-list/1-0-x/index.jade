@@ -1,0 +1,59 @@
+//
+   Created by Dillance on 17/1/10.
+
+if !videoCardStyleExist
+    - var videoCardStyleExist = true
+    link(rel='stylesheet', href='/dev/styles/pc/pages/newbolo/components/video-card-list/1-0-x/index.css')
+
+.video-card-list
+    ul.card-list-container
+        li.grid
+        li.grid
+        li.grid
+
+if !videoCardListTmplExist
+    - var videoCardListTmplExist = true
+    script(type='text/template', data-key='video-card-list')
+        <% data.forEach(function(d,i){ %>
+        .item-box(id!='<%-rendomId%>-<%-d.videoId%>-<%-i%>')
+            a.poster(href!='/new/play?videoId=<%-d.videoId%>',target='_blank')
+                img(src!='<%-(getImage(d.cover,[380,214]))%>')
+                .cover
+                .play-btn
+                .video-info
+                    .name <%-d.title%>
+                    .tags-list
+                        <% if(d.tags){ %>
+                        <% d.tags.split(',').forEach(function(tag,i){ %>
+                        <% if(i < 3){ %>
+                        .tag <%-tag%>
+                        <% } %>
+                        <% }); %>
+                        <% } %>
+                    .heat <%-d.playCount%>人看过
+            .uploader-info
+                .stuff
+                    a.avatar(href!='/new/person?id=<%-d.userIdStr%>',target='_blank')
+                        img(src!='<%-(getImage(d.channelInfo.avatar,[24,24]))%>')
+                    a.name(href!='/new/person?id=<%-d.userIdStr%>',target='_blank') <%-d.channelInfo.nick%>
+                    .last-time <%-dateParser(d.uploadTime)%>
+                .intro <%-d.intro%>
+                .operation
+                    a.comment-btn(href!='/new/play?videoId=<%-d.videoId%>',target='_blank')
+                        <% if(d.commentCount){ %>
+                        .num <%-d.commentCount%>
+                        <% } %>
+                    .like-btn(class!='<% if(d.hasFavor){ %>liked<% } %>',data-video-id!='<%-d.videoId%>')
+                        .num(class!='<% if(!d.favorCount){ %>hide<% } %>') <%-d.favorCount%>
+                <% if(d.userIdStr != !{userInfo.userIdStr || '""'}){ %>
+                .follow-btn(class!='<% if(d.channelInfo.hasFollow){ %>ed<% } %>',data-id!='<%-d.userIdStr%>')
+                <% } %>
+        <% }); %>
+    script(type='text/template', data-key='video-card-comment-list')
+        .comment-box
+            <% data.forEach(function(d){ %>
+            a.comment-item(href!='/new/play?videoId=<%-videoId%>&targetTo=comment',target='_blank')
+                i.name <%-d.nick%>：
+                | <%-d.content%>
+            <% }); %>
+

@@ -1,0 +1,131 @@
+//
+   Created by Dillance on 16/4/6.
+
+extends ./../../../layout
+block head
+    meta(name='keywords', content='网易Bobo 美女主播 视频聊天 美女视频 视频直播 美女秀场 视频聊天室 在线K歌 视频交友')
+    meta(name='description', content='BoBo是网易旗下大型在线娱乐社区 互联网明星直播平台 在线视频聊天 在线K歌跳舞 视频交友 赶快加入')
+    title #{videoInfo.title} |网易菠萝
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../_include/base-m-dependencies
+    link(rel='stylesheet', href='//cdn.webfont.youziku.com/webfonts/nomal/90342/47267/57cea5b3f629d81058c257af.css')
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/play/1-1-x/index.css')
+    - var originWidth = 750
+    - var isInPC = !!ua.match(/Windows\sNT|Mac\sOS\sX\s([\d_.]+)/)
+    - var maxWidth = isInPC ? originWidth : null;
+    include ../../_include/rem-helper
+    script.
+        var VIDEO_INFO = !{JSON.stringify(videoInfo)};
+    if (isInPC)
+        script.
+            location.href = '/play' + location.search;
+block content
+    .wechat-share-icon(style='display:none;')
+        img(src='#{videoInfo.cover.trim()}')
+    h1(style='display:none') #{videoInfo.title}
+    .play-wrapper
+        .download-bar
+            .logo
+            .content
+            a.open-btn(href='javascript:;') 打开
+            a.download-btn(href='javascript:;') 立即下载
+        include newpartial/video
+        .tip-box
+            .text
+                span 正在播放
+                span.middle #{channelInfo.nick}#{videoInfo.setName}
+                span 第#{videoInfo.setNum}集，马上下载APP查看全集
+            .icon
+        include newpartial/video-info-old
+        include newpartial/recommend
+        include newpartial/comment
+        .tip-words
+            | 下载App，做第一个发评论的啊！
+        - if(banner)
+        .recommend.banner
+            .title 更多推荐
+            .banner-content
+                .item
+                    a(data-url="#{banner.bannerLink}")
+                        img(src='#{jadeHelper.getImage(banner.bannerPic,[750,347])}')
+                        span #{banner.bannerName}
+        .always-here
+            .face
+            .chat
+                p
+                    |3分钟带你进入高潮，骚年来一发吧~
+                a.btn
+                    | 下载聊聊
+        .download-dialog
+            .container
+                .logo
+                h5.title 请先下载客户端
+                .tip
+                    | 本功能仅由客户端提供噢，快去下载网易菠萝吧
+                    br
+                    | _(:з」∠)_
+                .controller
+                    .fuck-off 我知道了
+                    a.download-btn(href='javascript:;') 马上下载
+                .remove-btn
+        .lock-dialog
+            .container
+                .logo
+                h5.title 惊！此视频已经被黑暗力量封锁
+                .tip
+                    | 火速下载网易菠萝APP观看视频吧(～￣▽￣)～
+                .controller
+                    .fuck-off 我知道了
+                    a.download-btn(href='javascript:;') 马上下载
+                .remove-btn
+        .download-guide
+            .container
+                .content 请点击这里使用浏览器打开
+                .triangle
+                .icon
+
+        .share-guide
+            .container
+                .content 点击这里安利给朋友吧
+                .triangle
+                .icon
+        .share-box
+            .container
+                .title 分享到
+                ul.content
+                    li.item.wechat(data-type='wechat') 微信
+                    li.item.moment(data-type='moment') 朋友圈
+                    li.item.weibo(data-type='weibo') 微博
+                    li.item.qzone(data-type='qzone') QQ空间
+                .cancel-btn 取消
+                .remove-btn
+        div(class="open-app-guide hidden")
+            img(src="/dev/images/pages/mobile/play/1-1-x/new/open-app-guide.png")
+        .report-box
+            .container
+                .title 举报
+                ul.content
+                    li.item 敏感信息
+                    | &nbsp;
+                    li.item 色情交易
+                    li.item 垃圾广告
+                    | &nbsp;
+                    li.item 人身攻击
+                    li.item 虚假中奖信息
+                    | &nbsp;
+                    li.item 其它
+                .submit-btn 提交
+                .remove-btn
+    script.
+        var DANMAKU = !{JSON.stringify(danmaku) || null};
+        var BANNER = !{JSON.stringify(banner) || null};
+        var SHARE_INFO = {
+            title: VIDEO_INFO.title,
+            intro: VIDEO_INFO.intro.replace(/(\n)+|(\r\n)+/g,''),
+            img: '!{videoInfo.cover.trim()}'
+        }
+
+    script.
+        require('/pages/mobile/play@1-1-x');
+
+    include ../../_include/cnzz-stat

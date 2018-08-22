@@ -1,0 +1,84 @@
+@import "../../../../../common/base/1-0-x/base-var";
+.newbolo-header {
+    color: #fff;
+    height: 60px;
+    line-height: 60px;
+    background: #0f0f0f;
+    text-align: right;
+    padding-right: 20px;
+    z-index: 9;
+    position: relative;
+
+    .not-logined {
+        height: 100%;
+        .register, .login {
+            line-height: 30px;
+            display: inline-block;
+            height: 30px;
+            text-align: center;
+            font-size: 16px;
+            margin: 0 10px;
+            cursor: pointer;
+            width: 65px;
+        }
+
+        .register {
+            @include bolo-btn(65px, 30px, #000, #ffaf1a);
+        }
+    }
+
+    .logined {
+        height: 100%;
+        font-size: 14px;
+
+        .user-info {
+            display: inline-block;
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            height: 120px;
+
+            .nick {
+                display: inline-block;
+                cursor: pointer;
+                color: #fff;
+            }
+            .avatar {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                margin: 0 20px;
+
+                img {
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 20px;
+                    vertical-align: middle;
+                }
+            }
+            .logout {
+                display: none;
+            }
+            &:hover {
+                .logout {
+                    display: block;
+                    right: 12px;
+                    top: 64px;
+                    font-size: 14px;
+                    line-height: 63px;
+                    text-align: center;
+                    position: absolute;
+                    width: 114px;
+                    height: 62px;
+                    background: url(/dev/images/pages/pc/newbolo/components/header/1-0-x/logout-btn.png) no-repeat;
+                    &:active, &:hover {
+                        color: #ffaf19
+                    }
+                }
+            }
+
+
+
+        }
+    }
+}

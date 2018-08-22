@@ -1,0 +1,32 @@
+.comment-box.shit-wrapper
+    .title
+        .total
+    .content-wrap
+        .content
+            .speaking-box
+                .avatar
+                    if(userInfo.avatar)
+                        img(src='#{userInfo.avatar}')
+                .send-box
+                    input(type='text')
+                    .send-btn
+            ul.comment-list
+                script(type='text/template', data-key='comment-list')
+                    <% data.forEach(function(d){ %>
+                    li.item
+                        .avatar
+                            img(src!='<%=(getImage(d.avatar,[70,70]))%>')
+                        .comment-info
+                            .name <%-d.nick%>
+                            .words <%-d.content%>
+                            .stuff
+                                .date <%=(timeParse(d.createTime))%> 来自
+                                <% if(d.commentFrom == 1){ %>
+                                .source.lofter
+                                <% }else if(d.commentFrom == 2){ %>
+                                .source.gacha
+                                <% }else{ %>
+                                .source.netease
+                                <% } %>
+                    <% }); %>
+            .more-btn 查看更多

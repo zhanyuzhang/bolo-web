@@ -1,0 +1,27 @@
+//
+   Created by Dillance on 16/7/6.
+
+extends ./../../../layout
+block head
+    meta(name='keywords', content='网易Bobo 美女主播 视频聊天 美女视频 视频直播 美女秀场 视频聊天室 在线K歌 视频交友')
+    meta(name='description', content='BoBo是网易旗下大型在线娱乐社区 互联网明星直播平台 在线视频聊天 在线K歌跳舞 视频交友 赶快加入')
+    title 网易菠萝直播
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/live/1-0-x/index.css')
+    - var originWidth = 1080
+    include ../../_include/rem-helper
+    style.
+        html,body,wrapper{height:100%;overflow: hidden;}
+        .container{width:54rem;height:100%;background:#f40;}
+        .item{width:10.8rem;height:100%;background:#f40;float:left;}
+block content
+    .wrapper.swiper-container
+        .container.swiper-wrapper
+            .item.swiper-slide shit1
+            .item.swiper-slide shit2
+            .item.swiper-slide shit3
+            .item.swiper-slide shit4
+            .item.swiper-slide shit5
+    script.
+        require('/pages/mobile/demo/iscroll');

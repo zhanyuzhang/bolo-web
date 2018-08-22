@@ -1,0 +1,72 @@
+.form-container
+    .main-body
+        .form-item
+            .title 标题：
+            .input-wrap
+                input(type='text',placeholder='填写不超过30个字数的标题')
+        .form-item
+            .title 分区：
+            .selector
+                .current-value 二次元
+                ul.options-list
+                    li.item 异次元
+                    li.item 第一季
+                    li.item 第一季
+        .form-item
+            .title 分类：
+            ul.category-list
+                li.c-item.selected 真人play
+                li.c-item 真人play
+                li.c-item 真人play
+                li.c-item 真人play
+                li.c-item 真人play
+                li.c-item 真人play
+                li.c-item 真人play
+                li.c-item 真人play
+        .form-item.tags-form
+            .title 标签：
+            .input-wrap
+                script(type='text/template', data-key='tag-item')
+                    .tag-item <%-data%>
+                input(type='text',placeholder='按回车输入',maxlength=9)
+                .count 0/5
+            ul.tags-list
+                li.item 暴走漫画1
+                li.item 暴走漫画2
+                li.item 暴走漫画3
+                li.item.more 更多
+            .tags-list--more
+                .list-wrap
+                    ul.tags-list
+                        li.item 暴走漫画1
+                        li.item 暴走漫画2
+                        li.item 暴走漫画3
+                        li.item 暴走漫画4
+                        li.item 暴走漫画5
+                        li.item 暴走漫画6
+                        li.item 暴走漫画7
+                        li.item 暴走漫画8
+                        li.item 暴走漫画9
+                        li.item 暴走漫画10
+                .confirm-btn 确定
+        .form-item
+            .title 选集：
+            .selector
+                .current-value 第一季
+                ul.options-list
+                    li.item 第一季
+                    li.item 第一季
+                    li.item 第一季
+            .form-item.episodes
+                .title 集数：
+                i 第
+                .input-wrap
+                    input(type='text',placeholder='0')
+                i 集
+
+    .side-body
+        .form-item
+            .title 简介：
+            textarea(placeholder='告诉网友您的视频亮点在哪里？')
+        .save-btn 保存
+        .submit-btn 提交

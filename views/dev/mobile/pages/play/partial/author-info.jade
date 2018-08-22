@@ -1,0 +1,8 @@
+.author-info(uid='#{videoInfo.userId}')
+    .avatar
+        img(src='#{channelInfo.avatar}')
+    .stuff
+        .name #{channelInfo.nick}
+        - var date = new Date(videoInfo.uploadTime);
+        .post-date #{date.getFullYear()}-#{date.getMonth() + 1}-#{date.getDate()}
+    .follow-btn + 关注

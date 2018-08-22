@@ -1,0 +1,55 @@
+//
+   Created by Dillance on 16/7/25.
+
+extends ../../../../layout
+block head
+    include ../../../_include/seo
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no")
+    title 菠萝登录
+    include ../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/user/1-0-x/common.css')
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/user/1-0-x/login.css')
+    - var originWidth = 720
+    include ../../../_include/rem-helper
+block content
+    .user-wrap
+        .user-con
+            .user-back-area.clearfix
+                span.user-back
+                //
+                    span.user-setting 设置
+            .user-form-con#js-form
+                .user-logo.clearfix
+                    span.logo-show
+                ul.user-form
+                    form(action="https://reg.163.com/login.jsp" method="post" name="frmlogin" id="passportLogin" target="_self")
+                        li.user-form-l1
+                            input.user-name.user-put(name="username" type="text" autocomplete="off" value="网易邮箱/手机号")
+                            div.user-name-list
+                                div#user-passport-username-list
+                                    //div.user-list-title 请选择或继续输入...
+                                    ul
+                        li.user-form-l2
+                            input.user-password.user-put(name="password" type="password" value="")
+                        li.user-tips
+                            p
+                        li.user-form-l3
+                            p.userbtn 登录
+                        li.user-sign.clearfix
+                            p.user-sign-btn
+                                a(href="http://reg.163.com/reg/mobile/innerDomainReg.do?product=BoBo&url=http://bolo.bobo.com/m/user/login/&loginurl=http://bolo.bobo.com/m/user/login/") 新用户注册
+                            p.user-password-forge
+                                a(href="http://reg.163.com/reg/reg_mob2_retake_pw.jsp") 忘记密码
+            .user-form-con
+                ul.user-form
+                    li.user-login-other
+                        .login-other-con
+                            p
+                                span.login-other-qq
+                                    a QQ
+                                span.login-other-wb
+                                    a 微博
+    .user-loading
+        .loading
+    script.
+        require('/pages/mobile/user/1-0-x/login');

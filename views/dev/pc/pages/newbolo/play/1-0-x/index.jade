@@ -1,0 +1,99 @@
+//
+   Created by Dillance on 17/1/10.
+
+extends ./../../layout/1-0-x/index
+block head
+    meta(name='description', content='#{videoInfo.intro}')
+    meta(name='keywords', content='网易菠萝, 网易, 菠萝, 无广告, 游戏, 原创视频, 视频, 守望先锋, 英雄联盟, LOL, OW, 守望屁股, 视频社区, 炉石传说, 大力金刚,直播,小视频,网红,斗鱼, 虎牙, 熊猫, 战旗, bilibili, 腾讯, 土豆,网易游戏,二次元, 游戏杂谈, 游戏解说, 大神解说, 游戏集锦, 泛娱乐, 搞笑, #{videoInfo.tags}')
+    title #{videoInfo.title}-#{videoInfo.zoneName}-网易菠萝-泛游戏视频社区
+    include ../../_include/base-dependencies
+    link(rel='stylesheet', href='/dev/styles/pc/pages/newbolo/play/1-0-x/index.css')
+    script.
+        var VIDEO_INFO = !{JSON.stringify(videoInfo)};
+        var CHANNEL_INFO = !{JSON.stringify(channelInfo)};
+        var DANMAKU = !{JSON.stringify(danmaku)};
+block content
+    include ../../components/side-bar/1-0-x/index
+    .header
+        include ../../components/header/1-0-x/index
+    .wrapper
+        .main
+            .player
+                if(!videoInfo.isLock)
+                    video(autoplay=true src="#{videoInfo.linkMp4}")
+                    .danmaku
+                        .channel
+                        .channel
+                        .channel
+                        .channel
+                        .channel
+                        .channel
+                        .channel
+                        .channel
+                        .channel
+                        .channel
+                        .channel
+                        .channel
+                        .channel
+                        .channel
+                    .control-bar
+                        .progress-area
+                            .progress
+                                .current
+                            .slide-bar
+                        .time
+                            span.current 00:00
+                            span &nbsp;/&nbsp;
+                            span.total #{videoInfo.formatDuration}
+                        input(type="checkbox" id="play-checkbox")
+                        label.play-btn(for="play-checkbox")
+                        input(type="checkbox" id="danmaku-checkbox")
+                        label.danmaku-btn(for="danmaku-checkbox")
+                        .volume-controller
+                            input(type="checkbox" id="muted-checkbox")
+                            label.muted-btn(for="muted-checkbox")
+                            .volume-box
+                                .total-volume
+                                .current-volume
+                                .slide-bar
+                else
+                    img.snow-screen(src="/dev/images/pages/pc/newbolo/play/1-0-x/snow-screen.png")
+                .danmaku-bar
+                    input.danmaku-input(placeholder="#{userInfo.userId ? '这里可以输入弹幕哦' : '登录后才可以发送弹幕哦'}")
+                    .submit-btn(class="#{videoInfo.isLock ? 'disabled' : 'enabled'}") 发弹幕
+            .info
+                .panel
+                    .title #{videoInfo.title}
+                    .row1
+                        .tag-list
+                            each tag in videoInfo.formatTags
+                                .tag ##{tag}
+                        .view-count #{videoInfo.playCount} 人看过
+                    .row2
+                        a(href="/new/person?id=#{videoInfo.userIdStr}" target="_blank")
+                            .icon
+                                img(src="#{channelInfo.avatar}")
+                        .details
+                            a(href="/new/person?id=#{videoInfo.userIdStr}" target="_blank")
+                                span.nick #{channelInfo.nick}
+                            span.upload-time #{videoInfo.formatUploadTime}
+                            .intro #{videoInfo.intro}
+                        .clear
+                .button-bar
+                    .comment-btn #{videoInfo.commentCount != 0 ? videoInfo.commentCount : ' '}
+                    .like-btn(class="#{videoInfo.hasFavor ? 'active' : ''}") #{videoInfo.favorCount != 0 ? videoInfo.favorCount : ' '}
+                    .follow-btn(class="#{channelInfo.hasFollow ? 'followed' : 'to-follow'}")
+                .clear
+
+        include ./modules/comment.jade
+
+        .module-title 相关推荐
+        .video-recommend.video-card-list-wrap(data-interface='/bolo/api/video/relations.htm',data-length='12',data-video-id='#{videoInfo.id}',data-hide-if-zero='true')
+            include ../../components/video-card-list/1-0-x/index.jade
+
+        script.
+            require('/pages/pc/newbolo/play@1-0-x');
+        //include ../../components/side-bar/1-0-x/index.jade
+        include ../../components/footer/1-0-x/index
+    include ../../components/footer/1-0-x/bobo
+

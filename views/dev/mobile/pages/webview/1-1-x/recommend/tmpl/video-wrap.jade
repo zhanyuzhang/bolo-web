@@ -1,0 +1,14 @@
+script(type='text/template', data-key='video-wrap')
+    <% data.forEach(function(d,i){ %>
+    .list-wrap.swiper-slide(data-cid!='<%=d.id%>',data-name!='<%=d.name%>')
+        .scroll-wrap
+            .hot-area
+                .title
+                    .text-block 本区热门
+                ul.hot-video-list
+            .all-area
+                .title.all
+                    .text-block 全部
+                ul.all-video-list
+        .fly-to-top
+    <% }); %>

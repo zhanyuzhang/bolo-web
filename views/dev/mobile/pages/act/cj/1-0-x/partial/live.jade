@@ -1,0 +1,45 @@
+.video-box
+    if(videoInfo && videoInfo.liveId > 0)
+        video(src='http://hls.bobopull.8686c.com/pushstation/#{videoInfo.userNum}/playlist.m3u8',controls='controls',preload='true',webkit-playsinline)
+    else
+        video(src='http://flv.bn.netease.com/#{videoList[0].summary}',poster='#{videoList[0].url}',controls='controls',preload='true',webkit-playsinline)
+    ul.video-list
+        if(videoInfo && videoInfo.liveId > 0)
+            li.item.current(data-src='http://hls.bobopull.8686c.com/pushstation/#{videoInfo.userNum}/playlist.m3u8')
+                .cover
+                    img(src='#{videoInfo.avatar}')
+                .frame
+                    .content #{videoInfo.title}
+        if(videoList)
+            each v, i in videoList
+                li.item(class='#{((!videoInfo || videoInfo.status != 1 || videoInfo.liveId < 0) && i == 0 ? "current" : "")}',data-src='http://flv.bn.netease.com/#{v.summary}')
+                    .cover
+                        img(src='#{v.url}')
+                    .frame
+                        .content #{v.title}
+        li.item(data-href='http://bolo.bobo.com/m/channel?userId=-1454785779986890578')
+.rules-box
+    .text 戳我试试≖‿≖✧
+    .join-btn
+.live-report.shit-wrapper
+    .title
+    .content-wrap
+        .content
+            ul.report-list
+                script(type='text/template', data-key='report-list')
+                    <% data.forEach(function(d){ %>
+                    li.item
+                        .author-info
+                            .avatar
+                                img(src!='<%=(getImage(d.avatar,[70,70]))%>')
+                            .stuff
+                                .name <%-d.nick%>
+                                .intro <%-d.intro%>
+                            .share-btn
+                        .post
+                            .words(class!='<% if(d.nick == "网易菠萝"){ %>official<% } %>') <%-d.content%>
+                            .image
+                                img(src!='<%=(getImage(d.images,[821,410]))%>')
+                            .date <%=(timeParse(d.createTime))%>
+                    <% }); %>
+            .more-btn

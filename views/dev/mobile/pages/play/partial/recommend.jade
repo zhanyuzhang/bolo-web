@@ -1,0 +1,18 @@
+.recommend
+    .title 更多推荐
+    if (videoInfo.categorys)
+        ul.category-list
+            each d in JSON.parse(videoInfo.categorys)
+                li.item(data-href='/m/hybrid/recommend?cid=#{d.id}') #{d.name}
+    .list-wrapper
+        ul.list-container
+            each data, index in relatedVideos
+                if (index < 5)
+                    li.item
+                        a.poster(href='/m/play?videoId=#{data.videoId}')
+                            img(src='#{jadeHelper.getImage(data.cover,[139,79])}')
+                            .cover
+                            - var minute = Math.floor(videoInfo.duration / 60);
+                            - var second = videoInfo.duration % 60;
+                            .time #{minute > 9 ? minute : '0' + minute}:#{second > 9 ? second : '0' + second}
+                        .name #{data.title}

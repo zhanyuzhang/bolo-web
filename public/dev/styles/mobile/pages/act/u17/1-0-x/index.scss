@@ -1,0 +1,116 @@
+@import "../../../../common/base/1-0-x/base-var";
+@import "../../../../common/ui/1-0-x/index";
+
+
+html, body{height:100%;}
+
+@mixin comic-container{
+  .comic-container{
+	width:8.9rem;border:2px solid #6c2e00;background:#fff;margin:.7rem auto 0;
+	.img-wrap{
+	  width:8.18rem;margin:.3rem auto;
+	  .grid{
+		position:relative;
+		.subtitle,
+		.select-btn{height:.748rem;min-width:4.5rem;padding:0 .2rem;line-height:.748rem;text-align:center;border-radius:.16rem;color:#535353;background:#fff;font-size:.432rem;position:absolute;left:50%;bottom:.32rem;-webkit-transform:translate(-50%,0);}
+		.subtitle{color:#fff;background:rgba(255,255,255,.2);text-shadow: 0 0 4px #000;font-weight: bold;white-space: nowrap;}
+	  }
+	  img{width:100%;display: block;}
+	}
+  }
+}
+
+@mixin operation{
+  .operation{
+	width:9rem;margin:.36rem auto 0;display: -webkit-box;-webkit-box-align: center;-webkit-box-pack: justify;padding-bottom:1rem;
+	.back-btn{height:.84rem;padding-left:1.06rem;font-size:.58rem;line-height:.84rem;background:url(/dev/images/pages/mobile/act/u17/1-0-x/back-btn.png) no-repeat left;background-size:auto 100%;font-weight: bold;}
+	.confirm-btn{
+	  width:5.64rem;height:1.15rem;line-height:1.15rem;border:2px solid #da8103;border-radius:.2rem;text-align:center;color:#df5f01;font-size:.58rem;background:#f8f400;
+	  &.disable{background:#818181;color:#535353;border-color:#818181;}
+	}
+  }
+}
+
+@mixin screen-transition{
+  -webkit-transform:translate(100%,0) translateZ(0);
+  -webkit-transition:opacity .3s linear, -webkit-transform .3s linear;
+  &.fade{opacity:0;}
+  &.show{-webkit-transform:translate(0,0) translateZ(0);}
+}
+
+.hide{display: none!important;}
+
+.wrapper{
+	height:100%;position:relative;background:url(/dev/images/pages/mobile/act/u17/1-0-x/main-bg.jpg) #f8aa00 no-repeat center top;background-size:100% auto;
+  .first-screen{
+	height:100%;background:url(/dev/images/pages/mobile/act/u17/1-0-x/first-screen-bg.png) no-repeat center top;background-size:100% auto;position:relative;
+	@include screen-transition;
+  	.bottom-container{
+	  width:100%;height:7.9rem;position:absolute;left:0;bottom:0;background:url(/dev/images/pages/mobile/act/u17/1-0-x/first-screen-bg2.png) no-repeat center bottom;background-size:100% auto;
+		.start-btn{width:3.6rem;height:3.384rem;@include icon-bg('/dev/images/pages/mobile/act/u17/1-0-x/start-btn.gif');position:absolute;left:50%;top:0;margin-left:1.36rem;}
+	}
+  }
+  .second-screen{
+	height:100%;width:100%;position:absolute;left:0;top:0;display: -webkit-box;-webkit-box-pack:center;overflow: auto;
+	@include screen-transition;
+	.scene-container{
+	  width:9.46rem;height:13.29rem;@include icon-bg('/dev/images/pages/mobile/act/u17/1-0-x/second-screen-bg.png');margin-top:1.4rem;position:relative;
+	  .btn{
+		width:4.58rem;height:5.27rem;position: absolute;
+		&.col-01{left:0;top:2.06rem;}
+		&.col-02{left:4.867rem;top:2.06rem;}
+		&.col-03{left:0;bottom:0;}
+		&.col-04{left:4.867rem;bottom:0;}
+	  }
+	}
+  }
+  .third-screen{
+	height:100%;width:100%;position:absolute;left:0;top:0;overflow: auto;
+	@include screen-transition;
+	@include comic-container;
+	@include operation;
+  }
+  .editor-screen{
+	height:100%;width:100%;position:absolute;left:0;top:0;overflow: auto;
+	@include screen-transition;
+	@include comic-container;
+	.tip{font-size:.43rem;margin-top:.4rem; font-weight: bold;text-align:center;}
+	.default-dialogue{
+	  padding-top:.1rem;
+	  .item{@include bolo-btn(8.784rem,1.2rem,.43rem);background:#fffc57;text-shadow: 0 0 4px #000;margin:.5rem auto 0;font-weight: bold;}
+	}
+	.input-wrap{
+	  width:8.784rem;height:1.2rem;margin:.3rem auto 0;border-radius: .1rem;overflow: hidden;box-shadow:inset 0 .06rem 6px 0 #999;background:#fff;
+		input{width:100%;height:.8rem;line-height:.8rem;font-size:.43rem;font-weight:bold;color:#c9c9c9;text-align:center;display: block;margin-top:.2rem;background:none;border:0;}
+	}
+	@include operation;
+	.operation{margin-top:2rem;}
+  }
+  .finish-screen{
+	height:100%;width:100%;position:absolute;left:0;top:0;overflow: auto;
+	@include screen-transition;
+	.title{width:9.27rem;height:.98rem;@include icon-bg('/dev/images/pages/mobile/act/u17/1-0-x/success-title.png');margin:.4rem auto 0;}
+	.img-wrap{
+	  width:8rem;margin:.3rem auto 0;
+		img{width:100%;display: block;}
+	}
+	.operation{
+	  display: -webkit-box;-webkit-box-pack: center;margin-top:1.1rem;-webkit-box-align: center;
+	  .save-btn{
+		@include bolo-btn(3.92rem,.864rem,.49rem,#ca6900);background:#fffc57;position:relative;
+		.save-tip{width:100%;color:#ca3900;font-size:.36rem;font-weight: bold;position:absolute;text-align:center;left:0;bottom:110%;display: none;}
+	  }
+	  .get-reward-btn{@include bolo-btn(3.92rem,.864rem,.49rem,#ca6900);margin-left:.6rem;background:#fff;}
+	}
+	.reward-intro{
+	  width:8.928rem;height:10.267rem;@include icon-bg('/dev/images/pages/mobile/act/u17/1-0-x/reward-intro.png');position:absolute;top:9rem;left:50%;margin-left:-4.464rem;display: none;
+		.to-play-btn{width:100%;height:1.728rem;position: absolute;left:0;top:5.37rem;}
+	}
+	.again-btn{font-size:.43rem;color:#fff447;text-align: center;text-decoration: underline;margin-top:.43rem;font-weight:bold;padding-bottom:1rem;}
+  }
+}
+
+.music-btn{
+  width:1rem;height:1rem;position: fixed;z-index:6;top:.1rem;right:.1rem;background:url(/dev/images/pages/mobile/act/u17/1-0-x/music-on.png) no-repeat center;background-size:.49rem .39rem;
+	&.off{background-image:url(/dev/images/pages/mobile/act/u17/1-0-x/music-off.png)}
+}

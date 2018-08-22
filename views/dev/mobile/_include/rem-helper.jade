@@ -1,0 +1,10 @@
+script.
+    var maxWidth = !{maxWidth || 'null'};
+    function remResize(screenWidth){
+        if(maxWidth && screenWidth > maxWidth) screenWidth = maxWidth;
+        document.documentElement.style.fontSize = ((screenWidth / #{originWidth}) * 100) + 'px';
+    }
+    window.onresize = function(){
+        remResize(document.documentElement.clientWidth);
+    };
+    remResize(document.documentElement.clientWidth);

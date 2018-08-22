@@ -1,0 +1,28 @@
+//
+   Created by Dillance on 16/5/6.
+
+extends ./../../../../layout
+block head
+    meta(name='keywords', content='网易菠萝，精品无广告原创视频内容，好玩吐槽神奇社区，只做年轻人最爱的（超趣味）2.5次元内容。')
+    meta(name='description', content='网易菠萝, 网易, 菠萝, 无广告, 萌贱污, 原创视频, 视频, 吐槽, 社区, 神奇, bolo, boluo, 视频社区, 内涵段子, 大力金刚,直播,小视频,网红,快看,暴走漫画,同道大叔,烧脑,花熊,漫画岛,bilibili,腾讯, 土豆,小咖秀,快手,有妖气,内涵,二次元,acfun')
+    title 网易菠萝 - 有内涵无广告萌贱污原创视频神器
+    include ../../../_include/base-dependencies
+    link(rel='stylesheet', href='/dev/styles/pc/pages/download/1-0-x/index.css')
+block content
+    .wrapper
+        ul.danmaku-wrap.
+            <li class="item-track" style="height:87.5px;line-height:87.5px;"><span class="bullet finished" style="transform: translate3d(-1747px, 0px, 0px); left: -307px;">十块钱扔下了不要找了赶紧去民政局吧</span><span class="bullet" style="transform: translate3d(-1620px, 0px, 0px); left: -148.32px;">还能不能愉快地追番了</span><span class="bullet" style="transform: translate3d(-1566px, 0px, 0px); left: -51.408px;">囍囍囍囍囍囍囍</span></li>
+        .content.
+            <object width="1000" height="1000" data="http://swf.ws.126.net/bobo/swf/bolodownload.swf" type="application/x-shockwave-flash">
+                <param value="true" name="allowFullScreen">
+                <param value="always" name="allowscriptaccess">
+                <param name="wmode" value="transparent">
+                <param name="allownetworking" value="all">
+                <param value="videoadv=&amp;sd=http://flv.bn.netease.com/videolib3/1601/15/RIFLB0787/SD/RIFLB0787-mobile.mp4&amp;hd=&amp;shd=&amp;per=0.4$$0.3&amp;vid=http://flv.bn.netease.com/videolib3/1601/15/RIFLB0787/SD/RIFLB0787-mobile.mp4&amp;autoPlay=1&amp;ipLimit=0&amp;liveIcon=0&amp;liveQuality=0&amp;defaultLive=0&amp;startTime=201210311100&amp;pltype=-1&amp;needReplay=0&amp;cl=cltest&amp;mid=midtest&amp;coverpic=&amp;hds=0" name="flashvars">
+            </object>
+        .qrcode
+            a.android-btn(href='#{androidUrls.main}',target='_blank')
+            a.ios-btn(href='https://itunes.apple.com/us/app/wang-yi-bo-luo-you-nei-han/id1097491412?l=zh&ls=1&mt=8',target='_blank')
+    include ../../../_include/footer
+    script.
+        require('/pages/pc/download@1-0-x');

@@ -1,0 +1,77 @@
+//
+   Created by Dillance on 16/11/29.
+
+extends ./../../../../../layout
+block head
+    include ../../../../_include/seo
+    title 毒鸡汤
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/act/poison-chicken/1-0-x/index.css')
+    - var originWidth = 1080
+    include ../../../../_include/rem-helper
+    script(src='http://t.c.m.163.com/yaoshu/share/build/share.1.3.2.js')
+block content
+    .wrapper
+        if !query.soup
+            .screen.page01.show
+                .logos
+                    .bolo
+                    .news
+        if query.soup
+            .screen.page01--sp.show
+                .title
+                .soup-container
+                    img(src='',data-index='#{query.soup}')
+                .start-btn
+                .logos
+                    .bolo
+                    .news
+        .screen.page02
+            .title
+            .chicken-selector
+                .chichen.col-01
+                .chichen.col-02
+                .chichen.col-03
+                .chichen.col-04
+            .confirm-btn.disable
+            .logos
+                .bolo
+                .news
+            .loading-chicken
+                img(src='/dev/images/pages/mobile/act/poison-chicken/1-0-x/loading.gif')
+        .screen.page03
+            .soup-container
+                .title
+                    img(src='')
+                .content
+                    img(src='')
+            .tool-bar
+                .replay-btn
+                .share-btn
+            a.get-reward-btn(href="/m/act/lottery/yinyang?from=dujitang") 领取毒鸡汤新年礼
+            .logos
+                .bolo
+                .news
+            .share-guide
+            .get-reward-dialog
+                .container
+                    .content 送你一张价值5元的网易菠萝毒剧观影券，教你解决成年人下半sheng的难题！
+                        br
+                        | 未成年小盆友请勿兑换哦!
+                    .cdkey 兑换码：bolo2017
+                    .download-btn
+    .music-btn
+        audio(src='http://file.ws.126.net/liveshow/bobo/chicken-bgm.mp3',autoplay)
+    .tip-dialog
+    div(style='display: none !important')
+        #__newsapp_sharetext 来看我熬的这碗毒鸡汤,好像很适合你！
+        #__newsapp_sharephotourl
+        #__newsapp_sharewxtitle 快来看我给你熬的毒鸡汤！
+        #__newsapp_sharewxtext 包治百病,喝完你一定会回来感谢我!
+        #__newsapp_sharewxthumburl
+        #__newsapp_sharewxurl
+    .start-guide(class="hidden")
+    script.
+        require('/pages/mobile/act/poison-chicken@1-0-x');
+    include ../../../../_include/cnzz-stat

@@ -1,0 +1,482 @@
+@charset "UTF-8";
+body {
+  color: #2e2e2e;
+  font-size: .3rem; }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑"; }
+
+body {
+  background: #000;
+  padding: .1rem .2rem; }
+
+.wrapper {
+  height: 100%;
+  position: relative;
+  overflow: hidden; }
+  .wrapper .page {
+    height: 11rem;
+    position: relative; }
+  .wrapper .home-page {
+    background-image: url("/dev/images/pages/mobile/act/puppet-judge/1-0-x/home-page.png");
+    background-size: 100%;
+    background-repeat: no-repeat; }
+    .wrapper .home-page .bottom-fixed-toolbar {
+      height: 4rem;
+      background: transparent; }
+      .wrapper .home-page .bottom-fixed-toolbar .next-btn {
+        background-image: url("/dev/images/pages/mobile/act/puppet-judge/1-0-x/enter-btn.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 4rem;
+        height: 4rem;
+        margin: 0 auto; }
+  .wrapper .playback-page {
+    background-image: url("/dev/images/pages/mobile/act/puppet-judge/1-0-x/page2-bg.png");
+    background-size: 100%;
+    background-repeat: no-repeat; }
+    .wrapper .playback-page .bottom-fixed-toolbar {
+      height: 1rem; }
+      .wrapper .playback-page .bottom-fixed-toolbar .next-btn {
+        float: right;
+        margin-right: .5rem;
+        height: .9rem;
+        width: 1.8rem;
+        background-image: url("/dev/images/pages/mobile/act/puppet-judge/1-0-x/pass-btn.png");
+        background-size: 100%;
+        background-repeat: no-repeat; }
+  .wrapper .puzzle-page {
+    background-image: url("/dev/images/pages/mobile/act/puppet-judge/1-0-x/page3-bg.png");
+    background-size: 100%;
+    background-repeat: no-repeat; }
+    .wrapper .puzzle-page .img-container {
+      position: absolute;
+      top: 1.8rem;
+      left: 0;
+      right: 0;
+      width: 7rem;
+      margin: 0 auto;
+      text-align: center; }
+      .wrapper .puzzle-page .img-container .img-wrapper {
+        float: left; }
+        .wrapper .puzzle-page .img-container .img-wrapper img {
+          width: 3.2rem;
+          height: 1.8rem;
+          background-image: url("/dev/images/pages/mobile/act/puppet-judge/1-0-x/loading072.gif");
+          background-size: 100%;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          border: 0.1rem solid transparent; }
+        .wrapper .puzzle-page .img-container .img-wrapper .left-img {
+          margin-right: .2rem; }
+        .wrapper .puzzle-page .img-container .img-wrapper .number {
+          text-align: center;
+          color: #fff;
+          font-size: .4rem;
+          margin: 0 auto;
+          width: .4rem;
+          height: .4rem;
+          border: #fff 1px solid;
+          border-radius: .2rem;
+          margin-bottom: .2rem; }
+    .wrapper .puzzle-page .bottom-fixed-toolbar {
+      height: 1.8rem;
+      background-image: url("/dev/images/pages/mobile/act/puppet-judge/1-0-x/toolbar-puzzle.png");
+      background-size: 100%;
+      background-repeat: no-repeat; }
+      .wrapper .puzzle-page .bottom-fixed-toolbar .replay-btn {
+        float: left;
+        height: 1.5rem;
+        width: 2rem;
+        margin-left: .3rem; }
+      .wrapper .puzzle-page .bottom-fixed-toolbar .next-btn {
+        float: right;
+        height: .8rem;
+        width: 2rem;
+        margin: .8rem .3rem 0 0; }
+  .wrapper .congratulate-page {
+    background-image: url("/dev/images/pages/mobile/act/puppet-judge/1-0-x/page4-bg.png");
+    background-size: 100%;
+    background-repeat: no-repeat; }
+    .wrapper .congratulate-page .bottom-fixed-toolbar .next-btn {
+      width: 5.4rem;
+      height: 1rem;
+      line-height: 1rem;
+      font-size: 0.5rem;
+      color: #fff;
+      background: #ffaf1a;
+      text-align: center;
+      border-radius: .1rem;
+      display: block;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      color: #000;
+      font-weight: bold;
+      margin: 0 auto;
+      background: #ebcd02; }
+      .wrapper .congratulate-page .bottom-fixed-toolbar .next-btn:active {
+        background: #ffd17b; }
+    .wrapper .congratulate-page .bottom-fixed-toolbar .share-area {
+      width: 5.4rem;
+      margin: .2rem auto; }
+      .wrapper .congratulate-page .bottom-fixed-toolbar .share-area .word {
+        height: 1rem;
+        color: #fff;
+        font-size: .4rem;
+        float: left;
+        line-height: 1rem;
+        margin-bottom: .2rem; }
+      .wrapper .congratulate-page .bottom-fixed-toolbar .share-area .share-btn {
+        width: .8rem;
+        height: .8rem;
+        float: right;
+        background-image: url("/dev/images/pages/mobile/act/puppet-judge/1-0-x/share-btn.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        border: 0.05rem solid #ebcd02;
+        border-radius: .5rem; }
+  .wrapper .murder-page {
+    background-image: url("/dev/images/pages/mobile/act/puppet-judge/1-0-x/page5-bg.png");
+    background-size: 100%;
+    background-repeat: no-repeat; }
+    .wrapper .murder-page .murder-container {
+      width: 7rem;
+      height: 8rem;
+      position: absolute;
+      top: 2.3rem;
+      left: 0;
+      right: 0;
+      margin: 0 auto; }
+      .wrapper .murder-page .murder-container .murder {
+        width: 2rem;
+        height: 2rem;
+        display: inline-block;
+        margin: .6rem .7rem; }
+    .wrapper .murder-page .bottom-fixed-toolbar {
+      height: 1rem;
+      padding-top: .1rem; }
+      .wrapper .murder-page .bottom-fixed-toolbar .pre-btn {
+        width: 1.8rem;
+        height: .8rem;
+        background-image: url("/dev/images/pages/mobile/act/puppet-judge/1-0-x/back-btn.png");
+        background-size: 100%;
+        background-repeat: no-repeat; }
+  .wrapper .figure-page {
+    height: 12rem; }
+    .wrapper .figure-page .figure {
+      height: 100%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      padding-top: 3.8rem; }
+      .wrapper .figure-page .figure .evidence {
+        padding-top: -1rem;
+        width: 6rem;
+        height: 6rem;
+        margin: 0 auto;
+        text-align: center;
+        overflow: scroll; }
+        .wrapper .figure-page .figure .evidence img {
+          width: 95%; }
+    .wrapper .figure-page .figure:nth-child(1) {
+      background-image: url("/dev/images/pages/mobile/act/puppet-judge/1-0-x/figure-shenfan.png");
+      background-size: 100%;
+      background-repeat: no-repeat; }
+    .wrapper .figure-page .figure:nth-child(2) {
+      background-image: url("/dev/images/pages/mobile/act/puppet-judge/1-0-x/figure-banzhuren2.png");
+      background-size: 100%;
+      background-repeat: no-repeat; }
+    .wrapper .figure-page .figure:nth-child(3) {
+      background-image: url("/dev/images/pages/mobile/act/puppet-judge/1-0-x/figure-haha.png");
+      background-size: 100%;
+      background-repeat: no-repeat; }
+    .wrapper .figure-page .figure:nth-child(4) {
+      background-image: url("/dev/images/pages/mobile/act/puppet-judge/1-0-x/figure-fanquan.png");
+      background-size: 100%;
+      background-repeat: no-repeat; }
+    .wrapper .figure-page .bottom-fixed-toolbar {
+      height: 2rem;
+      padding-top: .1rem; }
+      .wrapper .figure-page .bottom-fixed-toolbar .input-btn {
+        height: 1rem;
+        color: #ebcd02;
+        font-size: .4rem;
+        text-align: center;
+        line-height: 1rem; }
+      .wrapper .figure-page .bottom-fixed-toolbar .nav {
+        height: 1rem;
+        margin: 0 .1rem; }
+        .wrapper .figure-page .bottom-fixed-toolbar .nav .pre-btn {
+          width: 1.8rem;
+          height: .8rem;
+          background-image: url("/dev/images/pages/mobile/act/puppet-judge/1-0-x/back-btn.png");
+          background-size: 100%;
+          background-repeat: no-repeat;
+          float: left; }
+        .wrapper .figure-page .bottom-fixed-toolbar .nav .next-btn {
+          color: #ebcd02;
+          font-size: .45rem;
+          text-align: center;
+          font-weight: bold;
+          padding-right: .7rem;
+          height: .6rem;
+          background-image: url("/dev/images/pages/mobile/act/puppet-judge/1-0-x/next-btn.png");
+          background-size: 100%;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: right;
+          float: right; }
+  .wrapper .share-page {
+    height: auto; }
+    .wrapper .share-page .share-img {
+      width: 100%; }
+    .wrapper .share-page .bottom-fixed-toolbar {
+      bottom: 1.1rem;
+      text-align: center; }
+      .wrapper .share-page .bottom-fixed-toolbar .share-area {
+        display: inline-block; }
+        .wrapper .share-page .bottom-fixed-toolbar .share-area .word {
+          height: 1rem;
+          color: #fff;
+          font-size: .4rem;
+          float: left;
+          line-height: 1rem; }
+        .wrapper .share-page .bottom-fixed-toolbar .share-area .share-btn {
+          background-image: url("/dev/images/pages/mobile/act/puppet-judge/1-0-x/share-btn.png");
+          background-size: 100%;
+          background-repeat: no-repeat;
+          width: .8rem;
+          height: .8rem;
+          float: left;
+          border: 0.05rem solid #ebcd02;
+          border-radius: .5rem; }
+    .wrapper .share-page .download-bar {
+      width: 100%;
+      height: 1.2rem;
+      background: #000;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-align: center;
+      z-index: 5; }
+      .wrapper .share-page .download-bar .logo {
+        width: .94rem;
+        height: .94rem;
+        margin-left: .2rem;
+        background: url(/dev/images/pages/mobile/download/1-0-x/logo.png) no-repeat;
+        background-size: 100%; }
+      .wrapper .share-page .download-bar .ip-name {
+        font-size: .38rem;
+        font-weight: 700;
+        margin-left: .2rem;
+        line-height: .47rem;
+        color: #fff; }
+      .wrapper .share-page .download-bar .content {
+        line-height: .47rem;
+        color: #ffaf1a;
+        margin-left: .22rem;
+        font-size: .38rem;
+        font-weight: 700;
+        padding-left: .22rem;
+        border-left: 1px solid #fff;
+        -webkit-box-flex: 1; }
+      .wrapper .share-page .download-bar .btn {
+        width: 2.52rem;
+        height: 1.4rem;
+        background: url(/dev/images/pages/mobile/download/1-0-x/download-btn.gif) no-repeat;
+        background-size: 100%;
+        display: block; }
+
+.player {
+  width: 6.20rem;
+  position: absolute;
+  z-index: 999;
+  top: 2.7rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center; }
+  .player .close-player {
+    width: 1.5rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    font-size: 0.32rem;
+    color: #fff;
+    background: #ffaf1a;
+    text-align: center;
+    border-radius: .1rem;
+    display: block;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: inline-block; }
+    .player .close-player:active {
+      background: #ffd17b; }
+
+.music-player-switch {
+  position: absolute;
+  top: .5rem;
+  right: .2rem;
+  width: 34px;
+  height: 27px; }
+
+.music-player-switch-on {
+  background-image: url("/dev/images/pages/mobile/act/puppet-judge/1-0-x/button-on.png");
+  background-size: 100%;
+  background-repeat: no-repeat; }
+
+.music-player-switch-off {
+  background-image: url("/dev/images/pages/mobile/act/puppet-judge/1-0-x/button-off.png");
+  background-size: 100%;
+  background-repeat: no-repeat; }
+
+.input-window {
+  position: absolute;
+  z-index: 999;
+  width: 7.2rem;
+  top: 3rem; }
+  .input-window .send-box {
+    position: relative;
+    width: 6rem;
+    margin: 0 auto; }
+    .input-window .send-box .input-field {
+      width: 100%;
+      font-size: .32rem;
+      outline: none;
+      padding: .1rem 0;
+      border-radius: .1rem;
+      border: .05rem solid #ccc;
+      resize: none; }
+    .input-window .send-box .cancel-btn {
+      width: 1.5rem;
+      height: 0.8rem;
+      line-height: 0.8rem;
+      font-size: 0.32rem;
+      color: #fff;
+      background: #ffaf1a;
+      text-align: center;
+      border-radius: .1rem;
+      display: block;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      background: #ebcd02;
+      float: left;
+      color: #000; }
+      .input-window .send-box .cancel-btn:active {
+        background: #ffd17b; }
+    .input-window .send-box .submit-btn {
+      width: 1.5rem;
+      height: 0.8rem;
+      line-height: 0.8rem;
+      font-size: 0.32rem;
+      color: #fff;
+      background: #ffaf1a;
+      text-align: center;
+      border-radius: .1rem;
+      display: block;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      background: #ebcd02;
+      float: right;
+      color: #000; }
+      .input-window .send-box .submit-btn:active {
+        background: #ffd17b; }
+
+.modal-window {
+  width: 7.2rem;
+  height: 12rem;
+  opacity: .5;
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  background: #000; }
+
+.gesture-window {
+  width: 7.2rem;
+  height: 12rem;
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  background-image: url("/dev/images/pages/mobile/act/puppet-judge/1-0-x/gesture.png");
+  background-size: 100%;
+  background-repeat: no-repeat; }
+  .gesture-window .wording {
+    width: 6rem;
+    color: #fff;
+    font-size: .4rem;
+    font-weight: bold;
+    margin: 2.5rem auto; }
+
+.tips {
+  font-size: .3rem;
+  background: #ebcd02;
+  color: #000;
+  position: fixed;
+  z-index: 999;
+  max-width: 6rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: .1rem;
+  border-radius: .1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px 5px 3px 5px; }
+  .tips .tips-angle-right-down {
+    border-color: #ebcd02 #ebcd02 transparent transparent;
+    right: .5rem;
+    bottom: -30px;
+    border-style: solid;
+    overflow: hidden;
+    position: absolute;
+    border-width: 20px 10px; }
+  .tips .tips-angle-right-up {
+    border-color: transparent #ebcd02 #ebcd02 transparent;
+    right: .2rem;
+    top: -40px;
+    border-style: solid;
+    overflow: hidden;
+    position: absolute;
+    border-width: 20px 10px; }
+
+.hidden {
+  display: none; }
+
+.transparent {
+  opacity: 0; }
+
+.wrong-img {
+  border: 0.1rem rgba(255, 0, 0, 0.5) solid !important;
+  border-radius: .1rem; }
+
+.correct-img {
+  border: 0.1rem lime solid !important;
+  border-radius: .1rem; }
+
+.dragging-img {
+  position: absolute;
+  opacity: .8; }
+
+.bottom-fixed-toolbar {
+  position: fixed;
+  width: 100%;
+  bottom: -.15rem;
+  background: #000;
+  background-size: 100%;
+  background-repeat: no-repeat; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,123 @@
+//
+   Created by Dillance on 16/8/17.
+extends ./../../../../layout
+block head
+    meta(http-equiv='Content-Type',content='text/html;charset=utf-8')
+    meta(name='description', content='网易菠萝，精品无广告原创视频内容，好玩吐槽神奇社区，只做年轻人最爱的（超趣味）2.5次元内容。')
+    meta(name='keywords', content='网易菠萝, 网易, 菠萝, 无广告, 萌贱污, 原创视频, 视频, 吐槽, 社区, 神奇, bolo, boluo, 视频社区, 内涵段子, 大力金刚,直播,小视频,网红,快看,暴走漫画,同道大叔,烧脑,花熊,漫画岛,bilibili,腾讯, 土豆,小咖秀,快手,有妖气,内涵,二次元,acfun')
+    title 网易菠萝 - UP主视频管理平台
+    include ../../../_include/base-dependencies
+    link(rel='stylesheet', href='/dev/styles/pc/pages/video/1-0-x/index.css')
+    if(editorInfo)
+        script.
+            var EDITOR_INFO = !{editorInfo};
+block content
+    .wrapper
+        .side-panel-container
+            - var page = 'shareinfo';
+            include partial/left-panel
+        .main-container
+            .page-container.share-info.show
+                .info-wrapper
+                    .info-header 数据动态：
+                        .rules-btn 规则说明
+                            script(type='text/template', data-key='rules')
+                                .section 1.每天下午16点反馈前一日数据，每周日晚24点进行一周数据结算
+                                .section 2.总收入含播放量收入和额外奖励两部分
+                                    span
+                                        | ① 播放量收入：根据参与分享计划的视频所获得的有效播放量，菠萝所给予的奖励
+                                        br
+                                        | ② 额外奖励：根据分享最终所取得效果（包括但不限于转化率、用户质量、活跃度等），菠萝所给予的额外奖励
+                                .section 3.具体实算收入请以每周结算电子单为准
+                                .section 4.如需修改支付宝账号，请发送邮件至gzxuxiaochun@corp.netease.com申请修改。邮件主题为【支付宝账号修改+账号昵称+姓名】。
+                                    span
+                                        | 邮件格式：
+                                        br
+                                        | 原支付宝账号：
+                                        br
+                                        | 原真实姓名：
+                                        br
+                                        | 新支付宝账号：
+                                        br
+                                        | 新真实姓名：
+                                        br
+                                        | 新身份证正反两面照片： （如需修改）
+                                        br
+                                        | 附件附上盖有公司公章的证明文件扫描件。（个人自媒体不用）
+                    .briefing
+                        script(type='text/template', data-key='briefing')
+                            p 昨日播放量：
+                                i <%=data.dataYesterday%>
+                                |  次&emsp;&emsp;&emsp;前日播放量：
+                                i <%=data.dataBeforeYesterday%>
+                                |  次
+                            p 本周累计播放量：
+                                i <%=data.dataWeekly%>
+                                |  次
+                            p 预计本周播放量收入：
+                                i <%=data.playIncomeWeekly%>
+                                |  元
+                            p 预计本周可获奖励：
+                                i <%=data.downloadIncomeWeekly%>
+                                |  元
+                    .tip 注意：实际播放量及收入请以周结审核实算为准
+                    .details-box
+                        h2 收入明细：
+                        .details-list-header
+                            .item.col-01 日期
+                            .item.col-02 访问次数
+                            .item.col-03 实算播放次数
+                            .item.col-04 实际一周收入
+                            .item.col-05 状态
+                            .item.col-06
+                        .details-list
+                            script(type='text/template', data-key='details-list')
+                                <% data.forEach(function(d){ %>
+                                <% if(d.checkStatus == 0){ %>
+                                .span.unconfirm
+                                    .item.col-01 <%=dateParser(d.billBeginTime)%> 至 <%=dateParser(d.billEndTime)%>
+                                    .item.col-02 <%=d.browseNum%>
+                                    .item.col-03 待确认
+                                    .item.col-04 审核中
+                                    .item.col-05 待支付
+                                    .item.col-06
+                                        .check-btn(style='display:none') 查看审核明细
+                                <% }else{ %>
+                                .span
+                                    .item.col-01 <%=dateParser(d.billBeginTime)%> 至 <%=dateParser(d.billEndTime)%>
+                                    .item.col-02 <%=d.browseNum%>
+                                    .item.col-03 <%=d.playEffectUniqueNumFinal%>
+                                    .item.col-04 <%=d.playIncomeFinal%>(播放)+<%=d.downloadIncomeFinal%>(奖励)=<%=d.incomeFinal%>
+                                    .item.col-05 <% if(d.payStatus == 0){ %>待支付<% }else if(d.payStatus == 1){ %>支付成功<% }else{ %>支付失败<% } %>
+                                    .item.col-06
+                                        .check-btn(style='display:none') 查看审核明细
+                                <% } %>
+                                <% }); %>
+        include partial/user-editor
+    .details-dialog(style='display:none')
+        .container
+            .title 审核详情
+            .content
+                p 本周已记录播放次数&nbsp;
+                    i 12516626&nbsp;
+                    | 次
+                p 其中扣除无效及异常数据后实算播放次数为：&nbsp;
+                    i 26262626&nbsp;
+                    | 次
+                br
+                p 计得本周播放量收入为&nbsp;
+                    i 2151451&nbsp;
+                    | 菠萝币
+                p 另补贴转化率奖励为&nbsp;
+                    i 2515115&nbsp;
+                    | 菠萝币
+                p 本周总计收入&nbsp;
+                    i 12416541&nbsp;
+                    | 菠萝币
+            .confirm-btn 确定
+            .remove-btn
+    include ../../../_include/dialog/1-0-x/intro
+
+
+    script.
+        require('/pages/pc/video/1-0-x/shareInfo');

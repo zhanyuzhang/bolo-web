@@ -1,0 +1,133 @@
+//Created by Dillance on 16/5/18.
+
+extends ./../../../../layout
+block head
+    meta(name='description', content='网易菠萝，精品无广告原创视频内容，好玩吐槽神奇社区，只做年轻人最爱的（超趣味）2.5次元内容。')
+    meta(name='keywords', content='网易菠萝, 网易, 菠萝, 无广告, 萌贱污, 原创视频, 视频, 吐槽, 社区, 神奇, bolo, boluo, 视频社区, 内涵段子, 大力金刚,直播,小视频,网红,快看,暴走漫画,同道大叔,烧脑,花熊,漫画岛,bilibili,腾讯, 土豆,小咖秀,快手,有妖气,内涵,二次元,acfun')
+    meta(property='og:title',content='#{videoInfo.title}')
+    meta(property='weibo:webpage:title',content='#{videoInfo.title}')
+    title 网易菠萝 - 有内涵无广告萌贱污原创视频神器
+    include ../../../_include/base-dependencies
+    link(rel='stylesheet', href='/dev/styles/pc/pages/play/1-0-x/index.css')
+    - var isInPC = !!ua.match(/Windows\sNT|Mac\sOS\sX\s([\d_.]+)/)
+    if (!isInPC)
+        script.
+            location.href = '/m/play' + location.search
+    script.
+        var VIDEO_INFO = !{JSON.stringify(videoInfo)};
+    script.
+        var COMMENT_LIST = !{JSON.stringify(commentList)};
+    style.
+        .share{
+            display:none;
+        }
+block content
+    include ../../../_include/header
+    .wrapper
+        //.header
+        //    .container
+        //        .logo.pull-left
+        //        .action.pull-right
+        //            a.download-btn.pull-left(href='/download')
+        //            a.join-btn.pull-left(href='/download')
+        .play-container
+            .main-wrap.pull-left
+                .video-box
+                    video(src='#{videoInfo.linkMp4}',controls='controls',autoplay='true')
+                    ul.danmaku-wrap
+                .video-info
+                    .primary-info
+                        .avatar
+                            img(src='#{channelInfo.avatar}')
+                        .title #{videoInfo.title}
+                        .stuff
+                            .ip-name.pull-left #{channelInfo.nick}
+                            a.follow-btn.pull-left(href='javascript:;') + 关注
+                            - var date = new Date(videoInfo.uploadTime);
+                            .up-time.pull-left #{date.getFullYear()}-#{date.getMonth() + 1}-#{date.getDate()}
+                    .desc !{videoInfo.intro.replace(/(\n)+|(\r\n)+/g,'<br>')}
+                    if (videoInfo.tag)
+                        ul.tags-box
+                            each value in videoInfo.tag.split(',')
+                                li.item.pull-left ##{value}
+
+                    .hits #{videoInfo.playCount}次
+                    .action
+                        a.collect-btn.pull-left(href='javascript:;') 收藏
+                        a.share-btn.pull-left(href='javascript:;') 分享
+
+                .comment-box
+                    .title
+                        | 评论区
+                        i (#{videoInfo.commentCount})
+                    a.send-comment-btn(href='javascript:;') 我也来一发精彩评论
+                    if (commentList)
+                        ul.comment-list
+                            include tmpl/comment-reply
+                            each cItem in commentList
+                                li.item(data-id='#{cItem.id}',data-reply-count='#{cItem.commentCount}')
+                                    .avatar
+                                        img(src!='#{jadeHelper.getImage(cItem.avatar,[46,46])}')
+                                    .content
+                                        .name !{cItem.nick}
+                                        p !{cItem.content}
+                                        .action
+                                            a.like-btn.pull-left(href='javascript:;') #{cItem.supportCount}
+                                            a.comment-btn.pull-left(href='javascript:;') #{cItem.commentCount}
+                                            a.more-btn.pull-left(style='display:none')
+                                        .reply-box
+
+
+            .sub-wrap.pull-right
+                include tmpl/episodes
+
+
+    .download-bar
+        .container
+            .slogan.pull-left
+                | 想看生殖、繁衍，除了动物世界，还有
+                br
+                b 网易菠萝！
+            a.download-btn.pull-right(href='/download')
+
+    .play-tip-dialog
+        .container
+            .con 你需登录网易菠萝App后才能收藏，点赞或评论，前去下载吧！
+            .action
+                a.cancel-btn.pull-left(href='javascript:;') 取消
+                a.confirm-btn.pull-right(href='/download') 确定
+            a.remove-btn(href='javascript:;')
+
+    .share-dialog
+        .container
+            .con 这个菠萝能在厕所玩一年。赶紧安利啊！！
+            ul.platform-list
+                li.item.wechat(data-type='wechat') 微信
+                | &nbsp;
+                li.item.moment(data-type='moment') 朋友圈
+                | &nbsp;
+                li.item.weibo(data-type='weibo') 微博
+                | &nbsp;
+                li.item.qzone(data-type='qzone') QQ空间
+            .qrcode
+                .body
+            a.remove-btn(href='javascript:;')
+
+    include ../../../_include/dialog/1-0-x/tip
+    include ../../../_include/dialog/1-0-x/join-bolo
+
+    .share
+        .content
+            .title #{videoInfo.title}
+
+    script.
+        var DANMAKU = !{JSON.stringify(danmaku) || null};
+        var SHARE_INFO = {
+            title: '#{videoInfo.title}',
+            intro: '#{videoInfo.intro.replace(/(\n)+|(\r\n)+/g,"")}',
+            img: '!{videoInfo.cover.trim()}'
+        }
+    script.
+        require('/pages/pc/play@1-0-x');
+
+    include ../../../_include/cnzz-stat

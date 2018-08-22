@@ -1,0 +1,19 @@
+// Created by gztimboy on 2016/8/29 0029.
+extends ./../../../../layout
+block head
+    include ../../../_include/seo
+    title 网易菠萝-有内涵无广告萌贱原创视频神器
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no")
+    meta(name="format-detection" content="address=no,email=no,telephone=no")
+    include ../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/download/1-1-x/jumping.css')
+    - var originWidth = 760
+    include ../../../_include/rem-helper
+block content
+   .wrapper
+        img(src="/dev/images/pages/mobile/download/1-1-x/loading.gif" alt="loading")
+        img(src="/dev/images/pages/mobile/download/1-1-x/loading-failed.png" alt="loading-failed" class="hidden")
+        .wording 菠萝菌正在努力跳转中～
+    include ../../../_include/cnzz-stat
+    script.
+        require('/pages/mobile/download/1-1-x/jumping');

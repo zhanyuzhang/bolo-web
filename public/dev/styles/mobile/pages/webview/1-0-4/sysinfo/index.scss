@@ -1,0 +1,97 @@
+body{
+  background-color: #e3e7ea;
+}
+$sysinfoRoot:'/dev/images/pages/mobile/webview/1-0-4/sysinfo/';
+
+
+.sysInfoList{
+  background-color: white;
+  min-height: 1rem;
+  .item{
+    font-family: 'SimHei ';
+    padding: 0.43rem 0.28rem;
+    border-bottom:0.03rem solid #e3e7ea;
+    h1{
+      font-size:0.36rem;
+      color:#999999;
+      line-height: 0.65rem;
+    }
+    p{
+      font-size:0.36rem;
+      color:#2e2e2e;
+      line-height: 0.48rem;
+      text-align:left;
+      word-break: break-all;
+      a{
+        font-size:0.36rem;
+        color:#ffaf1a;
+      }
+    }
+    span.time{
+      float:right;
+      display: block;
+      color:#999999;
+      font-size:0.36rem;
+      height:0.5rem;
+    }
+    &:after{
+      content:'';
+      display: block;
+      clear:both;
+    }
+
+
+  }
+  .itemb{
+    font-family: 'SimHei ';
+    padding: 0.50rem 0.28rem;
+    border-bottom:0.03rem solid #e3e7ea;
+    .itembl{
+      float:left;
+      width: 1.44rem;
+      height: 1.16rem;
+      background: url("#{$sysinfoRoot}icon.png") left center no-repeat;
+      background-size: 1.14rem 1.14rem;
+    }
+    .itembr{
+      float:left;
+      width: 8.5rem;
+      height: 1.16rem;
+      h1{
+        color:#000000;
+        font-size:0.42rem;
+      }
+      p {
+        font-size:0.42rem;
+        color:#999999;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 0.60rem;
+        line-height: 0.60rem;
+        white-space:nowrap;
+      }
+    }
+    span.time{
+      float:right;
+      display: block;
+      color:#999999;
+      font-size:0.36rem;
+      height:0.5rem;
+    }
+    &:after{
+      content:'';
+      display: block;
+      clear:both;
+    }
+  }
+}
+.sysNList{
+  &:after{
+    height:1.7rem;line-height:1.7rem;text-align:center;color:#999;content:'菠萝正在运输中...';font-size:.36rem;display: block;
+  }
+  &.remove-loading:after{
+    display:none;
+  }
+}
+

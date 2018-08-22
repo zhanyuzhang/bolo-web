@@ -1,0 +1,95 @@
+html {
+    font-family: Arial, sans-serif, \5FAE\8F6F\96C5\9ED1;
+    line-height:1.2;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    color:#333;
+}
+body{position: relative;-webkit-overflow-scrolling:touch;-webkit-font-smoothing:antialiased;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
+{margin:0;padding:0;}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+ul{list-style: none;}
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+[hidden],
+template {
+    display: none;
+}
+a {
+    color:#333;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:active,
+a:hover {
+    outline: 0;
+}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+b,
+strong {
+    font-weight: bold;
+}
+i{font-style: normal;}
+
+input, select {
+    vertical-align:middle;
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{font-weight: 100}
+
+.pull-left{float: left}
+.pull-right{float:right;}
+
+.prio-hide{display:none!important;}
+.hide{display:none;}
+.font-white{color:#fff;}
+.font-gray{color:#848484;}
+.font-red{color:#f40;}
+
+.font-12{font-size:12px;}
+.font-14{font-size:14px;}
+.font-15{font-size:15px;}
+.font-16{font-size:16px;}
+.font-18{font-size:18px;}
+.font-20{font-size:20px;}
+.font-22{font-size:22px;}
+.font-26{font-size:26px;}
+.font-28{font-size:28px;}
+.font-32{font-size:32px;}
+
+.text-center{text-align:center;}
+.text-right{text-align: right;}
+.border-triangle{width: 0;height: 0;line-height: 0;font-size: 0;overflow: hidden;display:block;border-style:dashed;border-color:transparent;}

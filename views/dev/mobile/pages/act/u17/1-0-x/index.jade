@@ -1,0 +1,76 @@
+//
+   Created by Dillance on 16/10/20.
+
+extends ./../../../../../layout
+block head
+    include ../../../../_include/seo
+    title 十万个脑残对话悬赏令！
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/act/u17/1-0-x/index.css')
+    - var originWidth = 1080
+    include ../../../../_include/rem-helper
+block content
+    .share-icon(style='display:none;')
+        img(src='/dev/images/pages/mobile/act/u17/1-0-x/share.jpg')
+    .wrapper
+        .first-screen.show
+            .bottom-container
+                .start-btn
+        .second-screen.hide
+            .scene-container
+                .btn.col-01(data-type='snowwhite')
+                .btn.col-02(data-type='gf')
+                .btn.col-03(data-type='nezha')
+                .btn.col-04(data-type='author')
+        .third-screen.hide
+            .comic-container
+                .img-wrap
+                    script(type='text/template', data-key='grid-list')
+                        <% data.forEach(function(d,i){ %>
+                        .grid(data-info!='<%=(JSON.stringify(d))%>')
+                            img(src!='<%-d.img%>')
+                            <% if(d.words.length){ %>
+                            .select-btn 点我选择对话<%-( i == 0 ? '一' : '二' )%>
+                            .subtitle.hide
+                            <% } %>
+                        <% }); %>
+            .operation
+                .back-btn 返回
+                .confirm-btn.disable 生成作品
+        .editor-screen.hide
+            .comic-container
+                .img-wrap
+                    .grid
+                        img(src='')
+                        .subtitle
+            .tip 提示：戳下方选项给TA配对话
+            ul.default-dialogue
+                script(type='text/template', data-key='dialogue-list')
+                    <% data.forEach(function(d){ %>
+                    li.item <%-d%>
+                    <% }); %>
+            .tip 那么low！看我原创！（15字内）
+            .input-wrap
+                input(type='text',placeholder='点我输入文字')
+            .operation
+                .back-btn 返回
+                .confirm-btn.disable 完成
+        .finish-screen.hide
+            .title
+            .img-wrap
+                img.output
+                //img(src='/dev/images/pages/mobile/act/u17/1-0-x/qrcode.jpg')
+            .operation
+                .save-btn 保存图片
+                    .save-tip 请长按图片或截图保存
+                .get-reward-btn 领赏攻略
+            .reward-intro
+                .to-play-btn
+            .again-btn 再来一副脑残对话
+    .music-btn
+        audio(src='http://file.ws.126.net/liveshow/bobo/u17bgm.mp3',autoplay)
+    .tip-dialog
+    script.
+        require('/pages/mobile/act/u17@1-0-x');
+    include ../../../../_include/cnzz-stat

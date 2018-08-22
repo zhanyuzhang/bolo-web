@@ -1,0 +1,20 @@
+//
+   Created by Dillance on 16/4/25.
+
+extends ./../../../../../layout
+block head
+    meta(name='keywords', content='网易Bobo 美女主播 视频聊天 美女视频 视频直播 美女秀场 视频聊天室 在线K歌 视频交友')
+    meta(name='description', content='BoBo是网易旗下大型在线娱乐社区 互联网明星直播平台 在线视频聊天 在线K歌跳舞 视频交友 赶快加入')
+    title 菠萝专辑
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/webview/1-0-x/collection/index.css')
+    - var originWidth = 1080
+    include ../../../../_include/rem-helper
+block content
+    .wrapper
+        include tmpl/collection-list
+        ul.collection-list
+    .fly-to-top
+    script.
+        require('/pages/mobile/webview/collection@1-0-x');

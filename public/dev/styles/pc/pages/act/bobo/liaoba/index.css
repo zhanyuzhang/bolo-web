@@ -1,0 +1,98 @@
+@charset "UTF-8";
+body {
+  background: url(/dev/images/pages/pc/act/bobo/liaoba/body-bg.png) #ff9b19 no-repeat;
+  background-size: contain;
+  margin: 0;
+  padding: 0; }
+body .wrapper {
+  width: 1050px;
+  margin: 0 auto;
+  margin-top: 530px;
+  font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  position: relative; }
+body .wrapper .explain-header {
+  height: 60px;
+  background: url(/dev/images/pages/pc/act/bobo/liaoba/title1.png) no-repeat; }
+body .wrapper .explain {
+  position: relative;
+  color: white;
+  text-indent: 2em;
+  height: 80px;
+  padding: 20px 0; }
+body .wrapper .container-header {
+  height: 60px;
+  background: url(/dev/images/pages/pc/act/bobo/liaoba/title2.png) no-repeat; }
+body .wrapper .container {
+  position: relative;
+  width: 1050px;
+  overfloat: hidden; }
+body .wrapper .container .card {
+  position: relative;
+  float: left;
+  width: 320px;
+  height: 484px;
+  margin: 13px;
+  text-align: center;
+  background: white; }
+body .wrapper .container .card .read-more {
+  padding-top: 200px;
+  width: 320px;
+  height: 285px;
+  display: block;
+  font-size: 16px !important;
+  font-weight: 800;
+  color: #fff;
+  text-decoration: none;
+  background: #f98912; }
+body .wrapper .container .card .img-container {
+  width: 300px;
+  margin: 10px 0 0 10px; }
+body .wrapper .container .card .img-container img {
+  width: 300px;
+  height: 400px; }
+body .wrapper .container .card .anchor-info {
+  width: 290px;
+  position: absolute;
+  top: 225px;
+  height: 165px;
+  text-align: left;
+  margin-bottom: 200px;
+  margin-left: 10px;
+  padding: 10px 0 10px 10px;
+  color: white;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.7); }
+body .wrapper .container .card .anchor-info .base-info {
+  font-size: 18px;
+  color: #fd3164; }
+body .wrapper .container .card .anchor-info .base-info .user-id {
+  font-size: 16px; }
+body .wrapper .container .card .pre, body .wrapper .container .card .next {
+  top: 168px;
+  width: 28px;
+  height: 64px;
+  position: absolute;
+  cursor: pointer; }
+body .wrapper .container .card .pre {
+  margin-left: 10px;
+  background: url(/dev/images/pages/pc/act/bobo/liaoba/left.png) no-repeat; }
+body .wrapper .container .card .next {
+  margin-left: 282px;
+  background: url(/dev/images/pages/pc/act/bobo/liaoba/right.png) no-repeat; }
+body .wrapper .container .card .enter-btn {
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+  color: #fc3600;
+  cursor: pointer;
+  margin: 10px;
+  font-weight: bold;
+  text-align: center; }
+body .wrapper .container .card .enter-btn:hover {
+  background: #eb6101;
+  color: #fff; }
+
+.hidden {
+  display: none; }
+
+/*# sourceMappingURL=index.css.map */

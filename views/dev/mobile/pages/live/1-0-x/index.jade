@@ -1,0 +1,97 @@
+//
+   Created by Dillance on 16/7/4.
+
+extends ./../../../../layout
+block head
+    include ../../../_include/seo
+    title @!{roomInfo.nick} 不想跟你说话，并向你投掷了一个菠萝直播。
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/live/1-0-x/index.css')
+    - var originWidth = 1080
+    include ../../../_include/rem-helper
+    script.
+        var ROOM_INFO = !{JSON.stringify(roomInfo)};
+block content
+    .wechat-share-icon(style='display:none;')
+        img(src='#{roomInfo.avatar}')
+    .wrapper
+        .main-container
+            .page-container
+                .video-box
+                    video(src='http://hls.bobopull.8686c.com/pushstation/#{roomInfo.userNum}/playlist.m3u8',controls='controls',autoplay='autoplay',webkit-playsinline)
+                    .rest-tip(style='#{roomInfo.liveId > 0 ? "" : "display:block"}')
+                        .image
+                        a.btn(href='/m/channel?userId=#{roomInfo.userIdStr}') 点击跳转
+                    .live-count
+                .tip-bar
+                    .text 想看更多的萌贱污，打开网易菠萝，提升3倍流畅度!
+                .author-box(data-href='/m/channel?userId=#{roomInfo.userIdStr}')
+                    .avatar
+                        img(src='#{jadeHelper.getImage(roomInfo.avatar,[140,140])}')
+                    .info-box
+                        .name !{roomInfo.nick}
+                        .intro !{roomInfo.roomName || '主人犯懒，什么都没写'}
+                    .follow-btn
+                        .icon-cross
+                        .text 关注
+                .message-box
+                    .content
+                        include tmpl/message
+                    .like-box
+                        .like-btn
+                        script(type='text/template', data-key='piece-pineapple')
+                            .piece-pineapple(class!='<%=color%>')
+                                .container
+                    .send-btn
+                        .icon
+                        .text 别想静静了，发弹幕吐个槽吧...
+            .page-container
+                script(type='text/template', data-key='video-item')
+                    <% data.forEach(function(d){ %>
+                    <%=(' ')%>
+                    li.item(data-id!='<%=d.videoId%>')
+                        .cover
+                            img(src!='<%=(getImage(d.cover,[496,280]))%>')
+                        .name <%-d.title%>
+                        .stuff
+                            .author
+                                .avatar
+                                    img(src!='<%=(getImage(d.avatar,[50,50]))%>')
+                                .text <%-d.channelName%>
+                            .play-count
+                                .text 234234次
+                    <%=(' ')%>
+                    <% }); %>
+                .video-list-box.relevance
+                    .title
+                        .text UP主的相关视频
+                        a.more-btn(href='/m/channel?userId=#{roomInfo.userIdStr}')
+                            .text 更多
+                    ul.list-wrap
+
+                .video-list-box.recommend
+                    .title
+                        .text 菠萝菌力荐
+                    ul.list-wrap
+    .download-tip
+        .content
+            .remove-btn
+                .icon
+            a.download-btn(href='http://a.app.qq.com/o/simple.jsp?pkgname=com.netease.bolo.android') 马上下载
+    .download-dialog
+        .container
+            .logo
+            h5.title 请先下载客户端
+            .tip
+                | 本功能仅由客户端提供噢，快去下载网易菠萝吧
+                br
+                | _(:з」∠)_
+            .controller
+                .fuck-off 我知道了
+                a.download-btn(href='javascript:;') 马上下载
+            .remove-btn
+
+    script.
+        require('/pages/mobile/live@1-0-x');
+

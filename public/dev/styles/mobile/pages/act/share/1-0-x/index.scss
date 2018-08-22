@@ -1,0 +1,41 @@
+@import "../../../../common/base/1-0-x/base-var";
+@import "../../../../common/ui/1-0-x/index";
+
+.wrapper{
+  background:#fff;
+  .main-container{
+    height:39.11rem;@include icon-bg('/dev/images/pages/mobile/act/share/1-0-x/bg01.jpg');position:relative;
+    .join-btn{
+      position:absolute;left:50%;
+      &.col-01{width:2.5rem;height:2.5rem;top:5.35rem;margin-left:2.12rem;}
+      &.col-02{width:4.71rem;height:1.35rem;bottom:3.28rem;margin-left:-2.35rem;}
+    }
+    .rules-btn{
+      width:1.8rem;height:.6rem;position:absolute;left:50%;bottom:2.25rem;margin-left:-.9rem;display: block;
+    }
+  }
+  .case-list{
+    width:9.6rem;margin:1.36rem auto 0;@include justify-box;
+    .item{
+      width:2.46rem;display: inline-block;vertical-align: top;padding-bottom:.88rem;
+      .avatar{
+        width:2.34rem;height:2.34rem;border:.06rem dashed #563f14;border-radius:100%;position:relative;
+        .img-wrap,
+        .cover{position:absolute;top:.1rem;right:.1rem;left:.1rem;bottom:.1rem;overflow: hidden;border-radius:100%;}
+        .img-wrap{@include filled-img;}
+        .cover{border:.05rem dashed #563f14;}
+      }
+      .name{line-height:.5rem;margin-top:.18rem;font-size:.38rem;color:#563f14;text-align:center;}
+    }
+  }
+  .contact{
+    background:url(/dev/images/pages/mobile/act/share/1-0-x/bg02.png) #fff600 no-repeat center 1.2rem;background-size:8.76rem 4.18rem;padding-top:5.9rem;margin-top:-1.8rem;position: relative;z-index: 2;color:#766442;font-size:.38rem;text-align:center;padding-bottom:3rem;line-height:1.5;
+  }
+}
+
+.details-rules{
+  padding:0 .2rem .2rem;overflow: hidden;
+  h5{margin-top:.4rem;font-weight:bold;font-size:.4rem;}
+  .section{margin-top:.25rem;font-size:.36rem;}
+  span{margin-left:.2rem;display: block;margin-top:.05rem;}
+}

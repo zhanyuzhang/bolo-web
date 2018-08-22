@@ -1,0 +1,17 @@
+script(type='text/template', data-key='photos-box')
+    .photos-box
+        .sub-title
+        .body.swiper-container
+            .list-wrap.swiper-wrapper
+                <% data.forEach(function(d){ %>
+                .item.swiper-slide
+                    .image
+                        img(src!='<%=d.image%>')
+                    <% if(d.title){ %>
+                    p <%=d.title%>
+                    <% } %>
+                    <% if(d.intro){ %>
+                    p <%-d.intro%>
+                    <% } %>
+                <% }); %>
+            .indicator

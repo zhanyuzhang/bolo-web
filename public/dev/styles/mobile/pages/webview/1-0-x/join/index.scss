@@ -1,0 +1,29 @@
+@import "../common";
+
+html{background:#e3e7ea;}
+.wrapper{
+  @include icon-bg('/dev/images/pages/mobile/webview/1-0-x/join/logo.png',center .7rem,5.69rem 2.09rem);
+  overflow: hidden;padding:3.65rem 0 .3rem;
+
+  .content{
+    padding:0 .3rem;
+
+    .tip{line-height:.5rem;font-size:.34rem;}
+    .input-item{
+      height:1rem;display: -webkit-box;margin-top:.46rem;
+      .title{width:2.4rem;line-height:1rem;font-size:.42rem;}
+      input{
+        height:.8rem;-webkit-box-flex:1;background:#fff;display: block;border:0;border-radius:.1rem;padding:.1rem .2rem;font-size:.42rem;
+        &.error{color:#f40;}
+        &.error::-webkit-input-placeholder{color:#f40;}
+      }
+    }
+  }
+
+  .submit-btn{
+    width:8.8rem;height:1.4rem;background:#ffaf1a;border-radius:.1rem;text-align:center;line-height:1.4rem;color:#fff;font-size:.56rem;margin:1.06rem auto 0;
+    &.loading{@include icon-bg('/dev/images/common/loading.gif',center,auto 1.2rem,#ffaf1a);font-size:0;}
+  }
+}
+
+.success-tip{padding:1rem .2rem;text-align:center;font-size:.44rem;display: none;}

@@ -1,0 +1,13 @@
+.footer {
+  height: 268px;
+  background: #393939; }
+  .footer .container {
+    width: 1000px;
+    margin: 0 auto;
+    color: #fff; }
+    .footer .container .h4 {
+      font-size: 20px;
+      margin-top: 42px; }
+    .footer .container p {
+      line-height: 26px;
+      margin-top: 22px; }

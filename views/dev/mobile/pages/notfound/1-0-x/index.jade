@@ -1,0 +1,38 @@
+// created by chesszhang
+
+extends ./../../../../layout
+block head
+    include ../../../_include/seo
+    title 网易菠萝-有内涵无广告萌贱原创视频神器
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no")
+    meta(name="format-detection" content="address=no,email=no,telephone=no")
+    include ../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/notfound/1-0-x/index.css')
+    - var originWidth = 720
+    include ../../../_include/rem-helper
+block content
+    div(style='width:0;height:0;overflow:hidden;line-height:0;font-size:0;')
+    .wrapper
+        .android-btn
+        .ios-btn
+    .download-bar
+        .logo
+        .ip-name
+            | 网易
+            br
+            | 菠萝
+        .content
+            | 双手下载
+            br
+            | 以示清白
+        a.btn(href='javascript:;',data-href='http://a.app.qq.com/o/simple.jsp?pkgname=com.netease.bolo.android')
+    .download-guide
+        .container
+            .content 请点击这里使用浏览器打开
+            .triangle
+            .icon
+    script.
+        require('/pages/mobile/notfound@1-0-x');
+    script.
+        require('/pages/mobile/download@1-1-x');
+    include ../../../_include/cnzz-stat

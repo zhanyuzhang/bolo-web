@@ -1,0 +1,131 @@
+@import "../../../../../common/base/1-0-x/base-var";
+
+$icon-sprite:'/dev/images/pages/pc/newbolo/components/video-card-list/1-0-x/video-card-icon.png';
+$main-color:#ffaf19;
+
+.module-title{
+  font-size:32px;color:#333;font-weight: bold;line-height:114px;margin:20px auto 0;width:1180px;
+  .count{color:$main-color;margin-left:24px;font-size:24px;font-weight: 100;}
+	.more{float:right;font-size:14px;font-weight: 100;height:90px;overflow: hidden;
+		&:hover{color:$main-color;}
+	}
+}
+.video-card-list-wrap{
+	width:1180px;margin:0 auto;
+	&.hide{display: none;}
+}
+.video-card-list{
+  width:1180px;margin:0 auto;padding-bottom:5px;
+  .card-list-container{
+	margin:-20px 0 0 -20px;
+	&:after{clear:both;display: block;content:'';}
+	  .grid{float:left;margin-left:20px;}
+	.item-box{
+	  width:380px;margin-top:20px;background:#fff;box-shadow:0 0 5px 0 rgba(15,15,15,.1);@include transition-normal(box-shadow .2s);
+	  &:hover{box-shadow:0 0 5px 0 rgba(15,15,15,.3);}
+	  .poster{
+		height:214px;@include filled-img;position: relative;overflow: hidden;cursor: pointer;display: block;
+		.play-btn{@include icon-bg(48px,48px,$icon-sprite,-32px -5px);position: absolute;top:50%;left:50%;margin-left:-24px;margin-top:-24px;opacity:0;@include transition-normal(opacity .2s)}
+		.cover{
+		  height:80px;width:100%;position: absolute;bottom:0;left:0;
+		  background: linear-gradient(bottom , rgba(0, 0, 0, 0.8) , rgba(255, 255, 255, 0) 100%);
+		  background: -o-linear-gradient(bottom , rgba(0, 0, 0, 0.8) , rgba(255, 255, 255, 0) 100%);
+		  background: -ms-linear-gradient(bottom , rgba(0, 0, 0, 0.8) , rgba(255, 255, 255, 0) 100%);
+		  background: -moz-linear-gradient(bottom , rgba(0, 0, 0, 0.8) , rgba(255, 255, 255, 0) 100%);
+		  background: -webkit-linear-gradient(bottom , rgba(0, 0, 0, 0.8) , rgba(255, 255, 255, 0) 100%);
+		}
+		.video-info{
+		  position: absolute;bottom:0;left:0;right:0;padding:0 20px 10px;@include transform(translate(0,25px));@include transition-transform(.2s);
+		  .name{height:32px;color:#fff;font-size:18px;font-weight: bold;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+		  .tags-list{
+			overflow: hidden;min-height:20px;
+			.tag{
+			  float:left;margin-right:10px;padding:0 6px;background:rgba(255,255,255,.12);border-radius: 2px;height:20px;line-height:20px;color:rgba(255,255,255,.6);@include transform(translate(0,10px));@include transition-transform(.2s);
+				&:nth-child(1){}
+			}
+		  }
+		  .heat{font-size:14px;color:rgba(255,255,255,.6);position: absolute;top:34px;right:20px;}
+		}
+		&:hover{
+		  .play-btn{opacity: 1;}
+		  .video-info{
+			@include transform(translate(0,0));
+			.tags-list{
+			  .tag{@include transform(translate(0,0));}
+			}
+		  }
+		}
+	  }
+	  .uploader-info{
+		padding:20px;position: relative;
+		.stuff{
+		  font-size:0;
+		  .avatar,
+		  .name,
+		  .last-time{display: inline-block;vertical-align: middle;}
+		  .avatar{width:24px;height:24px;@include filled-img;border-radius: 100%;overflow: hidden;}
+		  .name{font-size:14px;color:#333;margin-left:8px;}
+		  .last-time{font-size:14px;color:$gray;margin-left:20px;}
+		}
+		.intro{margin-top:8px;color:$gray;max-height:54px;overflow: hidden;width:250px;}
+		.operation{
+		  margin-top:10px;font-size:14px;color:#333;
+		  .comment-btn,
+		  .like-btn{
+			display: inline-block;vertical-align: top;position: relative;padding-left:48px;height:40px;line-height:40px;background:#f5f5f5;border-radius: 2px;cursor: pointer;
+			.num{margin-right:14px;
+				&.hide{display:none;}
+			}
+			&:after{position: absolute;top:50%;content:'';display: block;}
+			  &:hover{background:#f5f5f5;}
+			  &:active{background:#ebebeb;}
+		  }
+		  .comment-btn:after{@include icon-bg(24px,20px,$icon-sprite,-5px -69px);margin-top:-10px;left:12px;}
+			.comment-btn:hover:after{background-position: -40px -69px;}
+		  .like-btn{
+			margin-left:20px;
+		  	&:after{@include icon-bg(24px,22px,$icon-sprite,-90px -5px);margin-top:-11px;left:12px;}
+			  &:hover:after{background-position:-90px -37px;}
+			&.liked{
+			  color:$main-color;
+			  &:after{background-position:-90px -37px;}
+			}
+		  }
+		}
+		.follow-btn{
+		  width:44px;height:46px;line-height:46px;padding-left:34px;position:absolute;top:20px;right:20px;border:1px solid $main-color;border-radius: 2px;color:$main-color;font-size:14px;cursor: pointer;
+		  &:before{@include icon-bg(14px,14px,$icon-sprite,-5px -27px);content:'';display:block;position: absolute;top:50%;margin-top:-7px;left:12px;}
+		  &:after{content:'关 注';}
+			&:hover{
+				background:$main-color;color:#fff;
+				&:before{background-position:-5px -48px;}
+			}
+			&:active{
+				background:#f2a719;color:#fff;
+				&:before{background-position:-5px -48px;}
+			}
+		  &.ed{
+			background:#f5f5f5;border-color: #f5f5f5;width:48px;
+			&:before{background-position:-5px -5px;width:17px;left:11px;}
+			&:after{content:'已关注';color:$gray;}
+			  &:hover{
+				  &:before{display:none;}
+				  &:after{content:'取消关注';color:$gray;position:absolute;top:0;left:0;width:100%;text-align: center;}
+			  }
+			  &:active{
+				  background:#ebebeb;
+			  }
+		  }
+		}
+	  }
+	  .comment-box{
+		border-top:1px solid #f5f5f5;padding:10px;color:$gray;
+		.comment-item{
+		  height:28px;line-height:28px;padding:0 10px;overflow: hidden;white-space:nowrap;text-overflow: ellipsis;display: block;
+		  .name{font-weight: bold;}
+		  &:hover{background:#fafafa;}
+		}
+	  }
+	}
+  }
+}

@@ -1,0 +1,28 @@
+@import "../common";
+
+html,body{height:100%;}
+.wrapper{
+  height:100%;overflow: auto;
+  .banner{
+    height:3.58rem;position:relative;overflow: hidden;
+    img{width:100%;position:absolute;left:0;top:50%;display: block;-webkit-transform:translate(0,-50%);}
+
+    .video-count{
+      width:1.12rem;height:1.12rem;border:.06rem solid $default-font-color;border-radius:100%;background:#ffdd9c;position:absolute;left:.32rem;bottom:.28rem;display:-webkit-box;-webkit-box-align:center;-webkit-box-pack: center;
+      &:before{width:1rem;height:1rem;border:1px solid #6c624f;border-radius:100%;position: absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);content:'';display:block;}
+
+      .wrap{line-height:.42rem;font-size:.3rem;font-weight:bold;text-align:center;}
+      .num{font-size:.4rem;}
+    }
+
+    @include play-count;
+  }
+
+  .collection-info{
+    padding:.34rem .44rem;border-bottom:1px solid #dfdfdf;
+    .title{font-size:.42rem;font-weight: bold;line-height:.54rem;}
+    .desc{line-height:.4rem;margin-top:.22rem;font-size:.32rem;}
+  }
+
+
+}

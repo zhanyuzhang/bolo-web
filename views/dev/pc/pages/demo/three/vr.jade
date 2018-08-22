@@ -1,0 +1,17 @@
+//
+   Created by Dillance on 16/8/20.
+
+extends ./../../../../layout
+block head
+    meta(name='keywords', content='网易菠萝 萌贱污 无广告 视频')
+    meta(name='description', content='网易菠萝-有内涵无广告萌贱原创视频神器')
+    meta(name='mobile-web-app-capable', content='yes')
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name='apple-mobile-web-app-status-bar-style', content='black-translucent')
+    title 网易菠萝
+    link(rel='stylesheet', href='/dev/styles/pc/pages/demo/three/index.css')
+    include ../../../_include/base-dependencies
+block content
+    canvas#main-canvas
+    script.
+        require('/pages/pc/demo/three/vr');

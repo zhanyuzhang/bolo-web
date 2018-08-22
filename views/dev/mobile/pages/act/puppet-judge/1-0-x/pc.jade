@@ -1,0 +1,18 @@
+doctype html
+html
+    head
+        meta(content='charset=utf-8')
+        link(rel='icon', href='/dev/images/common/bolo-logo-mini.png')
+        link(rel='stylesheet', href='/dev/styles/mobile/pages/act/puppet-judge/1-0-x/pc.css')
+    body
+        .wrapper
+            img(src="/dev/images/pages/mobile/act/puppet-judge/1-0-x/qr-code.jpg" alt="请用手机扫码")
+        script.
+            function resizeImg() {
+                document.querySelector('.wrapper img').style.height = window.innerHeight * .9 + 'px';
+            }
+            window.onresize = function () {
+               resizeImg();
+            }
+            resizeImg();
+

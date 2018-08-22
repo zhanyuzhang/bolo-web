@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+.header {
+  border: none;
+  position: absolute;
+  height: 510px;
+  background: #0f0f0f; }
+
+.wrapper .banner {
+  position: relative;
+  width: 1180px;
+  margin: 0 auto;
+  color: #fff;
+  padding-top: 60px; }
+  .wrapper .banner .video-info {
+    box-sizing: border-box;
+    float: left;
+    height: 460px;
+    width: 400px;
+    font-size: 14px; }
+    .wrapper .banner .video-info .title {
+      font-size: 48px;
+      color: #ffaf19;
+      padding: 50px 0; }
+    .wrapper .banner .video-info .name {
+      font-size: 24px; }
+    .wrapper .banner .video-info .tag-list {
+      font-size: 12px; }
+      .wrapper .banner .video-info .tag-list .tag {
+        background: #2c2c2c;
+        display: inline-block;
+        padding: 2px 5px;
+        margin: 5px; }
+    .wrapper .banner .video-info .source {
+      height: 24px;
+      padding: 20px 0 10px 0; }
+      .wrapper .banner .video-info .source .icon {
+        width: 24px;
+        height: 24px;
+        background: #aaa;
+        border-radius: 24px;
+        vertical-align: middle; }
+      .wrapper .banner .video-info .source .nick {
+        display: inline-block;
+        margin: 0 10px;
+        color: #fff; }
+      .wrapper .banner .video-info .source .time {
+        display: inline-block; }
+    .wrapper .banner .video-info .brief {
+      height: 84px;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      word-break: break-all;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+  .wrapper .banner .player {
+    position: relative;
+    float: right;
+    height: 460px;
+    width: 780px; }
+    .wrapper .banner .player input[type=checkbox] {
+      display: none; }
+    .wrapper .banner .player video {
+      height: 450px;
+      width: 780px; }
+    .wrapper .banner .player .modal {
+      cursor: pointer;
+      position: absolute;
+      height: 450px;
+      width: 780px;
+      top: 0; }
+      .wrapper .banner .player .modal .left-gradient, .wrapper .banner .player .modal .right-gradient {
+        width: 160px;
+        height: 100%;
+        float: left;
+        background: linear-gradient(to right, #0f0f0f, rgba(15, 15, 15, 0)); }
+      .wrapper .banner .player .modal .right-gradient {
+        float: right;
+        background: linear-gradient(to left, #0f0f0f, rgba(15, 15, 15, 0)); }
+      .wrapper .banner .player .modal .shade {
+        position: absolute;
+        background: #0f0f0f;
+        opacity: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%; }
+    .wrapper .banner .player .danmaku {
+      padding-top: 10px;
+      width: 780px;
+      height: 450px;
+      position: absolute;
+      top: 0;
+      overflow: hidden; }
+      .wrapper .banner .player .danmaku div[class*=channel] {
+        height: 30px;
+        line-height: 30px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        overflow: hidden; }
+      .wrapper .banner .player .danmaku .marquee {
+        height: 30px;
+        overflow: hidden;
+        position: absolute;
+        left: 780px;
+        text-shadow: 2px 2px 2px rgba(15, 15, 15, 0.8); }
+    .wrapper .banner .player .control {
+      position: absolute;
+      width: 780px;
+      height: 80px;
+      bottom: 10px;
+      opacity: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent); }
+      .wrapper .banner .player .control .progress {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.5);
+        height: 2px;
+        width: 700px;
+        bottom: 15px;
+        left: 0;
+        right: 0;
+        margin: 0 auto; }
+        .wrapper .banner .player .control .progress .pass {
+          height: 100%;
+          background: #ffaf19; }
+      .wrapper .banner .player .control .play-btn {
+        cursor: pointer;
+        left: 40px;
+        width: 48px;
+        height: 48px;
+        background: url("/dev/images/pages/pc/newbolo/home/1-0-x/pause-btn.png") no-repeat center;
+        background-size: cover;
+        position: absolute; }
+      .wrapper .banner .player .control #play-checkbox:checked ~ label.play-btn {
+        background: url("/dev/images/pages/pc/newbolo/home/1-0-x/play-btn.png") no-repeat center; }
+      .wrapper .banner .player .control .muted-btn {
+        cursor: pointer;
+        right: 40px;
+        width: 48px;
+        height: 48px;
+        background: url("/dev/images/pages/pc/newbolo/home/1-0-x/not-muted-btn.png") no-repeat center;
+        background-size: cover;
+        position: absolute; }
+      .wrapper .banner .player .control #muted-checkbox:checked ~ label.muted-btn {
+        background: url("/dev/images/pages/pc/newbolo/home/1-0-x/muted-btn.png") no-repeat center; }
+      .wrapper .banner .player .control .danmaku-btn {
+        cursor: pointer;
+        right: 100px;
+        width: 80px;
+        height: 48px;
+        background: url("/dev/images/pages/pc/newbolo/home/1-0-x/enter-btn.png") no-repeat center;
+        background-size: cover;
+        position: absolute; }
+      .wrapper .banner .player .control.show {
+        opacity: 1; }
+    .wrapper .banner .player:hover .control {
+      opacity: 1; }
+
+/*# sourceMappingURL=index.css.map */

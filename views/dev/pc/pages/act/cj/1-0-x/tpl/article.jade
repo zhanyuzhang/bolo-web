@@ -1,0 +1,18 @@
+script(type='text/template', id='article-list-tpl')
+   <% for(var index in this){ %> 
+   .article_item
+    .article_item_left
+     a.jsImgBig(href="javascript:void(0)")
+      img(src!="<% this[index]['image'] %>")
+    .article_item_right
+     .article_item_right_top
+      img.face(src!="<% this[index]['avatar'] %>")
+      .article_item_right_top_right
+       h1.bigNick <% this[index]["nick"] %>
+       p.smallNick <% this[index]["intro"] %>
+     .article_item_right_center
+      p.xcbd <% this[index]["content"] %>
+     .article_item_right_bottom
+      span.time <% this[index]['dateStr'] %>
+      a.share(href="javascript:void(0)",data-key="share1_web").js-tj
+   <% } %>

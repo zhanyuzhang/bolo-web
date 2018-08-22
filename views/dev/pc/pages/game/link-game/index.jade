@@ -1,0 +1,29 @@
+// created by chesszhang
+doctype html
+html
+    head
+        include ../../../_include/base-dependencies
+        title BoBo连连看
+        link(rel='icon', href='/dev/images/pages/pc/game/link-game/icon.png')
+        link(rel='stylesheet', href='/dev/styles/pc/pages/game/link-game/index.css')
+    body
+        .wrapper
+            .init-box
+                .start-btn
+            .game-box(class="hidden")
+                .toolbar
+                    .time
+                    .level
+                    .disorder
+                    .scoring
+                .game-area
+                    table(id="game")
+                    canvas(id="canvas" class="hidden" width=800 height=560)
+            .game-over(class="hidden")
+                .current-score
+                .history-score
+                .replay-btn
+            audio(class="hidden" src="http://mp3.9ku.com/hot/2010/10-19/400027.mp3" loop="loop")
+        script.
+            require('/pages/pc/game/link-game/link-game-debug');
+        include ../../../_include/cnzz-stat

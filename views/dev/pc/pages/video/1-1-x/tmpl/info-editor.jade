@@ -1,0 +1,101 @@
+script(type='text/template', data-key='tag-item')
+    .tag-item(class!='<% if(typeof selected != "undefined" && selected){ %>selected<% } %>') <%-data%>
+
+script(type='text/template', data-key='histroy-tag')
+    <% data.forEach(function(d){ %>
+    .tag-item(class!='<% if(videoData.tags.indexOf(d.tag) > -1){ %>selected<% } %>') <%-d.tag%>
+    <% }); %>
+    <% if(data.length > 6){ %>
+    .switch-btn.tag-item 更多
+    <% } %>
+
+script(type='text/template', data-key='auto-complete')
+    <% data.forEach(function(d){ %>
+    .item <%-d.tag%>
+    <% }); %>
+
+script(type='text/template', data-key='category-item')
+    <% data.forEach(function(d){ %>
+    li.c-item(data-id!='<%-d.id%>',data-name!='<%-d.name%>') <%-d.name%>
+    <% }); %>
+
+script(type='text/template', data-key='info-editor')
+    if(editorInfo)
+        - editorInfo = JSON.parse(editorInfo);
+        if(editorInfo.tagList.length > 30)
+            - editorInfo.tagList.length = 30
+    if(histroyTags)
+        - histroyTags = JSON.parse(histroyTags);
+    .main-body
+        .form-item.title-form
+            .title 标题：
+            .input-wrap
+                input(type='text',name='title',placeholder='填写不超过30个字数的标题',value!='<%-data.title%>',maxlength='30')
+                .count 0/30
+        <% if(isShowFillLastDataBtn){ %>
+        .fill-last-data-btn
+            a(href='javascript:;') 引用上一次的视频信息
+        <% } %>
+        .form-item
+            .title 分区：
+            .selector.zone
+                .current-value <%-(data.zoneName || '')%>
+                ul.options-list
+                    if(editorInfo && editorInfo.zoneList.length)
+                        each z, i in editorInfo.zoneList
+                            li.item(data-id='#{z.id}') #{z.name}
+        .form-item
+            .title 分类：
+            ul.category-list
+                <% EDITOR_INFO.categorys.forEach(function(c){ %>
+                <% if(c.parentId == data.zoneId){ %>
+                li.c-item(class!='<% if(data.categoryName && data.categoryName.split(",").indexOf(c.name) >= 0){ %>selected<% } %>',data-id!='<%-c.id%>',data-name!='<%-c.name%>') <%-c.name%>
+                <% } %>
+                <% }); %>
+        .form-item.tags-form
+            .title 标签：
+            .input-wrap
+                <% if(data.tags){ %>
+                <% data.tags.split(',').forEach(function(tag){ %>
+                .tag-item <%-tag%>
+                <% }); %>
+                <% } %>
+                input(type='text',placeholder='按回车输入',maxlength=18)
+                .count <%-(data.tags ? data.tags.split(',').length : 0)%>/5
+            ul.auto-complete
+            .tags-box
+                .custom
+                    //.add-btn.tag-item
+                    //    input
+                    //    .tip + 添加自定义标签
+                    .manage-btn 自定义标签管理
+                .official
+                    if histroyTags
+                        each d, i in histroyTags
+                            .tag-item(class='#{i > 5 ? "standby" : ""}',data-id='#{d.id}') !{d.tag}
+                        if histroyTags.length > 6
+                            .switch-btn.tag-item 更多
+        .form-item
+            .title 选集：
+            .selector.video-set
+                .current-value(data-id!='<%-(data.sid || "")%>',data-exist-sequences!='<%-(JSON.stringify(currentExsistSequences))%>') <%-(data.sname || '')%>
+                ul.options-list
+                    li.item.add-btn +新建...
+                    if(editorInfo && editorInfo.sets.length)
+                        each s, i in editorInfo.sets
+                            li.item(data-id='#{s.id}',data-exist-sequences='#{JSON.stringify(s.exsistSequences)}') #{s.name}
+            .form-item.episodes
+                .title 集数：
+                i 第
+                .input-wrap
+                    input(type='text',placeholder='0',data-current-num!='<%=(data.setNum || "")%>',value!='<%=(data.setNum || "")%>')
+                i 集
+                i.tip (选择选集时自动为您填充为最新一集)
+    .side-body
+        .form-item
+            .title 简介：
+            textarea(placeholder='告诉网友您的视频亮点在哪里？') <%=(data.intro || '')%>
+        .operation
+            .return-btn 返回
+            | &emsp;&emsp;
+            .submit-btn 提交

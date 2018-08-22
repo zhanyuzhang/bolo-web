@@ -1,0 +1,489 @@
+@import "../../../../common/base/1-0-x/base-var";
+
+$baseUrl: '/dev/images/pages/mobile/act/puppet-judge/1-0-x/';
+$baseColor: #ebcd02;
+
+@mixin setBackgroundImg($imgName) {
+  background-image: url($baseUrl + $imgName);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+body {
+  background: #000;
+  padding: .1rem .2rem;
+}
+.wrapper {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  .page {
+    height: 11rem;
+    position: relative;
+  }
+  .home-page {
+    @include setBackgroundImg('home-page.png');
+    .bottom-fixed-toolbar {
+      height: 4rem;
+      background: rgba(0, 0, 0, 0);
+      .next-btn {
+        @include setBackgroundImg('enter-btn.png');
+        width: 4rem;
+        height: 4rem;
+        margin: 0 auto;
+        //opacity: 0;
+      }
+    }
+
+  }
+
+  .playback-page {
+    @include setBackgroundImg('page2-bg.png');
+    .bottom-fixed-toolbar {
+      height: 1rem;
+      .next-btn {
+        float: right;
+        margin-right: .5rem;
+        height: .9rem;
+        width: 1.8rem;
+        @include setBackgroundImg('pass-btn.png');
+      }
+    }
+  }
+
+  .puzzle-page {
+    @include setBackgroundImg('page3-bg.png');
+    .img-container {
+      position: absolute;
+      top: 1.8rem;
+      left: 0;
+      right: 0;
+      width: 7rem;
+      margin: 0 auto;
+      text-align: center;
+
+      .img-wrapper {
+          float: left;
+          img {
+            width: 3.2rem;
+            height: 1.8rem;
+            @include setBackgroundImg('loading072.gif');
+            background-size: contain;
+            background-position: center;
+            border: .1rem solid rgba(0, 0, 0, 0);
+          }
+          .left-img {
+            margin-right: .2rem;
+          }
+          .number {
+            text-align: center;
+            color: #fff;
+            font-size: .4rem;
+            margin: 0 auto;
+            width: .4rem;
+            height: .4rem;
+            border: #fff 1px solid;
+            border-radius: .2rem;
+            margin-bottom: .2rem;
+          }
+      }
+    }
+
+    .bottom-fixed-toolbar {
+      height: 1.8rem;
+      @include setBackgroundImg('toolbar-puzzle.png');
+      //border: 1px solid green;
+      .replay-btn {
+        float: left;
+        height:1.5rem;
+        width: 2rem;
+        margin-left: .3rem;
+      }
+      .next-btn {
+        float: right;
+        height: .8rem;
+        width: 2rem;
+        margin: .8rem .3rem 0 0;
+      }
+    }
+  }
+
+  .congratulate-page {
+    @include setBackgroundImg('page4-bg.png');
+    .bottom-fixed-toolbar {
+      .next-btn {
+        @include bolo-btn(5.4rem, 1rem, .5rem);
+        color: #000;
+        font-weight: bold;
+        margin: 0 auto;
+        background: $baseColor;
+      }
+      .share-area {
+        width: 5.4rem;
+        margin: .2rem auto;
+        .word {
+          height: 1rem;
+          color: #fff;
+          font-size: .4rem;
+          float: left;
+          line-height: 1rem;
+          margin-bottom: .2rem;
+        }
+        .share-btn {
+          width: .8rem;
+          height: .8rem;
+          float: right;
+          @include setBackgroundImg('share-btn.png');
+          border: .05rem solid $baseColor;
+          border-radius: .5rem;
+        }
+      }
+    }
+  }
+
+  .murder-page {
+    @include setBackgroundImg('page5-bg.png');
+
+    .murder-container {
+      width: 7rem;
+      height: 8rem;
+      position: absolute;
+      top: 2.3rem;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      //border: 1px solid green;
+
+      .murder {
+        width: 2rem;
+        height: 2rem;
+        //border: 1px solid red;
+        display: inline-block;
+        margin: .6rem .7rem;
+      }
+    }
+
+    .bottom-fixed-toolbar {
+      height: 1rem;
+      padding-top: .1rem;
+      .pre-btn {
+        width: 1.8rem;
+        height: .8rem;
+        @include setBackgroundImg('back-btn.png');
+    }
+
+    }
+  }
+
+  .figure-page {
+    height: 12rem;
+    .figure {
+      height: 100%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      padding-top: 3.8rem;
+
+      .evidence {
+        padding-top: -1rem;
+        width: 6rem;
+        height: 6rem;
+        //border: 1px solid green;
+        margin: 0 auto;
+        text-align: center;
+        overflow: scroll;
+        img {
+          width: 95%;
+        }
+      }
+    }
+    .figure:nth-child(1) {
+      @include setBackgroundImg('figure-shenfan.png');
+    }
+    .figure:nth-child(2) {
+      @include setBackgroundImg('figure-banzhuren2.png');
+    }
+    .figure:nth-child(3) {
+      @include setBackgroundImg('figure-haha.png');
+    }
+    .figure:nth-child(4) {
+      @include setBackgroundImg('figure-fanquan.png');
+    }
+
+    .bottom-fixed-toolbar {
+      height: 2rem;
+      padding-top: .1rem;
+      .input-btn {
+        height: 1rem;
+        color: $baseColor;
+        font-size: .4rem;
+        text-align: center;
+        line-height: 1rem;
+      }
+      .nav {
+        height: 1rem;
+        margin: 0 .1rem;
+        .pre-btn {
+          width: 1.8rem;
+          height: .8rem;
+          @include setBackgroundImg('back-btn.png');
+          float: left;
+        }
+        .next-btn {
+          color: $baseColor;
+          font-size: .45rem;
+          text-align: center;
+          font-weight: bold;
+          padding-right: .7rem;
+          height: .6rem;
+          @include setBackgroundImg('next-btn.png');
+          background-size: contain;
+          background-position: right;
+          float: right;
+        }
+      }
+    }
+
+    //.tool-bar {
+    //  position: absolute;
+    //  width: 6.8rem;
+    //  height: 2rem;
+    //  //border: 1px solid green;
+    //  margin: 0 auto;
+    //  top: 9.8rem;
+    //  text-align: center;
+    //
+    //  .next-btn, .input-btn {
+    //    height: .8rem;
+    //    width: 5rem;
+    //    //background: red;
+    //    margin: .2rem auto;
+    //    //opacity: 0;
+    //  }
+    //  .input-btn {
+    //    width: 3rem;
+    //  }
+    //}
+  }
+
+  .share-page {
+    height: auto;
+    .share-img {
+      width: 100%;
+    }
+
+    .bottom-fixed-toolbar {
+      bottom: 1.1rem;
+      text-align: center;
+      .share-area {
+        display: inline-block;
+        .word {
+          height: 1rem;
+          color: #fff;
+          font-size: .4rem;
+          float: left;
+          line-height: 1rem;
+        }
+        .share-btn {
+          @include setBackgroundImg('share-btn.png');
+          width: .8rem;
+          height: .8rem;
+          float: left;
+          border: .05rem solid $baseColor;
+          border-radius: .5rem;
+        }
+      }
+    }
+
+    //.download-btn {
+    //  //width: 100%;
+    //  //height: 1.4rem;
+    //  //position: fixed;
+    //  //left: 0;
+    //  //bottom: 0;
+    //  //z-index: 5;
+    //
+    //  position: fixed;
+    //  bottom: -.15rem;
+    //  height: 1.2rem;
+    //  width: 100%;
+    //  @include setBackgroundImg('download-btn.png');
+    //  background-size: 100%;
+    //  background-repeat: no-repeat;
+    //  //z-index: 999;
+    //}
+    .download-bar{
+      width:100%;height:1.2rem;background:#000;position:fixed;left:0;bottom:0;display: -webkit-box;overflow: hidden;-webkit-box-align:center;z-index:5;
+      .logo{width:.94rem;height:.94rem;margin-left:.2rem;background:url(/dev/images/pages/mobile/download/1-0-x/logo.png) no-repeat;background-size:100%;}
+      .ip-name{font-size: .38rem;font-weight: 700;margin-left: .2rem;line-height:.47rem;color:#fff;}
+      .content{line-height:.47rem;color:#ffaf1a;margin-left:.22rem;font-size: .38rem;font-weight: 700;padding-left:.22rem;border-left:1px solid #fff;-webkit-box-flex:1;}
+      .btn{width:2.52rem;height:1.4rem;background:url(/dev/images/pages/mobile/download/1-0-x/download-btn.gif) no-repeat;background-size:100%;display: block;}
+    }
+  }
+
+}
+
+// 下面的是全局样式
+.player {
+  width: 6.20rem;
+  //border: 1px solid red;
+  position: absolute;
+  z-index: 999;
+  top: 2.7rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  .close-player {
+    @include bolo-btn(1.5rem, .8rem, .32rem);
+    display: inline-block;
+  }
+}
+
+.music-player-switch {
+  position: absolute;
+  top: .5rem;
+  right: .2rem;
+  width: 34px;
+  height: 27px;
+}
+.music-player-switch-on {
+  @include setBackgroundImg('button-on.png');
+}
+.music-player-switch-off {
+  @include setBackgroundImg('button-off.png');
+}
+
+.input-window {
+  position: absolute;
+  z-index: 999;
+  width: 7.2rem;
+  top: 3rem;
+  .send-box {
+    position: relative;
+    width: 6rem;
+    margin: 0 auto;
+    .input-field {
+      width: 100%;
+      font-size: .32rem;
+      outline: none;
+      padding: .1rem 0;
+      border-radius: .1rem;
+      border: .05rem solid #ccc;
+      resize: none;
+    }
+    .cancel-btn{
+      @include bolo-btn(1.5rem, .8rem, .32rem);
+      background: $baseColor;
+      float: left;
+      color: #000;
+    }
+    .submit-btn{
+      @include bolo-btn(1.5rem, .8rem, .32rem);
+      background: $baseColor;
+      float: right;
+      color: #000;
+    }
+    //.send-btn{width:8.96rem;height:.9rem;@include icon-bg($bg-send-btn);}
+  }
+}
+
+.modal-window {
+  width: 7.2rem;
+  height: 12rem;
+  opacity: .5;
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  background: #000;
+}
+.gesture-window {
+  width: 7.2rem;
+  height: 12rem;
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  @include setBackgroundImg('gesture.png');
+
+  .wording {
+    width: 6rem;
+    color: #fff;
+    font-size: .4rem;
+    font-weight: bold;
+    margin: 2.5rem auto;
+  }
+}
+
+// 提示框
+.tips {
+  font-size: .3rem;
+  background: $baseColor;
+  color: #000;
+  position: fixed;
+  z-index: 999;
+  max-width: 6rem;
+  left: 0;
+  right: 0;
+  //bottom: 1rem;
+  margin: 0 auto;
+  padding: .1rem;
+  border-radius: .1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px 5px 3px 5px;
+
+  // 右下角三角形
+  .tips-angle-right-down {
+    border-color: $baseColor $baseColor transparent transparent;
+    right: .5rem;
+    bottom: -30px;
+    border-style: solid;
+    overflow: hidden;
+    position: absolute;
+    border-width: 20px 10px;
+  }
+
+  // 右上角三角形
+  .tips-angle-right-up {
+    border-color: transparent $baseColor $baseColor transparent;
+    right: .2rem;
+    top: -40px;
+    border-style: solid;
+    overflow: hidden;
+    position: absolute;
+    border-width: 20px 10px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.transparent {
+  opacity: 0;
+}
+.wrong-img {
+  border: .1rem rgba(255, 0, 0, .5) solid!important;
+  border-radius: .1rem;
+}
+
+.correct-img {
+  border: .1rem rgba(0, 255, 0, 1) solid!important;
+  border-radius: .1rem;
+}
+.dragging-img {
+  position: absolute;
+  opacity: .8;
+}
+
+.bottom-fixed-toolbar {
+  position: fixed;
+  width: 100%;
+  bottom: -.15rem;
+  background: #000;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}

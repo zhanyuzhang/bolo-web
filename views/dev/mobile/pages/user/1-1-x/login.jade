@@ -1,0 +1,40 @@
+//
+   Created by Dillance on 16/7/25.
+
+extends ../../../../layout
+block head
+    include ../../../_include/seo
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no")
+    title 菠萝登录
+    include ../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/user/1-0-x/common.css')
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/user/1-1-x/login.css')
+    - var originWidth = 720
+    include ../../../_include/rem-helper
+block content
+    div#urs-login-block
+    .user-wrap
+        .user-con
+            .user-back-area.clearfix
+                span.back-trigger.user-back
+                //- span.user-setting 设置
+            -var name = type == "yesgo" ? "user-form-con user-yesgo" : "user-form-con"
+            #js-form.user-form-con
+                .user-logo.clearfix
+                    span.logo-show
+                    #login-urs-block
+            .user-form-con
+                ul.user-form
+                    li.user-login-other
+                        .login-other-con
+                            p
+                                span.login-trigger.login-other-qq(data-type='qq')
+                                    a QQ
+                                //span.login-trigger.login-other-wx(data-type='weixin')
+                                //    a 微信
+                                span.login-trigger.login-other-wb(data-type='weibo')
+                                    a 微博
+    .user-loading
+        .loading
+    script.
+        require('/pages/mobile/user/1-1-x/login');

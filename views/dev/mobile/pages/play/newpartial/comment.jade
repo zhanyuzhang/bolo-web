@@ -1,0 +1,50 @@
+.comment-wrapper
+    .title 评论区
+        i (0)
+    .send-box
+        .avatar
+            img
+        .send-btn
+    .hot-comment-box
+        .sub-title 最热评论
+        ul.comment-list
+    .new-comment-box
+        .sub-title 最新评论
+        ul.comment-list
+    script(type='text/template', data-key='comment-list')
+        <% data.forEach(function(d){ %>
+        li.comment-item(data-id!='<%=d.id%>',data-userId!='<%=d.userIdStr%>',data-commentCount!='<%=d.commentCount%>')
+            .author-avatar
+                img(src!='<%=(getImage(d.avatar,[60,60]))%>')
+            .comment-content
+                .author-name <%-d.nick%>
+                .words <%-d.content%>
+                .reply-list
+            .others-do
+                <% if(d.supportCount==0) %>
+                .good-btn 赞
+                <% if(d.supportCount!=0) %>
+                .good-btn <%-d.supportCount%>
+        <% }); %>
+    script(type='text/template', data-key='reply-list')
+        <% data.forEach(function(d){ %>
+        .reply-item(data-id!='<%=d.id%>',data-cid!='<%=d.cid%>',data-userId!='<%=d.userIdStr%>',data-commentCount!='<%=d.commentCount%>')
+            .replyer-info
+                .replyer-avatar
+                    img(src!='<%=(getImage(d.avatar,[60,60]))%>')
+                .replyer-name
+                    <% if(d.replyUserId < 0){ %>
+                    <%-d.nick%>
+                    <% }else{ %>
+                    <%-d.nick%>
+                    i 回复
+                    <%-d.replyNick%>
+                    <% } %>
+            .replyer-words <%-d.content%>
+        <% }); %>
+    .comment-panel
+        .share-btn
+        //.like-btn 234234
+        .comment-btn 0
+.tip-dialog
+//.like-btn(class!='<% if(d.hasSupport){ %>ed<% } %>',data-cid!='<%=d.id%>',data-count!='<%=d.supportCount%>') <% if(d.supportCount > 0){ %><%-d.supportCount%><% }else{ %>赞<% } %>

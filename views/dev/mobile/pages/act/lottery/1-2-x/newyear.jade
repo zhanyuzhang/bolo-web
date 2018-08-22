@@ -1,0 +1,177 @@
+//
+   Created by Dillance on 16/10/27.
+
+extends ./../../../../../layout
+block head
+    include ../../../../_include/seo
+    title 菠萝新年开运大转盘！
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/act/lottery/1-2-x/newyear.css')
+    - var originWidth = 1080
+    include ../../../../_include/rem-helper
+block content
+    .wrapper
+        .lottery-container
+            .balance 种子余额：
+                i.num 0
+            .start-btn
+                .pointer
+        .left-time 您还有
+            i.num 0
+            | 次抽奖机会
+    .operation
+        .btn.home.activated
+        | &emsp;
+        .btn.list
+        | &emsp;
+        .btn.rules
+    .list-dialog.hide
+        .container
+            .title
+            ul.winners-list
+                script(type='text/template', data-key='winners-list')
+                    <% data.forEach(function(d){ %>
+                    li.item
+                        .name <%-(d.nick.replace(/^(.)(.*)(.)$/, function(match, $1, $2, $3) {return $1 + new Array($2.length + 1).join('*') + $3;}))%>
+                        <% if(d.reward == 1){ %>
+                        .level 一等奖
+                        <% }else if(d.reward == 2){ %>
+                        .level 二等奖
+                        <% }else if(d.reward == 3){ %>
+                        .level 三等奖
+                        <% }else if(d.reward == 4){ %>
+                        .level 四等奖
+                        <% }else if(d.reward == 5){ %>
+                        .level 五等奖
+                        <% }else if(d.reward == 6){ %>
+                        .level 六等奖
+                        <% }else if(d.reward == 7){ %>
+                        .level 特等奖
+                        <% } %>
+                    <% }); %>
+            .remove-btn
+    .rules-dialog.hide
+        .container
+            .title
+            .content
+                p 时间：
+                    br
+                    | 本活动从2017.1.3开始至2017.1.7结束
+                p 奖品：
+                    br
+                    | 特等奖：99元现金红包
+                    | 一等奖：阴阳师周边套装（抱枕+扇子+明信片）
+                    | 二等奖：徐老师来巡山年货礼包
+                    | 三等奖：2017胖次新年日历
+                    | 四等奖：画师定制明信片1套
+                    | 五等奖：种子40个
+                    | 六等奖：种子20个
+                .info
+                    i.caption 参与抽奖方式：
+                    | 每人每日最后可抽奖十次，每次抽奖将消耗20个种子。抽中实物奖品后会向您收集地址联系方式等信息。
+                .info
+                    i.caption 发奖时间：
+                    | 所有虚拟奖品我们会在中奖后立即充值到您的帐户，实物奖品请联系QQ：3530721286进行领奖,在活动结束（1月7日）后的10个工作日内寄出。
+                .info
+                    i.caption 活动声明：
+                    | 凡参加本次活动者，即视为同意接受本活动的相关规则，不应使用任何舞弊手段以谋求中奖；如有违反，即自动丧失参加资格；如使用任何舞弊手段而得奖，则取消其得奖资格。
+                .info 如本次活动因不可抗力等原因无法执行时，本公司有权予以暂停、终止或修改活动内容。所有产品抽奖活动与苹果公司（Apple Inc）无关
+            .remove-btn
+    .win-dialog.hide
+        .container
+            .body-wrap
+            script(type='text/template', data-key='win-dialog')
+                <% if(reward == -1){ %>
+                .error-title 亲的
+                    i 种子余额不足
+                    | ，
+                    br
+                    | 快去领取种子吧
+                .error-content
+                    img(src='/dev/images/pages/mobile/act/lottery/1-2-x/not-enough.png')
+                .confirm-btn.get-seed 去领种子
+                <% }else if(reward == -2){ %>
+                .error-title
+                    i 谢谢您的参与
+                    | ，
+                    br
+                    | 机会已用光，明天再来呗
+                .error-content
+                    img(src='/dev/images/pages/mobile/act/lottery/1-2-x/thanks.png')
+                .confirm-btn 确定
+                <% }else if(reward == 0){ %>
+                .error-title
+                    | 您果然是纯种非洲血统！
+                    br
+                    | 再试一次吧！
+                .error-content
+                    img(src='/dev/images/pages/mobile/act/lottery/1-2-x/thanks.png')
+                .confirm-btn 确定
+                <% }else if(reward == 6){ %>
+                .title 恭喜您获得
+                    i 六等奖:
+                    .name 种子20个
+                .content
+                    img(src='/dev/images/pages/mobile/act/lottery/1-2-x/seed.png')
+                .confirm-btn 确定
+                <% }else if(reward == 5){ %>
+                .title 恭喜您获得
+                    i 五等奖:
+                    .name 种子40个
+                .content
+                    img(src='/dev/images/pages/mobile/act/lottery/1-2-x/seed.png')
+                .confirm-btn 确定
+                <% }else if(reward == 4){ %>
+                .title 恭喜您获得
+                    i 四等奖:
+                    .name 画师定制明信片1套
+                .content
+                    img(src='/dev/images/pages/mobile/act/lottery/1-2-x/04.png')
+                .confirm-btn.win 去领奖
+                <% }else if(reward == 3){ %>
+                .title 恭喜您获得
+                    i 三等奖:
+                    .name 2017胖次新年日历
+                .content
+                    img(src='/dev/images/pages/mobile/act/lottery/1-2-x/03.png')
+                .confirm-btn.win 去领奖
+                <% }else if(reward == 2){ %>
+                .title 恭喜您获得
+                    i 二等奖:
+                    .name 徐老师来巡山年货礼包
+                .content
+                    img(src='/dev/images/pages/mobile/act/lottery/1-2-x/02.png')
+                .confirm-btn.win 去领奖
+                <% }else if(reward == 1){ %>
+                .title 恭喜您获得
+                    i 一等奖:
+                    .name 阴阳师周边套装
+                .content
+                    img(src='/dev/images/pages/mobile/act/lottery/1-2-x/01.png')
+                .confirm-btn.win 去领奖
+                <% } %>
+            .remove-btn
+    .get-reward-dialog.hide
+        .container
+            .content 请联系QQ：3530721286，
+                br
+                | 说明用户名即可进行领奖。
+            .confirm-btn 确定
+            .remove-btn
+    .tip-dialog
+    .download-dialog
+        .container
+            .logo
+            h5.title 请先下载客户端
+            .tip
+                | 本功能仅由客户端提供噢，快去下载网易菠萝吧
+                br
+                | _(:з」∠)_
+            .controller
+                .fuck-off 我知道了
+                a.download-btn(href='javascript:;') 马上下载
+            .remove-btn
+    script.
+        require('/pages/mobile/act/lottery/1-2-x/newyear');
+    include ../../../../_include/cnzz-stat

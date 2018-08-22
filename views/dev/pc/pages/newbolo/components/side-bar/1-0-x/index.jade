@@ -1,0 +1,39 @@
+//
+   Created by Dillance on 17/1/10.
+link(rel='stylesheet', href='/dev/styles/pc/pages/newbolo/components/side-bar/1-0-x/index.css')
+include ../../../components/dialog/report/1-0-x/index
+.side-bar
+    .logo
+        img(src="/dev/images/pages/pc/newbolo/components/side-bar/1-0-x/logo.png")
+    .nav
+        a.item(href='/new/home' class="home" data-page="home")
+            .icon-box
+                span.icon
+            span.title 首页
+        a.item(href='/new/game?zoneName=swxf' class="shouwang" data-page="swxf" data-name="守望先锋")
+            .icon-box
+                span.icon
+            span.title 守望先锋
+        a.item(href='/new/game?zoneName=lscs' class="lushi" data-page="lscs" data-name="炉石传说")
+            .icon-box
+                span.icon
+            span.title 炉石传说
+        a.item(href='/new/game?zoneName=lol' class="lol" data-page="lol" data-name="英雄联盟")
+            .icon-box
+                span.icon
+            span.title 英雄联盟
+        a.item(href='/new/game?zoneName=dh' class="gaoxiao" data-page="dh" data-name="动画")
+            .icon-box
+                span.icon
+            span.title 搞笑动画
+        a.item(href='/new/game?zoneName=gx' class="yule" data-page="gx" data-name="搞笑")
+            .icon-box
+                span.icon
+            span.title 生活娱乐
+    .qrcode
+        img(src="/dev/images/pages/pc/newbolo/components/side-bar/1-0-x/qr-code.png")
+    .feedback
+        a
+    script.
+        require('/pages/pc/newbolo/components/side-bar@1-0-x');
+

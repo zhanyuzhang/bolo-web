@@ -1,0 +1,21 @@
+script(type='text/template', data-key='video-list')
+    <% data.forEach(function(d){ %>
+    <%=(' ')%>
+    li.item(data-vid!='<%=d.videoId%>')
+        .cover
+            img(src!='<%=(getImage(d.cover,[498,280]))%>')
+            .info-wrap
+                .avatar
+                    img(src!='<%=(getImage(d.avatar,[50,50]))%>')
+                .ip-name <%=d.channelName%>
+            <% if(d.isLock != 2){ %>
+            .play-count <%=d.playCount%>次
+            <% } %>
+            <% if(d.isLock){ %>
+            .icon(class!='<% if(d.isLock == 1){ %>seed<% }else{ %>coin<% } %>')
+            <% } %>
+        .name
+            //b [神吐槽]
+            | <%=d.title%>
+    <%=(' ')%>
+    <% }); %>

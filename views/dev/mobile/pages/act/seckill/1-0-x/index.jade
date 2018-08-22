@@ -1,0 +1,65 @@
+extends ./../../../../../layout
+block head
+  include ../../../../_include/seo
+  title 梅嘲讽特别篇之啪啪寻爱夜
+  meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no")
+  meta(name="format-detection" content="address=no,email=no,telephone=no")
+  include ../../../../_include/base-m-dependencies
+  link(rel='stylesheet', href='/dev/styles/mobile/pages/act/seckill/1-0-x/index.css')
+  - var originWidth = 750
+  include ../../../../_include/rem-helper
+block content
+  .wrapper
+    .header
+      .remained-count
+        span 剩余张数：
+        span(class="count") 0
+      .timmer
+        .day(class="part")
+          .high-bit 0
+          .low-bit 0
+          .unit 天
+        .hour(class="part")
+          .high-bit 0
+          .low-bit 0
+          .unit 时
+        .minute(class="part")
+          .high-bit 0
+          .low-bit 0
+          .unit 分
+        .second(class="part")
+          .high-bit 0
+          .low-bit 0
+          .unit 秒
+
+      .wording 距离活动结束还剩
+
+    .ticket-before-click
+      .get-btn(class="disabled" data-stat="ac_get")
+    .ticket-after-click(class="hidden")
+      .code 13YSD2
+      .get-btn(data-stat="ac_change")
+    .recommend
+      .read-more
+      .recommend-video(data-vid="14776222286471" id="recommend-video1" data-stat="ac_play_left")
+      .recommend-video(data-vid="14808535486381" id="recommend-video2" data-stat="ac_play_right")
+    .rule
+      h2(class="title") 活动规则
+      ul(class="content")
+        li 1、秒杀时间：2016.12.08 20点到21点
+        li 2、每个用户限领1次
+        li 3、兑换路径：复制兑换码之后，进入我——兑换码——粘贴兑换码，确定，即可观看视频。
+        li 4、兑换期间如遇到问题，请在我——用户反馈处填写问题，萌萌哒菠萝菌时刻陪伴你哟~
+  .modal-window(class="hidden")
+  .warn-window(class="hidden" id="not-start")
+    .close-btn
+    .stay-btn
+    .leave-btn(data-stat="ac_go_paly")
+  .warn-window(class="hidden" id="is-ended")
+    .close-btn
+    .stay-btn
+    .leave-btn(data-stat="ac_go_paly")
+
+  script.
+    require('/pages/mobile/act/seckill@1-0-x');
+  include ../../../../_include/cnzz-stat

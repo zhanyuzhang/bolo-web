@@ -1,0 +1,33 @@
+html {
+  height: 100%; }
+  html body {
+    height: 100%;
+    background: url(/dev/images/pages/pc/notfound/1-0-x/404-bg.png) no-repeat center;
+    overflow: hidden;
+    position: relative; }
+    html body .wrapper {
+      margin: 0 auto;
+      position: relative;
+      top: 50%;
+      margin-top: -200px;
+      width: 300px;
+      height: 400px;
+      background-size: cover; }
+      html body .wrapper .home-page-btn {
+        width: 270px;
+        height: 40px;
+        line-height: 40px;
+        color: #000;
+        text-align: center;
+        background: #ffaf1a;
+        border-radius: 2px;
+        cursor: pointer;
+        font-size: 16px;
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 320px; }
+        html body .wrapper .home-page-btn:active {
+          background: #ffd17b; }
+
+/*# sourceMappingURL=index.css.map */

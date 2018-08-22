@@ -1,0 +1,323 @@
+@charset "UTF-8";
+.module-title {
+  font-size: 32px;
+  color: #333;
+  font-weight: bold;
+  line-height: 114px;
+  margin: 20px auto 0;
+  width: 1180px; }
+  .module-title .count {
+    color: #ffaf19;
+    margin-left: 24px;
+    font-size: 24px;
+    font-weight: 100; }
+  .module-title .more {
+    float: right;
+    font-size: 14px;
+    font-weight: 100;
+    height: 90px;
+    overflow: hidden; }
+    .module-title .more:hover {
+      color: #ffaf19; }
+
+.video-card-list-wrap {
+  width: 1180px;
+  margin: 0 auto; }
+  .video-card-list-wrap.hide {
+    display: none; }
+
+.video-card-list {
+  width: 1180px;
+  margin: 0 auto;
+  padding-bottom: 5px; }
+  .video-card-list .card-list-container {
+    margin: -20px 0 0 -20px; }
+    .video-card-list .card-list-container:after {
+      clear: both;
+      display: block;
+      content: ''; }
+    .video-card-list .card-list-container .grid {
+      float: left;
+      margin-left: 20px; }
+    .video-card-list .card-list-container .item-box {
+      width: 380px;
+      margin-top: 20px;
+      background: #fff;
+      box-shadow: 0 0 5px 0 rgba(15, 15, 15, 0.1);
+      -webkit-transition: box-shadow 0.2s;
+      -moz-transition: box-shadow 0.2s;
+      -ms-transition: box-shadow 0.2s;
+      -o-transition: box-shadow 0.2s;
+      transition: box-shadow 0.2s; }
+      .video-card-list .card-list-container .item-box:hover {
+        box-shadow: 0 0 5px 0 rgba(15, 15, 15, 0.3); }
+      .video-card-list .card-list-container .item-box .poster {
+        height: 214px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        display: block; }
+        .video-card-list .card-list-container .item-box .poster img {
+          width: 100%;
+          height: 100%;
+          display: block; }
+        .video-card-list .card-list-container .item-box .poster .play-btn {
+          width: 48px;
+          height: 48px;
+          background: url("/dev/images/pages/pc/newbolo/components/video-card-list/1-0-x/video-card-icon.png") no-repeat -32px -5px;
+          background-color: transparent;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-left: -24px;
+          margin-top: -24px;
+          opacity: 0;
+          -webkit-transition: opacity 0.2s;
+          -moz-transition: opacity 0.2s;
+          -ms-transition: opacity 0.2s;
+          -o-transition: opacity 0.2s;
+          transition: opacity 0.2s; }
+        .video-card-list .card-list-container .item-box .poster .cover {
+          height: 80px;
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background: linear-gradient(bottom, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0) 100%);
+          background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0) 100%);
+          background: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0) 100%);
+          background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0) 100%);
+          background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0) 100%); }
+        .video-card-list .card-list-container .item-box .poster .video-info {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          padding: 0 20px 10px;
+          -webkit-transform: translate(0, 25px);
+          -moz-transform: translate(0, 25px);
+          -ms-transform: translate(0, 25px);
+          -o-transform: translate(0, 25px);
+          transform: translate(0, 25px);
+          -webkit-transition: -webkit-transform 0.2s;
+          -moz-transition: -moz-transform 0.2s;
+          -ms-transition: -ms-transform 0.2s;
+          -o-transition: -o-transform 0.2s;
+          transition: transform 0.2s; }
+          .video-card-list .card-list-container .item-box .poster .video-info .name {
+            height: 32px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis; }
+          .video-card-list .card-list-container .item-box .poster .video-info .tags-list {
+            overflow: hidden;
+            min-height: 20px; }
+            .video-card-list .card-list-container .item-box .poster .video-info .tags-list .tag {
+              float: left;
+              margin-right: 10px;
+              padding: 0 6px;
+              background: rgba(255, 255, 255, 0.12);
+              border-radius: 2px;
+              height: 20px;
+              line-height: 20px;
+              color: rgba(255, 255, 255, 0.6);
+              -webkit-transform: translate(0, 10px);
+              -moz-transform: translate(0, 10px);
+              -ms-transform: translate(0, 10px);
+              -o-transform: translate(0, 10px);
+              transform: translate(0, 10px);
+              -webkit-transition: -webkit-transform 0.2s;
+              -moz-transition: -moz-transform 0.2s;
+              -ms-transition: -ms-transform 0.2s;
+              -o-transition: -o-transform 0.2s;
+              transition: transform 0.2s; }
+          .video-card-list .card-list-container .item-box .poster .video-info .heat {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            position: absolute;
+            top: 34px;
+            right: 20px; }
+        .video-card-list .card-list-container .item-box .poster:hover .play-btn {
+          opacity: 1; }
+        .video-card-list .card-list-container .item-box .poster:hover .video-info {
+          -webkit-transform: translate(0, 0);
+          -moz-transform: translate(0, 0);
+          -ms-transform: translate(0, 0);
+          -o-transform: translate(0, 0);
+          transform: translate(0, 0); }
+          .video-card-list .card-list-container .item-box .poster:hover .video-info .tags-list .tag {
+            -webkit-transform: translate(0, 0);
+            -moz-transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
+            -o-transform: translate(0, 0);
+            transform: translate(0, 0); }
+      .video-card-list .card-list-container .item-box .uploader-info {
+        padding: 20px;
+        position: relative; }
+        .video-card-list .card-list-container .item-box .uploader-info .stuff {
+          font-size: 0; }
+          .video-card-list .card-list-container .item-box .uploader-info .stuff .avatar,
+          .video-card-list .card-list-container .item-box .uploader-info .stuff .name,
+          .video-card-list .card-list-container .item-box .uploader-info .stuff .last-time {
+            display: inline-block;
+            vertical-align: middle; }
+          .video-card-list .card-list-container .item-box .uploader-info .stuff .avatar {
+            width: 24px;
+            height: 24px;
+            border-radius: 100%;
+            overflow: hidden; }
+            .video-card-list .card-list-container .item-box .uploader-info .stuff .avatar img {
+              width: 100%;
+              height: 100%;
+              display: block; }
+          .video-card-list .card-list-container .item-box .uploader-info .stuff .name {
+            font-size: 14px;
+            color: #333;
+            margin-left: 8px; }
+          .video-card-list .card-list-container .item-box .uploader-info .stuff .last-time {
+            font-size: 14px;
+            color: #999;
+            margin-left: 20px; }
+        .video-card-list .card-list-container .item-box .uploader-info .intro {
+          margin-top: 8px;
+          color: #999;
+          max-height: 54px;
+          overflow: hidden;
+          width: 250px; }
+        .video-card-list .card-list-container .item-box .uploader-info .operation {
+          margin-top: 10px;
+          font-size: 14px;
+          color: #333; }
+          .video-card-list .card-list-container .item-box .uploader-info .operation .comment-btn,
+          .video-card-list .card-list-container .item-box .uploader-info .operation .like-btn {
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            padding-left: 48px;
+            height: 40px;
+            line-height: 40px;
+            background: #f5f5f5;
+            border-radius: 2px;
+            cursor: pointer; }
+            .video-card-list .card-list-container .item-box .uploader-info .operation .comment-btn .num,
+            .video-card-list .card-list-container .item-box .uploader-info .operation .like-btn .num {
+              margin-right: 14px; }
+              .video-card-list .card-list-container .item-box .uploader-info .operation .comment-btn .num.hide,
+              .video-card-list .card-list-container .item-box .uploader-info .operation .like-btn .num.hide {
+                display: none; }
+            .video-card-list .card-list-container .item-box .uploader-info .operation .comment-btn:after,
+            .video-card-list .card-list-container .item-box .uploader-info .operation .like-btn:after {
+              position: absolute;
+              top: 50%;
+              content: '';
+              display: block; }
+            .video-card-list .card-list-container .item-box .uploader-info .operation .comment-btn:hover,
+            .video-card-list .card-list-container .item-box .uploader-info .operation .like-btn:hover {
+              background: #f5f5f5; }
+            .video-card-list .card-list-container .item-box .uploader-info .operation .comment-btn:active,
+            .video-card-list .card-list-container .item-box .uploader-info .operation .like-btn:active {
+              background: #ebebeb; }
+          .video-card-list .card-list-container .item-box .uploader-info .operation .comment-btn:after {
+            width: 24px;
+            height: 20px;
+            background: url("/dev/images/pages/pc/newbolo/components/video-card-list/1-0-x/video-card-icon.png") no-repeat -5px -69px;
+            background-color: transparent;
+            margin-top: -10px;
+            left: 12px; }
+          .video-card-list .card-list-container .item-box .uploader-info .operation .comment-btn:hover:after {
+            background-position: -40px -69px; }
+          .video-card-list .card-list-container .item-box .uploader-info .operation .like-btn {
+            margin-left: 20px; }
+            .video-card-list .card-list-container .item-box .uploader-info .operation .like-btn:after {
+              width: 24px;
+              height: 22px;
+              background: url("/dev/images/pages/pc/newbolo/components/video-card-list/1-0-x/video-card-icon.png") no-repeat -90px -5px;
+              background-color: transparent;
+              margin-top: -11px;
+              left: 12px; }
+            .video-card-list .card-list-container .item-box .uploader-info .operation .like-btn:hover:after {
+              background-position: -90px -37px; }
+            .video-card-list .card-list-container .item-box .uploader-info .operation .like-btn.liked {
+              color: #ffaf19; }
+              .video-card-list .card-list-container .item-box .uploader-info .operation .like-btn.liked:after {
+                background-position: -90px -37px; }
+        .video-card-list .card-list-container .item-box .uploader-info .follow-btn {
+          width: 44px;
+          height: 46px;
+          line-height: 46px;
+          padding-left: 34px;
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          border: 1px solid #ffaf19;
+          border-radius: 2px;
+          color: #ffaf19;
+          font-size: 14px;
+          cursor: pointer; }
+          .video-card-list .card-list-container .item-box .uploader-info .follow-btn:before {
+            width: 14px;
+            height: 14px;
+            background: url("/dev/images/pages/pc/newbolo/components/video-card-list/1-0-x/video-card-icon.png") no-repeat -5px -27px;
+            background-color: transparent;
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            margin-top: -7px;
+            left: 12px; }
+          .video-card-list .card-list-container .item-box .uploader-info .follow-btn:after {
+            content: '关 注'; }
+          .video-card-list .card-list-container .item-box .uploader-info .follow-btn:hover {
+            background: #ffaf19;
+            color: #fff; }
+            .video-card-list .card-list-container .item-box .uploader-info .follow-btn:hover:before {
+              background-position: -5px -48px; }
+          .video-card-list .card-list-container .item-box .uploader-info .follow-btn:active {
+            background: #f2a719;
+            color: #fff; }
+            .video-card-list .card-list-container .item-box .uploader-info .follow-btn:active:before {
+              background-position: -5px -48px; }
+          .video-card-list .card-list-container .item-box .uploader-info .follow-btn.ed {
+            background: #f5f5f5;
+            border-color: #f5f5f5;
+            width: 48px; }
+            .video-card-list .card-list-container .item-box .uploader-info .follow-btn.ed:before {
+              background-position: -5px -5px;
+              width: 17px;
+              left: 11px; }
+            .video-card-list .card-list-container .item-box .uploader-info .follow-btn.ed:after {
+              content: '已关注';
+              color: #999; }
+            .video-card-list .card-list-container .item-box .uploader-info .follow-btn.ed:hover:before {
+              display: none; }
+            .video-card-list .card-list-container .item-box .uploader-info .follow-btn.ed:hover:after {
+              content: '取消关注';
+              color: #999;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              text-align: center; }
+            .video-card-list .card-list-container .item-box .uploader-info .follow-btn.ed:active {
+              background: #ebebeb; }
+      .video-card-list .card-list-container .item-box .comment-box {
+        border-top: 1px solid #f5f5f5;
+        padding: 10px;
+        color: #999; }
+        .video-card-list .card-list-container .item-box .comment-box .comment-item {
+          height: 28px;
+          line-height: 28px;
+          padding: 0 10px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          display: block; }
+          .video-card-list .card-list-container .item-box .comment-box .comment-item .name {
+            font-weight: bold; }
+          .video-card-list .card-list-container .item-box .comment-box .comment-item:hover {
+            background: #fafafa; }
+
+/*# sourceMappingURL=index.css.map */

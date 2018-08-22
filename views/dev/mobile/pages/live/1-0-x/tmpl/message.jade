@@ -1,0 +1,39 @@
+script(type='text/template', data-key='message')
+    <% if(type == 'noticeMsg'){ %>
+    .message-item
+        .item-box.announcement
+            .icon
+            <% if(data.type == 1){ %>
+            .text 播主暂时离开，精彩很快回来！
+            <% }else if(data.type == 2){ %>
+            .text 播主回来啦！
+            <% }else{ %>
+            .text biubiubiu！弹幕由我来装载！
+            <% } %>
+    <% } %>
+
+    <% if(type == 'enter'){ %>
+    .message-item
+        .item-box.tip-gray
+            .name <%-data.user.nick%>
+            .text 进来了
+    <% } %>
+
+    <% if(type == 'followMsg'){ %>
+    .message-item
+        .item-box.tip-orange
+            .name <%-data.user.nick%>
+            .text 路转粉了
+    <% } %>
+
+    <% if(type == 'groupChatMsg'){ %>
+    <% data.list.forEach(function(d){ %>
+    .message-item
+        .item-box.chat
+            .avatar
+                img(src!='<%-d.body.senderUser.avatar%>')
+            .body
+                .name <%-d.body.senderUser.nick%>
+                .text <%-d.body.message%>
+    <% }); %>
+    <% } %>

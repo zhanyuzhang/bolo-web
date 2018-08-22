@@ -1,0 +1,115 @@
+//
+   Created by Dillance on 16/4/6.
+
+extends ./../../../layout
+block head
+    meta(name='keywords', content='网易Bobo 美女主播 视频聊天 美女视频 视频直播 美女秀场 视频聊天室 在线K歌 视频交友')
+    meta(name='description', content='BoBo是网易旗下大型在线娱乐社区 互联网明星直播平台 在线视频聊天 在线K歌跳舞 视频交友 赶快加入')
+    title #{videoInfo.title} |网易菠萝
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/play/1-0-x/index.css')
+    - var originWidth = 750
+    - var isInPC = !!ua.match(/Windows\sNT|Mac\sOS\sX\s([\d_.]+)/)
+    - var maxWidth = isInPC ? originWidth : null;
+    include ../../_include/rem-helper
+    script.
+        var VIDEO_INFO = !{JSON.stringify(videoInfo)};
+    if (isInPC)
+        script.
+            location.href = '/play' + location.search;
+block content
+    .wechat-share-icon(style='display:none;')
+        img(src='#{videoInfo.cover.trim()}')
+    .play-wrapper
+        include partial/video
+        .tip-box
+            .text 想看我的更多作品？马上打开菠萝，提升3倍流畅度
+            .icon
+        include partial/video-info
+        include partial/author-info
+        include partial/episodes
+        include partial/recommend
+        .comment
+            .title 评论区
+                span.comment-num (#{videoInfo.commentCount})
+            .comment-container
+                include tmpl/comment
+                include tmpl/comment-reply
+        .tip-words
+            .main 上网易菠萝客户端
+            | 精彩短视频任性看，广告神马的见鬼去吧！(｡•ˇ‸ˇ•｡)
+
+        .download-bar
+            .logo
+            .content
+                | 网易菠萝
+                br
+                b 就是黑凤梨！
+            a.download-btn(href='javascript:;')
+
+        .download-dialog
+            .container
+                .logo
+                h5.title 请先下载客户端
+                .tip
+                    | 本功能仅由客户端提供噢，快去下载网易菠萝吧
+                    br
+                    | _(:з」∠)_
+                .controller
+                    .fuck-off 我知道了
+                    a.download-btn(href='javascript:;') 马上下载
+                .remove-btn
+
+        .download-guide
+            .container
+                .content 请点击这里使用浏览器打开
+                .triangle
+                .icon
+
+        .share-guide
+            .container
+                .content 点击这里安利给朋友吧
+                .triangle
+                .icon
+        .share-box
+            .container
+                .title 分享到
+                ul.content
+                    li.item.wechat(data-type='wechat') 微信
+                    li.item.moment(data-type='moment') 朋友圈
+                    li.item.weibo(data-type='weibo') 微博
+                    li.item.qzone(data-type='qzone') QQ空间
+                .cancel-btn 取消
+                .remove-btn
+
+        .report-box
+            .container
+                .title 举报
+                ul.content
+                    li.item 敏感信息
+                    | &nbsp;
+                    li.item 色情交易
+                    li.item 垃圾广告
+                    | &nbsp;
+                    li.item 人身攻击
+                    li.item 虚假中奖信息
+                    | &nbsp;
+                    li.item 其它
+                .submit-btn 提交
+                .remove-btn
+
+
+
+    script.
+        var DANMAKU = !{JSON.stringify(danmaku) || null};
+        var SHARE_INFO = {
+            title: VIDEO_INFO.title,
+            intro: VIDEO_INFO.intro,
+            img: '#{videoInfo.cover.trim()}'
+        }
+
+    script.
+        require('/pages/mobile/play@1-0-x');
+
+    include ../../_include/cnzz-stat

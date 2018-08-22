@@ -1,0 +1,15 @@
+link(rel='stylesheet', href='/dev/styles/pc/pages/newbolo/components/header/1-0-x/index.css')
+.newbolo-header
+    if userInfo.userId
+        .logined
+            .user-info
+                a.nick(href="/new/person?id=#{userInfo.userIdStr}") #{userInfo.nickName}
+                a.avatar(href="/new/person?id=#{userInfo.userIdStr}")
+                    img(src='#{userInfo.avatar}')
+                .logout 退出登录
+    else
+        .not-logined
+            .register 注册
+            .login 登录
+    script.
+        require('/pages/pc/newbolo/components/header@1-0-x');

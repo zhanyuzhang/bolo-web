@@ -1,0 +1,22 @@
+//
+   Created by Dillance on 16/8/31.
+
+extends ./../../../../../layout
+block head
+    include ../../../../_include/seo
+    title 分享计划申请流程
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/act/share/1-0-x/flow.css')
+    - var originWidth = 1080
+    include ../../../../_include/rem-helper
+block content
+    .wrapper
+        .tip 如果您为内容或原创作者，有您自己的作品想要进行分享，请马上入驻菠萝再进行申请~
+        .main-body
+            a.join-btn(href='/m/hybrid/join')
+        .tip 除此之外，如果您为微博达人、社交一朵花，亦可通过邮件形式进行报名参加
+            br
+            | 报名方式：将您的姓名、微博/微信号、个人介绍发至邮箱：bolo@163.com即可完成报名
+            br
+            | 分享计划负责人联系方式：gzxuxiaochun#corp.netease.com（#换成@）

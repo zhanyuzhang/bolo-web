@@ -1,0 +1,26 @@
+script(id='tmpl_common/login/loginLayer',type='text/template')
+    .login-area
+        h2 海量短视频，看片神器
+        <% if (!isMainland && loginType === 'register') { %>
+        p
+            a.ntes-regist(href!='http://reg.163.com/reg/reg.jsp?product=bobo&url=<%=url%>&loginurl=<%=url%>', data-keyfrom='navi.reg163') 注册网易邮箱
+        <% } else { %>
+        #login-URS-iframe(style='margin-top:20px')
+        <% } %>
+    .no-account
+        p 社交账号登录
+        div
+            a.qq-login.no-account-login(href!='http://reg.163.com/outerLogin/oauth2/connect.do?target=1&domains=bobo.com,163.com&product=bobo&url=<%=url%>&url2=<%=url%>', data-keyfrom='navi.loginqq')
+                em.png24.icon-qq-login
+                br
+                | 腾讯QQ登录
+            a.sina-login.no-account-login(href!='http://reg.163.com/outerLogin/oauth2/connect.do?target=3&domains=bobo.com,163.com&product=bobo&url=<%=url%>&url2=<%=url%>', data-keyfrom='navi.loginsina')
+                em.png24.icon-weibo-login
+                br
+                | 新浪微博登录
+            <% if (!isMainland) { %>
+            a.no-account-login(href!='https://graph.facebook.com/oauth/authorize?client_id=985733318130287&redirect_uri=http://www.bobo.com/api/facebook/login/callback?url=<%= encodeUrl %>', data-keyfrom='navi.loginfacebook')
+                em.png24.icon-facebook-login
+                br
+                | Facebook登录
+            <% } %>

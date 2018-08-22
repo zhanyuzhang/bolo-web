@@ -1,0 +1,157 @@
+@import "../../../../../common/base/1-0-x/base-var";
+
+.player {
+    height: 650px;
+    background: #0f0f0f;
+    position: relative;
+    unselectable: none; // IE/Opera
+    -moz-user-select: none; // FireFox
+    onselectstart: none; // IE/Safari
+    -webkit-user-select: none; // Chrome
+
+    video {
+        width: 100%;
+        height: 570px;
+    }
+
+    .danmaku {
+        padding-top: 10px;
+        width: 1020px;
+        position: absolute;
+        top: 0;
+        overflow: hidden;
+
+        div[class*=channel] {
+            height: 30px;
+            line-height: 30px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            overflow: hidden;
+        }
+
+        .marquee {
+            height: 30px;
+            overflow: hidden;
+            position: absolute;
+            left: 1020px;
+        }
+    }
+
+    .control-bar {
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 80px;
+        bottom: 80px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, 0));
+
+        input[type=checkbox] {
+            display: none;
+        }
+
+        .progress-area {
+            width: 700px;
+            height: 20px;
+            left: -73px;
+            right: 0;
+            margin: 0 auto;
+            position: absolute;
+            cursor: pointer;
+            padding-top: 10px;
+
+            .progress {
+                background: rgba(255, 255, 255, .5);
+                height: 4px;
+
+                .current {
+                    height: 100%;
+                    background: #ffaf19
+                }
+            }
+
+            .slide-bar {
+                position: absolute;
+                height:  20px;
+                top: 0;
+                width: 4px;
+                background: #fff;
+            }
+        }
+
+        .time {
+            position: absolute;
+            color: #fff;
+            left: 120px;
+            top: 24px;
+            font-size: 14px;
+
+            .current {
+                color: #ffaf1a;
+            }
+        }
+
+        .play-btn, .muted-btn, .danmaku-btn {
+            cursor: pointer;
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            background-size: cover;
+        }
+        .play-btn {
+            left: 40px;
+            background: url($imagePath + 'pause-btn.png') no-repeat center;
+        }
+        #play-checkbox:checked ~ label.play-btn {
+            background: url($imagePath + 'play-btn.png') no-repeat center;
+        }
+        .muted-btn {
+            right: 40px;
+            background: url($imagePath + 'not-muted-btn.png') no-repeat center;
+        }
+        #muted-checkbox:checked ~ label.muted-btn {
+            background: url($imagePath + 'muted-btn.png') no-repeat center;
+        }
+        .danmaku-btn {
+            right: 100px;
+            background: url($imagePath + 'close-danmaku-btn.png') no-repeat center;
+        }
+        #danmaku-checkbox:checked ~ label.danmaku-btn {
+            background: url($imagePath + 'open-danmaku-btn.png') no-repeat center;
+        }
+    }
+
+    .danmaku-bar {
+        font-size: 14px;
+        width: 940px;
+        height: 80px;
+        line-height: 80px;
+        margin: 0 auto;
+        padding: 0 10px;
+
+        .danmaku-input {
+            box-sizing: border-box;
+            padding: 0 10px;
+            width: 830px;
+            height: 50px;
+            vertical-align: middle;
+            border-radius: 3px;
+        }
+
+        .submit-btn {
+            margin-left: 20px;
+            vertical-align: middle;
+            display: inline-block;
+            @include bolo-btn(80px, 50px, #fff, #ffaf1a);
+        }
+    }
+
+    &:hover {
+        .control-bar {
+            opacity: 1;
+        }
+    }
+}

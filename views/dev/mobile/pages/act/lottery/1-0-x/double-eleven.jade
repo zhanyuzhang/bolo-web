@@ -1,0 +1,160 @@
+//
+   Created by Dillance on 16/10/27.
+
+extends ./../../../../../layout
+block head
+    include ../../../../_include/seo
+    title 网易菠萝双11大抽奖!
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/act/lottery/1-0-x/double-eleven.css')
+    - var originWidth = 1080
+    include ../../../../_include/rem-helper
+block content
+    .wrapper
+        .page-container.home(style='display:block;')
+            .content
+                .seed-details-btn
+                //.balance 种子余额:
+                //    i.num 请登录
+                svg.svg-balance.balance(xmlns='http://www.w3.org/2000/svg')
+                    g
+                        path#svg-path(d='m74.5,77c221,17 359,179 358.5,179',stroke-width='0',stroke='#000',fill-opacity='0')
+                        text(x='20',y='20')
+                            textPath.num(xlink:href='#svg-path') 种子余额: 请登录
+                .start-btn
+                .count-tip 您还有
+                    i.num 0
+                    | 次抽奖机会
+        .page-container.win
+            .content
+                .win-list-wrap
+                    .win-list
+                        script(type='text/template', data-key='win-list')
+                            <% data.concat(data).concat(data).forEach(function(d){ %>
+                            .item
+                                .col-01 <%-(d.nick.replace(/^(.)(.*)(.)$/, function(match, $1, $2, $3) {return $1 + new Array($2.length + 1).join('*') + $3;}))%>
+                                <% if(d.reward == 1){ %>
+                                .col-03 一等奖
+                                <% }else if(d.reward == 2){ %>
+                                .col-03 二等奖
+                                <% }else if(d.reward == 3){ %>
+                                .col-03 三等奖
+                                <% }else if(d.reward == 4){ %>
+                                .col-03 四等奖
+                                <% }else if(d.reward == 5){ %>
+                                .col-03 五等奖
+                                <% }else if(d.reward == 6){ %>
+                                .col-03 六等奖
+                                <% }else if(d.reward == 7){ %>
+                                .col-03 特等奖
+                                <% } %>
+                            <% }); %>
+        .page-container.rules
+            .content
+                .sub-title 活动时间：
+                p 本活动从2016.11.11 20:00开始至2016.11.13 24:00结束；
+                .sub-title 活动奖品：
+                .prize-list
+                    .item 特等奖：LAMY 凌美 safari 钢笔
+                    .item 一等奖：超级萌的颜文字抱枕
+                    .item 二等奖：出前一丁 黑蒜油猪骨汤味 五联包
+                    .item 三等奖：精美明信片+菠萝湿巾1盒
+                    .item 四等奖：大力金刚观影券福袋1个
+                    .item 五等奖：种子40个
+                    .item 六等奖：种子20个
+                .sub-title 参与抽奖方式：
+                p 每人每日最多可抽奖五次，每次抽奖将消耗20个种子。
+                .sub-title 发奖时间：
+                p 所有虚拟奖品我们会在中奖后立即充值到您的帐户，实物奖品则在活动结束（10月13日）后的10个工作日内寄出。
+                .sub-title 活动声明：
+                p 凡参加本次活动者，即视为同意接受本活动的相关规则，不应使用任何舞弊手段以谋求中奖；如有违反，即自动丧失参加资格；如使用任何舞弊手段而得奖，则取消其得奖资格。
+        .nav
+            .btn.home.current
+            .btn.win
+            .btn.rules
+        .seed-dialog
+            .container
+                .remove-btn
+                .title
+                .content 种子可以在菠萝里通过小任务免费获得，并用来解锁看片、投喂up主、兑换门票等等，快去领取吧ヾ(o◕∀◕)ﾉ
+                a.jump-btn(href='/m/hybrid/mission/list') 去领种子
+        .win-dialog
+            script(type='text/template', data-key='win-dialog')
+                .container(class!='reward<%-reward%>')
+                    .remove-btn
+                    <% if(reward == -1){ %>
+                    .title.err
+                        i 谢谢您的参与，
+                    <% }else if(reward == -2){ %>
+                    .title.err 亲的
+                        i 种子余额不足
+                        | ，
+                    <% }else{ %>
+                    .title 恭喜您获得
+                        <% if(reward == 1){ %>
+                        i 一等奖
+                        <% }else if(reward == 2){ %>
+                        i 二等奖
+                        <% }else if(reward == 3){ %>
+                        i 三等奖
+                        <% }else if(reward == 4){ %>
+                        i 四等奖
+                        <% }else if(reward == 5){ %>
+                        i 五等奖
+                        <% }else if(reward == 6){ %>
+                        i 六等奖
+                        <% }else if(reward == 7){ %>
+                        i 特等奖
+                        <% } %>
+                    <% } %>
+                    .content
+                        <% if(reward == -1){ %>
+                        .name 机会已用光，明天再来呗
+                        <% }else if(reward == -2){ %>
+                        .name 快去领取种子吧！
+                        <% }else if(reward == 1){ %>
+                        .name 超级萌的颜文字抱枕
+                        <% }else if(reward == 2){ %>
+                        .name 出前一丁 黑蒜油猪骨汤味 五联包
+                        <% }else if(reward == 3){ %>
+                        .name 精美明信片+菠萝湿巾1盒
+                        <% }else if(reward == 4){ %>
+                        .name 大力金刚观影券福袋1个
+                        <% }else if(reward == 5){ %>
+                        .name 种子40个
+                        <% }else if(reward == 6){ %>
+                        .name 种子20个
+                        <% } %>
+                        .prize-img
+                    .operation
+                        <% if([-1,5,6].indexOf(reward) >= 0){ %>
+                        .confirm-btn 确认
+                        <% }else if(reward == -2){ %>
+                        .get-seed-btn 去领种子
+                        <% }else{ %>
+                        .reject-btn 残忍拒绝
+                        | &emsp;
+                        .get-btn 去领奖
+                        <% } %>
+        .award-dialog
+            .container
+                .remove-btn
+                .content 请联系QQ:348879759进行领奖
+                .confirm-btn 确认
+    .tip-dialog
+    .download-dialog
+        .container
+            .logo
+            h5.title 请先下载客户端
+            .tip
+                | 本功能仅由客户端提供噢，快去下载网易菠萝吧
+                br
+                | _(:з」∠)_
+            .controller
+                .fuck-off 我知道了
+                a.download-btn(href='javascript:;') 马上下载
+            .remove-btn
+    script.
+        require('/pages/mobile/act/lottery/1-0-x/double-eleven');
+    include ../../../../_include/cnzz-stat

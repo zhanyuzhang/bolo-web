@@ -1,0 +1,45 @@
+html{   -webkit-box-orient: vertical; -webkit-box-align: center; -webkit-tap-highlight-color:rgba(255,0,0,0);}
+body { margin:0; font-family: "Microsoft YaHei", "微软雅黑", Arial,sans-serif; font-size:0.12rem; position:relative; background: #ffaf1a; }
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, blockquote, p {padding: 0;margin: 0;background: url(//img2.cache.netease.com/bobo/img16/apptest/h5/mobile1603/blank.gif) no-repeat 0 0;}
+table, td, tr, th { font-size:0.12rem;}
+li { list-style-type:none; }
+img { vertical-align:top; border:0;}
+ol, ul { list-style:none; }
+h1, h2, h3, h4, h5, h6 { font-size:0.12rem; font-weight:normal;}
+.fB { font-weight:bold;}
+.clearfix { *zoom:1;}
+.clearfix:after, .area:after { display:block; overflow:hidden; clear:both; height:0; visibility:hidden; content:"."; }
+a , a:hover ,a:visited {text-decoration:none;}
+.cDRed,.cDRed:visited,.cDRed a{color:#f63838; text-decoration:none;}
+.cDRed a:hover,a.cDRed:hover{color:#f63838; text-decoration:none;}
+.cRed,.cRed:visited,.cRed a{color:#ff6d54; text-decoration:none;}
+.cRed a:hover,a.cRed:hover{color:#ff6d54; text-decoration:none;}
+.blank3 { clear:both; height:0.03rem; overflow:hidden; display:block; }
+.blank5 { clear:both; height:0.05rem; overflow:hidden; display:block; }
+.blank6 { clear:both; height:0.06rem; overflow:hidden; display:block; }
+.blank9 { clear:both; height:0.09rem; overflow:hidden; display:block; }
+.blank6w { background:#fff; clear:both; height:0.06rem; overflow:hidden; display:block; }
+.blank10 { clear:both; height:0.10rem; overflow:hidden; display:block; }
+.blank12 { clear:both; height:0.12rem; overflow:hidden; display:block; }
+.blank15 { clear:both; height:0.15rem; overflow:hidden; display:block; }
+.blank20 { clear:both; height:0.20rem; overflow:hidden; display:block; }
+.blank30 { clear:both; height:0.30rem; overflow:hidden; display:block; }
+.display-none { display: none;}
+
+body {}
+.xz-area { position: relative;  width:100%; clear:both; margin:0 auto;background:#ffaf1a; height:12.06rem;}
+.xz-dl { position: fixed; z-index: 3; left:0; bottom:0; width:100%; clear: both; margin:0 auto; height:1.40rem; background: #000; color: #fff;}
+.xz-dm { position: relative; width:100%; height: 100%; overflow: hidden;}
+.xz-cover { position:absolute; left: 0; top: 0;  z-index: 3;  width:100%; clear:both; margin:0 auto;background:url("/dev/images/pages/mobile/xz/1-0-x/xzbg03.png") no-repeat center; height:12.06rem; background-size: 100% 100%;}
+.xz-dm div { font-size: 0.24rem; color: #fff; position: absolute; left:0;top:0; width:4.3rem; height:0.5rem;}
+.xz-dl-logo {width:0.94rem; height:0.94rem; margin-left:0.2rem; float: left; margin-top:0.23rem;background:url("/dev/images/pages/mobile/xz/1-0-x/xzlogo.png") no-repeat center; background-size: 99% 99%; }
+.xz-dl-title { font-size: 0.38rem; color: #fff; font-weight: bold; margin-top:0.25rem; margin-left:0.2rem; float:left; line-height:120%;}
+.xz-dl-des { font-size: 0.38rem; color: #ffaf1a; font-weight: bold; margin-top:0.25rem; margin-left:0.22rem; float:left; line-height:120%; border-left:1px solid #fff; padding-left: 0.22rem;}
+.xz-dl-but {width:2.52rem; height:1.40rem; background:url("/dev/images/pages/mobile/xz/1-0-x/xzbut.gif") no-repeat center; background-size: 99% 99%; float:right;}
+.popmask {display:none; position:fixed;height:100%;width:100%;left:0;top:0;background-color:rgba(0,0,0,0.7);z-index:10;}
+.xz-tips { position:fixed; right: 0.2rem; top: 0.1rem; z-index: 12; display: block;}
+.xz-tips-top { position: relative;}
+.xz-tips-ic { position: absolute; background:url("/dev/images/pages/mobile/xz/1-0-x/xz_smile.png") no-repeat center; width:0.63rem; height:0.69rem; background-size: 99% 99%; left: 0.05rem; top: -0.14rem;}
+.xz-tips-arrows { float: right; clear:both; margin:0 auto;  width:0;   height:0;  border-left:0.13rem solid transparent;   border-right:0.13rem solid transparent;  border-bottom:0.13rem solid #ffaf1a; display:block; margin-right: 0.3rem;}
+.xz-tips-text { font-size: 0.24rem; color: #2e2e2e; background: #ffaf1a; border-radius: 4px; clear: both; padding:3px 0.15rem 2px 0.73rem; margin-right: 0.1rem;}
+

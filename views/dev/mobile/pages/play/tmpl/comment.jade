@@ -1,0 +1,16 @@
+script(type='text/template', data-key='comment')
+    <% data.forEach(function(d){ %>
+    .comment-item(id!='c-<%=d.id%>')
+        .comment-author
+            .avatar
+                img(src!='<%=d.avatar%>')
+            .content
+                .panel
+                    .name <%=d.nick%>：
+                    ul.operation
+                        li.item.like-btn 赞
+                        li.item.reply-num <%=d.commentCount%>
+                        li.item.reply-btn
+                .words <%-d.content%>
+        ul.reply-list
+    <% }); %>

@@ -1,0 +1,19 @@
+.video-info-box
+    script.
+        var v = !{JSON.stringify(videoInfo)};
+    .video-title 
+        p #{videoInfo.title}
+        .action-f
+            .action
+                .hits
+                    .icon
+                    | #{videoInfo.playCount}次
+                .share-btn
+    .description #{videoInfo.intro.replace(/(\n)+|(\r\n)+/g,'<br>')}
+    if (videoInfo.tag)
+        .tags-box
+            ul.content
+                each value in videoInfo.tag.split(',')
+                    li.item ##{value}
+    .video-info-box-scale
+        .icon

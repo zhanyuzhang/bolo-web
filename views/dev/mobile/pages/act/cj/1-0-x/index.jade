@@ -1,0 +1,106 @@
+//
+   Created by Dillance on 16/7/13.
+
+extends ./../../../../../layout
+block head
+    include ../../../../_include/seo
+    title 2016ChinaJoy开车指南-网易菠萝出品
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/act/cj/1-0-x/index.css')
+    - var originWidth = 1080
+    include ../../../../_include/rem-helper
+    if(videoInfo)
+        script.
+            var VIDEO_INFO = !{JSON.stringify(videoInfo)};
+    if(videoList)
+        script.
+            var VIDEO_LIST = !{JSON.stringify(videoList)};
+    if(userInfo)
+        script.
+            var USER_INFO = !{JSON.stringify(userInfo)};
+block content
+    .wechat-share(style='display:none')
+        img(src='http://img5.cache.netease.com/bobo/2016/7/25/201607251856195ba06.jpg')
+    .wrapper
+        .header-placeholder
+            .logout-btn
+        .nav-placeholder
+            ul.nav
+                li.item.current(data-stat-key='spot_h5')
+                    .content
+                li.item(data-stat-key='exh_h5')
+                    .content
+                li.item
+                    .content
+                li.item
+                    .content
+                li.item
+                    .content
+        .page-container.live-page.show
+            include partial/live
+        .page-container.pavilion-page
+            include partial/pavilion
+        .page-container.fun-page
+            include partial/fun
+        .page-container.periphery-page
+            include partial/periphery
+        .page-container.girls-page
+            include partial/girls
+        //include partial/comment
+        include partial/ip-wall
+        .partners
+            .logo.bolo(data-href='http://bolo.bobo.com/m/download')
+            .logo.netease(data-href='http://game.163.com/2016/chinajoy')
+            .logo.lofter(data-href='http://www.lofter.com/')
+            .logo.gacha(data-href='http://gacha.163.com/')
+            .logo.nice(data-href='http://www.oneniceapp.com/')
+            .logo.comic(data-href='http://manhua.163.com/')
+    .tip-dialog
+    .share-dialog
+        .container
+            .share-icons
+                .btn.wechat(data-stat-key='wx_h5') 微信
+                .btn.moment(data-stat-key='pyq_h5') 微信朋友圈
+                .btn.weibo(data-stat-key='wb_h5') 微博
+                .btn.qzone(data-stat-key='QQ_h5') QQ空间
+            .remove-btn
+    .share-dialog.gift
+        .container
+            .content
+                p 活动规则：一键分享本专题，即有机会获得现场手办一份或凹凸君定制T恤1件！（记得保存截图噢）
+                p 活动时间：7月26日-7月31日下午3点前，机不可失！
+            .share-icons
+                .btn.wechat(data-stat-key='wx_h5') 微信
+                .btn.moment(data-stat-key='pyq_h5') 微信朋友圈
+                .btn.weibo(data-stat-key='wb_h5') 微博
+                .btn.qzone(data-stat-key='QQ_h5') QQ空间
+            .remove-btn
+    .share-dialog.success
+        .container
+            input
+            .error-tip
+            .content
+                p 乘客须知：
+                p 8月1日，我们将在网易菠萝APP内公布十位幸运用户，届时中奖群众凭手机号+分享截图，按照指示操作即可领奖！如有疑问可私信微博@网易菠萝菌，或在菠萝公众号（ID￼bolo163）后台留言噢。
+            .submit-btn
+            .remove-btn
+    .share-dialog.download
+        .container
+            a.download-btn(href='/m/download')
+            .remove-btn
+    .wechat-share-guide
+        .container
+            .content 点击这里安利给朋友吧
+            .triangle
+            .icon
+    include tmpl/photos-box
+    include ../../../../_include/ui/download-bar/1-0-x/index
+
+    script.
+        require('/pages/mobile/act/cj@1-0-x');
+
+    include ../../../../_include/cnzz-stat
+
+
+

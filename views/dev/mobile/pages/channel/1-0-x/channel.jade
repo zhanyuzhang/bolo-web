@@ -1,0 +1,69 @@
+// Created by gztimboy on 2016/4/12 0012.
+
+doctype html
+html
+    head
+        title 网易菠萝
+        meta(http-equiv="Content-Type",content="text/html; charset=utf-8")
+        meta(name="keywords" content="网易菠萝 短视频 二次元 网络剧 真人短剧 在线直播 萌动漫 污视频 贱直播")
+        meta(name="description" content="菠萝是网易旗下海量短视频平台 年轻人娱乐社区 热门IP短剧想看就看 更有著名IP创作团队与你即时直播互动 就差爱吐槽的你 赶快加入")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no")
+        meta(name="format-detection" content="address=no,email=no,telephone=no")
+        meta(name="apple-mobile-web-app-capable" content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+        - var originWidth = 750
+        include ../../../_include/rem-helper
+        script(src='/dev/scripts/bowl.js')
+        link(rel="stylesheet" href="/dev/styles/mobile/pages/channel/1-0-x/channel.css")
+    body
+        .channel-shareimg
+            //img(src="http://bobo-public.nosdn.127.net/bobo_1455591596042_69972728.jpg")
+        .channel-info
+            script(type='text/template' ,data-key='channelInfo')
+                <%  %>
+                .channel-info-bg1
+                <% if (data.avatar!=null) {%>
+                .channel-info-avatar
+                    img(src!='<%=data.avatar%>')
+                <% } %>
+                .channel-info-title
+                    h2 <%=data.nick%>
+                    h3 <% if (data.intro!=null) {%><%=data.intro%><% } %>
+                    h4
+                        span.channel-info-follows + 关注
+                        span.channel-info-fol-num <%=data.followedCount%>
+                        span.channel-info-fol-text 人已关注
+                        span.channel-info-share 分享
+                <% %>
+        .channel-set
+            //.channel-set-list 第一集
+            //.channel-set-list 第一集
+            //.channel-set-list 第一集
+            //.channel-set-list 第一集
+        .channel-video-list
+        .channel-dl
+            .channel-dl-logo
+            .channel-dl-logo-title
+                h2 网易菠萝
+                h3 就是黑凤梨！
+            .channel-dl-but 立即下载
+        #popmask.popmask
+        #channel-dl-tips.channel-dl-tips
+            .channel-dl-tips-close
+                .channel-dl-tips-close-ic
+            .channel-dl-tips-ic
+            h2 请先下载客户端
+            h3 本功能仅由客户端提供噢，快去下载网易菠萝吧_(:з」∠)_
+            .channel-dl-tips-but
+                .channel-dl-tips-but-l 我知道了
+                .channel-dl-tips-but-r 立即下载
+        #channel-tips.channel-tips
+            .channel-tips-top
+                .channel-tips-arrows
+                .channel-tips-ic
+            .channel-tips-text 点击这里去浏览器下载吧
+        script.
+            require('/pages/mobile/channel/1-0-x/channel');
+
+        include ../../../_include/cnzz-stat
+

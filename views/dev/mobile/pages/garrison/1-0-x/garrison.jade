@@ -1,0 +1,57 @@
+//
+   Created by gztimboy on 2016/4/12 0012.
+
+doctype html
+html
+    head
+        title 网易菠萝
+        meta(http-equiv="Content-Type",content="text/html; charset=utf-8")
+        meta(name="keywords" content="网易菠萝 短视频 二次元 网络剧 真人短剧 在线直播 萌动漫 污视频 贱直播")
+        meta(name="description" content="菠萝是网易旗下海量短视频平台 年轻人娱乐社区 热门IP短剧想看就看 更有著名IP创作团队与你即时直播互动 就差爱吐槽的你 赶快加入")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no")
+        meta(name="format-detection" content="address=no,email=no,telephone=no")
+        meta(name="apple-mobile-web-app-capable" content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+        - var originWidth = 750
+        include ../../../_include/rem-helper
+        script(src='/dev/scripts/bowl.js')
+        link(rel="stylesheet" href="/dev/styles/mobile/pages/garrison/1-0-x/garrison.css")
+    body
+        .gar-area
+            .gar-title 加入菠萝，分享创意
+            .gar-des 请准备1-2段已在任意平台上传的3-5分钟短视频，根据提示填写或上传资料，我们将有专人与您联系。
+            .gar-input
+                span.gar-input-title 团队名称：
+                span.gar-input-content
+                    input(id='name' name='user').gar-input-content-input01
+                    span.gar-input-content-clear.gar-input-content-clear-1
+            .gar-input
+                span.gar-input-title 微博账号：
+                span.gar-input-content
+                    input(id='weibo' name='weibo').gar-input-content-input01
+                    span.gar-input-content-clear.gar-input-content-clear-2
+            .gar-input
+                span.gar-input-title 联系方式：
+                span.gar-input-content
+                    input(id='phone' name='phone').gar-input-content-input01
+                    span.gar-input-content-clear.gar-input-content-clear-3
+            .gar-input4
+                h3 请在下面粘贴至少一段您上传的视频连接
+                span.gar-input4-title 上传视频1
+                span.gar-input4-content
+                    input(id='video1' name='video1').gar-input-content-input02
+            .gar-input4
+                span.gar-input4-title 上传视频2
+                span.gar-input4-content
+                    input(id='video2' name='video2').gar-input-content-input02
+            span.blank3
+            .gar-but 提交
+        .gar-tips
+            span.gar-tips-ic
+            .gar-tips-text 已成功提交！
+        script.
+            require('/pages/mobile/garrison/1-0-x/garrison');
+
+
+
+

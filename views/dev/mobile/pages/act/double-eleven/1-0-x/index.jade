@@ -1,0 +1,44 @@
+//
+   Created by Dillance on 16/10/20.
+
+extends ./../../../../../layout
+block head
+    include ../../../../_include/seo
+    title 网易菠萝双11大放送
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/act/double-eleven/1-0-x/index.css')
+    - var originWidth = 1080
+    include ../../../../_include/rem-helper
+block content
+    .wrapper
+        .statement-btn
+        .banner
+            img(src='/dev/images/pages/mobile/act/double-eleven/1-0-x/img01.jpg')
+        .input-wrap
+            input(type='text',placeholder='输入口令')
+        .confirm-btn
+        .to-play-page
+            img(src='/dev/images/pages/mobile/act/double-eleven/1-0-x/img02.jpg')
+    .code-dialog.hide
+        .container
+            .remove-btn
+            h5 兑换码
+            .code
+            .go-exchange-btn 去兑换
+    .statement-dialog.hide
+        .container
+            .remove-btn
+            h5 活动声明
+            .text
+                | &emsp;&emsp;本次活动兑换码每台设备限领一次，可用于观看《大力金刚》第二季第24集，兑换有效期为：2016.11.03至 2016.11.15，观看有效期为2016.11.03至 2016.11.20。
+                br
+                | &emsp;&emsp;凡参加本次活动者，即视为同意接受本活动的相关规则，不应使用任何舞弊手段以谋求中奖；如有违反，即自动丧失参加资格；如使用任何舞弊手段而得奖，则取消其得奖资格。
+                br
+                | &emsp;&emsp;如本次活动因不可抗力等原因无法执行时，本公司有权予以暂停、终止或修改活动内容。所有产品抽奖活动与苹果公司（Apple Inc）无关
+            .fuck-off-btn 知道啦
+
+    .tip-dialog
+    script.
+        require('/pages/mobile/act/double-eleven@1-0-x');
+    include ../../../../_include/cnzz-stat

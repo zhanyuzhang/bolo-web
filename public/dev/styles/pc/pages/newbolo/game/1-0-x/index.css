@@ -1,0 +1,194 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+.header {
+  border: none;
+  position: absolute;
+  height: 380px;
+  background: #0f0f0f; }
+  .header .cover {
+    height: 320px;
+    background-size: cover; }
+  .header .modal {
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    height: 320px;
+    top: 60px;
+    width: 100%; }
+
+.wrapper .banner {
+  position: relative;
+  z-index: 2;
+  width: 1180px;
+  margin: 0 auto; }
+  .wrapper .banner .game-name {
+    padding: 70px 0 70px 0;
+    width: 210px;
+    font-size: 48px;
+    color: #fff; }
+  .wrapper .banner .main {
+    height: 300px; }
+    .wrapper .banner .main .video-info {
+      display: inline-block;
+      height: 300px;
+      width: 640px;
+      color: #666;
+      box-sizing: border-box;
+      padding: 20px 40px;
+      font-size: 14px;
+      background: #fff;
+      vertical-align: top; }
+      .wrapper .banner .main .video-info .title {
+        font-size: 32px;
+        font-weight: bold;
+        color: #333;
+        padding: 10px 0 20px 0; }
+      .wrapper .banner .main .video-info .name {
+        font-size: 24px;
+        color: #333; }
+      .wrapper .banner .main .video-info .tag-list {
+        font-size: 12px; }
+        .wrapper .banner .main .video-info .tag-list .tag {
+          background: #f5f5f5;
+          display: inline-block;
+          padding: 2px 5px;
+          margin: 5px; }
+      .wrapper .banner .main .video-info .source {
+        height: 24px;
+        padding: 10px 0 5px 0; }
+        .wrapper .banner .main .video-info .source .icon {
+          width: 24px;
+          height: 24px;
+          background: #aaa;
+          border-radius: 24px;
+          vertical-align: middle; }
+        .wrapper .banner .main .video-info .source .nick {
+          color: #333;
+          font-weight: bold;
+          display: inline-block;
+          margin: 0 10px; }
+        .wrapper .banner .main .video-info .source .time {
+          display: inline-block; }
+      .wrapper .banner .main .video-info .brief {
+        height: 42px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        word-break: break-all;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+    .wrapper .banner .main .player {
+      position: relative;
+      display: inline-block;
+      height: 300px;
+      width: 540px;
+      box-sizing: border-box;
+      vertical-align: top;
+      margin-left: -3px; }
+      .wrapper .banner .main .player input[type=checkbox] {
+        display: none; }
+      .wrapper .banner .main .player video {
+        height: 300px;
+        width: 540px;
+        position: absolute;
+        top: 0;
+        left: 0; }
+      .wrapper .banner .main .player .danmaku {
+        padding-top: 10px;
+        width: 536px;
+        position: absolute;
+        top: 0;
+        overflow: hidden; }
+        .wrapper .banner .main .player .danmaku div[class*=channel] {
+          height: 30px;
+          line-height: 30px;
+          color: #fff;
+          font-size: 18px;
+          font-weight: bold;
+          overflow: hidden;
+          width: 536px;
+          position: relative;
+          left: 2px; }
+        .wrapper .banner .main .player .danmaku .marquee {
+          height: 30px;
+          overflow: hidden;
+          position: absolute;
+          width: 540px;
+          left: 540px;
+          text-shadow: 2px 2px 2px rgba(15, 15, 15, 0.8); }
+      .wrapper .banner .main .player .control {
+        position: absolute;
+        width: 534px;
+        height: 80px;
+        bottom: 0px;
+        opacity: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent); }
+        .wrapper .banner .main .player .control .progress {
+          position: absolute;
+          background: rgba(255, 255, 255, 0.5);
+          height: 2px;
+          width: 500px;
+          bottom: 15px;
+          left: 0;
+          right: 0;
+          margin: 0 auto; }
+          .wrapper .banner .main .player .control .progress .pass {
+            height: 100%;
+            background: #ffaf19; }
+        .wrapper .banner .main .player .control .play-btn {
+          cursor: pointer;
+          left: 18px;
+          width: 48px;
+          height: 48px;
+          background: url("/dev/images/pages/pc/newbolo/game/1-0-x/pause-btn.png") no-repeat center;
+          background-size: cover;
+          position: absolute; }
+        .wrapper .banner .main .player .control #play-checkbox:checked ~ label.play-btn {
+          background: url("/dev/images/pages/pc/newbolo/game/1-0-x/play-btn.png") no-repeat center; }
+        .wrapper .banner .main .player .control .muted-btn {
+          cursor: pointer;
+          right: 22px;
+          width: 48px;
+          height: 48px;
+          background: url("/dev/images/pages/pc/newbolo/game/1-0-x/not-muted-btn.png") no-repeat center;
+          background-size: cover;
+          position: absolute; }
+        .wrapper .banner .main .player .control #muted-checkbox:checked ~ label.muted-btn {
+          background: url("/dev/images/pages/pc/newbolo/game/1-0-x/muted-btn.png") no-repeat center; }
+        .wrapper .banner .main .player .control .danmaku-btn {
+          cursor: pointer;
+          right: 82px;
+          width: 80px;
+          height: 48px;
+          background: url("/dev/images/pages/pc/newbolo/game/1-0-x/enter-btn.png") no-repeat center;
+          background-size: cover;
+          position: absolute; }
+        .wrapper .banner .main .player .control.show {
+          opacity: 1; }
+      .wrapper .banner .main .player:hover .control {
+        opacity: 1; }
+.wrapper .card-box ul.menu {
+  list-style: none;
+  text-align: center;
+  padding: 70px 0 40px 0; }
+  .wrapper .card-box ul.menu li.title {
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 24px;
+    cursor: pointer; }
+    .wrapper .card-box ul.menu li.title.active {
+      font-weight: bold;
+      border-bottom: 2px solid #ffaf19;
+      color: #ffaf19; }
+
+.clear {
+  clear: both; }
+
+.hidden {
+  display: none; }
+
+/*# sourceMappingURL=index.css.map */

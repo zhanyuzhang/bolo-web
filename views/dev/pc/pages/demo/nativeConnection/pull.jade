@@ -1,0 +1,26 @@
+//
+   Created by Dillance on 16/10/12.
+
+extends ./../../../../layout
+block head
+    meta(name='keywords', content='网易菠萝 萌贱污 无广告 视频')
+    meta(name='description', content='网易菠萝-有内涵无广告萌贱原创视频神器')
+    meta(name='mobile-web-app-capable', content='yes')
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name='apple-mobile-web-app-status-bar-style', content='black-translucent')
+    title 网易菠萝
+    include ../../../_include/base-dependencies
+    style.
+        html,body{height:100%;text-align: center;}
+        .wrapper{display: -webkit-box;-webkit-box-align: center;-webkit-box-pack:center;height:100%;}
+block content
+    .wrapper
+        a(href='javascript:;').pull-btn(style='font-size:20px;') 拉起菠萝
+        .content 试下啫
+        .title 试下咯
+    script.
+        alert('shit')
+        require(['zepto@1-1-4','querystring@1-0-x'],function($,qs){
+            alert('shit')
+            $('.wrapper').append('<iframe style="display:none;" src="bolo://com.netease.bolo.android/video?id="' + (qs.parse().id || 14627905314731) + '></iframe>');
+        });

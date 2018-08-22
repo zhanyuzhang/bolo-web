@@ -1,0 +1,11 @@
+meta(http-equiv='x-ua-compatible',content='ie=edge')
+link(rel='stylesheet', href='/dev/styles/pc/common/base/1-0-x/base.css')
+link(rel='stylesheet', href='/dev/styles/pc/common/user/1-1-x/user.css')
+script(type='text/javascript', src='//webzj.reg.163.com/webapp/javascript/page/json3.js')
+script(type='text/javascript', src='//webzj.reg.163.com/webapp/javascript/message.js?v=123456')
+script(src='/dev/scripts/bowl.js')
+if(userInfo)
+    script.
+        var USER_INFO = !{JSON.stringify(userInfo)};
+include tmpl/user
+

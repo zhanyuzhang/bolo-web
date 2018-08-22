@@ -1,0 +1,23 @@
+@import "../../../common/base/1-0-x/base-var";
+html,
+body{height:100%;}
+body{overflow: auto;}
+.wrapper{min-height:100%;background:#ffaf1a;font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif;position:relative;}
+.content{padding-bottom:50px;position:relative;overflow: hidden;}
+.content object{margin:0 auto;display:block;position: relative;z-index: 2;}
+.qrcode{
+  width:249px;height:390px;position:absolute;top:457px;left:50%;margin-left:250px;background:url(/dev/images/pages/pc/download/1-0-x/qrcode.png) no-repeat;z-index: 5;
+  .android-btn{width:136px;height:40px;position:absolute;top:300px;left:20px;display: block;}
+  .ios-btn{width:136px;height:40px;position:absolute;top:253px;left:20px;display: block;}
+}
+
+.footer{position:fixed;left:0;bottom:0;width:100%;z-index:5;}
+
+.danmaku-wrap{
+  height:100%;position:absolute;width:100%;left:0;top:0;overflow: hidden;
+  .item-track{
+    color:#fff;font-size:18px;position:relative;
+    .bullet{height:100%;position:absolute;top:0;left:100%;display: block;white-space: nowrap;font-weight: bold;-webkit-transform:translate3d(0,0,0)}
+  }
+}
+@import "../../../common/footer/1-0-x/index";

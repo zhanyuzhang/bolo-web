@@ -1,0 +1,10 @@
+script(type='text/template', data-key='episodes')
+    .title
+        | 分集
+        i.episodes-num (<%=data.length%>)
+    .list-container
+        ul.content
+            <% data.forEach(function(d){ %>
+            li.item(class!='<% if(d.videoId == VIDEO_INFO.id){ %>current<% } %>',data-vid!='<%=d.videoId%>')
+                .text-wrap <%=d.title%>
+            <% }); %>

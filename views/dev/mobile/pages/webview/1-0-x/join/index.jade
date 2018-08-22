@@ -1,0 +1,42 @@
+extends ./../../../../../layout
+block head
+    meta(name='keywords', content='网易菠萝')
+    meta(name='description', content='BoBo是网易旗下大型在线娱乐社区 互联网明星直播平台 在线视频聊天 在线K歌跳舞 视频交友 赶快加入')
+    title 申请进驻
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/webview/1-0-x/join/index.css')
+    - var originWidth = 1080
+    include ../../../../_include/rem-helper
+block content
+    .wrapper
+        .content
+            .tip 请准备好身份证及1-2段已在任意平台上传的3-5分钟短视频，根据提示填写或上传资料，我们将有专人与您联系。
+            label.input-item
+                .title 团队名称：
+                input(type='text',name='name',placeholder='请填写团队名称')
+            label.input-item
+                .title 微博账号：
+                input(type='text',name='weibo',placeholder='请填写微博账号')
+            label.input-item
+                .title QQ或微信：
+                input(type='text',name='weibo',placeholder='请填写QQ或微信账号')
+            label.input-item
+                .title 联系方式：
+                input(type='text',name='phone',placeholder='请填写联系方式')
+            br
+            br
+            .tip 请在下方粘贴您在其他视频平台的系列视频名
+            label.input-item
+                .title 视频平台
+                input(type='text',name='video1',placeholder='例如：B站+口水三国')
+        .submit-btn 提交
+    .success-tip
+        | 进驻申请提交成功！
+        br
+        | 你将在3个工作日之内收到回复！
+    script.
+        require('/pages/mobile/webview/join@1-0-x');
+
+
+

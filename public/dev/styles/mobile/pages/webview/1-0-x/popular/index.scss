@@ -1,0 +1,27 @@
+@import "../common";
+
+html,body{height:100%;}
+
+.wrapper{
+  height:100%;overflow: auto; background: #e3e7ea;
+  .popular-list{
+    .item{
+      position:relative;margin: .3rem {bottom:0};border-radius: .1rem;overflow: hidden;
+
+      img{width:100%;display: block;border-radius: .1rem;}
+      .name{height:.86rem;line-height:.86rem;color:#fff;font-size:.42rem;position:absolute;left:0;bottom:0;right:0;padding:1rem 0 0 .38rem;background:-webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,.6) 100%);overflow: hidden;white-space: nowrap;text-overflow:ellipsis;}
+      .tip{
+        height:.53rem;position: absolute;top:.4rem;right:.3rem;padding-left:.55rem;overflow:hidden;
+        .content{
+          height:.5rem;line-height:.5rem;margin-top:.03rem;background:rgba(0,0,0,.5);border-radius:0 .06rem .06rem 0;color:#ffaf1a;font-weight:bold;padding:0 .14rem 0 .04rem;margin-left: .12rem;position: relative;
+          &:before{@include border-triangle(0 0 .5rem .12rem,bottom,rgba(0,0,0,.5));position: absolute;top:0;left:-.12rem;content:'';}
+        }
+        .icon{width:.68rem;height:.53rem;position: absolute;top:0;left:0;@include icon-bg($icon-popular-label);}
+
+      }
+    }
+
+    @include loading-after;
+
+  }
+}

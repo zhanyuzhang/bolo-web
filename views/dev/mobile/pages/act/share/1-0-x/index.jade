@@ -1,0 +1,68 @@
+//
+   Created by Dillance on 16/8/19.
+
+extends ./../../../../../layout
+block head
+    include ../../../../_include/seo
+    title 网易菠萝分享计划
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/act/share/1-0-x/index.css')
+    - var originWidth = 1080
+    include ../../../../_include/rem-helper
+block content
+    .wechat-share(style='display:none')
+        img(src='/dev/images/pages/mobile/act/share/1-0-x/wechat-share.png')
+    .wrapper
+        .main-container
+            .join-btn.col-01
+            .join-btn.col-02
+            a.rules-btn(href='/m/act/share/rules')
+        .case-list(style='display:none')
+            .item
+                .avatar
+                    .img-wrap
+                        img
+                    .cover
+                .name 暴走漫画
+            | &nbsp;
+            .item
+                .avatar
+                    .img-wrap
+                        img
+                    .cover
+                .name 暴走漫画
+            | &nbsp;
+            .item
+                .avatar
+                    .img-wrap
+                        img
+                    .cover
+            | &nbsp;
+            .item
+                .avatar
+                    .img-wrap
+                        img
+                    .cover
+            | &nbsp;
+            .item
+                .avatar
+                    .img-wrap
+                        img
+                    .cover
+            | &nbsp;
+            .item
+                .avatar
+                    .img-wrap
+                        img
+                    .cover
+        .contact
+            p 合作咨询和问题反馈，欢迎您通过以下方式与我们联系
+            p 官方微博：@网易菠萝菌
+            p 官方微信：网易菠萝
+            p email：gzxuxiaochun#corp.netease.com（#换成@）
+            p QQ：3530721286
+    include ../../../../_include/ui/download-bar/1-0-x/index
+    .tip-dialog
+    script.
+        require('/pages/mobile/act/share@1-0-x');

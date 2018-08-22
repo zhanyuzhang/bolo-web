@@ -1,0 +1,13 @@
+script(type='text/template', data-key='list')
+    <% data.forEach(function(d){ %>
+    li.item(data-aid!='<%=d.aid%>')
+        .cover
+            img(src!='<%=d.cover%>')
+            .tip
+        .info-box
+            .name
+                //b [神吐槽]
+                | <%=d.name%>
+            .video-count <%=d.videoCount%>个视频
+            .play-count <%=d.playCount%>次
+    <% }); %>

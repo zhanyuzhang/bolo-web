@@ -1,0 +1,68 @@
+//
+   Created by Dillance on 16/9/5.
+
+extends ./../../../../../layout
+block head
+    meta(name="keywords" content="网易菠萝 短视频 二次元 网络剧 真人短剧 在线直播 萌动漫 污视频 贱直播")
+    meta(name="description" content="菠萝是网易旗下海量短视频平台 年轻人娱乐社区 热门IP短剧想看就看 更有著名IP创作团队与你即时直播互动 就差爱吐槽的你 赶快加入")
+    title 任务中心
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/webview/1-0-x/mission/index.css')
+    - var originWidth = 1080
+    include ../../../../_include/rem-helper
+block content
+    .wrapper
+        .container
+            script(type='text/template', data-key='page')
+                .user-info-box
+                    <% if(userInfo){ %>
+                    .logined
+                        .seed-num <%-userInfo.seedNum%>
+                        .detail-btn 种子明细
+                    <% }else{ %>
+                    .unlogin
+                        .tip-box 登录查看种子数
+                            .login-btn 马上登录
+                        .bolo-logo
+                    <% } %>
+                .mission-list.welfare
+                    .banner
+                        a(href="/m/hybrid/mission/intro?isfromlist=true")
+                            img(src='/dev/images/pages/mobile/webview/1-0-x/mission/welfare1.jpg')
+                <% missionInfo.forEach(function(m){ %>
+                .mission-list(class!='<%-m.className%><% if(m.totalProgress == m.totalLimit){ %> finished<% } %>')
+                    .title <%-m.title%>
+                        span.tip <%-m.totalProgress%>/<%-m.totalLimit%>
+                    .list-container
+                        <% m.list.forEach(function(l){ %>
+                        .item(data-id!='<%-l.id%>',data-action!='<%-l.action%>',data-type!='<%-l.taskType%>')
+                            .mission-info
+                                .name <%-l.taskName%>
+                                .seed-num +<%-l.award%>
+                            <% if(userInfo){ %>
+                            .mission-status
+                                .progress <%-l.progress%>/<%-l.upperLimit%>
+                                .go-btn(class!='<% if(l.progress == l.upperLimit){ %>finished<% } %>',data-id!='<%-l.id%>',data-action!='<%-l.action%>',data-type!='<%-l.taskType%>') GO
+                            <% } %>
+                        <% }); %>
+                <% }); %>
+        .details-wapper
+            .mission-list.details
+                .list-container
+                    script(type='text/template', data-key='details')
+                        <% data.forEach(function(d){ %>
+                        .item
+                            .mission-info
+                                .name <%-d.name%>
+                                .date <%-dateParser(d.create_time)%>
+                            .mission-status
+                                .seed-num(class!='<% if(d.type == 2){ %>consume<% } %>') <%-(d.type == 1 ? '+' + d.currency : '-' + d.currency)%>
+                        <% }); %>
+    .tip-dialog
+
+    script.
+        require('/pages/mobile/webview/mission@1-0-x');
+    include ../../../../_include/cnzz-stat
+
+

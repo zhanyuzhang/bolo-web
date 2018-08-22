@@ -1,0 +1,57 @@
+link(rel='stylesheet', href='/dev/styles/mobile/common/comment/1-0-x/index.css')
+.comment-wrapper
+    .title 评论区
+        i (0)
+    .send-box
+        textarea(rows=1 class="comment-input-field" placeholder="点这里来一发评论 (・ω・)")
+        .submit-btn 发送
+    .hot-comment-box
+        .sub-title 最热评论
+        ul.comment-list
+    .new-comment-box
+        .sub-title 最新评论
+        ul.comment-list
+    script(type='text/template', data-key='comment-list')
+        <% data.forEach(function(d){ %>
+        li.comment-item(data-id!='<%=d.id%>',data-userId!='<%=d.userIdStr%>',data-commentCount!='<%=d.commentCount%>')
+            .author-avatar
+                img(src!='<%=(getImage(d.avatar,[60,60]))%>')
+            .comment-content
+                .host-comment
+                    .author-name <%-d.nick%>
+                    .words <%-d.content%>
+                .reply-list
+            .like-btn(class!='<% if(d.hasSupport){ %>ed<% } %>',data-cid!='<%=d.id%>',data-count!='<%=d.supportCount%>') <% if(d.supportCount > 0){ %><%-d.supportCount%><% }else{ %>赞<% } %>
+        <% }); %>
+    script(type='text/template', data-key='reply-list')
+        <% data.forEach(function(d){ %>
+        .reply-item(data-id!='<%=d.id%>',data-cid!='<%=d.cid%>',data-userId!='<%=d.userIdStr%>',data-commentCount!='<%=d.commentCount%>')
+            .replyer-info
+                .replyer-avatar
+                    img(src!='<%=(getImage(d.avatar,[60,60]))%>')
+                .replyer-name
+                    <%-d.nick%>
+                    <% if(d.replyNick){ %>
+                    i 回复
+                    <%-d.replyNick%>
+                    <% } %>
+            .replyer-words <%-d.content%>
+        <% }); %>
+    .comment-panel
+        .share-btn
+        //.like-btn 234234
+        .comment-btn 0
+.download-dialog
+    .container
+        .logo
+        h5.title 请先下载客户端
+        .tip
+            | 本功能仅由客户端提供噢，快去下载网易菠萝吧
+            br
+            | _(:з」∠)_
+        .controller
+            .fuck-off 我知道了
+            a.download-btn(href='javascript:;') 马上下载
+        .remove-btn
+.tip-dialog
+//.like-btn(class!='<% if(d.hasSupport){ %>ed<% } %>',data-cid!='<%=d.id%>',data-count!='<%=d.supportCount%>') <% if(d.supportCount > 0){ %><%-d.supportCount%><% }else{ %>赞<% } %>

@@ -1,0 +1,125 @@
+//
+   Created by Dillance on 16/12/7.
+
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title wechat demo
+        meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=0')
+    body
+    script(src='https://code.jquery.com/jquery-2.2.4.min.js')
+    script(src='http://res.wx.qq.com/open/js/jweixin-1.0.0.js')
+    script.
+        /**
+         * @method getSignature: 通过ajax请求获取签名
+         * @param resolve: Promise对象的resolve
+         * @param reject: Promise对象的reject
+         **/
+        var eventTypes = [
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage',
+            'onMenuShareQQ',
+            'onMenuShareWeibo',
+            'onMenuShareQZone'
+        ];
+        function getSignature() {
+            return new Promise(function (resolve, reject) {
+                var url = 'http://bolo.bobo.com/bolo/api/wechat/getJsApiSignature.htm?url=' + encodeURIComponent(location.href.split('#')[0]);
+                jQuery.ajax({
+                    url: url,
+                    dataType: "jsonp",
+                    jsonpCallback:"getJsApiSignature",
+                    success: function(data) {
+                        resolve(data);
+                    },
+                    error: function(){
+                        reject("获取签名失败！");
+                    }
+                });
+            });
+        }
+        /**
+         * @method initConfig:  初始化jssdk的权限验证配置
+         * @param config: 配置对象，调用getSignature()之后，由后台返回的
+         **/
+        function initConfig(config) {
+            // 通过config接口注入权限验证配置
+            wx.config({
+                // debug: true,
+                appId: config.appid,
+                timestamp: config.timestamp,
+                nonceStr: config.noncestr,
+                signature: config.signature,
+                jsApiList: eventTypes.slice(0)
+            });
+            // 监听错误
+            wx.error(function (res) {
+                alert(res.errMsg);
+            });
+        }
+        /**
+         * @method onMenuShare：设置分享信息
+         * @params shareInfo，分享配置对象，它包含下列10个属性:
+         *    eventType: 分享类型，0为朋友圈，1为好友，2为QQ，3为微博，4为空间
+         *    title: 分享标题
+         *    desc: 分享描述
+         *    link: 分享链接
+         *    imgUrl: 分享图标
+         *    type: 分享类型,music、video或link，不填默认为link
+         *    dataUrl: 如果type是music或video，则要提供数据链接，默认为空
+         *    success: 分享成功时的回调函数
+         *    cancel: 取消分享时的回调函数
+         *    fail: 分享失败时的回调函数
+         **/
+        function onMenuShare(shareInfo) {
+            wx.ready(function () {
+                eventTypes.forEach(function (event) {
+                    wx[event]({
+                        title: shareInfo.title,
+                        desc: shareInfo.desc,
+                        link: shareInfo.link,
+                        imgUrl: shareInfo.imgUrl,
+                        type: shareInfo.type || 'link',
+                        dataUrl: shareInfo.dataUrl || null,
+                        success: function (res) {
+                            shareInfo.success && shareInfo.success(res);
+                        },
+                        cancel: function (res) {
+                            shareInfo.cancel && shareInfo.cancel(res);
+                        },
+                        fail: function (res) {
+                            shareInfo.fail && shareInfo.fail(res);
+                        }
+                    });
+                });
+            });
+        }
+        /**
+         * @method share：分享接口
+         * @params shareInfo，和onMenuShare的参数一样
+         **/
+        window.share = function(shareInfo) {
+            getSignature().then(function (res) {
+                initConfig(res.data);
+                onMenuShare(shareInfo);
+                return res;
+            }, function (err) {
+                alert(err);
+            });
+        };
+        share({
+            title: '#我达成了【初级侦探】成就#你有一宗未解的校园连环杀人案',
+            desc: '你有一宗未解的校园连环杀人案',
+            link: 'http://preview.bobo.com:85/m/act/puppet-judge?debug',
+            imgUrl: 'http://img1.cache.netease.com/bobo/2016/11/12/20161112191743e9da6.png',
+            success: function (res) {
+                alert(JSON.stringify(arguments));
+            },
+            fail: function (res) {
+                alert(JSON.stringify(arguments));
+            },
+            cancel: function (res) {
+                alert(JSON.stringify(res));
+            }
+        });

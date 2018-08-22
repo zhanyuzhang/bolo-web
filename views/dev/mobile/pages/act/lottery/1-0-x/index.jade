@@ -1,0 +1,129 @@
+//
+   Created by Dillance on 16/10/20.
+
+extends ./../../../../../layout
+block head
+    include ../../../../_include/seo
+    title 菠萝周末大福利
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/act/lottery/1-0-x/index.css')
+    - var originWidth = 1080
+    include ../../../../_include/rem-helper
+block content
+    .wrapper
+        .page-container.home(style='display:block;')
+            .content
+                .seed-details-btn
+                .balance 种子余额:
+                    i.num 请登录
+                .start-btn
+                .count-tip 您还有
+                    i.num 0
+                    | 次抽奖机会
+        .page-container.win
+            .content
+                .win-list-wrap
+                    .win-list
+                        script(type='text/template', data-key='win-list')
+                            <% data.concat(data).concat(data).forEach(function(d){ %>
+                            .item
+                                .col-01 <%-(d.nick.replace(/.{3}$/,'***'))%>
+                                <% if(d.reward == 1){ %>
+                                .col-03 一等奖
+                                <% }else if(d.reward == 2){ %>
+                                .col-03 二等奖
+                                <% }else if(d.reward == 3){ %>
+                                .col-03 三等奖
+                                <% }else if(d.reward == 4){ %>
+                                .col-03 四等奖
+                                <% }else if(d.reward == 5){ %>
+                                .col-03 五等奖
+                                <% }else if(d.reward == 6){ %>
+                                .col-03 六等奖
+                                <% }else if(d.reward == 7){ %>
+                                .col-03 特等奖
+                                <% } %>
+                            <% }); %>
+        .page-container.rules
+            .content
+                .sub-title 活动时间：
+                p 本活动从2016.10.21 20:00 至2016.10.23 24:00结束；
+                .sub-title 活动奖品：
+                .prize-list
+                    .item 特等奖：Kindle Paperwhite电子书阅读器
+                    .item 一等奖：lol小手办＋毛绒玩具
+                    .item 二等奖：自拍杆
+                    .item 三等奖：暴走卡牌
+                    .item 四等奖：明信片一张＋种子20个
+                    .item 五等奖：种子40个
+                    .item 六等奖：种子20个
+                .sub-title 参与抽奖方式：
+                p 每人每日最多可抽奖十次，每次抽奖将消耗20个种子。抽中实物奖品后会向您收集地址联系方式等信息。
+                .sub-title 发奖时间：
+                p 所有虚拟奖品我们会在中奖后立即充值到您的帐户，实物奖品请联系QQ:348879759进行领奖,在活动结束（10月23日）后的10个工作日内寄出。
+                .sub-title 活动声明：
+                p 凡参加本次活动者，即视为同意接受本活动的相关规则，不应使用任何舞弊手段以谋求中奖；如有违反，即自动丧失参加资格；如使用任何舞弊手段而得奖，则取消其得奖资格。如本次活动因不可抗力等原因无法执行时，本公司有权予以暂停、终止或修改活动内容。所有产品抽奖活动与苹果公司（Apple Inc）无关
+        .nav
+            .btn.home.current
+            .btn.win
+            .btn.rules
+
+        .seed-dialog
+            .container
+                .remove-btn
+                .title
+                .content 种子可以在菠萝里通过小任务免费获得，并用来解锁看片、投喂up主、兑换门票等等，快去领取吧ヾ(o◕∀◕)ﾉ
+                a.jump-btn(href='/m/hybrid/mission/list') 去领种子
+        .win-dialog
+            script(type='text/template', data-key='win-dialog')
+                .container(class!='reward<%-reward%>')
+                    .remove-btn
+                    .title 恭喜您获得
+                        <% if(reward == 1){ %>
+                        i 一等奖
+                        <% }else if(reward == 2){ %>
+                        i 二等奖
+                        <% }else if(reward == 3){ %>
+                        i 三等奖
+                        <% }else if(reward == 4){ %>
+                        i 四等奖
+                        <% }else if(reward == 5){ %>
+                        i 五等奖
+                        <% }else if(reward == 6){ %>
+                        i 六等奖
+                        <% }else if(reward == 7){ %>
+                        i 特等奖
+                        <% } %>
+                    .content
+                        <% if(reward == 1){ %>
+                        .name lol小手办＋毛绒玩具
+                        <% }else if(reward == 2){ %>
+                        .name 自拍杆
+                        <% }else if(reward == 3){ %>
+                        .name 暴走卡牌
+                        <% }else if(reward == 4){ %>
+                        .name 明信片一张＋种子20个
+                        <% }else if(reward == 5){ %>
+                        .name 种子40个
+                        <% }else if(reward == 6){ %>
+                        .name 种子20个
+                        <% } %>
+                        .prize-img
+                    .operation
+                        <% if(reward == 5 || reward == 6){ %>
+                        .confirm-btn 确认
+                        <% }else{ %>
+                        .reject-btn 残忍拒绝
+                        | &emsp;
+                        .get-btn 去领奖
+                        <% } %>
+        .award-dialog
+            .container
+                .remove-btn
+                .content 请联系QQ:348879759进行领奖
+                .confirm-btn 确认
+    .tip-dialog
+    script.
+        require('/pages/mobile/act/lottery@1-0-x');
+    include ../../../../_include/cnzz-stat

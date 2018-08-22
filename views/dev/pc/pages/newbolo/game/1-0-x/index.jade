@@ -1,0 +1,71 @@
+//
+   Created by Dillance on 17/1/10.
+
+extends ./../../layout/1-0-x/index
+block head
+    meta(name='description', content='网易菠萝_泛游戏视频社区，网易菠萝原班团队倾力打造的泛游戏视频社区，立足网易游戏、暴雪资源优势，聚合知名游戏、搞笑、动画类PGC，提供内容丰富的泛游戏视频。')
+    meta(name='keywords', content='网易菠萝, 网易, 菠萝, 无广告, 游戏, 原创视频, 视频, 守望先锋, 英雄联盟, LOL, OW, 守望屁股, 视频社区, 炉石传说, 大力金刚,直播,小视频,网红,斗鱼, 虎牙, 熊猫, 战旗, bilibili, 腾讯, 土豆,网易游戏,二次元, 游戏杂谈, 游戏解说, 大神解说, 游戏集锦, 泛娱乐, 搞笑')
+    title #{name}-网易菠萝-泛游戏视频社区
+    include ../../_include/base-dependencies
+    link(rel='stylesheet', href='/dev/styles/pc/pages/newbolo/game/1-0-x/index.css')
+    script.
+        var VIDEO_INFO = !{JSON.stringify(videoInfo)};
+        var CHANNEL_INFO = !{JSON.stringify(channelInfo)};
+        var DANMAKU = !{JSON.stringify(danmaku)};
+block content
+    include ../../components/side-bar/1-0-x/index
+    .header
+        include ../../components/header/1-0-x/index
+        .cover
+        .modal
+    .wrapper
+        .banner
+            .game-name #{name}
+            .main
+                .video-info
+                    .title 今日精选
+                    .name #{videoInfo.title}
+                    .tag-list
+                        each tag in videoInfo.formatTags
+                            .tag #{tag}
+                    .source
+                        a(href="/new/person?id=#{videoInfo.userIdStr}" target="_blank")
+                            img.icon(src='#{channelInfo.avatar}')
+                        a(href="/new/person?id=#{videoInfo.userIdStr}" target="_blank")
+                            .nick #{channelInfo.nick}
+                        .time #{videoInfo.formatUploadTime}
+                    .brief #{videoInfo.intro}
+                .player
+                    video(src="#{videoInfo.linkMp4}" autoplay=true loop=true)
+                    .danmaku
+                        .channel
+                        .channel
+                        .channel
+                        .channel
+                        .channel
+                        .channel
+                        .channel
+                    .control
+                        .progress
+                            .pass
+                        input(type="checkbox" id="play-checkbox" autocomplete="off")
+                        label.play-btn(for="play-checkbox")
+                        input(type="checkbox" id="muted-checkbox" autocomplete="off")
+                        label.muted-btn(for="muted-checkbox")
+                        .danmaku-btn
+
+                .clear
+            .card-box
+                ul.menu
+                    li.title(class="active",data-type='time') 按时间
+                    li.title(data-type='heat') 按热度
+            .game-video-list.video-card-list-wrap.time(data-interface='/bolo/api/web/video/zoneVideoList.htm',data-page-num='1',data-page-size='9',data-type='1',data-length='infinite',data-zone-id='#{zoneId}')
+                include ../../components/video-card-list/1-0-x/index.jade
+            .game-video-list.video-card-list-wrap.heat.hide(data-interface='/bolo/api/web/video/zoneVideoList.htm',data-page-num='1',data-page-size='9',data-type='0',data-length='infinite',data-zone-id='#{zoneId}')
+                include ../../components/video-card-list/1-0-x/index.jade
+        script.
+            require('/pages/pc/newbolo/game@1-0-x');
+        //include ../../components/side-bar/1-0-x/index.jade
+        include ../../components/footer/1-0-x/index
+    include ../../components/footer/1-0-x/bobo
+

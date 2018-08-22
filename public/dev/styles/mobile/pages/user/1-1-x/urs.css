@@ -1,0 +1,94 @@
+body {
+  color: #2e2e2e;
+  font-size: .3rem; }
+
+.m-header,
+.m-footer {
+  display: none; }
+
+.g-bd {
+  border-radius: 0;
+  background: none;
+  width: auto; }
+
+.m-cnt {
+  padding: 0; }
+
+.m-cnt .inputbox {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #c5cddb; }
+
+.m-cnt .inputbox.active {
+  border: none;
+  border-bottom: 1px solid #c5cddb; }
+
+input,
+.m-cnt #login-form .u-label,
+.m-cnt #register-form input.zcemail {
+  background: none;
+  width: 176px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; }
+
+.m-cnt .ckin {
+  width: 175px; }
+
+.m-cnt #login-form .m-ckcnt input.cktext,
+.m-cnt #register-form input.cktext {
+  width: 120px; }
+
+.m-cnt .m-nerror .ferrorhead,
+.m-cnt .m-nerror .ferrorhead2 {
+  width: 288px; }
+
+.m-cnt #login-form .m-sug .itm {
+  line-height: 26px;
+  height: 26px; }
+
+.w-exception {
+  width: 342px; }
+
+.u-btn-middle3 {
+  width: 105px; }
+
+.u-loginbtn {
+  font-size: 16px;
+  border-radius: 7px; }
+
+.f-bgcolor {
+  background-color: #CA5252; }
+
+.btncolor {
+  background: #ffaf1a;
+  color: #FFF; }
+
+.btndisabled {
+  background: #ffaf1a;
+  color: #FFF;
+  cursor: default; }
+
+.m-cnt .m-pc {
+  width: 176px; }
+
+.m-cnt .m-pc .pcin,
+.m-cnt .m-pcbox .u-label {
+  width: 128px; }
+
+.m-cnt .m-unlogin .u-regbtn.bgcolor {
+  color: #ffaf1a; }
+
+.m-cnt .m-unlogin .forgetpwd {
+  font-size: 14px;
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  border-right: 1px solid; }
+
+.m-cnt .m-unlogin .u-regbtn {
+  font-size: 14px;
+  width: 45%;
+  text-align: center; }
+
+/*# sourceMappingURL=urs.css.map */

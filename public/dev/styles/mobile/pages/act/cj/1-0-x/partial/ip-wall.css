@@ -1,0 +1,74 @@
+/*
+Syntax error: Undefined mixin 'icon-bg'.
+        on line 9 of ip-wall.scss, in `icon-bg'
+        from line 9 of ip-wall.scss
+
+4: $icon-source-gacha:'data:image/jpg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABGAAD/4QONaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjUtYzAxNCA3OS4xNTE0ODEsIDIwMTMvMDMvMTMtMTI6MDk6MTUgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6YjkwZDA5N2YtNDdmZC1jMzQyLWJkNGYtY2RkMWE2YTkwOGMzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjE0MTlGOTRFNDYwMDExRTZBQzY2RDlDNjBDQTlFQTBBIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjE0MTlGOTRENDYwMDExRTZBQzY2RDlDNjBDQTlFQTBBIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE1IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjdiNThlNzNlLTg1ZmQtMjc0Yy04NjAyLTFlOGI5NzRjNzE4OCIgc3RSZWY6ZG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjcxOWQxMWE0LTQ0ZTctMTFlNi04YTIwLWUwZDMyMTFiZWZhNSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv/uAA5BZG9iZQBkwAAAAAH/2wCEAAQDAwMDAwQDAwQGBAMEBgcFBAQFBwgGBgcGBggKCAkJCQkICgoMDAwMDAoMDA0NDAwRERERERQUFBQUFBQUFBQBBAUFCAcIDwoKDxQODg4UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFP/AABEIAA4APwMBEQACEQEDEQH/xAB/AAADAQEAAAAAAAAAAAAAAAAEBQYDBwEBAQADAQAAAAAAAAAAAAAAAAQCBgcFEAABBAEDAwQCAQUAAAAAAAACAQMEBQYREhMAIQcxQRQVYSIyQiMzJAgRAAIBAgYBAQkAAAAAAAAAAAECABEDITFBEgQFgWFRkaGxIjJSIxT/2gAMAwEAAhEDEQA/AOqwIF5kF25HYlQIjQgkqRaX8omxkrwNyXgjMtGJnwo6HM4ZbRRU7d+ordhSu5jnOYdZ0L80BySxehxrmcaACpbz7odTNZVT5nVjZQ2YcWQ5HkVNpAOQjMxj5AsvAoOj+pILgOaFpubXVN3tm1lVoymU3enfhX0cEoVZfb9Q3BStKYHHWU+f+QMgss6Z8XVs4aOsnz6+O7kVe8Kzfjux5jsiO2RoosyCdjAyHqQoe71VNKp0aSa+RYnjqkzFmLDtsayVJFRUwyyy5O3aCRco4rUxxDfkAyjLYm86In3QdF6RMqDynZS/G0XCqnK1fyFjJ4uIzM0JN761di645Hs2+bVNz7Q8LZrqKO+muidIjXM41h4uagO0EjIbCW7k9GxIhyLWRPmWcbkdUkBJLyNDzr+pCKAK6aF+MQTWRWb1x7jqy7VXL19a5eNNYjneVL+je8kyrhTw69v7uioqsLWW1IbqBm14q5KImzJoUbZQ5G0V036IvWUth9N5j+x8XtYeF22ty2tnjVpmEh844x4ESC+ce7EyFSPlDgIPTc4XZekRvRzH42N2TBwIkyoOS4r8qyRriBzhjiQtI5JZNW9qNEKoPunUZb9YqMKeJqPRcnslt214lrc2jVWhw0G8NSmc0kDeHk2IreOyBjcgfVITTQQONdmvH8dx3uga6b13L29E6Vagwww+c8/mv2Lcsf1girD8QgO9a/azEtoKn4VjvyVI8Ohdzo2dQq5yO4y0V3OkuGLrTiE38cW22/3J9S4tis/3ETT26sm/RXhrvgEriBGx5iKDzdlurZkspaynLlYbmoyAmLzI4kbk41kppt12d+kSuzVfEPHfLnf0qPDVtfcDLRr5BVKP/wCtv2LyICvf4tO+/Tb36RIbEH/+e1rIUrG4sYblLWsUIJHLKw+2UnUr0dclqju1F5Fa5NG9fz0iW2RO+MGsxqUnsVsjMXbZA3EQtvNTlrl/d/RdpGkP+Au/0/x79Ih105gCZfXR7ZquK4IWiYlkoI4J6ijAGAr31XYran29NPbpE//Z';
+5: 
+6: .comment-box{
+7:   margin-top:-.32rem;z-index: 2;
+8:   .title{
+9:     height:.64rem;@include icon-bg($icon-title-comment,left,auto 100%);padding-left:2.24rem;display: -webkit-box;-webkit-box-align:end;
+10:     .total{font-size:.26rem;}
+11:   }
+12:   .content{
+13:     background:#fff;padding:0 .18rem;overflow: hidden;
+14:     .speaking-box{
+
+Backtrace:
+ip-wall.scss:9:in `icon-bg'
+ip-wall.scss:9
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:253:in `visit_mixin'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/root_node.rb:20:in `render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/engine.rb:315:in `_render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/engine.rb:262:in `render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:362:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:201:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/plugin.rb:81:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/exec.rb:443:in `watch_or_update'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/exec.rb:326:in `process_result'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/exec.rb:41:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/exec.rb:21:in `parse!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/bin/scss:13:in `<top (required)>'
+/usr/bin/scss:23:in `load'
+/usr/bin/scss:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined mixin 'icon-bg'.\A         on line 9 of ip-wall.scss, in `icon-bg'\A         from line 9 of ip-wall.scss\A \A 4: $icon-source-gacha:'data:image/jpg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABGAAD/4QONaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjUtYzAxNCA3OS4xNTE0ODEsIDIwMTMvMDMvMTMtMTI6MDk6MTUgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6YjkwZDA5N2YtNDdmZC1jMzQyLWJkNGYtY2RkMWE2YTkwOGMzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjE0MTlGOTRFNDYwMDExRTZBQzY2RDlDNjBDQTlFQTBBIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjE0MTlGOTRENDYwMDExRTZBQzY2RDlDNjBDQTlFQTBBIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE1IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjdiNThlNzNlLTg1ZmQtMjc0Yy04NjAyLTFlOGI5NzRjNzE4OCIgc3RSZWY6ZG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjcxOWQxMWE0LTQ0ZTctMTFlNi04YTIwLWUwZDMyMTFiZWZhNSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv/uAA5BZG9iZQBkwAAAAAH/2wCEAAQDAwMDAwQDAwQGBAMEBgcFBAQFBwgGBgcGBggKCAkJCQkICgoMDAwMDAoMDA0NDAwRERERERQUFBQUFBQUFBQBBAUFCAcIDwoKDxQODg4UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFP/AABEIAA4APwMBEQACEQEDEQH/xAB/AAADAQEAAAAAAAAAAAAAAAAEBQYDBwEBAQADAQAAAAAAAAAAAAAAAAQCBgcFEAABBAEDAwQCAQUAAAAAAAACAQMEBQYREhMAIQcxQRQVYSIyQiMzJAgRAAIBAgYBAQkAAAAAAAAAAAECABEDITFBEgQFgWFRkaGxIjJSIxT/2gAMAwEAAhEDEQA/AOqwIF5kF25HYlQIjQgkqRaX8omxkrwNyXgjMtGJnwo6HM4ZbRRU7d+ordhSu5jnOYdZ0L80BySxehxrmcaACpbz7odTNZVT5nVjZQ2YcWQ5HkVNpAOQjMxj5AsvAoOj+pILgOaFpubXVN3tm1lVoymU3enfhX0cEoVZfb9Q3BStKYHHWU+f+QMgss6Z8XVs4aOsnz6+O7kVe8Kzfjux5jsiO2RoosyCdjAyHqQoe71VNKp0aSa+RYnjqkzFmLDtsayVJFRUwyyy5O3aCRco4rUxxDfkAyjLYm86In3QdF6RMqDynZS/G0XCqnK1fyFjJ4uIzM0JN761di645Hs2+bVNz7Q8LZrqKO+muidIjXM41h4uagO0EjIbCW7k9GxIhyLWRPmWcbkdUkBJLyNDzr+pCKAK6aF+MQTWRWb1x7jqy7VXL19a5eNNYjneVL+je8kyrhTw69v7uioqsLWW1IbqBm14q5KImzJoUbZQ5G0V036IvWUth9N5j+x8XtYeF22ty2tnjVpmEh844x4ESC+ce7EyFSPlDgIPTc4XZekRvRzH42N2TBwIkyoOS4r8qyRriBzhjiQtI5JZNW9qNEKoPunUZb9YqMKeJqPRcnslt214lrc2jVWhw0G8NSmc0kDeHk2IreOyBjcgfVITTQQONdmvH8dx3uga6b13L29E6Vagwww+c8/mv2Lcsf1girD8QgO9a/azEtoKn4VjvyVI8Ohdzo2dQq5yO4y0V3OkuGLrTiE38cW22/3J9S4tis/3ETT26sm/RXhrvgEriBGx5iKDzdlurZkspaynLlYbmoyAmLzI4kbk41kppt12d+kSuzVfEPHfLnf0qPDVtfcDLRr5BVKP/wCtv2LyICvf4tO+/Tb36RIbEH/+e1rIUrG4sYblLWsUIJHLKw+2UnUr0dclqju1F5Fa5NG9fz0iW2RO+MGsxqUnsVsjMXbZA3EQtvNTlrl/d/RdpGkP+Au/0/x79Ih105gCZfXR7ZquK4IWiYlkoI4J6ijAGAr31XYran29NPbpE//Z';\A 5: \A 6: .comment-box{\A 7:   margin-top:-.32rem;z-index: 2;\A 8:   .title{\A 9:     height:.64rem;@include icon-bg($icon-title-comment,left,auto 100%);padding-left:2.24rem;display: -webkit-box;-webkit-box-align:end;\A 10:     .total{font-size:.26rem;}\A 11:   }\A 12:   .content{\A 13:     background:#fff;padding:0 .18rem;overflow: hidden;\A 14:     .speaking-box{"; }

@@ -1,0 +1,141 @@
+//
+   Created by Dillance on 16/8/15.
+
+extends ./../../../../../../layout
+block head
+    link(rel='icon', href='http://img2.cache.netease.com/bobo/image/favicon.ico')
+    meta(name='keywords', content='网易Bobo 美女主播 视频聊天 美女视频 视频直播 美女秀场 视频聊天室 在线K歌 视频交友')
+    meta(name='description', content='BoBo是网易旗下大型在线娱乐社区 互联网明星直播平台 在线视频聊天 在线K歌跳舞 视频交友 赶快加入')
+    title 网易BoBo春节活动
+    meta(http-equiv='x-ua-compatible',content='ie=edge')
+    link(rel='stylesheet', href='/dev/styles/pc/common/base/1-0-x/base.css')
+    link(rel='stylesheet', href='/dev/styles/pc/pages/act/bobo/newyear/1-0-x/index.css')
+block content
+    include ../../header/1-0-x/index
+    .wrapper
+        .banner-container
+            .title.exchange
+            .card-num
+                .col-01 现有：-
+                .col-02 现有：-
+                .col-03 现有：-
+                .col-04 现有：-
+                .col-05 现有：-
+                .col-06 现有：-
+                .col-07 现有：-
+                .col-08 现有：-
+            .medal-num
+                .col-01 保时捷座驾  余量：-
+                .col-02 BoBo勋章  余量：-
+                .col-03 新年座驾  余量：-
+                .col-04 福气勋章  余量：-
+            a.exchange-btn.col-01.js-need-login(href='javascript:;')
+            a.exchange-btn.col-02.js-need-login(href='javascript:;')
+            a.prediction-btn(href='javascript:;')
+            script(type='text/template', data-key='main-data')
+                .title.exchange
+                .card-num
+                    .col-01 现有：<%-data.wangNum%>
+                    .col-02 现有：<%-data.yiNum%>
+                    .col-03 现有：<%-data.bo1Num%>
+                    .col-04 现有：<%-data.bo2Num%>
+                    .col-05 现有：<%-data.xinNum%>
+                    .col-06 现有：<%-data.chunNum%>
+                    .col-07 现有：<%-data.daNum%>
+                    .col-08 现有：<%-data.jiNum%>
+                .medal-num
+                    .col-01 保时捷座驾  余量：<%-data.porscheNum%>
+                    .col-02 BoBo勋章  余量：<%-data.boBoMedalNum%>
+                    .col-03 新年座驾  余量：<%-data.newYearCarNum%>
+                    .col-04 福气勋章  余量：<%-data.luckMedelNum%>
+                a.exchange-btn.col-01(href='javascript:;',class!='<% if(data.hasExchangeA){ %>exchanged<% } %>',data-canexchange!='<% if(data.canExchangeA){ %>true<% } %>',data-giftenough!='<% if(data.giftEnoughA){ %>true<% } %>',data-type='A')
+                a.exchange-btn.col-02(href='javascript:;',class!='<% if(data.hasExchangeB){ %>exchanged<% } %>',data-canexchange!='<% if(data.canExchangeB){ %>true<% } %>',data-giftenough!='<% if(data.giftEnoughB){ %>true<% } %>',data-type='B')
+                a.prediction-btn(href='javascript:;')
+        .rules-container
+            .title.rules
+            .title.reward
+        .anchro-container(style='display:none;')
+            .box-tab
+                .content bobo除夕
+                .prev-btn
+                .next-btn
+    .side-bar
+        .target-btn
+            a.item(href='javascript:;',data-type='exchange') 奖励兑换
+            a.item(href='javascript:;',data-type='rules') 活动玩法
+            a.item(href='javascript:;',data-type='reward') 活动奖励
+            a.item.preview(href='javascript:;') 直播预告
+        a.go-to-top(href='javascript:;')
+    .get-luckybag-dialog(style='display:none;')
+        .container
+            a.get-btn.js-need-login(href='javascript:;')
+    .result-dialog(style='display:none;')
+        .container
+            .content
+                script(type='text/template', data-key='lucky-bag-result')
+                    <% if(type == 1){ %>
+                    .reward-bag
+                        img(src='/dev/images/pages/pc/act/bobo/newyear/1-0-x/bag01.png')
+                    .tip 恭喜您获得免费鞭炮&nbsp;
+                        i 5
+                        | &nbsp;个！快打年兽得福气卡吧！
+                    .confirm-btn
+                    <% }else if(type == 4){ %>
+                    .reward-bag
+                        img(src='/dev/images/pages/pc/act/bobo/newyear/1-0-x/bag02.png')
+                    .tip 恭喜您获得&nbsp;
+                        i 7
+                        | &nbsp;天会员！直接生效！
+                    .confirm-btn
+                    <% }else if(type == 5){ %>
+                    .reward-bag
+                        img(src='/dev/images/pages/pc/act/bobo/newyear/1-0-x/bag03.png')
+                    .tip 恭喜您获得&nbsp;
+                        i 10
+                        | &nbsp;波币！快去送礼吧！
+                    .confirm-btn
+                    <% }else{ %>
+                    .reward-bag
+                        img(src='/dev/images/pages/pc/act/bobo/newyear/1-0-x/bag04.png')
+                    .tip 恭喜您获得福气卡！请到专题页查看！
+                    .confirm-btn.check(data-type!='<%-type%>')
+                    <% } %>
+            .remove-btn
+    .preview-dialog(style='display:none;')
+        .container
+            .remove-btn
+    footer.footer(style='margin-top:0;')
+        .foot(style='width:auto;overflow:hidden')
+            p
+                a(href='http://www.bobo.com/special/help/info.html', title='BoBo简介', target='_blank') BoBo简介
+                i
+                a(href='/help?helpType=3', title='商务联系', target='_blank') 商务联系
+                i
+                a.js-feedback(href='javascript:;', title='意见反馈') 意见反馈
+                i
+                a(href='http://www.bobo.com/special/help/operate.html', title='帮助中心', data-keyfrom='service', target='_blank') 帮助中心
+                i
+                a(href='http://www.bobo.com/special/help/site.html', title='合作网站', target='_blank') 合作网站
+            p
+                span BoBo©1997-2016 杭州播播科技有限公司版权所有
+                span 浙网文[2015]0293-063号
+                span 浙ICP备15005366号
+                span 经营许可证编号：浙B2-20150144
+                span
+                    a(target='_blank', href='http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010002000114') 浙公网安备 33010002000114号
+                span
+                    a(target='_blank', href='http://img1.cache.netease.com/f2e/www/index2014/images/stxk2015.png') 信息网络传播视听节目许可证
+                span
+                    a(target='_blank', href='http://img1.cache.netease.com/f2e/www/index2014/images/stxkz1119.jpg') 广播电视节目制作经营许可证
+    script(src='https://analytics.163.com/ntes.js', type='text/javascript')
+    script(type='text/javascript').
+        if (typeof neteaseTracker != 'undefined') {
+            _ntes_nacc = "bobo";
+            neteaseTracker();
+        }
+
+    script(src='/dev/scripts/bowl.js')
+    script.
+        require('/pages/pc/act/bobo/newyear@1-0-x');
+
+

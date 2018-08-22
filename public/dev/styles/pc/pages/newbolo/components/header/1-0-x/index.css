@@ -1,0 +1,71 @@
+.newbolo-header {
+  color: #fff;
+  height: 60px;
+  line-height: 60px;
+  background: #0f0f0f;
+  text-align: right;
+  padding-right: 20px;
+  z-index: 9;
+  position: relative; }
+  .newbolo-header .not-logined {
+    height: 100%; }
+    .newbolo-header .not-logined .register, .newbolo-header .not-logined .login {
+      line-height: 30px;
+      display: inline-block;
+      height: 30px;
+      text-align: center;
+      font-size: 16px;
+      margin: 0 10px;
+      cursor: pointer;
+      width: 65px; }
+    .newbolo-header .not-logined .register {
+      width: 65px;
+      height: 30px;
+      line-height: 30px;
+      color: #000;
+      text-align: center;
+      background: #ffaf1a;
+      border-radius: 2px;
+      cursor: pointer; }
+      .newbolo-header .not-logined .register:active {
+        background: #ffd17b; }
+  .newbolo-header .logined {
+    height: 100%;
+    font-size: 14px; }
+    .newbolo-header .logined .user-info {
+      display: inline-block;
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      height: 120px; }
+      .newbolo-header .logined .user-info .nick {
+        display: inline-block;
+        cursor: pointer;
+        color: #fff; }
+      .newbolo-header .logined .user-info .avatar {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin: 0 20px; }
+        .newbolo-header .logined .user-info .avatar img {
+          height: 40px;
+          width: 40px;
+          border-radius: 20px;
+          vertical-align: middle; }
+      .newbolo-header .logined .user-info .logout {
+        display: none; }
+      .newbolo-header .logined .user-info:hover .logout {
+        display: block;
+        right: 12px;
+        top: 64px;
+        font-size: 14px;
+        line-height: 63px;
+        text-align: center;
+        position: absolute;
+        width: 114px;
+        height: 62px;
+        background: url(/dev/images/pages/pc/newbolo/components/header/1-0-x/logout-btn.png) no-repeat; }
+        .newbolo-header .logined .user-info:hover .logout:active, .newbolo-header .logined .user-info:hover .logout:hover {
+          color: #ffaf19; }
+
+/*# sourceMappingURL=index.css.map */

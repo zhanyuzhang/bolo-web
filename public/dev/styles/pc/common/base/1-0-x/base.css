@@ -1,0 +1,600 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  color: #2d2d2d;
+  font: 12px/1.5 Arial,"\5FAE\8F6F\96C5\9ED1",sans-serif,"\5b8b\4f53";
+  -webkit-font-smoothing: antialiased; }
+
+:focus {
+  outline: 1; }
+
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+ul, li, ol {
+  display: block; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  text-decoration: none;
+  background: transparent;
+  color: #2d2d2d; }
+
+a:hover {
+  color: #2d2d2d;
+  text-decoration: none; }
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle;
+  outline: none; }
+
+i {
+  font-style: normal; }
+
+.footer {
+  margin-top: 0; }
+
+.border-triangle {
+  width: 0;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  border-style: dashed;
+  border-color: transparent;
+  display: block; }
+
+.pull-left {
+  float: left;
+  display: inline; }
+
+.pull-right {
+  float: right;
+  display: inline; }
+
+.tip-dialog {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: none;
+  z-index: 20; }
+  .tip-dialog .container {
+    width: 286px;
+    min-height: 150px;
+    background: rgba(46, 46, 46, 0.9);
+    border-radius: 5px;
+    position: absolute;
+    top: -200px;
+    margin-top: -90px;
+    left: 50%;
+    margin-left: -143px;
+    overflow: hidden;
+    -webkit-transition: top 0.2s linear;
+    -moz-transition: top 0.2s linear;
+    -ms-transition: top 0.2s linear;
+    -o-transition: top 0.2s linear;
+    transition: top 0.2s linear; }
+    .tip-dialog .container .title {
+      margin-top: 14px;
+      color: #fff;
+      text-align: center; }
+    .tip-dialog .container .content {
+      margin-top: 40px;
+      padding: 0 50px;
+      text-align: center;
+      color: #fff;
+      min-height: 38px; }
+    .tip-dialog .container .confirm-btn {
+      width: 100px;
+      height: 26px;
+      line-height: 26px;
+      background: #ffaf1a;
+      margin: 34px auto 25px;
+      border-radius: 2px;
+      text-align: center;
+      cursor: pointer; }
+    .tip-dialog .container .remove-btn {
+      width: 16px;
+      height: 16px;
+      background: url(image-path("icon04.png")) no-repeat center;
+      background-color: transparent;
+      position: absolute;
+      top: 9px;
+      right: 9px;
+      cursor: pointer; }
+  .tip-dialog.show .container {
+    top: 50%; }
+  .tip-dialog.add-set-dialog .container .content {
+    margin-top: 22px;
+    padding: 0; }
+  .tip-dialog.add-set-dialog .container input {
+    width: 220px;
+    height: 20px;
+    padding: 4px 6px;
+    background: none;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    margin: 0 auto;
+    display: block;
+    color: #fff; }
+  .tip-dialog.add-set-dialog .container .confirm-btn {
+    margin-top: 22px; }
+
+.intro-dialog {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: none;
+  z-index: 6;
+  background: url(/dev/images/common/dialog-cover.png); }
+  .intro-dialog.show {
+    display: block; }
+  .intro-dialog .container {
+    width: 560px;
+    position: absolute;
+    left: 50%;
+    margin-left: -280px;
+    top: 50%;
+    margin-top: -132px;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden; }
+    .intro-dialog .container .dialog-header {
+      height: 38px;
+      line-height: 38px;
+      background: #ffaf1a;
+      text-align: center;
+      font-size: 16px;
+      color: #fff;
+      font-weight: bold; }
+    .intro-dialog .container .content {
+      margin-top: 10px;
+      padding: 0 20px;
+      height: 150px;
+      overflow: auto; }
+      .intro-dialog .container .content h5 {
+        font-size: 16px;
+        margin-top: 20px; }
+      .intro-dialog .container .content .section {
+        font-size: 14px;
+        margin-top: 10px; }
+        .intro-dialog .container .content .section span {
+          margin-left: 20px;
+          margin-top: 5px;
+          display: block; }
+    .intro-dialog .container .confirm-btn {
+      width: 100px;
+      height: 26px;
+      line-height: 26px;
+      background: #ffaf1a;
+      margin: 20px auto;
+      border-radius: 2px;
+      text-align: center;
+      cursor: pointer; }
+    .intro-dialog .container .remove-btn {
+      width: 16px;
+      height: 16px;
+      background: url("/dev/images/common/chacha01.png") no-repeat center;
+      background-color: transparent;
+      position: absolute;
+      top: 9px;
+      right: 9px;
+      cursor: pointer; }
+
+.join-bolo-dialog {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url(/dev/images/common/dialog-cover.png);
+  overflow: auto;
+  z-index: 3; }
+  .join-bolo-dialog .container {
+    width: 700px;
+    position: absolute;
+    left: 50%;
+    margin-left: -350px;
+    top: 50%;
+    margin-top: -430px; }
+    .join-bolo-dialog .container .content {
+      border-radius: 4px;
+      overflow: auto;
+      background: #fff; }
+      .join-bolo-dialog .container .content .join-bolo-please {
+        height: 56px;
+        line-height: 56px;
+        background: #ffe805;
+        text-align: center;
+        font-size: 24px;
+        color: #766442; }
+      .join-bolo-dialog .container .content .tip {
+        color: #999;
+        margin-top: 26px;
+        font-size: 16px;
+        padding-left: 58px;
+        padding-right: 58px; }
+      .join-bolo-dialog .container .content .body {
+        overflow: auto; }
+        .join-bolo-dialog .container .content .body .form-container {
+          width: 582px;
+          margin: 32px auto 0;
+          padding-bottom: 10px;
+          border-bottom: 1px dashed #f0f0f0; }
+          .join-bolo-dialog .container .content .body .form-container .form-item {
+            padding-left: 150px;
+            position: relative;
+            height: 44px;
+            margin-bottom: 20px;
+            font-size: 14px; }
+            .join-bolo-dialog .container .content .body .form-container .form-item span {
+              width: 150px;
+              text-align: right;
+              line-height: 44px;
+              position: absolute;
+              left: 0;
+              top: 0; }
+            .join-bolo-dialog .container .content .body .form-container .form-item .input-wrap {
+              border: 1px solid #f0f0f0;
+              height: 42px;
+              overflow: hidden;
+              padding: 0 10px; }
+              .join-bolo-dialog .container .content .body .form-container .form-item .input-wrap input {
+                border: 0;
+                background: none;
+                width: 100%;
+                height: 24px;
+                margin-top: 9px; }
+        .join-bolo-dialog .container .content .body .id-img-form {
+          width: 582px;
+          margin: 36px auto 0; }
+          .join-bolo-dialog .container .content .body .id-img-form h5 {
+            font-size: 16px;
+            color: #666; }
+          .join-bolo-dialog .container .content .body .id-img-form .form-wrap {
+            margin-top: 24px;
+            text-align: justify;
+            font-size: 0;
+            line-height: 1.2; }
+            .join-bolo-dialog .container .content .body .id-img-form .form-wrap:after {
+              width: 100%;
+              height: 0;
+              overflow: hidden;
+              content: '';
+              display: inline-block; }
+            .join-bolo-dialog .container .content .body .id-img-form .form-wrap .item {
+              width: 258px;
+              display: inline-block;
+              vertical-align: top;
+              font-size: 14px;
+              color: #666; }
+              .join-bolo-dialog .container .content .body .id-img-form .form-wrap .item .img-wrap {
+                height: 178px;
+                background: #f3f3f3;
+                position: relative; }
+                .join-bolo-dialog .container .content .body .id-img-form .form-wrap .item .img-wrap img {
+                  width: 100%;
+                  height: 100%;
+                  display: block; }
+                .join-bolo-dialog .container .content .body .id-img-form .form-wrap .item .img-wrap .file-input {
+                  width: 130px;
+                  height: 38px;
+                  position: absolute;
+                  left: 50%;
+                  top: 50%;
+                  margin-left: -65px;
+                  margin-top: -19px;
+                  background: #ffe805;
+                  border-radius: 4px;
+                  text-align: center;
+                  line-height: 38px; }
+                  .join-bolo-dialog .container .content .body .id-img-form .form-wrap .item .img-wrap .file-input .icon-cross {
+                    width: 12px;
+                    height: 12px;
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: middle; }
+                    .join-bolo-dialog .container .content .body .id-img-form .form-wrap .item .img-wrap .file-input .icon-cross:before, .join-bolo-dialog .container .content .body .id-img-form .form-wrap .item .img-wrap .file-input .icon-cross:after {
+                      content: '';
+                      background: #666;
+                      border-radius: 0;
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      bottom: 0;
+                      right: 0;
+                      margin: auto; }
+                    .join-bolo-dialog .container .content .body .id-img-form .form-wrap .item .img-wrap .file-input .icon-cross:before {
+                      width: 100%;
+                      height: 2px; }
+                    .join-bolo-dialog .container .content .body .id-img-form .form-wrap .item .img-wrap .file-input .icon-cross:after {
+                      width: 2px;
+                      height: 100%; }
+                  .join-bolo-dialog .container .content .body .id-img-form .form-wrap .item .img-wrap .file-input .text {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-left: 5px; }
+                .join-bolo-dialog .container .content .body .id-img-form .form-wrap .item .img-wrap input {
+                  width: 100%;
+                  height: 100%;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  opacity: 0;
+                  cursor: pointer; }
+              .join-bolo-dialog .container .content .body .id-img-form .form-wrap .item .id-tip {
+                line-height: 36px;
+                text-align: center; }
+        .join-bolo-dialog .container .content .body .confirm-box {
+          width: 488px;
+          margin: 30px auto 0; }
+          .join-bolo-dialog .container .content .body .confirm-box .agreement-check input,
+          .join-bolo-dialog .container .content .body .confirm-box .agreement-check .text {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0; }
+          .join-bolo-dialog .container .content .body .confirm-box .agreement-check .text {
+            margin-left: 10px;
+            font-size: 14px; }
+          .join-bolo-dialog .container .content .body .confirm-box .agreement-check .agreement-btn {
+            color: #0054ff;
+            cursor: pointer; }
+          .join-bolo-dialog .container .content .body .confirm-box .submit-btn {
+            height: 46px;
+            line-height: 46px;
+            text-align: center;
+            font-size: 18px;
+            color: #7e6b3f;
+            background: #ffe805;
+            border-radius: 4px;
+            margin-top: 16px;
+            cursor: pointer; }
+          .join-bolo-dialog .container .content .body .confirm-box .contact-tip {
+            text-align: center;
+            line-height: 40px;
+            font-size: 14px;
+            color: #999; }
+    .join-bolo-dialog .container .remove-btn {
+      width: 46px;
+      height: 46px;
+      position: absolute;
+      left: auto;
+      top: -15px;
+      bottom: auto;
+      right: -15px;
+      background: url(/dev/images/pages/pc/act/share/1-0-x/dialog-remover.png);
+      cursor: pointer; }
+  .join-bolo-dialog.enter .container .content .tip {
+    padding-right: 58px; }
+
+.bolo-header {
+  height: 60px;
+  border-top: 3px solid #2ac481;
+  border-bottom: 1px solid #dfdfdf;
+  background: #ffaf1a; }
+  .bolo-header .container {
+    width: 1000px;
+    margin: 0 auto;
+    height: 100%; }
+    .bolo-header .container .logo {
+      width: 150px;
+      height: 100%;
+      background: url("/dev/images/common/bolo-logo-header.jpg") no-repeat center;
+      float: left; }
+    .bolo-header .container .user-info {
+      width: 76px;
+      height: 100%;
+      line-height: 60px;
+      float: right;
+      position: relative;
+      font-size: 0;
+      margin-left: 10px; }
+      .bolo-header .container .user-info .avatar {
+        width: 48px;
+        height: 48px;
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 100%;
+        background: url("/dev/images/common/bolo-default-avatar.png") #ddd no-repeat center; }
+        .bolo-header .container .user-info .avatar img {
+          width: 100%;
+          height: 100%;
+          display: block; }
+      .bolo-header .container .user-info:after {
+        width: 0;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+        overflow: hidden;
+        display: block;
+        border-style: dashed;
+        border-color: transparent;
+        border-width: 6px 6px 0;
+        border-top-style: solid;
+        border-top-color: #ffd17a;
+        display: inline-block;
+        vertical-align: middle;
+        content: '';
+        margin-left: 10px; }
+      .bolo-header .container .user-info:hover .operation-list {
+        display: block; }
+      .bolo-header .container .user-info .operation-list {
+        width: 150px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        border-top: 1px solid transparent;
+        display: none; }
+        .bolo-header .container .user-info .operation-list .item {
+          padding: 0 6px;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+          font-size: 14px;
+          cursor: pointer;
+          display: block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          background: #f6f6f6; }
+          .bolo-header .container .user-info .operation-list .item.current {
+            background: #ffd17a; }
+          .bolo-header .container .user-info .operation-list .item:hover {
+            background: #ffd17a; }
+          .bolo-header .container .user-info .operation-list .item.nickname {
+            cursor: default; }
+          .bolo-header .container .user-info .operation-list .item.nickname:hover {
+            background: #f6f6f6; }
+    .bolo-header .container .join-btn {
+      width: 108px;
+      height: 36px;
+      line-height: 36px;
+      border: 1px solid #2e2e2e;
+      border-radius: 2px;
+      float: right;
+      margin-left: 10px;
+      text-align: center;
+      font-size: 18px;
+      margin-top: 10px; }
+    .bolo-header .container .join-btn {
+      opacity: .6; }
+    .bolo-header .container .download-btn {
+      width: 120px;
+      height: 100%;
+      background: url(/dev/images/common/download-btn.gif) no-repeat center;
+      float: right;
+      margin-left: 10px;
+      font-size: 0; }
+    .bolo-header .container .bolo-icon {
+      width: 50px;
+      height: 40px;
+      float: right;
+      display: inline;
+      margin-top: 10px;
+      background: url("/dev/images/common/icon01.jpg") no-repeat; }
+
+.bolo-footer {
+  height: 268px;
+  background: #393939; }
+  .bolo-footer .container {
+    width: 1000px;
+    margin: 0 auto;
+    color: #fff;
+    overflow: hidden;
+    position: relative; }
+    .bolo-footer .container h4 {
+      font-size: 20px;
+      margin-top: 42px; }
+    .bolo-footer .container p {
+      line-height: 26px;
+      margin-top: 22px;
+      font-size: 14px; }
+    .bolo-footer .container a {
+      color: #fff; }
+    .bolo-footer .container .qr-codes {
+      position: absolute;
+      top: 78px;
+      right: 0; }
+      .bolo-footer .container .qr-codes .download-page,
+      .bolo-footer .container .qr-codes .bolo-wechat-account {
+        width: 118px;
+        display: inline-block;
+        vertical-align: top;
+        *display: inline;
+        margin-left: 20px; }
+        .bolo-footer .container .qr-codes .download-page .qr-wrap,
+        .bolo-footer .container .qr-codes .bolo-wechat-account .qr-wrap {
+          height: 110px;
+          background: #fff;
+          border-radius: 3px;
+          position: relative; }
+          .bolo-footer .container .qr-codes .download-page .qr-wrap .body,
+          .bolo-footer .container .qr-codes .bolo-wechat-account .qr-wrap .body {
+            width: 106px;
+            height: 97px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -53px;
+            margin-top: -48.5px; }
+        .bolo-footer .container .qr-codes .download-page .text,
+        .bolo-footer .container .qr-codes .bolo-wechat-account .text {
+          margin-top: 14px;
+          color: #fff;
+          text-align: center; }
+      .bolo-footer .container .qr-codes .download-page .body {
+        background: url(/dev/images/common/qr-download-page.png) no-repeat; }
+      .bolo-footer .container .qr-codes .bolo-wechat-account .body {
+        background: url(/dev/images/common/qr-bolo.png) no-repeat; }
+
+/*# sourceMappingURL=base.css.map */

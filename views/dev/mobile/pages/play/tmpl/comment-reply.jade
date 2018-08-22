@@ -1,0 +1,10 @@
+script(type='text/template', data-key='comment-reply-list')
+    <% data.forEach(function(d){ %>
+    li.item
+        .user-info
+            .avatar
+                img(src!='<%=d.avatar%>')
+            .name
+                | <%=d.nick%>：
+        .content <%-d.content%>
+    <% }); %>

@@ -1,0 +1,50 @@
+@charset "UTF-8";
+html,
+body {}
+body{ background:#fff;}
+.jo-area {background:#000000 url(/dev/images/pages/pc/join/1-0-x/jobg01.jpg) no-repeat center; min-width: 1000px; width:100%; clear:both; margin:0 auto; height:631px; display:block;}
+.jo-area-cnt { width:1000px; clear: both; margin: 0 auto; padding-top: 335px;}
+.jo-area-cnt h2 { background:url(/dev/images/pages/pc/join/1-0-x/jobg05.png) no-repeat center; width:454px; height: 134px; clear: both; margin:0 auto; cursor: pointer; font-size: 30px; font-weight: bold; text-align: center; line-height: 134px;_background:url(/dev/images/pages/pc/join/1-0-x/jobg05.gif) no-repeat center; }
+.jo-area-cnt h2:hover { background:url(/dev/images/pages/pc/join/1-0-x/jobg06.png) no-repeat center; }
+.jo-intro { width:1000px; clear:both; margin:0 auto; overflow: hidden; padding: 50px 0;}
+.jo-intro ul { width:1100px; float: left;}
+.jo-intro li {width:300px; float: left; margin-right: 50px; display: inline;}
+.jo-intro li h2 {  line-height: 80px;}
+.jo-intro li .num { font-size: 60px; font-weight: bold; font-style: italic; color:#ffaf1a; vertical-align: middle;}
+.jo-intro li .title { font-size: 20px; font-weight: bold; vertical-align: middle; padding: 0 10px 0 10px; color: #343434;}
+.jo-intro li .title2 { font-size: 16px; font-weight: 100; vertical-align: middle; color: #828181;}
+.jo-intro li .title2 a ,.jo-intro li .title2 a:visited { text-decoration: underline;color: #828181;}
+.jo-intro li .title2 a:hover { color: #b80000;}
+.jo-intro li h3 { font-size:16px; color: #343434; text-align: left; line-height: 200%; font-weight: 100;}
+.jo-evaluate-bg {background:#eeeeee url(/dev/images/pages/pc/join/1-0-x/jobg02.png) no-repeat center; min-width: 1000px; width:100%; clear:both; margin:0 auto; height:671px; display:block;}
+.jo-evaluate { width:1000px; clear: both; margin:0 auto; padding-top: 155px;}
+.jo-evaluate ul { clear: both;}
+.jo-evaluate li { width:880px; clear: both; margin:0 auto; float: right; height: 468px; overflow: hidden;}
+.jo-evaluate .evaluate { width:880px; clear: both; margin:0 auto; padding: 20px 0;}
+.jo-evaluate .evaluate .evaluate-l { background:url(/dev/images/pages/pc/join/1-0-x/jobg07.png) no-repeat center; width:763px; height:116px; float: left; color: #fff; _background:url(/dev/images/pages/pc/join/1-0-x/jobg07.gif) no-repeat center;}
+.jo-evaluate .evaluate .evaluate-l h3 { font-size: 18px; font-weight: 100; color: #fff; padding:44px 50px 0 90px; text-align: left; line-height: 180%; height: 60px; overflow: hidden; word-break: break-all;}
+.jo-evaluate .evaluate .evaluate-r { width:112px; float: right; position: relative;}
+.jo-evaluate .evaluate .evaluate-r .avatar { width:108px; height: 108px; border-radius: 108px; border:2px solid #434343; overflow: hidden;}
+.jo-evaluate .evaluate .evaluate-r .avatar img { width:108px; height: 108px; border-radius: 108px; overflow: hidden;}
+.jo-evaluate .evaluate .evaluate-r .nick { position: absolute; width:300px; text-align: right; left: -320px; color: #1b1b1b; font-size: 20px; top: 5px; z-index: 3;}
+.jo-report-bg {background:#eeeeee url(/dev/images/pages/pc/join/1-0-x/jobg03.png) no-repeat center; min-width: 1000px; width:100%; clear:both; margin:0 auto; height:646px; display:block;}
+.jo-report { width:1000px; clear: both; margin:0 auto; padding-top: 150px;}
+.jo-report-l { width:495px; float: left;}
+.jo-report-l .pic { width:495px; clear: both; margin: 0 auto;}
+.jo-report-l .pic img { vertical-align: top;}
+.jo-report-l h2 { background: #000; font-size: 20px; color: #fff; font-weight: 100; padding: 10px 20px; height: 60px; line-height: 30px;}
+.jo-report-l h2 a ,.jo-report-l h2 a:visited { color: #fff; display: block; height:60px;}
+.jo-report-l h2 a:hover { color: #ff0;}
+.jo-report-r { width:480px; float: right;}
+.jo-report-r dl { clear: both;}
+.jo-report-r dt { width:480px; clear: both; margin: 0 auto; background: #fff; margin-bottom: 16px;}
+.jo-report-r dt a { display:block; height: 90px; padding: 13px;}
+.jo-report-r dt a:hover { background: #f7f7f7;}
+.jo-report-r dt .pic { width:145px; float: left;}
+.jo-report-r dt .title { width:285px; float: right; color: #000; font-size: 18px; font-weight: 100; line-height: 180%; padding: 10px 0;}
+.jo-but-bg {background:#eeeeee url(/dev/images/pages/pc/join/1-0-x/jobg04.png) no-repeat center; min-width: 1000px; width:100%; clear:both; margin:0 auto; height:322px; display:block; position: relative;}
+.jo-but-bg h2 { background:url(/dev/images/pages/pc/join/1-0-x/jobg08.png) no-repeat center; width:400px; height: 80px; clear: both; margin:0 auto; color:#343434; cursor: pointer; font-size: 36px; font-weight: bold; text-align: center; line-height: 85px; overflow: hidden; position: absolute; left: 50%; margin-left: 110px; top: 120px;}
+.jo-but-bg h2:hover { background:url(/dev/images/pages/pc/join/1-0-x/jobg09.png) no-repeat center; }
+
+
+

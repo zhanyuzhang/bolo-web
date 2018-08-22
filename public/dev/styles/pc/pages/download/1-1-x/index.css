@@ -1,0 +1,74 @@
+@charset "UTF-8";
+html,
+
+body{ background: #ffe805; position: relative;}
+.dl-area-bg { background:url(/dev/images/pages/pc/download/1-1-x/xzbg40.png) no-repeat center; min-width: 1000px; width:100%; clear:both; margin:0 auto;padding-top:178px; height:498px; display:block;}
+
+.dl-area-cnt { width:100%; clear:both; margin:0px auto; text-align: center; position: relative; }
+.dl-area-cnt .video { width:522px; clear: both; margin:0 auto; position: relative;}
+#focusVideo { height:305px; display:block;}
+.dl-area-cnt .video h2 { font-size: 20px; font-weight: 100; color:#fff; line-height: 40px; cursor: pointer;}
+.dl-area-cnt .video h2:hover { color: #ff0;}
+.dl-area-cnt .video .cover { position: absolute; background:url(/dev/images/pages/pc/download/1-1-x/xzbg48.png) no-repeat center; _background:url(/dev/images/pages/pc/download/1-1-x/xzbg48.gif) no-repeat center; width:83px; height: 23px; z-index: 3; right:-4px; top: -4px; }
+
+.dl-area-cnt .dl-dm-bg { width:100%; clear:both; position: absolute; z-index: 2;left:0px; top:0px; height:305px; overflow: hidden;}
+.dl-area-cnt .dl-dm-bg .dl-dm { position: relative; width:100%; height: 305px; overflow: hidden;}
+.dl-area-cnt .dl-dm-bg .dl-dm div { font-size: 26px; color: #fff; position: absolute; left:0;top:0; width:430px; height:50px;text-shadow:0 0 0.2em #897400,-0 -0 0.2em #897400;}
+
+.dl-area2-bg { background:url(/dev/images/pages/pc/download/1-1-x/xzbg41.png) no-repeat center; min-width: 1000px; width:100%; clear:both; margin:0 auto; height:261px; display:block;}
+.dl-area3-bg { background:url(/dev/images/pages/pc/download/1-1-x/xzbg42.png) no-repeat center; min-width: 1000px; width:100%; clear:both; margin:0 auto; height:543px; display:block;}
+.dl-area3 { width:1000px; clear:both; margin:0 auto;}
+.dl-area3-cnt {width:570px; clear: both; float:left; margin-left:180px; display: inline ; position: relative ;}
+.dl-area3-cnt .intro {width:570px; clear: both; margin:0 auto; height: 130px;}
+.dl-area3-cnt .intro .intro-l {width:380px; float: left; color:#69552f;}
+.dl-area3-cnt .intro .intro-l h2 { font-size:20px; text-align: left; font-weight: 100;padding-top:10px; line-height: 160%;}
+.dl-area3-cnt .intro .intro-l h2 a ,.dl-area3-cnt .intro .intro-l h2 a:visited { color:#69552f;}
+.dl-area3-cnt .intro .intro-l h2 a:hover{ color: #b00000;}
+.dl-area3-cnt .intro .intro-l h3 { font-size:16px; text-align: left; font-weight: 100; line-height: 160%;}
+.dl-area3-cnt .intro .intro-r {width:148px; float: right; position: relative;}
+.dl-area3-cnt .intro .intro-r img { vertical-align: top;}
+.dl-area3-cnt .intro .intro-r .icon { position: absolute;  width:148px; height: 100px; z-index: 2;
+    left:0px; top:0px;background:url(/dev/images/pages/pc/download/1-1-x/xzbg55.png) no-repeat center;_background:none;}
+.dl-area3-cnt .intro .intro-r a { width:148px; height: 100px; display: block;}
+.dl-area3-cnt .comment { width:570px; clear:both; margin:0 auto; height: 350px; overflow: hidden;}
+.dl-area3-cnt .comment ul { clear: both;}
+.dl-area3-cnt .comment li { clear: both; width:100%; float: left;}
+.dl-area3-cnt .comment .text { width:570px; clear: both; margin:0 auto;border-bottom:1px solid #b4aa97; padding-top: 22px; padding-bottom: 15px;}
+.dl-area3-cnt .comment .text .text-l {width:64px; height: 64px; float:left; border-radius: 64px; overflow: hidden ;}
+.dl-area3-cnt .comment .text .text-l img { width:64px; height:64px; border-radius: 64px; overflow: hidden ;}
+.dl-area3-cnt .comment .text .text-r { width:490px; float:right; position: relative ; padding-bottom: 20px;}
+.dl-area3-cnt .comment .text .text-r h2 { font-size: 18px; color: #69552f; font-weight: 100; line-height: 160%;}
+.dl-area3-cnt .comment .text .text-r h3 { font-size: 20px; color: #69552f; font-weight: bold; line-height: 160%;}
+.dl-area3-cnt .comment .text .text-r h4 { text-align: right; position: absolute; left:0px; bottom:0px; width:100%;}
+.dl-area3-cnt .comment .text .text-r h4 .icon { background:url(/dev/images/pages/pc/download/1-1-x/xzbg49.png) no-repeat center; width:28px; height: 29px; display: inline-block ;}
+.dl-area3-cnt .comment .text .text-r h4 .num { font-size: 20px; color: #b5b5b5; font-weight: 100; line-height: 160%; line-height: 33px; display: inline-block; vertical-align:bottom ; height: 29px; overflow: hidden; padding-right: 10px; margin-bottom: 2px; text-align: left; width:40px;}
+.dl-area3-cnt .icon2 { background:url(/dev/images/pages/pc/download/1-1-x/xzbg50.png) no-repeat center; width:93px; height:158px; display: inline-block; position: absolute ; left: 555px; top: 380px; }
+.dl-area4-bg { background:url(/dev/images/pages/pc/download/1-1-x/xzbg43.png) no-repeat center; min-width: 1000px; width:100%; clear:both; margin:0 auto; height:314px; display:block;}
+.dl-area5-bg { background:url(/dev/images/pages/pc/download/1-1-x/xzbg44.png) no-repeat center; min-width: 1000px; width:100%; clear:both; margin:0 auto; height:396px; display:block;}
+.dl-area5 { width:1000px; clear: both; margin:0 auto; overflow: hidden; height:290px;}
+.dl-area5-cnt { width:4000px; height: 290px; float: left;}
+.dl-area5 ul { float: left;}
+.dl-area5 li { width:200px; float: left; text-align: center;}
+.dl-area5 .pic { width:180px; clear: both; margin:0 auto;}
+.dl-area5 .pic img { vertical-align: top;}
+.dl-area5 .pic h3 { padding: 0 5px; text-align: center; clear: both; margin:0 auto; font-size: 20px; color: #fff; font-weight: 100; background: #2e2e2e; line-height: 54px; height: 54px; overflow: hidden; word-break: break-all; border-radius: 0 0 6px 6px;}
+.dl-area6-bg { background:url(/dev/images/pages/pc/download/1-1-x/xzbg45.png) no-repeat center; min-width: 1000px; width:100%; clear:both; margin:0 auto; height:529px; display:block;}
+.dl-area6 {width:870px; clear:both; margin:0 auto; padding-top: 80px;}
+.dl-area6 .text { height: 260px; overflow: hidden;}
+.dl-area6 ul { clear: both;}
+.dl-area6 li { clear: both; display: none; color: #69552f; height:260px;}
+.dl-area6 li h2 { font-size: 30px; padding: 0 0px 0 0px; text-align: left; font-weight: 100; line-height: 160%;}
+.dl-area6 li h3 { font-size: 24px; padding: 0 40px; text-align: right; font-weight: 100; line-height: 160%;}
+.dl-area6 .on { display: block;}
+.dl-area6 .pot {clear:both; width:100%; margin: 0 auto; text-align: center;}
+.dl-area6 .pot span { background:url(/dev/images/pages/pc/download/1-1-x/xzbg51.png) no-repeat center; width:40px; height: 20px; display: inline-block; cursor: pointer;_background:url(/dev/images/pages/pc/download/1-1-x/xzbg51.gif) no-repeat center;}
+.dl-area6 .pot .on {background:url(/dev/images/pages/pc/download/1-1-x/xzbg52.png) no-repeat center;_background:url(/dev/images/pages/pc/download/1-1-x/xzbg52.gif) no-repeat center;}
+.dl-area7-bg { background:url(/dev/images/pages/pc/download/1-1-x/xzbg46.png) no-repeat center; min-width: 1000px; width:100%; clear:both; margin:0 auto; height:251px; display:block; text-align: center;}
+.dl-area7 { width:1000px; clear: both; margin:0 auto; position: relative;}
+.dl-area7 .icon {background:url(/dev/images/pages/pc/download/1-1-x/xzbg53.png) no-repeat center; width:315px; height: 109px; position: absolute; left:712px; top: 192px; display: block; z-index: 3;_background:url(/dev/images/pages/pc/download/1-1-x/xzbg53.gif) no-repeat center;}
+.dl-float {display: block;height:auto;margin-top: -80px;position: fixed;right: 50px;text-align: left;top: 50%;width: 119px;z-index: 10; padding-top: 160px;height:40px; font-size: 20px; text-align: center; color: #69552f;  background:url(/dev/images/pages/pc/download/1-1-x/xzbg54.png) no-repeat center;  _position: absolute; _top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-280));}
+
+
+
+
+

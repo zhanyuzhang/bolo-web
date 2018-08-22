@@ -1,0 +1,242 @@
+$baseUrl: '/dev/images/pages/mobile/act/seckill/1-0-x/';
+$baseColor: #ebcd02;
+
+@mixin setBackgroundImg($imgName) {
+  background-image: url($baseUrl + $imgName);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  background-color: #fff;
+  @include setBackgroundImg('bg.png');
+  background-repeat: repeat-y;
+
+  .wrapper {
+    position: relative;
+    padding: .1rem .2rem;
+    //overflow: hidden;
+
+    .header {
+      height: 3.4rem;
+      @include setBackgroundImg('header.png');
+      position: relative;
+
+      .remained-count {
+        font-size: .30rem;
+        position: absolute;
+        font-weight: bold;
+
+        .count {
+          color: red;
+        }
+      }
+
+      .wording {
+        font-size: .2rem;
+        width: 3.7rem;
+        text-align: center;
+        left: 1.4rem;
+        position: absolute;
+        top: 2.5rem;
+        color: #fff;
+      }
+
+      .timmer {
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+        -webkit-justify-content: center;
+        align-items: center;
+        -webkit-align-items: center;
+        width: 3.7rem;
+        height: .55rem;
+        position: absolute;
+        left: 1.4rem;
+        top: 1.9rem;
+        font-size: .25rem;
+        color: red;
+        padding-left: .05rem;
+
+        .part {
+          .high-bit, .low-bit {
+            display: inline-block;
+            background: #fff;
+            border-radius: .05rem;
+            padding: .025rem;
+            margin-left: .05rem;
+          }
+
+          .unit {
+            display: inline-block;
+            color: #fff;
+            margin-left: .05rem;
+            font-size: .2rem;
+          }
+        }
+      }
+    }
+
+    .ticket-before-click {
+      height: 3.68rem;
+      @include setBackgroundImg('ticket1.png');
+      position: relative;
+
+      .get-btn {
+        width: 3.2rem;
+        height: .9rem;
+        position: absolute;
+        top: 2.3rem;
+        left: 3.3rem;
+        border-radius: .1rem;
+        @include setBackgroundImg('btn-valid.png');
+
+        &.disabled {
+          @include setBackgroundImg('btn-invalid.png');
+        }
+        //border: 1px solid green;
+
+        //&.disabled {
+        //  opacity: .5;
+        //  background: #000;
+        //}
+      }
+    }
+
+    .ticket-after-click {
+      height: 3.68rem;
+      @include setBackgroundImg('ticket2.png');
+      position: relative;
+
+      .code {
+        position: absolute;
+        width: 5rem;
+        left: 1.5rem;
+        top: .8rem;
+        font-size: .8rem;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .get-btn {
+        width: 3.2rem;
+        height: .9rem;
+        position: absolute;
+        top: 2.3rem;
+        left: 2.2rem;
+        border-radius: .1rem;
+        @include setBackgroundImg('exchange-btn.png');
+      }
+    }
+
+    .recommend {
+      height: 2.83rem;
+      @include setBackgroundImg('recommend.png');
+      position: relative;
+      margin: .2rem 0;
+
+      .read-more {
+        width: 2rem;
+        height: .5rem;
+        float: right;
+      }
+
+      .recommend-video {
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        top: 1.1rem;
+
+        &#recommend-video1 {
+          left: 1.2rem;
+        }
+        &#recommend-video2 {
+          left: 4.9rem;
+        }
+      }
+
+    }
+
+    .rule {
+      height: 2.5rem;
+      position: relative;
+
+      .title {
+        font-size: .32rem;
+        margin: .2rem 0;
+        font-weight: bold;
+
+      }
+
+      .content {
+        font-size: .24rem;
+
+        li {
+          margin: .1rem 0;
+        }
+      }
+    }
+  }
+
+  .modal-window {
+    position: absolute;
+    top: 0;
+    width: 7.5rem;
+    height: 14rem;
+    background: rgba(0, 0, 0, .7);
+  }
+
+  .warn-window {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 6rem;
+    height: 3.5rem;
+    top: 4rem;
+
+    .close-btn {
+      position: absolute;
+      width: .5rem;
+      height: .5rem;
+      left: 5.5rem;
+    }
+
+    .stay-btn {
+      position: absolute;
+      width: 2.2rem;
+      height: 1rem;
+      left: .5rem;
+      top: 2.05rem;
+    }
+
+    .leave-btn {
+      position: absolute;
+      width: 2.2rem;
+      height: 1rem;
+      left: 3.2rem;
+      top: 2.05rem;
+    }
+
+    &#not-start {
+      @include setBackgroundImg('is-not-start.png');
+    }
+    &#is-ended {
+      @include setBackgroundImg('is-end.png');
+    }
+  }
+
+}

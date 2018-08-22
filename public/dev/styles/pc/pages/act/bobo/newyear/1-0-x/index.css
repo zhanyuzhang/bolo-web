@@ -1,0 +1,310 @@
+.wrapper {
+  position: relative;
+  font-size: 18px;
+  overflow: hidden;
+  width: 100%; }
+  .wrapper .banner-container {
+    height: 1327px;
+    background: url("/dev/images/pages/pc/act/bobo/newyear/1-0-x/banner-bg.png") no-repeat center;
+    overflow: hidden; }
+    .wrapper .banner-container .title {
+      width: 100%;
+      margin-top: 720px;
+      display: block;
+      height: 1px;
+      overflow: hidden; }
+    .wrapper .banner-container .card-num {
+      margin-top: 230px;
+      color: #fff;
+      position: relative;
+      height: 20px; }
+      .wrapper .banner-container .card-num .col-01,
+      .wrapper .banner-container .card-num .col-02,
+      .wrapper .banner-container .card-num .col-03,
+      .wrapper .banner-container .card-num .col-04,
+      .wrapper .banner-container .card-num .col-05,
+      .wrapper .banner-container .card-num .col-06,
+      .wrapper .banner-container .card-num .col-07,
+      .wrapper .banner-container .card-num .col-08 {
+        width: 108px;
+        line-height: 1.4;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 0; }
+      .wrapper .banner-container .card-num .col-01 {
+        margin-left: -600px; }
+      .wrapper .banner-container .card-num .col-02 {
+        margin-left: -463px; }
+      .wrapper .banner-container .card-num .col-03 {
+        margin-left: -328px; }
+      .wrapper .banner-container .card-num .col-04 {
+        margin-left: -183px; }
+      .wrapper .banner-container .card-num .col-05 {
+        margin-left: 72px; }
+      .wrapper .banner-container .card-num .col-06 {
+        margin-left: 209px; }
+      .wrapper .banner-container .card-num .col-07 {
+        margin-left: 344px; }
+      .wrapper .banner-container .card-num .col-08 {
+        margin-left: 489px; }
+    .wrapper .banner-container .medal-num {
+      margin-top: 186px;
+      color: #fff;
+      position: relative; }
+      .wrapper .banner-container .medal-num .col-01,
+      .wrapper .banner-container .medal-num .col-02,
+      .wrapper .banner-container .medal-num .col-03,
+      .wrapper .banner-container .medal-num .col-04 {
+        width: 165px;
+        line-height: 1.8;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        font-size: 14px; }
+      .wrapper .banner-container .medal-num .col-01 {
+        margin-left: -540px; }
+      .wrapper .banner-container .medal-num .col-02 {
+        margin-left: -323px; }
+      .wrapper .banner-container .medal-num .col-03 {
+        margin-left: 129px; }
+      .wrapper .banner-container .medal-num .col-04 {
+        margin-left: 346px; }
+    .wrapper .banner-container .exchange-btn {
+      width: 185px;
+      height: 50px;
+      position: absolute;
+      left: 50%;
+      top: 1212px;
+      background: url("/dev/images/pages/pc/act/bobo/newyear/1-0-x/exchange-btn.png"); }
+      .wrapper .banner-container .exchange-btn:after {
+        width: 181px;
+        height: 46px;
+        border: 2px solid #5e0711;
+        display: none;
+        content: ''; }
+      .wrapper .banner-container .exchange-btn:active:after {
+        display: block; }
+      .wrapper .banner-container .exchange-btn.col-01 {
+        margin-left: -441px; }
+      .wrapper .banner-container .exchange-btn.col-02 {
+        margin-left: 226px; }
+      .wrapper .banner-container .exchange-btn.exchanged {
+        background: url("/dev/images/pages/pc/act/bobo/newyear/1-0-x/exchanged.png");
+        cursor: default; }
+    .wrapper .banner-container .prediction-btn {
+      width: 98px;
+      height: 148px;
+      position: absolute;
+      top: 637px;
+      left: 50%;
+      margin-left: -660px; }
+  .wrapper .rules-container {
+    height: 2007px;
+    background: url("/dev/images/pages/pc/act/bobo/newyear/1-0-x/rules-bg.png") no-repeat center;
+    overflow: hidden; }
+    .wrapper .rules-container .title {
+      width: 100%;
+      margin-top: 28px;
+      display: block;
+      height: 1px;
+      overflow: hidden; }
+    .wrapper .rules-container .reward {
+      margin-top: 786px; }
+  .wrapper .anchro-container {
+    height: 1331px;
+    background: url("/dev/images/pages/pc/act/bobo/newyear/1-0-x/anchor-bg.png") no-repeat center;
+    overflow: hidden; }
+    .wrapper .anchro-container .box-tab {
+      width: 366px;
+      height: 60px;
+      margin: 152px auto 0;
+      background: #710a1a;
+      position: relative; }
+      .wrapper .anchro-container .box-tab .content {
+        width: 250px;
+        height: 60px;
+        line-height: 60px;
+        overflow: hidden;
+        text-align: center;
+        margin: 0 auto;
+        color: #fef6cb; }
+      .wrapper .anchro-container .box-tab .prev-btn {
+        width: 0;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+        overflow: hidden;
+        display: block;
+        border-style: dashed;
+        border-color: transparent;
+        border-width: 14px 18px 14px 0;
+        border-right-style: solid;
+        border-right-color: #ef3049;
+        position: absolute;
+        top: 50%;
+        margin-top: -14px;
+        left: 23px; }
+      .wrapper .anchro-container .box-tab .next-btn {
+        width: 0;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+        overflow: hidden;
+        display: block;
+        border-style: dashed;
+        border-color: transparent;
+        border-width: 14px 0 14px 18px;
+        border-left-style: solid;
+        border-left-color: #ef3049;
+        position: absolute;
+        top: 50%;
+        margin-top: -14px;
+        right: 23px; }
+
+.side-bar {
+  width: 180px;
+  height: 567px;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  margin-top: -300px;
+  background: url("/dev/images/pages/pc/act/bobo/newyear/1-0-x/side-bar.png") no-repeat;
+  overflow: hidden;
+  z-index: 50; }
+  .side-bar .target-btn {
+    width: 151px;
+    margin: 117px 0 0 13px; }
+    .side-bar .target-btn .item {
+      height: 52px;
+      line-height: 52px;
+      font-size: 18px;
+      text-align: center;
+      color: #d9bb75;
+      display: block; }
+      .side-bar .target-btn .item:hover {
+        background: #d9bb75;
+        color: #96010e; }
+      .side-bar .target-btn .item:nth-child(1) {
+        height: 50px;
+        line-height: 50px; }
+      .side-bar .target-btn .item:nth-child(1):hover {
+        background: url("/dev/images/pages/pc/act/bobo/newyear/1-0-x/side-bar-hover.png") #d9bb75 no-repeat top; }
+  .side-bar .go-to-top {
+    width: 34px;
+    height: 18px;
+    position: absolute;
+    bottom: 34px;
+    left: 50%;
+    margin-left: -17px; }
+
+.get-luckybag-dialog {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url("/dev/images/common/dialog-cover.png");
+  z-index: 10;
+  z-index: 100; }
+  .get-luckybag-dialog .container {
+    width: 561px;
+    height: 702px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -351px;
+    margin-left: -281px;
+    background: url("/dev/images/pages/pc/act/bobo/newyear/1-0-x/luckybag.png") no-repeat; }
+    .get-luckybag-dialog .container .get-btn {
+      width: 208px;
+      height: 56px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -102px; }
+
+.result-dialog {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url("/dev/images/common/dialog-cover.png");
+  z-index: 10;
+  z-index: 100; }
+  .result-dialog .container {
+    width: 580px;
+    height: 430px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -290px;
+    margin-top: -215px;
+    background: url("/dev/images/pages/pc/act/bobo/newyear/1-0-x/reward-dialog.png") no-repeat;
+    overflow: hidden; }
+    .result-dialog .container .content {
+      width: 468px;
+      margin: 206px auto 0; }
+      .result-dialog .container .content .reward-bag {
+        width: 130px;
+        height: 110px;
+        margin: 0 auto; }
+        .result-dialog .container .content .reward-bag img {
+          width: 100%;
+          height: 100%;
+          display: block; }
+      .result-dialog .container .content .tip {
+        font-size: 16px;
+        color: #58220a;
+        text-align: center;
+        line-height: 1.5; }
+        .result-dialog .container .content .tip i {
+          font-size: 24px;
+          color: #96010e;
+          font-weight: bold; }
+      .result-dialog .container .content .confirm-btn {
+        width: 143px;
+        height: 38px;
+        margin: 10px auto 0;
+        background: url("/dev/images/pages/pc/act/bobo/newyear/1-0-x/btn02.png");
+        cursor: pointer; }
+        .result-dialog .container .content .confirm-btn.check {
+          background: url("/dev/images/pages/pc/act/bobo/newyear/1-0-x/btn01.png"); }
+    .result-dialog .container .remove-btn {
+      width: 35px;
+      height: 32px;
+      position: absolute;
+      top: 128px;
+      right: 0;
+      cursor: pointer; }
+
+.preview-dialog {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url("/dev/images/common/dialog-cover.png");
+  z-index: 10;
+  z-index: 100; }
+  .preview-dialog .container {
+    width: 901px;
+    height: 577px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -450.5px;
+    margin-top: -288.5px;
+    background: url("/dev/images/pages/pc/act/bobo/newyear/1-0-x/preview-bg.png");
+    min-height: 0; }
+    .preview-dialog .container .remove-btn {
+      width: 64px;
+      height: 62px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer; }
+
+/*# sourceMappingURL=index.css.map */

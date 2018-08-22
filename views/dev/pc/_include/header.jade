@@ -1,0 +1,30 @@
+if userInfo
+    script.
+        var USER_INFO = !{JSON.stringify(userInfo)};
+
+.bolo-header
+    .container
+        .logo
+        .user-info
+            .avatar
+                if userInfo.userId
+                    img(src='#{userInfo.avatar}')
+            .operation-list
+                if userInfo.userId
+                    //.item.nickname(title='#{userInfo.nickName}') #{userInfo.nickName}
+                    if userInfo.userType == 1
+                        a.item.toconsole-btn(href='/video/console',target='_blank') 视频管理
+                    if userInfo.shareUserStatus == 1
+                        a.item(href='/video/shareinfo',target='_blank') 分享计划
+                    .item.logout-btn 退出
+                else
+                    .item.login-btn 登录
+                    .item.res-btn 注册
+        if userInfo.userType != 1 && !originalUrl.match(/join$/)
+            a.join-btn(href='/join',target='_blank') 我要入驻
+        if !originalUrl.match(/download$/)
+            a.download-btn(href='/download',target='_blank') 我要下载
+        .bolo-icon
+script.
+    require('/common/uiComponent/pc/header@1-0-x');
+

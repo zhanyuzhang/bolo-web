@@ -1,0 +1,34 @@
+script(type='text/template', data-key='video-list')
+    <% data.forEach(function(d,i){ %>
+    li.item
+        .cover(data-info!='<%=(JSON.stringify(d))%>')
+            img(src!='<%=d.cover%>',onerror='this.remove();')
+        .video-info
+            .name <%-d.title%>
+            .type 【<%-(d.sname || '')%>第<%-d.setNum%>集】
+            .time 上传：<%=(formatDate(d.uploadTime))%>&emsp;&emsp;编辑：<%=(formatDate(d.modifyTime))%>&emsp;&emsp;播放次数：<% if(d.playCount > 0){ %><%=d.playCount%><% }else{ %>统计中<% } %>
+        .options.pull-right(class!='<% if(d.transcodingStatus == 1){ %>loading<% }else if(d.transcodingStatus == 2){ %>fail<% }else if(d.status == 0){ %>on-sale<% }else if(d.status == 1 && d.opIdStr == user.userIdStr){ %>validating<% }else if(d.status == 1){ %>deleted<% }else if(d.status == 2){ %>deleted<% } %>')
+            .edit-btn(data-info!='<%=(JSON.stringify(d))%>') 编辑
+            .reason-btn 查看原因
+            .delete-btn(data-id!='<%=d.id%>') 删除
+        if userInfo.shareUserStatus == 1
+            <% if(d.status == 0){ %>
+            .share-box(data-cover!='<%=d.cover%>',data-title!='<%=d.title%>')
+                .share-icon
+                .text 分享
+                .platform-box
+                    .title 分享到微博，QQ，微信等平台
+                    .platform-list
+                        .p-item.weibo
+                        | &nbsp;
+                        .p-item.qzone
+                        | &nbsp;
+                        .p-item.qq
+                        | &nbsp;
+                        .p-item.baidu
+                    input.link(type='text',value!='http://<%-(location.host)%>/play?videoId=<%-d.id%>&sharedby=<%=user.userIdStr%>')
+                    .qr-box
+                        .content
+                        | 扫一扫
+            <% } %>
+    <% }); %>

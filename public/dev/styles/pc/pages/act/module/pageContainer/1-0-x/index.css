@@ -1,0 +1,31 @@
+.page_box {
+  height: 77px;
+  padding-bottom: 20px; }
+  .page_box .page_box_container {
+    float: right;
+    margin-right: 23px;
+    margin-top: 23.5px; }
+    .page_box .page_box_container a {
+      float: left;
+      color: #2e2e2e;
+      font-size: 18px;
+      line-height: 30px; }
+    .page_box .page_box_container a.page {
+      float: left;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      background-color: #efeff0;
+      font-size: 12px;
+      color: #2e2e2e;
+      border-radius: 100%;
+      font-weight: bold;
+      margin-right: 17px; }
+    .page_box .page_box_container a.cur {
+      background-color: #2e2e2e;
+      color: #efeff0; }
+    .page_box .page_box_container a.pre {
+      margin-right: 17px; }
+
+/*# sourceMappingURL=index.css.map */

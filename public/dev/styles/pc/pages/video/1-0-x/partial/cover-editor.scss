@@ -1,0 +1,53 @@
+.cover-editor{
+  @include absolute-box(100%,100%,0,0);background:#fff;
+  .content{
+    padding-left:25px;overflow: hidden;
+    .title{line-height:100px;font-size:16px;}
+    .main-body{
+      overflow: hidden;
+      label.methods{
+        display: block;line-height:18px;
+        input,i,.tip{display:inline-block;vertical-align: middle;}
+        .tip{color:$gray;}
+      }
+      .mode-one{
+        width:263px;
+        .img-selector{
+          height:148px;line-height:148px;margin-top:28px;position:relative;border-radius:3px;overflow: hidden;cursor:pointer;background:#999;
+          img{width:100%;height:100%;display: block;position:relative;z-index: 2}
+          input{width:100%;height:100%;display: block;position:absolute;top:0;left:0;opacity:0;z-index: 4;cursor:pointer;}
+          &:after{width:48px;height:5px;position:absolute;left:50%;margin-left:-24px;border-radius:10px;background:#dbdbdb;top:50%;margin-top:-3px;content:'';}
+          &:before{height:48px;width:5px;position:absolute;left:50%;margin-left:-3px;border-radius:10px;background:#dbdbdb;top:50%;margin-top:-24px;content:'';}
+          .cover{display: none;z-index:3;}
+          &:hover .cover{
+            @include absolute-box(100%,100%,0,0);content:'编辑封面';text-align: center;color:#fff;background:rgba(0,0,0,.5);font-size:14px;display: block;
+          }
+        }
+        .tips-box{
+          margin-top:15px;line-height:18px;
+          .item{
+            color:$gray;position:relative;padding-left:30px;
+            &:after{@include absolute-box(6px,6px,10px,50%);margin-top:-3px;background:#e9e9e9;border-radius:3px;content:'';}
+          }
+        }
+      }
+      .mode-two{
+        width:600px;margin-left:30px;position:relative;
+        .img-list{
+          margin: 28px 0 0 -18px;
+          .item{
+            width:290px;height:148px;line-height:148px;overflow: hidden;margin:0 0 18px 18px;float:left;display: inline;
+            img{width:263px;height:148px;float:right;}
+          }
+        }
+        .change-btn{@include absolute-box(auto,16px,auto,0,auto,0);padding-left:20px;background:url(image-path('icon02.png')) no-repeat left;color:$gray;cursor: pointer;}
+      }
+    }
+    .options{
+      width:820px;margin-top:50px;height:40px;line-height:40px;text-align:center;padding-bottom:28px;
+      .cancel-btn,
+      .confirm-btn{width:270px;display: inline-block;vertical-align: top;margin:0 35px;background:$main-color;border-radius:3px;font-size:16px;cursor:pointer;}
+      .cancel-btn{background:#dbdbdb;}
+    }
+  }
+}

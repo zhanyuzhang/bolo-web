@@ -1,0 +1,9 @@
+[{
+  "name": "bolo",
+  "script": "bin/www",
+  "log_date_format": "YYYY-MM-DD HH:mm Z",
+  "exec_mode": "cluster",
+  "instances": 4,
+  "error_file": "logs/bolo-error.log",
+  "out_file": "logs/bolo-out.log"
+}]

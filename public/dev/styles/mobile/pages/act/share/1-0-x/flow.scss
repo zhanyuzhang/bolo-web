@@ -1,0 +1,11 @@
+@import "../../../../common/base/1-0-x/base-var";
+@import "../../../../common/ui/1-0-x/index";
+
+.wrapper{
+  padding:.9rem .6rem;
+  .tip{color:$gray;line-height:1.5;font-size:.34rem;}
+  .main-body{
+    width:9.6rem;height:7.32rem;@include icon-bg('/dev/images/pages/mobile/act/share/1-0-x/flow.png');margin:.85rem auto 2rem;position:relative;
+    .join-btn{width:4.72rem;height:1.35rem;position: absolute;bottom:0;left:50%;margin-left:-2.36rem;display: block;}
+  }
+}

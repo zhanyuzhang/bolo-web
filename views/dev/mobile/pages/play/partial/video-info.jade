@@ -1,0 +1,17 @@
+.video-info-box
+    script.
+        var v = !{JSON.stringify(videoInfo)};
+    .video-title #{videoInfo.title}
+
+    .description #{videoInfo.intro}
+    if (videoInfo.tag)
+        .tags-box
+            ul.content
+                each value in videoInfo.tag.split(',')
+                    li.item ##{value}
+    .action
+        .hits
+            .icon
+            | #{videoInfo.playCount}次
+        .collect-btn 马克
+        .share-btn 安利

@@ -1,0 +1,58 @@
+if userInfo.userId
+    .user-editor
+        .container
+            .editor-header 编辑个人资料
+                .remove-btn
+            .content
+                .form-item
+                    .title 上传头像:
+                    .avatar
+                        img(src='#{jadeHelper.getImage(userInfo.avatar,[68,68])}')
+                        input(type='file')
+                    .tip 上传头像尺寸为正方形，100K内，jpg、gif、png格式的照片
+                .form-item
+                    .title 更改昵称:
+                    .input-wrap
+                        input(class='nickname',type='text',value='#{userInfo.nickName}')
+                        .letter-count #{userInfo.nickName.length}/10
+                .form-item
+                    .title 性&emsp;&emsp;别:
+                    if userInfo.sex == 1
+                        label
+                            input(type='radio',name='sex',value='1',checked='checked')
+                            | &nbsp;男
+                        | &emsp;&emsp;
+                        label
+                            input(type='radio',name='sex',value='0')
+                            | &nbsp;女
+                    else
+                        label
+                            input(type='radio',name='sex',value='1')
+                            | &nbsp;男
+                        | &emsp;&emsp;
+                        label
+                            input(type='radio',name='sex',value='0',checked='checked')
+                            | &nbsp;女
+                .form-item.region
+                    .title 所&nbsp;&nbsp;在&nbsp;&nbsp;地:
+                    select.province
+                    | &emsp;
+                    select.city
+                    script(type='text/template', data-key='china-province')
+                        <% data.forEach(function(d){ %>
+                        <% if(d.pid == #{userInfo.province || 1}){ %>
+                        option(data-city!='<%-(encodeURIComponent(JSON.stringify(d.cities)))%>',data-id!='<%-d.pid%>',selected) <%-d.province%>
+                        <% }else{ %>
+                        option(data-city!='<%-(encodeURIComponent(JSON.stringify(d.cities)))%>',data-id!='<%-d.pid%>') <%-d.province%>
+                        <% } %>
+                        <% }); %>
+                    script(type='text/template', data-key='china-city')
+                        <% data.forEach(function(d){ %>
+                        option(data-id!='<%-d.cid%>') <%-d.city%>
+                        <% }); %>
+
+                .form-item
+                    .title 简&emsp;&emsp;介:
+                    textarea !{userInfo.intro}
+                    .textarea-count #{userInfo.intro.length}/20
+                .save-btn 保存

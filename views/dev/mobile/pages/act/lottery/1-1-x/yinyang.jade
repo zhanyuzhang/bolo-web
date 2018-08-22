@@ -1,0 +1,187 @@
+//
+   Created by Dillance on 16/12/07.
+
+
+extends ./../../../../../layout
+block head
+    include ../../../../_include/seo
+    title 网易菠萝年末周边大放送
+    meta(content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no',name='viewport')
+    include ../../../../_include/base-m-dependencies
+    link(rel='stylesheet', href='/dev/styles/mobile/pages/act/lottery/1-1-x/yinyang.css')
+    script.
+        function remResize(screenWidth,rotation){
+            document.documentElement.style.fontSize = ((screenWidth / (rotation ? 1334 : 750)) * 100) + 'px';
+        }
+        window.onresize = function(){
+            if(document.documentElement.clientWidth > document.documentElement.clientHeight){
+                remResize(document.documentElement.clientWidth,'horizontal');
+            }else{
+                remResize(document.documentElement.clientWidth);
+            }
+        };
+        remResize(document.documentElement.clientWidth);
+block content
+    .wrapper
+        .firework
+        .figure
+            - var leftRandom = Math.floor(Math.random() * 2);
+            if leftRandom == 0
+                img(src='/dev/images/pages/mobile/act/lottery/1-1-x/figure/01.png',data-url='//bolo.163.com/m/channel?userId=8994275338500457907',data-stat='award_main_IP')
+            else
+                img(src='/dev/images/pages/mobile/act/lottery/1-1-x/figure/02.png',data-url='//bolo.163.com/m/channel?userId=-3664622527285983253',data-stat='award_main_IP')
+            - var rightRandom = Math.floor(Math.random() * 2);
+            if rightRandom == 0
+                img(src='/dev/images/pages/mobile/act/lottery/1-1-x/figure/03.png',data-url='//bolo.163.com/m/channel?userId=-4668098751522678063',data-stat='award_main_IP')
+            else
+                img(src='/dev/images/pages/mobile/act/lottery/1-1-x/figure/04.png',data-url='//bolo.163.com/m/channel?userId=-182841557846182616',data-stat='award_main_IP')
+        .start-nr-btn
+            .times 3抽&nbsp;
+                i.num 3
+                | /3
+        .start-ssr-btn.disable
+            .times 3抽&nbsp;
+                i.num 3
+                | /3
+        .prize-list-btn
+        .rules-btn
+        .video-btn(data-url='//bolo.163.com/m/play?videoId=14679744550121',data-stat='award_main_vedio')
+        .soup-btn(data-url='//bolo.163.com/m/act/chicken',data-stat='award_main_chicken')
+        .more-btn(data-url='http://a.app.qq.com/o/simple.jsp?pkgname=com.netease.bolo.android',data-stat='award_main_more')
+        .lottery-animation
+            .amulet
+            .explode
+        .result-box
+            .container
+                .prize-wrap
+                script(type='text/template', data-key='result')
+                    .prize-level(class!='<%-data.awardRank%>')
+                    .prize-name <%-data.awardName%>
+                    .prize-img
+                        <% if(data.awardPic){ %>
+                        img(src!='<%-data.awardPic%>')
+                        <% }else{ %>
+                        .text 哇靠!什么狗屎运!你竟然中奖了耶!!
+                        <% } %>
+                .prize-mc
+                    - var random = Math.floor(Math.random() * 2);
+                    if(random == 0)
+                        - var leftRandom = Math.floor(Math.random() * 2);
+                        if leftRandom == 0
+                            img(src='/dev/images/pages/mobile/act/lottery/1-1-x/figure/01.png',style='-webkit-transform:scaleX(-1)')
+                        else
+                            img(src='/dev/images/pages/mobile/act/lottery/1-1-x/figure/02.png',style='-webkit-transform:scaleX(-1)')
+                    else
+                        - var rightRandom = Math.floor(Math.random() * 2);
+                        if rightRandom == 0
+                            img(src='/dev/images/pages/mobile/act/lottery/1-1-x/figure/03.png')
+                        else
+                            img(src='/dev/images/pages/mobile/act/lottery/1-1-x/figure/04.png')
+                .confirm-btn
+                .remove-btn
+                .share-btn
+        .unlucky-box
+            .container
+                .advice
+                .prize-mc
+                    - var random = Math.floor(Math.random() * 2);
+                    if(random == 0)
+                        - var leftRandom = Math.floor(Math.random() * 2);
+                        if leftRandom == 0
+                            img(src='/dev/images/pages/mobile/act/lottery/1-1-x/figure/01.png',style='-webkit-transform:scaleX(-1)')
+                        else
+                            img(src='/dev/images/pages/mobile/act/lottery/1-1-x/figure/02.png',style='-webkit-transform:scaleX(-1)')
+                    else
+                        - var rightRandom = Math.floor(Math.random() * 2);
+                        if rightRandom == 0
+                            img(src='/dev/images/pages/mobile/act/lottery/1-1-x/figure/03.png')
+                        else
+                            img(src='/dev/images/pages/mobile/act/lottery/1-1-x/figure/04.png')
+                .confirm-btn
+                .remove-btn
+        .phone-dialog.hide
+            .container
+                .content
+                    .title 手机
+                    input(type='tel',maxlength='11')
+                .submit-btn
+            .remove-btn
+        .exchange-dialog.hide
+            .container
+                .content
+                    .intro 送你一张价值
+                        i.num 5
+                        | 元的网易菠萝毒剧观影券，教你解决成年人下半sheng的难题！
+                    .cdkey 长按复制兑换码：
+                        i bolo2017
+                    .download-btn
+                    .tip 进入:“APP首页-我-兑换码”即可兑换
+            .remove-btn
+        .open-bolo-dialog.hide
+            .container
+                .content 打开网易菠萝,召唤终极大奖
+                .open-btn
+            .remove-btn
+        .limit-tip-dialog.hide
+            .container
+                .content 咦，今天的抽奖机会用光了诶
+                .come-tomorrow-btn
+            .remove-btn
+        .rules-dialog.hide
+            .container
+                .title 活动规则
+                .content
+                    p ◆参与方式：普通稀有度，每人每天限参与抽3次；超高稀有度，每人每天限在【网易菠萝】内抽3次
+                    p ◆活动时间：2016年12月26 日20:00~12月31日 24:00
+                    p ◆发奖方式：所有实物奖品中奖后，请点击【确认】，填写手机号码
+                    p ◆活动声明：凡参加本次活动者，即视为同意接受本活动的相关规则，不应使用任何舞弊手段以谋求中奖；如有违反，即自动丧失参加资格；如使用任何舞弊手段而得奖，则取消其得奖资格
+            .remove-btn
+        .prize-list-dialog.hide
+            .container
+                .title 活动奖品
+                .content
+                    .prize-list
+                        script(type='text/template', data-key='prize-list')
+                            <% for(var k in data){ %>
+                            .item
+                                .level <%-k%>
+                                <% if(['SSR','SR'].indexOf(k) > -1){ %>
+                                .ssr-list
+                                    <% data[k].forEach(function(d,i){ %>
+                                    .ssr-item
+                                        img(src!='<%-d.awardPic%>')
+                                        .name <%-d.awardName%>
+                                    | <%=('&nbsp;')%>
+                                    <% }); %>
+                                    <% if(3 - data[k].length % 3 < 3){ %>
+                                    <% for(var i = 0;i < (3 - data[k].length % 3);i++){ %>
+                                    .ssr-item
+                                    <% }} %>
+                                <% }else{ %>
+                                .other-list
+                                    <% data[k].forEach(function(d){ %>
+                                    p <%-d.awardName%>
+                                    <% }); %>
+                                <% } %>
+                            <% } %>
+            .remove-btn
+        .music-btn
+            audio.bgm(src='http://file.ws.126.net/liveshow/bobo/yinyang-bgm.mp3',autoplay,loop)
+            audio.lottery-sound(src='http://file.ws.126.net/liveshow/bobo/yinyang-lottery+lucky.mp3',preload)
+            //audio.goodluck(src='http://file.ws.126.net/liveshow/bobo/goodluck.mp3',preload)
+        .loading-mask(class='#{query.from == "netease" && "netease"}')
+            .container
+                .bolo
+                .tip 等一下啦，别急别急&nbsp;
+                    i.progress
+
+
+    canvas.drawing-board
+    .share-guide
+        .bolo
+
+
+
+    script.
+        require('/pages/mobile/act/lottery/1-1-x/yinyang');
+    include ../../../../_include/cnzz-stat

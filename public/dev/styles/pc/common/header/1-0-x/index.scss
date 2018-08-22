@@ -1,0 +1,32 @@
+$bolo-header-logo: '/dev/images/common/bolo-logo-header.jpg';
+$bolo-icon: '/dev/images/common/icon01.jpg';
+$bolo-default-avatar: '/dev/images/common/bolo-default-avatar.png';
+.bolo-header{
+  height:60px;border-top:3px solid #2ac481;border-bottom:1px solid #dfdfdf;background:$main-color;
+  .container{
+    width:1000px;margin:0 auto;height:100%;
+    .logo{width:150px;height:100%;background:url($bolo-header-logo) no-repeat center;float:left;}
+
+    .user-info{
+      width:76px;height:100%;line-height:60px;float: right;position: relative;font-size:0;margin-left:10px;
+      .avatar{width:48px;height:48px;overflow: hidden;display: inline-block;vertical-align: middle;border-radius:100%;background:url($bolo-default-avatar) #ddd no-repeat center;@include filled-img;}
+      &:after{@include border-triangle(6px 6px 0,top,#ffd17a);display: inline-block;vertical-align: middle;content:'';margin-left:10px;}
+      &:hover .operation-list{display:block;}
+      .operation-list{
+        width:150px;position: absolute;top:60px;right:0;border-top:1px solid transparent;display: none;
+        .item{
+          padding:0 6px;height:40px;line-height:40px;text-align: center;font-size:14px;cursor:pointer;display: block;overflow:hidden;text-overflow:ellipsis;white-space: nowrap;background:#f6f6f6;
+          &.current{background:#ffd17a;}
+          &:hover{background:#ffd17a;}
+          &.nickname{ cursor: default;}
+          &.nickname:hover{background:#f6f6f6;}
+        }
+      }
+    }
+
+    .join-btn{width:108px;height:36px;line-height:36px;border:1px solid $default-font-color;border-radius: 2px;float:right;margin-left:10px;text-align: center;font-size:18px;margin-top:10px;}
+    .join-btn{opacity:.6;}
+    .download-btn{width:120px;height:100%;background:url(/dev/images/common/download-btn.gif) no-repeat center;float:right;margin-left:10px;font-size:0;}
+    .bolo-icon{width:50px;height:40px;float:right;display:inline;margin-top:10px;background:url($bolo-icon) no-repeat;}
+  }
+}

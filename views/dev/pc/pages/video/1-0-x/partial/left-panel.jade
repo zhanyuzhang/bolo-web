@@ -1,0 +1,61 @@
+.im-dajiangyou
+.avatar-wrap
+    .avatar(class='#{userInfo && userInfo.userId && "pointer"}')
+        if(userInfo && userInfo.userId)
+            img(src='#{jadeHelper.getImage(userInfo.avatar,[68,68])}')
+        else
+            img(src='http://imgsize.ph.126.net/?imgurl=http://img2.cache.netease.com/bobo/image/avatar150.png_68x68x1x85.png')
+    if(userInfo && userInfo.userId)
+        .edit-icon
+.name
+    if(userInfo && userInfo.userId)
+        | !{userInfo.nickName}
+    else
+        a.login-btn(href='javascript:;') 登录
+if userInfo && userInfo.userId
+    .brief-info
+        .followed-count #{userInfo.followedCount} 人
+        | &emsp;&emsp;
+        .played-count #{userInfo.totalPlayCount} 次
+if userInfo.shareUserStatus == 1
+    .share-box
+        .share-icon
+        .text 分享我的主页
+        .platform-box
+            .title 分享到微博，QQ，微信等平台
+            .platform-list
+                .p-item.weibo
+                | &nbsp;
+                .p-item.qzone
+                | &nbsp;
+                .p-item.qq
+                | &nbsp;
+                .p-item.baidu
+            input.link(type='text',value!='http://#{host}/m/channel?userId=#{userInfo.userIdStr}&sharedby=#{userInfo.userIdStr}')
+            .qr-box
+                .content
+                | 扫一扫
+.nav-list
+    if page == 'index'
+        a.item.current(href='javascript:;') 上传视频
+        a.item.to-console-btn(href='/video/console') 视频管理
+        if userInfo.shareUserStatus == 1
+            a.item(href='/video/shareinfo') 分享计划
+    else if page == 'shareinfo'
+        a.item(href='/video/upload') 上传视频
+        a.item.to-console-btn(href='/video/console') 视频管理
+        if userInfo.shareUserStatus == 1
+            a.item.current(href='javascript:;') 分享计划
+    else
+        a.item(href='/video/upload') 上传视频
+        a.item.current(href='javascript:;') 视频管理
+        if userInfo.shareUserStatus == 1
+            a.item(href='/video/shareinfo') 分享计划
+if userInfo && userInfo.userId
+    .exit-btn 退出
+.tip 如有疑问，请发邮件到 gzxuxiaochun@corp.netease.com
+    br
+    | 或者 qq 3530721286 联系我们
+
+script.
+    require('/pages/pc/video/1-0-x/leftPanel');

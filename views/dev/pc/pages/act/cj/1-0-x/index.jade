@@ -1,0 +1,808 @@
+extends ./../../../../../layout
+block head
+    meta(name='keywords', content='网易Bobo 美女主播 视频聊天 美女视频 视频直播 美女秀场 视频聊天室 在线K歌 视频交友')
+    meta(charset="utf-8")
+    meta(name='description', content='BoBo是网易旗下大型在线娱乐社区 互联网明星直播平台 在线视频聊天 在线K歌跳舞 视频交友 赶快加入')
+    title 2016ChinaJoy开车指南-网易菠萝出品
+    include ../../../../_include/base-dependencies
+    link(rel='stylesheet', href='/dev/styles/pc/pages/act/cj/1-0-0/index.css')
+    script.
+        var VIDEO_INFO = !{JSON.stringify(roomInfo)};
+        var ART_COUNT = #{artInfo.count || 0};
+        var VCI = !{JSON.stringify(videoCmsInfo)};
+block content
+    div.cj_content_bg
+      div.cj_conent_bg_container
+       div.bg1
+       div.bg2
+       div.bg3
+       div.bgbg4
+       div.bgr3
+       div.bgl6
+    div.cj_banner
+     div.video_box
+      div.p_border
+       div.p_border_right
+       div.p_border_top
+       div.p_border_right_top
+       div.p_border_content
+        div.video_box_content
+         div.video_box_content_left
+         div.video_box_content_right
+          div.video_box_content_right_top.scroll-bar-section#section
+           .scroll-bar-article#article
+            - for(var index in videoCmsInfo)
+             div.video_box_content_right_top_item
+              img(src="http://imgsize.ph.126.net/?imgurl=#{videoCmsInfo[index].pic}_168x114x1x85.jpg")
+              div.ret
+              div.bar
+              a.info(href="javascript:void(0)",title="http://flv.bn.netease.com/#{videoCmsInfo[index].summary}") #{videoCmsInfo[index].title}
+           .scroll-bar-scrollBar#scrollBar
+            .scroll-bar-tip#tip
+      .btn_live
+      .cj_hand
+       .c
+        .top
+        .center
+        a.btn.sbtn(href="javascript:void(0)",data-key="act_web").js-tj
+        a.control(href="javascript:void(0)")
+      .cj_hand_min
+       .c
+        a.btn.sbtn(href="javascript:void(0)")
+        a.control(href="javascript:void(0)")
+      .cj_nav
+       .c
+        a.item(href="javascript:void(0)")
+         i.title1
+        a.item(href="javascript:void(0)")
+         i.title2
+        a.item(href="javascript:void(0)")
+         i.title3
+        a.item(href="javascript:void(0)")
+         i.title4
+        a.item(href="javascript:void(0)")
+         i.title5
+        a.control.controlzk(href="javascript:void(0)")
+        a.code
+        a.top(href="#")
+    div.cj_content
+     div.cj_content_tabs
+      a.live(href="javascript:void(0)",data-key="spot_web").live_cur.js-tj
+      a.introduce(href="javascript:void(0)",data-key="exh_web").js-tj
+      div.bgl1
+     div.cj_content_live.cj_content_item.cj_content_item_cur
+      div.article_box.scrollItem
+       div.p_border
+        div.p_border_right
+        div.p_border_top
+        div.p_border_right_top
+        div.p_border_content
+         .title
+         .article_list
+          - for(var index in artInfo.data)
+           .article_item
+            .article_item_left
+             a.jsImgBig(href="javascript:void(0)")
+              img(src='#{artInfo.data[index]["image"]}')
+            .article_item_right
+             .article_item_right_top
+              img.face(src='#{artInfo.data[index]["avatar"]}')
+              .article_item_right_top_right
+               h1.bigNick #{artInfo.data[index]["nick"]}
+               p.smallNick #{artInfo.data[index]["intro"]}
+             .article_item_right_center
+              p.xcbd !{artInfo.data[index]["content"]}
+             .article_item_right_bottom
+              span.time #{new Date(artInfo.data[index]["createTime"]).toLocaleString()}
+              a.share(href="javascript:void(0)",data-key="share1_web").js-tj
+         include ./module/pageBox
+         input#imgUrl(type="hidden")
+     div.cj_content_int.cj_content_item
+      div.cj_zqdh.scrollItem
+       div.p_border
+        div.p_border_right
+        div.p_border_top
+        div.p_border_right_top
+        div.p_border_content
+         h1.title
+         div.zqdh_t
+          .zqdh_t_l
+          .zqdh_t_r
+           .zqdh_t_r_t
+           .zqdh_t_r_b 作为今年的参展商之一，菠萝老司机带大家提前探路2016CJ展馆ヽ(•̀ω•́ )ゝ地图。图中N2-N5，E5-E7为聚焦最多游客的BTOC展馆，今年有近300家厂商参展，其余展馆则为BTOB或硬件厂商展馆。戳开可查看2016的部分展区厂商分布图噢
+         div.zqdh_b
+          div.mapC
+           div.mapCC
+            div.n2.nbg
+            div.n3.nbg
+            div.n4.nbg
+            div.n5.nbg
+      div.cj_zqdh.cj_chwl.scrollItem
+       div.p_border
+        div.p_border_right
+        div.p_border_top
+        div.p_border_right_top
+        div.p_border_content
+         h1.title.title2
+         div.zqdh_t
+          .zqdh_t_l.zqdh_t_l2
+          .zqdh_t_r
+           .zqdh_t_r_t.zqdh_t_r_t2
+           .zqdh_t_r_b.zqdh_t_r_b2 想要当跑会小能手，首先要对ChinaJoy周边的吃住行了然于心\(￣ˇ￣)>。要知道每年在ChinaJoy领饭盒、订宾馆、找车位什么的都是一场硬战，所以贴心老司机给你准备了一份新手攻略，附赠超有趣下饭视频！
+         div.chwl_c
+          .chwl_l.chwl_l_chi
+           a.chwl_tab.tab1(href="javascript:void(0);")
+           a.chwl_tab.tab2(href="javascript:void(0);")
+           a.chwl_tab.tab3(href="javascript:void(0);")
+          .chwl_r
+           .chwl_r_i.cur
+            .chwl_r_l
+             h1.rtitle.title_chi
+             h1.stitle 1、吃土吃到饱
+             p.info 没有包餐的展览不是好展览，即使你不是CJ工作人员，也可以在指定展区领取免费盒饭+饮料哟~（领完即止，看手速的时刻到了）
+             h1.stitle 2、小康阶级
+             p.info 假如你不愿饿着肚子拍长龙，不如自带便当or面包，啃完接着赶路；也可以添多一些预算，挑选展区内的餐厅，更加健康可口哟。 
+             h1.stitle 3、土豪权贵们
+             p.info 冲出摩肩接踵的展馆，又是一条好汉，展馆外有各式美味，任君挑选；唯一的问题是——出馆再进馆要重新买票！多花70块钱买清净！值不值就看各人消费能力啦~
+             p.info(style="margin-top:14px;") 下附展馆内餐厅（仅供参考）：<br/>西餐厅(展馆南入口大厅1楼) 永和大王(龙阳路2000号)<br/>自选餐厅(展馆南入口大厅2楼) 肯德基(龙阳路2000号、银霄路393号)<br/>福记餐厅(W2馆，W3馆夹层) 麦当劳(龙阳路2345号)<br/>麦当劳(W5馆夹层;E1馆B4室) 85度C(龙阳路2100号)<br/>棒约翰(E4馆B1室) 鹭发美食(龙阳路2233号)<br/>MILANO咖啡(E5馆R1室) 真锅咖啡馆(龙阳路2277号)<br/>食客(E5馆B2室) 天天渔港(龙阳路2277号)<br/>98餐厅(E3馆，E4馆夹层) 味千拉面(银霄路393号)<br/>Lacite咖啡(E6馆R1室)、大拇指广场(芳甸路199弄)。
+            .chwl_r_r
+             .scroll-bar-section#section1
+              .scroll-bar-article#article1
+               .chwl_r_r_i
+                .chwl_r_r_i_video
+                 img(style="width:100%;height:100%",src="http://imgsize.ph.126.net/?imgurl=http://img5.cache.netease.com/bobo/2016/7/28/20160728211217395c2.jpg_244x156x1x85.jpg")
+                span.chwl_r_r_i_title(style="width:420px;display:block;") 高校食堂揭秘，吃到第几个菜你哭了？
+                a.bar(target="_blank",href="http://bolo.bobo.com/play?videoId=14627905280131",data-key="eat1_web").js-tj
+               .chwl_r_r_i
+                .chwl_r_r_i_video
+                 img(style="width:100%;height:100%",src="http://imgsize.ph.126.net/?imgurl=http://img6.cache.netease.com/bobo/2016/7/28/20160728211244abc5d.jpg_244x156x1x85.jpg")
+                span.chwl_r_r_i_title 美女勇尝黑暗北京小吃
+                a.bar(target="_blank",href="http://bolo.bobo.com/play?videoId=14624312444581",data-key="eat2_web").js-tj
+              .scroll-bar-scrollBar#scrollBar1
+               .scroll-bar-tip#tip1
+           .chwl_r_i
+            .chwl_r_l
+             h1.rtitle.title_zhu
+             h1.stitle 1、屌丝型住宿推荐
+             p.info 兜里揣着两张毛爷爷，风风火火来CJ，照样能活的像个好汉。菠萝菌特选了几家便宜实惠的住处，大家随意哈。<br>▶花木路站3号口&gt;&gt;博相X宾馆，距会场0.7KM，100+/晚<br>▶高科西路&gt;&gt;如X酒店，距会场2.1KM，100+/晚<br>
+             h1.stitle 2、小资型住宿推荐
+             p.info 有点小钱，想住更安全更卫生的酒店的话，还是选择熟悉的快捷酒店品牌吧！CJ期间这些品牌均会一房难求，且均有小幅度涨价，还没订房的抓紧啦！<br>▶芳甸路&gt;&gt;宜X思酒店，距会场1.6km。300+/晚<br>▶锦江之星上海磁悬浮总站店，距会场1.3km。300+/晚<br>▶陆家嘴东方路&gt;&gt;汉X连锁酒店，距会场2.3km.300+/晚
+             h1.stitle 3、闪瞎狗眼型住宿推荐：
+             p.info 作为国际大都市的上海，自然是少不了各种豪华酒店的，在这里你可以享受到与价格相称的高品质服务，和周边超棒的景色，在夜晚也能俯瞰CJ展馆。<br>▶花木路站5号口&gt;&gt;浦东JL大酒店，距会场0.1km，1000+/晚<br>▶世纪公园站4号口>>上海DS酒店，距会场1.7km，800+/晚
+            .chwl_r_r
+             .scroll-bar-section
+              .scroll-bar-article
+               .chwl_r_r_i
+                .chwl_r_r_i_video
+                 img(style="width:100%;height:100%",src="http://imgsize.ph.126.net/?imgurl=http://img1.cache.netease.com/bobo/2016/7/28/20160728211318550f8.jpg_244x156x1x85.jpg")
+                span.chwl_r_r_i_title 床上运动延时实用指南
+                a.bar(target="_blank",href="http://bolo.bobo.com/play?videoId=14672037825361",data-key="live1_web").js-tj
+               .chwl_r_r_i
+                .chwl_r_r_i_video
+                 img(style="width:100%;height:100%",src="http://imgsize.ph.126.net/?imgurl=http://img3.cache.netease.com/bobo/2016/7/28/2016072821134522797.jpg_244x156x1x85.jpg")
+                span.chwl_r_r_i_title 千年皇宫酒店的诡异案件
+                a.bar(target="_blank",href="http://bolo.bobo.com/m/play?videoId=14627905329991",data-key="live2_web").js-tj
+           .chwl_r_i
+            .scroll-bar-section(style="height:480px;")#section3
+             .scroll-bar-article#article3
+              .chwl_r_l
+               h1.rtitle.title_xin
+               h1.stitle 1、机场/火车站出发
+               h1.stitle 浦东国际机场/虹桥机场—上海新国际博览中心
+               p.info 出租车：约35分钟；车费约95元；<br>磁浮列车：仅8分钟；单程50元（如出示机票，单程40元）；往返80元；<br>机场三线、机场六线：约40分钟；车费16元；<br>地铁：乘2号线至龙阳路站下，步行或换乘7号线至上海新国际博览中心
+               h1.stitle 上海火车站—上海新国际博览中心
+               p.info 出租车：相距16公里；车费约45元；<br>地铁：可乘1号线到人民广场站，换乘2号线至龙阳路站下，步行或换乘7号线至上海新国际博览中心
+               h1.stitle 上海南站—上海新国际博览中心
+               p.info 出租车：相距20公里；车费约55元；<br>地铁：可乘1号线到人民广场站，换乘2号线至龙阳路站下，步行或换乘7号线至上海新国际博览中心
+               h1.stitle 上海虹桥火车站—上海新国际博览中心
+               p.info 出租车：相距35公里；车费约100元；<br>地铁：乘2号线至龙阳路站下，步行或换乘7号线至上海新国际博览中心
+               h1.stitle 2、自 驾
+               p.info 上海新国际博览中心位于龙阳路、罗山路交汇处，易于通行。从市中心横跨南浦大桥、杨浦大桥可直达。<br>停车位：上海新国际博览中心共有4603个车位供客人泊车。
+               h1.stitle 3、地铁、公交
+               p.info 1号线常熟路站，2号线静安寺站，3号线镇平路站，4号线镇平路站或东安路站，可换乘7号线直达上海新国际博览中心。3、4号线中山公园站，1、8号线人民广场站，4、6、9号线世纪大道站皆可换乘2号线，至龙阳路站下，再步行或换乘7号线至上海新国际博览中心。<br>多条公交线路途经上海新国际博览中心，附近设有站点：989区间、大桥五线, 大桥六线区间、方川专线、东川专线、花木1路、机场三线、机场六线、975、976等。
+              .chwl_r_r
+               .chwl_r_r_i
+                .chwl_r_r_i_video
+                 img(style="width:100%;height:100%",src="http://imgsize.ph.126.net/?imgurl=http://img2.cache.netease.com/bobo/2016/7/21/20160721173954903c0.jpg_244x156x1x85.jpg")
+                span.chwl_r_r_i_title 平胸的人挤公交是一种什么样的体验？
+                a.bar(target="_blank",href="http://bolo.bobo.com/m/play?videoId=14642625044581",data-key="trans1_web").js-tj
+               .chwl_r_r_i
+                .chwl_r_r_i_video
+                 img(style="width:100%;height:100%",src="http://imgsize.ph.126.net/?imgurl=http://img3.cache.netease.com/bobo/2016/7/28/20160728211419020a9.png_244x156x1x85.jpg")
+                span.chwl_r_r_i_title 来自星星的富二代在地球开车违章
+                a.bar(target="_blank",href="http://bolo.bobo.com/play?videoId=14659579893881",data-key="trans2_web").js-tj
+             .scroll-bar-scrollBar#scrollBar3(style="right:49px;height:88%;top:39px;")
+              .scroll-bar-tip#tip3
+          .chwl_b
+          .chwl_t
+      div.cj_zqdh.cj_zbpd.scrollItem
+       div.p_border
+        div.p_border_right
+        div.p_border_top
+        div.p_border_right_top
+        div.p_border_content
+         h1.title.title3
+         div.zqdh_t
+          .zqdh_t_l.zqdh_t_l3
+          .zqdh_t_r
+           .zqdh_t_r_t.zqdh_t_r_t3
+           .zqdh_t_r_b.zqdh_t_r_b3 每年CJ，土豪参展商都会在现场派发特别定制的免费周边，手慢的根本抢不到好嘛 (╯°Д°)╯︵ ┻━┻！老司机整理了后备箱的周边存货供大家鉴赏，内含刷周边小TIPS，千万憋错过噢
+         div.zbpd_c
+          div.zbpd_i_c
+           div.zbpd_i
+            img(src='http://imgsize.ph.126.net/?imgurl=http://img4.cache.netease.com/bobo/2016/7/18/201607181715060481c.png_245x158x1x85.jpg')
+            div.bar
+            div.icon
+           span.mtitle 【收纳型周边】
+          div.zbpd_i_c.zbpd_i_c_center
+           div.zbpd_i
+            img(src='http://imgsize.ph.126.net/?imgurl=http://img3.cache.netease.com/bobo/2016/7/18/201607181714102e0f2.jpg_245x158x1x85.jpg')
+            div.bar
+            div.icon
+           span.mtitle 【萌物系周边】
+          div.zbpd_i_c
+           div.zbpd_i
+            img(src='http://imgsize.ph.126.net/?imgurl=http://img3.cache.netease.com/bobo/2016/7/18/201607181714361df7e.jpg_245x158x1x85.jpg')
+            div.bar
+            div.icon
+           span.mtitle 【宅男福利周边】
+          div.zbpd_i_c
+           div.zbpd_i
+            img(src='http://imgsize.ph.126.net/?imgurl=http://img2.cache.netease.com/bobo/2016/7/18/20160718171231fb745.jpg_245x158x1x85.jpg')
+            div.bar
+            div.icon
+           span.mtitle 【暴雪系周边】
+          div.zbpd_i_c.zbpd_i_c_center
+           div.zbpd_i
+            img(src='http://imgsize.ph.126.net/?imgurl=http://img5.cache.netease.com/bobo/2016/7/26/201607262028117f83c.jpg_245x158x1x85.jpg')
+            div.bar
+            div.icon
+           span.mtitle 【菠萝周边】
+          div.zbpd_i_c
+           div.zbpd_i
+            img(src='http://imgsize.ph.126.net/?imgurl=http://img5.cache.netease.com/bobo/2016/7/18/2016071817114879856.png_245x158x1x85.jpg')
+            div.bar
+            div.icon
+           span.mtitle 【网易系周边】
+      div.cj_zqdh.cj_nstj.scrollItem
+       div.p_border
+        div.p_border_right
+        div.p_border_top
+        div.p_border_right_top
+        div.p_border_content
+         h1.title.title4
+         div.zqdh_t
+          .zqdh_t_l.zqdh_t_l4
+          .zqdh_t_r
+           .zqdh_t_r_t.zqdh_t_r_t4
+           .zqdh_t_r_b.zqdh_t_r_b3 ChinaJoy除了有好玩的游戏，还有好看的男神女神。不过今年Showgirl的着装规定史无前例地严格，别说观球了，连肚脐和臀线都不能露，只能看大长腿啦。今年老司机勾搭了不少高颜值coser和showgirl，带你先睹为快≖‿≖✧
+         div.nstj_c
+          div.nstj_c_container
+           div.nstj_i
+            div.nstj_i_c.nstj_big
+             img(title="yuuto",src='http://imgsize.ph.126.net/?imgurl=http://img2.cache.netease.com/bobo/2016/7/20/201607201640455846a.png_460x462x1x85.jpg')
+             div.bar_c
+              div.bar_c_c
+               div.bar
+               div.icon
+            div.nstj_i_c
+             img(title="网易游戏SG",src='http://imgsize.ph.126.net/?imgurl=http://img4.cache.netease.com/bobo/2016/7/18/2016071817175103afd.jpg_230x230x1x85.jpg')
+             div.bar_c
+              div.bar_c_c
+               div.bar
+               div.icon
+            div.nstj_i_c
+             img(title="网易游戏SG",src='http://imgsize.ph.126.net/?imgurl=http://img3.cache.netease.com/bobo/2016/7/18/2016071817172416aa0.jpg_230x230x1x85.jpg')
+             div.bar_c
+              div.bar_c_c
+               div.bar
+               div.icon
+            div.nstj_i_c
+             img(title="黄靖翔",src='http://imgsize.ph.126.net/?imgurl=http://img1.cache.netease.com/bobo/2016/7/18/20160718171814b2224.jpg_230x230x1x85.jpg')
+             div.bar_c
+              div.bar_c_c
+               div.bar
+               div.icon
+            div.nstj_i_c
+             img(title="瓶子",src='http://imgsize.ph.126.net/?imgurl=http://img1.cache.netease.com/bobo/2016/7/20/2016072016442414277.png_230x230x1x85.jpg')
+             div.bar_c
+              div.bar_c_c
+               div.bar
+               div.icon
+           div.nstj_i
+            div.nstj_i_c.nstj_big.nstj_i_c_cur
+             img(title="祺祺",src='http://imgsize.ph.126.net/?imgurl=http://img1.cache.netease.com/bobo/2016/7/20/2016072016413877ce3.png_460x462x1x85.jpg')
+             div.bar_c
+              div.bar_c_c
+               div.bar
+               div.icon
+            div.nstj_i_c.nstj_i_c_cur
+             img(title="小孽",src='http://imgsize.ph.126.net/?imgurl=http://img5.cache.netease.com/bobo/2016/7/20/2016072016430919068.png_230x230x1x85.jpg')
+             div.bar_c
+              div.bar_c_c
+               div.bar
+               div.icon
+            div.nstj_i_c
+             img(title="妍酱,索尼子",src='http://imgsize.ph.126.net/?imgurl=http://img2.cache.netease.com/bobo/2016/7/18/201607181722545446b.jpg_230x230x1x85.jpg')
+             div.bar_c
+              div.bar_c_c
+               div.bar
+               div.icon
+            div.nstj_i_c
+             img(title="一诺,LL东条希",src='http://imgsize.ph.126.net/?imgurl=http://img2.cache.netease.com/bobo/2016/7/18/20160718172351bb391.jpg_230x230x1x85.jpg')
+             div.bar_c
+              div.bar_c_c
+               div.bar
+               div.icon
+            div.nstj_i_c
+             img(title="小小白",src='http://imgsize.ph.126.net/?imgurl=http://img4.cache.netease.com/bobo/2016/7/21/20160721162155153f1.jpg_230x230x1x85.jpg')
+             div.bar_c
+              div.bar_c_c
+               div.bar
+               div.icon
+          a.clickLeft(href='javascript:void(0)')
+          a.clickRight(href='javascript:void(0)')
+     div.pic_box
+      div.p_border
+        div.p_border_right
+        div.p_border_top
+        div.p_border_right_top
+        div.p_border_content
+         h1.title
+          span (ﾉ>ω<)ﾉ恭喜你，打开了通往新世界的大门！这里有【最搞笑】【最逗比】【最污】【最适合如厕时间】的视频up主！点一个试试看吧~
+         .box_list
+          .item
+           img(src="http://img3.cache.netease.com/bobo/2016/7/29/20160729124223efd0b.png")
+           a.bar
+           a.zbar(href="http://bolo.bobo.com/play?videoId=14624312631231&sourceFrom=cj",target="_blank")
+           a.span(href="http://bolo.bobo.com/play?videoId=14624312631231&sourceFrom=cj",target="_blank") 陈翔6点半
+          .item
+           img(src="http://img6.cache.netease.com/bobo/2016/7/29/20160729124159fca82.png")
+           a.bar
+           a.zbar(href="http://bolo.bobo.com/play?videoId=14625158891881&sourceFrom=cj",target="_blank")
+           a.span(href="http://bolo.bobo.com/play?videoId=14625158891881&sourceFrom=cj",target="_blank") 大力金刚
+          .item
+           img(src="http://img6.cache.netease.com/bobo/2016/7/29/201607291301188293e.png")
+           a.bar
+           a.zbar(href="http://bolo.bobo.com/play?videoId=14690683620701&sourceFrom=cj",target="_blank")
+           a.span(href="http://bolo.bobo.com/play?videoId=14690683620701&sourceFrom=cj",target="_blank") 暴走MC
+          .item
+           img(src="http://img4.cache.netease.com/bobo/2016/7/29/20160729123829b3e8b.png")
+           a.bar
+           a.zbar(href="http://bolo.bobo.com/play?videoId=14679744512741&sourceFrom=cj",target="_blank")
+           a.span(href="http://bolo.bobo.com/play?videoId=14679744512741&sourceFrom=cj",target="_blank") 暴走大事件
+          .item
+           img(src="http://img1.cache.netease.com/bobo/2016/7/29/20160729125333c3ef8.jpg")
+           a.bar
+           a.zbar(href="http://bolo.bobo.com/play?videoId=14641701383261&sourceFrom=cj",target="_blank")
+           a.span(href="http://bolo.bobo.com/play?videoId=14641701383261&sourceFrom=cj",target="_blank") 淮秀帮
+          .item
+           img(src="http://img3.cache.netease.com/bobo/2016/7/29/2016072920131385c08.png")
+           a.bar
+           a.zbar(href="http://bolo.bobo.com/play?videoId=14695024509841&sourceFrom=cj",target="_blank")
+           a.span(href="http://bolo.bobo.com/play?videoId=14695024509841&sourceFrom=cj",target="_blank") 凹凸君说
+          .item
+           img(src="http://img6.cache.netease.com/bobo/2016/7/29/201607291238032d22c.png")
+           a.bar
+           a.zbar(href="http://bolo.bobo.com/play?videoId=14672037815911&sourceFrom=cj",target="_blank")
+           a.span(href="http://bolo.bobo.com/play?videoId=14672037815911&sourceFrom=cj",target="_blank") 暴走玩啥游戏
+          .item
+           img(src="http://img5.cache.netease.com/bobo/2016/7/29/20160729125406c5db2.png")
+           a.bar
+           a.zbar(href="http://bolo.bobo.com/play?videoId=14661352277691&sourceFrom=cj",target="_blank")
+           a.span(href="http://bolo.bobo.com/play?videoId=14661352277691&sourceFrom=cj",target="_blank") 逗鱼时刻
+          .item
+           img(src="http://img4.cache.netease.com/bobo/2016/7/29/201607291252458f42f.jpg")
+           a.bar
+           a.zbar(href="http://bolo.bobo.com/play?videoId=14679744550051&sourceFrom=cj",target="_blank")
+           a.span(href="http://bolo.bobo.com/play?videoId=14679744550051&sourceFrom=cj",target="_blank") 这很守望
+     div.cj_content_partner
+       div.p_border
+        div.p_border_right
+        div.p_border_top
+        div.p_border_right_top
+        div.p_border_content
+         h1.title
+         div.partner_top
+          .ptr_top_left
+           .ptr_t_l_l
+           a.ptr_t_l_r(href="http://bolo.bobo.com/download",target="_blank")
+          .ptr_top_right
+           .ptr_t_r_l
+           a.ptr_t_r_r(href="http://game.163.com/2016/chinajoy/",target="_blank")
+         div.ptr_bottom
+          a.ptr_b_i.ptr_b_i1(href="http://www.lofter.com/",target="_blank")
+          a.ptr_b_i.ptr_b_i2(href="http://gacha.163.com/client",target="_blank")
+          a.ptr_b_i.ptr_b_i3(href="http://www.oneniceapp.com/",target="_blank")
+          a.ptr_b_i.ptr_b_i4(href="http://manhua.163.com/",target="_blank")
+       div.gt.gt1
+       dig.gt.gt2
+     div.cj_content_bottom(style="height:120px;")
+    .cj_alert
+     .bar
+     .cj_alert_zbdh
+      a.clickLeft(title="n1",href="javascript:void(0)")
+      a.clickRight(title="n3",href="javascript:void(0)")
+      div.n2_c.n_c
+       div.n2.n
+        div.n2_sd.nbg.n_i
+        div.n2_tx.nbg.n_i
+        div.n2_wm.nbg.n_i
+        .close_c
+         .close
+       div.n_show.n_show_sd
+        div.n_show_arrow
+         .arrowr
+        div.n_show_top
+         div.left
+         div.right
+          h1 【盛大游戏】展区
+          p 盛大今年主打手游，主要包括《传奇3》、《传奇世界》、《龙之谷》手游，均提供现场试玩。端游方面，有《龙之谷》、《传奇永恒》等，还有最新代理的日本国民级RPG游戏《勇者斗恶龙X》。
+        div.n_show_bottom
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img4.cache.netease.com/bobo/2016/7/18/20160718190703db267.jpg_370x250x1x85.jpg")
+          span 2016盛大游戏CJ展台
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img6.cache.netease.com/bobo/2016/7/18/2016071819071693166.jpg_370x250x1x85.jpg")
+          span 2016盛大游戏CJ展台
+       div.n_show.n_show_tx
+        div.n_show_arrow
+         .arrowl
+        div.n_show_top
+         div.left
+         div.right
+          h1 【腾讯互动娱乐】展区
+          p 腾讯互娱将率23款端游、页游、手游、电视游戏在今年CJ登场，其中有5款新品首秀并提供试玩，还有1款未公布的神秘产品。
+        div.n_show_bottom
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img4.cache.netease.com/bobo/2016/7/18/20160718190806fafc1.png_370x250x1x85.jpg")
+          span 2016腾讯CJ展台
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img1.cache.netease.com/bobo/2016/7/18/20160718190822a362c.png_370x250x1x85.jpg")
+          span 2015腾讯CJ展台
+       div.n_show.n_show_wm
+        div.n_show_arrow
+         .arrowt
+        div.n_show_top
+         div.left
+         div.right
+          h1 【完美世界】展区
+          p 今年完美世界主推端游《最终兵器》、《幻影突击》，手游《诛仙》。《最终兵器》为3D类动作MOBA游戏，《幻影突击》则是刚获得代理权的韩国第一人称射击游戏。展区还设了浴室迷魂区~难道能现场观看美人出浴？
+        div.n_show_bottom
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img4.cache.netease.com/bobo/2016/7/18/20160718190913eed45.jpg_370x250x1x85.jpg")
+          span 2016CJ完美世界展台俯瞰图
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img1.cache.netease.com/bobo/2016/7/18/20160718190929be0c7.jpg_370x250x1x85.jpg")
+          span 浴室迷魂体验区
+      div.n3_c.n_c
+       div.n3.n
+        div.n3_37.nbg.n_i
+        div.n3_xsj.nbg.n_i
+        .close_c
+         .close
+       div.n_show.n_show_37
+        div.n_show_arrow
+         .arrowt
+        div.n_show_top
+         div.left
+         div.right
+          h1 【37游戏】展区
+          p 去年，页游老司机37游戏携四款主推页游《传奇霸业》、《战国之怒》、《轩辕剑之天之痕》参展。同时更大走IP路线，推出《倒霉熊之激流勇进》、《樱桃小丸子之美食大冒险》等游戏试玩。今年消息密不透风，说不定届时会有重磅炸弹?
+        div.n_show_bottom
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img5.cache.netease.com/bobo/2016/7/18/20160718184632a839a.jpg_370x250x1x85.jpg")
+          span 2015 37游戏CJ展台
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img4.cache.netease.com/bobo/2016/7/18/2016071818464952f91.jpg_370x250x1x85.jpg")
+          span 2015 37游戏CJ展台
+       div.n_show.n_show_xsj
+        div.n_show_arrow
+         .arrowl
+        div.n_show_top
+         div.left
+         div.right
+          h1 【西山居】展区
+          p 西山居的参展产品还是最经典的剑侠系列，包括《剑侠世界》手游版，《剑侠情缘口袋版》，新作《猎魔军团》也将亮相现场。据透露，届时还会有神秘新端游曝光。 
+        div.n_show_bottom
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img3.cache.netease.com/bobo/2016/7/18/201607181908365b997.jpg_370x250x1x85.jpg")
+          span 2016西山居古色古香的展台
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img1.cache.netease.com/bobo/2016/7/18/20160718190858b5492.jpg_370x250x1x85.jpg")
+          span 2016西山居showgirl
+      div.n4_c.n_c
+       div.n4.n
+        div.n4_wybl.nbg.n_i
+        div.n4_wyyx.nbg.n_i
+        div.n4_bx.nbg.n_i
+        .close_c
+         .close
+       div.n_show.n_show_wybl
+        div.n_show_arrow
+         .arrowr
+        div.n_show_top
+         div.left
+         div.right
+          h1 【网易菠萝】展区
+          p 既然今年ChinaJoy的主题是“泛娱乐”，怎能少得了菠萝菌的身影！老司机不仅带来超好玩的原创娱乐视频，还有好基友大力金刚给现场观众大派福袋！同时，不甘寂寞的网易菠萝还携手网易漫画，给杀手古德搞了个大新闻~  
+        div.n_show_bottom
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img5.cache.netease.com/bobo/2016/7/26/201607262028117f83c.jpg_370x250x1x85.jpg")
+          span 萌萌哒菠萝周边
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img2.cache.netease.com/bobo/2016/7/18/20160718185213bb3ee.png_370x250x1x85.jpg")
+          span 大力金刚携女票亮相CJ
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img2.cache.netease.com/bobo/2016/7/21/20160721173626450f3.jpg_370x250x1x85.jpg")
+          span 【网易菠萝】超燃IP大乱炖
+          a.video_bar(href="http://bolo.bobo.com/m/play?videoId=14679744550121",target="_blank")
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img1.cache.netease.com/bobo/2016/7/21/20160721173814638e4.jpg_370x250x1x85.jpg")
+          span 【杀手古德】动画预告片强势先行！
+          a.video_bar(href="http://bolo.bobo.com/m/play?videoId=14679744492761",target="_blank")
+       div.n_show.n_show_wyyx
+        div.n_show_arrow
+         .arrowl
+        div.n_show_top
+         div.left
+         div.right
+          h1 【网易游戏】展区
+          p 据说，本届ChinaJoy网易游戏包下1196m2超豪华展位，为玩家们打造史上最会玩的红色主场！现场提供《梦幻西游》《大话西游》“双游”经典，绝美《倩女幽魂》《天下》系列手游、端游试玩，还有游戏界玩红，高颜值showgirl，陪你high足四天四夜！ 
+        div.n_show_bottom
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img1.cache.netease.com/bobo/2016/7/21/20160721214214aeab7.jpg_370x250x1x85.jpg")
+          span 2016网易游戏红色主场
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img4.cache.netease.com/bobo/2016/7/21/201607212142552e656.jpg_370x250x1x85.jpg")
+          span 《梦幻西游无双版》、《大话西游手游》游戏画面
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img4.cache.netease.com/bobo/2016/7/21/20160721214314410ad.jpg_370x250x1x85.jpg")
+          span 《倩女幽魂2》、《天下3》游戏画面
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img6.cache.netease.com/bobo/2016/7/26/2016072615124725c7d.jpg_370x250x1x85.jpg")
+          span 【网易游戏】玩红团明星代表邀你来CJ
+          a.video_bar(href="http://bolo.bobo.com/play?videoId=14695024505421",target="_blank")
+       div.n_show.n_show_bx
+        div.n_show_arrow
+         .arrowt
+        div.n_show_top
+         div.left
+         div.right
+          h1 【暴雪】展区
+          p 今年的ChinaJoy暴雪继续带来《炉石传说》《魔兽世界》7.0前夕等热门游戏的试玩，更有《风暴英雄》新英雄奥莉尔全球首次亮相！这是暴雪首次将最新英雄的首发试玩放在中国。
+        div.n_show_bottom
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img6.cache.netease.com/bobo/2016/7/18/201607181906466f6ae.jpg_370x250x1x85.jpg")
+          span 《风暴英雄》新英雄奥莉尔 
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img3.cache.netease.com/bobo/2016/7/21/2016072117383168805.jpg_370x250x1x85.jpg")
+          span 【暴走玩啥游戏】守望先锋这屁股！
+          a.video_bar(href="http://bolo.bobo.com/m/play?videoId=14672037815911",target="_blank")
+        div.n_show_top
+         div.left.left2
+         div.right
+          h1 【Minecraft】展区
+          p 今年是我的世界Minecraft首次亮相ChinaJoy，展区与暴雪、网易游戏相邻，其最受欢迎的开发者Jens Bergensten更是在个人Twitter透露将亲临现场与中国玩家见面！MC粉们千万不要错过噢. 
+        div.n_show_bottom
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img5.cache.netease.com/bobo/2016/7/18/20160718185626dc220.jpg_370x250x1x85.jpg")
+          span Minecraft x 网易游戏展台
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img1.cache.netease.com/bobo/2016/7/18/20160718190603d5ca1.jpg_370x250x1x85.jpg")
+          span Jens Bergensten宣布参加2016CJ
+      div.n5_c.n_c
+       div.n5.n
+        div.n5_zfb.nbg.n_i
+        div.n5_aqy.nbg.n_i
+        .close_c
+         .close
+       div.n_show.n_show_zfb
+        div.n_show_arrow
+         .arrowr
+        div.n_show_top
+         div.left
+         div.right
+          h1 【支付宝】展区
+          p 土豪支付宝在2015年ChinaJoy上用无人机送餐吸引眼球，拯救了一大批现场饿货。希望今年马云来点实在的，直接无人机送红包吧！
+        div.n_show_bottom
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img4.cache.netease.com/bobo/2016/7/18/201607181853217611c.jpg_370x250x1x85.jpg")
+          span 2015支付宝CJ展台
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img4.cache.netease.com/bobo/2016/7/18/2016071818535080440.jpg_370x250x1x85.jpg")
+          span 出动无人机高调送餐
+       div.n_show.n_show_aqy
+        div.n_show_arrow
+         .arrowl
+        div.n_show_top
+         div.left
+         div.right
+          h1 【爱奇艺】展区
+          p 去年爱奇艺在ChinaJoy上大秀IP优势，专门请到《花千骨》、《灵域》小说作者莅临展会，还推出《奇葩说女神来了》游戏亮相BTOB展区，不知道今年有没有奇葩说嘉宾来到现场呢？  
+        div.n_show_bottom
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img1.cache.netease.com/bobo/2016/7/18/201607181848281f638.jpg_370x250x1x85.jpg")
+          span 《奇葩说》女神来了手游
+         div.item
+          img(src="http://imgsize.ph.126.net/?imgurl=http://img2.cache.netease.com/bobo/2016/7/18/201607181849004e508.jpg_370x250x1x85.jpg")
+          span 古典美的showgirl
+     .cj_alert_zbpd
+      .close_c
+       .close
+      .slider
+       a.clickLeft
+       a.clickRight
+       .slider_c
+        .item
+         .top
+          img.big(src='http://imgsize.ph.126.net/?imgurl=http://img6.cache.netease.com/bobo/2016/7/21/20160721135528fbde6.jpg_733x522x1x85.jpg',style="width:100%")
+         .bottom
+          h1 【收纳型周边】
+          p 早起的观众有包领！历年chinajoy一些土豪厂商都有送推车送箱包的活动，有了这些收纳神器，就可以尽情收割你喜爱的周边啦。去年《侠客行》甚至还推出前排小板凳，供观众占位时使用。冲着周边去CJ的朋友们记得进场后立马先去排队领包哟。
+        .item
+         .top
+          img.big(src='http://imgsize.ph.126.net/?imgurl=http://img4.cache.netease.com/bobo/2016/7/21/201607211156412f5a1.jpg_733x522x1x85.jpg',style="width:100%")
+         .bottom
+          h1 【萌物系周边】
+          p 想收藏一套萌翻的多啦A梦，不用再去麦当劳买什么儿童套餐啦，CJ现场有更多款式挑到眼花。还有各种Q版的游戏角色手办，除了买来自己收藏，也很适合作为CJ伴手礼送给身边的妹纸。
+        .item
+         .top
+          img.big(src='http://imgsize.ph.126.net/?imgurl=http://img4.cache.netease.com/bobo/2016/7/21/20160721115625e31fa.jpg_733x522x1x85.jpg',style="width:100%")
+         .bottom
+          h1(style="width:246px;") 【宅男福利周边】
+          p(style="width:709px;") 注意！前方有一大♂波肉体出动！乳此凹凸有致细节逼真的手办，老司机血槽已空。宅男们，遇到把持不住的赶紧抱回家食用啦。不知道价格是不是和罩杯SIZE成正比呢(*/ω＼*)
+        .item
+         .top
+          img.big(src='http://imgsize.ph.126.net/?imgurl=http://img3.cache.netease.com/bobo/2016/7/21/20160721115555faa87.jpg_733x522x1x85.jpg',style="width:100%")
+         .bottom
+          h1 【暴雪系周边】
+          p 要说喷血，暴雪爸爸的翘臀女儿们也是不甘示弱的。作为2016年毒性最强游戏之一，守望屁股的周边势必抢破头。暴雪系周边向来不便宜，图中这个猎空闪光手办在官网价格是150刀，折合人民币要1005元，中毒玩家们记得事先备好足量盘缠。
+        .item
+         .top
+          img.big(src='http://imgsize.ph.126.net/?imgurl=http://img5.cache.netease.com/bobo/2016/7/26/201607262028117f83c.jpg_733x522x1x85.jpg',style="width:100%")
+         .bottom
+          h1 【菠萝周边】
+          p 作为菠萝当家老司机，怎能不晒自家的周边呢。今年的ChinaJoy，菠萝展区有免费福袋派发，内含超实用随身必带撩妹神器，特殊质地消除缠绵时的粘腻感，给心爱的ta带来爽彻心扉欲罢不能的体验 (☆▽☆)y。猜到是什么了吗？
+        .item
+         .top
+          img.big(src='http://imgsize.ph.126.net/?imgurl=http://img4.cache.netease.com/bobo/2016/7/25/20160725131544b9234.jpg_733x522x1x85.jpg',style="width:100%")
+         .bottom
+          h1 【网易系周边】
+          p wuli大黄易今年包下了全场最壕最大的展位，周边当然不能示弱。嫣然巧笑巫蛮儿，乘风破浪龙太子，更有超萌的小剑小骨CP八音盒……梦幻西游的脑残粉们千万不！要！错！过！
+     .cj_alert_nstj
+      .close_c
+       .close
+      .slider
+       a.clickLeft
+       a.clickRight
+       .slider_c
+        .item2
+          img(src='http://img2.cache.netease.com/bobo/2016/7/21/2016072111302592ccf.jpg')
+          .bottom
+           .info
+            .bar2
+            h1 【yuuto】
+            p.info 身材劲爆的CoserYuuto也是专业营养师一枚~玩得最多的游戏是LOL和音游。Yuuto说，熟的人都叫她知心爸爸，需排位带飞或者想调理一下身体的时候都可以找她噢！
+             a(target="_blank",style="color:#ffdd00",href="https://www.oneniceapp.com/user/rsDsXG?uid=rsDsXG&nfrom=wechat_contact&app_version=3.9.13") &nbsp;去nice看她
+        .item2
+          img(src='http://img2.cache.netease.com/bobo/2016/7/21/201607211130502136e.jpg')
+          .bottom
+           .info
+            .bar2
+            h1 【王茹】
+            p.info 大眼睛萌妹子王茹，有着白皙皮肤甜美笑容，是今年网易游戏展区的showgirl之一。
+        .item2
+          img(src='http://img2.cache.netease.com/bobo/2016/7/21/201607211131093fc2f.jpg')
+          .bottom
+           .info
+            .bar2
+            h1 【金大玮】
+            p.info 170cm长腿女神金大玮去年也参加过CJ，今年是网易游戏展区showgirl之一。
+        .item2
+          img(src='http://img6.cache.netease.com/bobo/2016/7/21/201607211129337f21d.jpg')
+          .bottom
+           .info
+            .bar2
+            h1 【黄靖翔】
+            p.info 靖翔欧巴在动漫圈人气爆棚，曾获2014ChinaJoy封面角色大赛银奖，被新浪微博评选位2015年度二次元最具影响力大V。除了当coser，他还参演过网剧《男神执事团》，网络大电影《双程》。天了噜，又是一个明明可以靠颜值却偏要拼实力的人！
+             a(target="_blank",style="color:#ffdd00",href="http://huangjingxiang.lofter.com") &nbsp;去LOFTER看他
+        .item2
+          img(src='http://img3.cache.netease.com/bobo/2016/7/21/2016072111323878a84.jpg')
+          .bottom
+           .info
+            .bar2
+            h1 【瓶子】
+            p.info 瓶子，一个外向乐观的妹纸，喜欢跳舞喜欢动漫喜欢杰尼斯，学习舞蹈已经有13年了，并且获得过大大小小的奖项。温柔可人的她，会在今年CJ网易游戏展区舞台现身！如果你喜欢瓶子又去不了现场，一定要关注我们专题页的图文直播噢！<br>
+             a(target="_blank",style="color:#ffdd00",href="https://www.oneniceapp.com/user/8hVDVS?uid=8hVDVS&nfrom=wechat_contact") 去nice看她
+        .item2
+          img(src='http://img1.cache.netease.com/bobo/2016/7/21/201607211133015ed8b.jpg')
+          .bottom
+           .info
+            .bar2
+            h1 【祺祺】
+            p.info 娇小可爱的祺祺，自称是一枚自带逗比属性的喵星人。偶尔神经质的双子座，平时主要在跳宅舞，有时也会玩cosplay。祺祺说，要登台啦好紧张，希望能得到菠萝原住民们的支持哟！
+        .item2
+          img(src='http://img2.cache.netease.com/bobo/2016/7/21/20160721113325d1667.jpg')
+          .bottom
+           .info
+            .bar2
+            h1 【小孽】
+            p.info 超美精灵小孽，一个听到音乐身体就会情不自禁的跟着摇摆摇摆的萌妹纸，最喜欢宅舞，希望带给大家一个元气满满的自己！她和瓶子、祺祺将组成3人宅舞团出现在CJ现场，菠萝老司机已经准备好前排板凳啦~！
+        .item2
+          img(src='http://img5.cache.netease.com/bobo/2016/7/21/201607211137584a3f4.jpg')
+          .bottom
+           .info
+            .bar2
+            h1 【妍酱】
+            p.info 一个身材热辣的超性感索尼子！还有老司机最喜欢的邪恶俯拍视角耶~
+             a(target="_blank",style="color:#ffdd00",href="http://gacha.163.com/detail/post/c78633ab19a3433a816d8488e0e60593") &nbsp;去GACHA看她
+        .item2
+          img(src='http://img3.cache.netease.com/bobo/2016/7/21/20160721113653f84e1.jpg')
+          .bottom
+           .info
+            .bar2
+            h1 【一诺】
+            p.info LL人妻东条希梦幻公主装，美艳不可方物。
+             a(target="_blank",style="color:#ffdd00",href="http://gacha.163.com/detail/post/80c699d7d4bd48fb8f3ddbd52553794c") &nbsp;去GACHA看她
+        .item2
+          img(src='http://img5.cache.netease.com/bobo/2016/7/21/201607211136369a6a2.jpg')
+          .bottom
+           .info
+            .bar2
+            h1 【小小白】
+            p.info 小小白，cos圈美颜盛世的知名coser，出版过《福》、《洛幕》、《白》、《白社会》、《潋心》等cosplay图集，同时还是负责3D动画《秦时明月》、《天行九歌》、《武庚纪》等作品宣传企划工作的高手噢。菠萝菌忍不住想舔屏了⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄<br>
+             a(target="_blank",style="color:#ffdd00",href="http://175569734.lofter.com/") &nbsp;去LOFTER看他
+     .cj_alert_nsb
+      .close_c
+        .close
+      .item.item1
+       .top
+        .left.left1
+        .right.right2
+       .center
+      .item.item2
+       .top
+        .left.left1
+        .right.right2
+          p 本次活动以手机号作为中奖身份证明，别忘了告诉老司机噢：
+       .form
+        label
+        input#phone
+       .tip
+        span.y 乘客须知：
+        span(style="line-height:15.5px;width:660px;")  8月1日，我们将在网易菠萝APP内公布十位幸运用户，届时中奖群众凭手机号+分享截图，按照指示操作即可领奖！如有疑问可私信微博@网易菠萝菌，或在菠萝公众号（ID:bolo163）后台留言噢。
+       a.btn.btn1
+      .item.item3
+       .top
+        .left.left1
+        .right.right2.right3
+          p(style="line-height:25px;") 活动规则：一键分享本专题，即有机会获得来自CJ现场的精美手办1份！（记得保存截图噢）<br>活动时间：7月26日-7月31日下午3点前，机不可失！
+       .myshare
+        a.si.wb(href="javascript:void(0)",target="_blank",data-key="wb_web").js-tj
+        a.si.qz(href="javascript:void(0)",target="_blank",data-key="QQ_web").js-tj
+        .si.wx
+       a.btn.btn2
+     .cj_alert_a_share
+      .item
+       .top
+         .myshare
+          a.si.wb(href="javascript:void(0)",target="_blank",data-key="wb_web").js-tj
+          a.si.qz(href="javascript:void(0)",target="_blank",data-key="QQ_web").js-tj
+          .si.wx
+         a.btn.btn2
+     .cj_alert_imgContainer
+      .close_c
+       .close
+      img(src="")
+    include ./tpl/article.jade
+    include ./tpl/comment.jade
+    include ../../../../_include/cnzz-stat.jade
+    script.
+        require('/pages/pc/act/cj@1-0-x');
+         
+
+     
+
+
+    

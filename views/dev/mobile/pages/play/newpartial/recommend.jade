@@ -1,0 +1,23 @@
+.recommend
+    script.
+        var REC_DATA = !{JSON.stringify(relatedVideos)};
+    .title 相关推荐
+    .list-wrapper
+        ul.list-container
+            each data, index in relatedVideos
+                if (index < 2)
+                    li.item
+                        a.poster(href='/m/play?videoId=#{data.videoId}&bid=#{data.videoId}')
+                            img(src='#{data.cover}')
+                            .cover
+                            - var minute = Math.floor(videoInfo.duration / 60);
+                            - var second = videoInfo.duration % 60;
+                            .time #{minute > 9 ? minute : '0' + minute}:#{second > 9 ? second : '0' + second}
+                            if data.isLock == 1
+                                .pay-icon.seed
+                            else if data.isLock == 2
+                                .pay-icon.coin
+                        .name #{data.title}
+    //.rec-tip
+    //    |下载APP，查看更多视频
+    //    .icon
